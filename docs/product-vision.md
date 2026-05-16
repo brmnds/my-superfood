@@ -88,6 +88,36 @@ Recipe posts should include:
 
 This section should support frequently posted recipes over time.
 
+## Supplements Section
+
+The site should also show supplements.
+
+Supplements can include:
+
+- Supplements Tilman Resch is actually using.
+- Supplements that are generally recommended.
+- Supplements recommended by specific public figures, protocols, or sources.
+
+Each supplement should be able to show recommendation/source labels, for example:
+
+- Taking: Tilman Resch
+- Recommended by: Bryan Johnson
+- Generally recommended
+- Recommended by another named person, protocol, or expert source
+
+There should be a dedicated section for supplements recommended by Bryan Johnson.
+
+The same supplement may have multiple labels. For example, a supplement can be both recommended by Bryan Johnson and marked as actually taken by Tilman Resch.
+
+Supplement cards or detail pages should make the distinction clear between:
+
+- Who recommends it.
+- Who is taking it.
+- What it is used for.
+- Any relevant caution, context, or evidence level.
+
+The supplement area should avoid making unsupported medical claims. It should feel like a curated discovery and tracking layer, not a diagnosis or prescription tool.
+
 ## Visual Direction
 
 The whole site/app should be bright, fresh, organic, and high quality.
@@ -116,3 +146,5 @@ The interface should feel premium but practical: visual and inspiring on the lan
 - Should food data start as a curated local dataset or come from a nutrition API?
 - Which LuminaOS flow should be triggered: account creation, habit creation, goal creation, or a nutrition-plan import?
 - What should count as a "high representation" of a nutrient for filtering?
+- Which supplement sources should be included beyond Tilman Resch and Bryan Johnson?
+- How should evidence level and health cautions be represented for supplements?
