@@ -14,21 +14,21 @@ This report validates current My Superfood images against the picture steering f
 | Food | Current asset | Status | Notes |
 | --- | --- | --- | --- |
 | Broccoli | `assets/images/real/broccoli.jpg` | Pass | Raw broccoli on bright background. |
-| Chickpeas | `assets/images/real/chickpeas.jpg` | Fail | Current source appears to be chickpea flour/ground gram, not full chickpeas. Replace with full real chickpeas on a clean bright background. |
+| Chickpeas | `assets/images/real/chickpeas.png` | Pass | Full whole chickpeas on a clean white background. |
 | Lentils | `assets/images/real/lentils-uncooked.jpg` | Pass | Clean uncooked lentils. |
-| Cauliflower | `assets/images/real/cauliflower-market.jpg` | Fail | Better than the archived document thumbnail, but still has market/background context. Replace with raw cauliflower on transparent or very bright empty background. |
+| Cauliflower | `assets/images/real/cauliflower.png` | Pass | Raw cauliflower head on a clean white background. |
 | Banana | `assets/images/real/banana-transparent.png` | Pass | Transparent-background banana asset. |
 | Avocado | `assets/images/real/avocado.jpg` | Pass | Full/halved avocado is recognizable. |
 | Blueberries | `assets/images/real/blueberries.jpg` | Pass | Whole blueberries, clean close-up. |
 | Spinach | `assets/images/real/spinach.jpg` | Pass | Raw spinach leaves. |
-| Salmon | `assets/images/real/salmon.jpg` | Fail | Current image reads as food/dish context. Replace with a clean raw salmon fillet or piece on bright neutral/transparent background. |
-| Oats | `assets/images/real/oats.jpg` | Fail | Current image has an unsuitable blue/background cast. Replace with a small mountain of oats, scoop, or cup on bright neutral background. |
+| Salmon | `assets/images/real/salmon.png` | Pass | Clean raw salmon fillet on a white background. |
+| Oats | `assets/images/real/oats.png` | Pass | Small mountain of rolled oats on a clean white background. |
 | Olive Oil | `assets/images/real/olive-oil.jpg` | Pass | Clean bottle/product-style image. |
 | Walnuts | `assets/images/real/walnuts.jpg` | Pass | Raw walnuts are recognizable. |
-| Yogurt | `assets/images/real/yogurt.jpg` | Fail | Current image is not suitable for the intended protein yogurt card. Replace with clean protein yogurt in a white bowl/cup on bright background. |
-| Sweet Potato | `assets/images/real/sweet-potato.jpg` | Fail | Current image is not the raw ingredient. Replace with raw sweet potato, whole or cut, on bright neutral background. |
-| Cacao | `assets/images/real/cacao.jpg` | Fail | Needs a cleaner, brighter background. Prefer cacao powder/nibs in a clean bowl, spoon, or small pile. |
-| Pumpkin Seeds | `assets/images/real/pumpkin-seeds.jpg` | Fail | Current image has a dark/black background. Replace with pumpkin seeds on transparent, white, or bright neutral background. |
+| Yogurt | `assets/images/real/yogurt.png` | Pass | Clean protein-yogurt style bowl on a white background. |
+| Sweet Potato | `assets/images/real/sweet-potato.png` | Pass | Raw sweet potato with cut pieces on a clean white background. |
+| Cacao | `assets/images/real/cacao.png` | Pass | Cacao powder and nibs on a clean white background. |
+| Pumpkin Seeds | `assets/images/real/pumpkin-seeds.png` | Pass | Pumpkin seeds on a clean white background. |
 
 ## Recipe Images
 
@@ -54,16 +54,7 @@ This report validates current My Superfood images against the picture steering f
 
 ## Required Image Replacement Backlog
 
-Replace these before calling the food image set production-ready:
-
-1. Chickpeas: full real chickpeas, no flour/powder.
-2. Cauliflower: raw cauliflower on transparent or very bright empty background.
-3. Salmon: raw clean salmon fillet/piece, not a dish.
-4. Oats: small mountain, scoop, or cup on bright neutral background.
-5. Cacao: cleaner bright background.
-6. Pumpkin seeds: bright or transparent background, no black background.
-7. Yogurt: protein yogurt in a clean bowl/cup.
-8. Sweet potato: raw sweet potato, not a dish.
+No food image replacement backlog remains after the 2026-05-16 generated image pass.
 
 ## Acceptance Criteria For Next Image Pass
 
