@@ -1,20 +1,20 @@
 const foods = [
-  { id: "broccoli", name: "Broccoli", image: "assets/images/broccoli.svg", categories: ["fiber", "advanced"], benefits: ["Fiber rich", "Vitamin C", "Supports gut health"], note: "Cruciferous vegetable with fiber, vitamin C, and plant compounds.", x: "50%", y: "47%", center: true },
-  { id: "chickpeas", name: "Chickpeas", image: "assets/images/chickpeas.svg", categories: ["protein", "carbs", "fiber"], benefits: ["Plant protein", "Slow carbs", "High fiber"], note: "A practical base for bowls, hummus, and satisfying meals.", x: "24%", y: "20%" },
-  { id: "lentils", name: "Lentils", image: "assets/images/lentils.svg", categories: ["protein", "carbs", "fiber"], benefits: ["Protein", "Iron", "Folate"], note: "A dense pantry staple for soups, salads, and meal prep.", x: "39%", y: "16%" },
-  { id: "cauliflower", name: "Cauliflower", image: "assets/images/cauliflower.svg", categories: ["fiber", "advanced"], benefits: ["Light fiber", "Vitamin C", "Cruciferous"], note: "Mild, flexible, and easy to use as a vegetable base.", x: "63%", y: "17%" },
-  { id: "banana", name: "Banana", image: "assets/images/banana.svg", categories: ["carbs", "fiber"], benefits: ["Quick carbs", "Potassium", "Portable"], note: "A simple energy fruit for breakfast or training snacks.", x: "79%", y: "20%" },
-  { id: "avocado", name: "Avocado", image: "assets/images/avocado.svg", categories: ["oils", "fiber"], benefits: ["Healthy fats", "Potassium", "Satisfying"], note: "Creamy fats and fiber that make simple meals feel complete.", x: "18%", y: "43%" },
-  { id: "blueberries", name: "Blueberries", image: "assets/images/blueberries.svg", categories: ["carbs", "advanced", "fiber"], benefits: ["Polyphenols", "Vitamin C", "Fresh sweetness"], note: "A colorful fruit for breakfast bowls and snacks.", x: "34%", y: "38%" },
-  { id: "spinach", name: "Spinach", image: "assets/images/spinach.svg", categories: ["fiber", "advanced"], benefits: ["Leafy minerals", "Vitamin K", "Easy greens"], note: "Quick greens for bowls, eggs, smoothies, and soups.", x: "17%", y: "70%" },
-  { id: "salmon", name: "Salmon", image: "assets/images/salmon.svg", categories: ["protein", "oils"], benefits: ["Protein", "Omega-3 fats", "Recovery"], note: "A protein-rich fish with naturally occurring omega-3 fats.", x: "35%", y: "69%" },
-  { id: "oats", name: "Oats", image: "assets/images/oats.svg", categories: ["carbs", "fiber"], benefits: ["Beta-glucan", "Slow carbs", "Breakfast base"], note: "A steady breakfast grain with soluble fiber.", x: "28%", y: "88%" },
-  { id: "olive-oil", name: "Olive Oil", image: "assets/images/olive-oil.svg", categories: ["oils", "advanced"], benefits: ["Monounsaturated fats", "Polyphenols", "Kitchen staple"], note: "A classic fat for salads, vegetables, and sauces.", x: "48%", y: "83%" },
-  { id: "walnuts", name: "Walnuts", image: "assets/images/walnuts.svg", categories: ["oils", "protein", "fiber"], benefits: ["Healthy fats", "Minerals", "Crunch"], note: "A dense topping for breakfast bowls and salads.", x: "62%", y: "87%" },
-  { id: "yogurt", name: "Yogurt", image: "assets/images/yogurt.svg", categories: ["protein", "advanced"], benefits: ["Protein", "Fermented", "Calcium"], note: "A fermented base for breakfast, sauces, or snacks.", x: "73%", y: "72%" },
-  { id: "sweet-potato", name: "Sweet Potato", image: "assets/images/sweet-potato.svg", categories: ["carbs", "fiber"], benefits: ["Slow carbs", "Beta carotene", "Comforting"], note: "A bright, filling carbohydrate for bowls and plates.", x: "88%", y: "62%" },
-  { id: "cacao", name: "Cacao", image: "assets/images/cacao.svg", categories: ["advanced", "oils"], benefits: ["Polyphenols", "Magnesium", "Deep flavor"], note: "A rich ingredient for smoothies, yogurt, and warm drinks.", x: "91%", y: "38%" },
-  { id: "pumpkin-seeds", name: "Pumpkin Seeds", image: "assets/images/pumpkin-seeds.svg", categories: ["protein", "oils", "fiber"], benefits: ["Zinc", "Magnesium", "Protein"], note: "A small topping with useful minerals and texture.", x: "86%", y: "87%" }
+  { id: "broccoli", name: "Broccoli", image: "assets/images/real/broccoli.jpg", categories: ["fiber", "advanced"], benefits: ["Fiber rich", "Vitamin C", "Supports gut health"], note: "Cruciferous vegetable with fiber, vitamin C, and plant compounds.", x: "50%", y: "47%", center: true },
+  { id: "chickpeas", name: "Chickpeas", image: "assets/images/real/chickpeas.jpg", categories: ["protein", "carbs", "fiber"], benefits: ["Plant protein", "Slow carbs", "High fiber"], note: "A practical base for bowls, hummus, and satisfying meals.", x: "24%", y: "20%" },
+  { id: "lentils", name: "Lentils", image: "assets/images/real/lentils.jpg", categories: ["protein", "carbs", "fiber"], benefits: ["Protein", "Iron", "Folate"], note: "A dense pantry staple for soups, salads, and meal prep.", x: "39%", y: "16%" },
+  { id: "cauliflower", name: "Cauliflower", image: "assets/images/real/cauliflower.jpg", categories: ["fiber", "advanced"], benefits: ["Light fiber", "Vitamin C", "Cruciferous"], note: "Mild, flexible, and easy to use as a vegetable base.", x: "63%", y: "17%" },
+  { id: "banana", name: "Banana", image: "assets/images/real/banana.jpg", categories: ["carbs", "fiber"], benefits: ["Quick carbs", "Potassium", "Portable"], note: "A simple energy fruit for breakfast or training snacks.", x: "79%", y: "20%" },
+  { id: "avocado", name: "Avocado", image: "assets/images/real/avocado.jpg", categories: ["oils", "fiber"], benefits: ["Healthy fats", "Potassium", "Satisfying"], note: "Creamy fats and fiber that make simple meals feel complete.", x: "18%", y: "43%" },
+  { id: "blueberries", name: "Blueberries", image: "assets/images/real/blueberries.jpg", categories: ["carbs", "advanced", "fiber"], benefits: ["Polyphenols", "Vitamin C", "Fresh sweetness"], note: "A colorful fruit for breakfast bowls and snacks.", x: "34%", y: "38%" },
+  { id: "spinach", name: "Spinach", image: "assets/images/real/spinach.jpg", categories: ["fiber", "advanced"], benefits: ["Leafy minerals", "Vitamin K", "Easy greens"], note: "Quick greens for bowls, eggs, smoothies, and soups.", x: "17%", y: "70%" },
+  { id: "salmon", name: "Salmon", image: "assets/images/real/salmon.jpg", categories: ["protein", "oils"], benefits: ["Protein", "Omega-3 fats", "Recovery"], note: "A protein-rich fish with naturally occurring omega-3 fats.", x: "35%", y: "69%" },
+  { id: "oats", name: "Oats", image: "assets/images/real/oats.jpg", categories: ["carbs", "fiber"], benefits: ["Beta-glucan", "Slow carbs", "Breakfast base"], note: "A steady breakfast grain with soluble fiber.", x: "28%", y: "88%" },
+  { id: "olive-oil", name: "Olive Oil", image: "assets/images/real/olive-oil.jpg", categories: ["oils", "advanced"], benefits: ["Monounsaturated fats", "Polyphenols", "Kitchen staple"], note: "A classic fat for salads, vegetables, and sauces.", x: "48%", y: "83%" },
+  { id: "walnuts", name: "Walnuts", image: "assets/images/real/walnuts.jpg", categories: ["oils", "protein", "fiber"], benefits: ["Healthy fats", "Minerals", "Crunch"], note: "A dense topping for breakfast bowls and salads.", x: "62%", y: "87%" },
+  { id: "yogurt", name: "Yogurt", image: "assets/images/real/yogurt.jpg", categories: ["protein", "advanced"], benefits: ["Protein", "Fermented", "Calcium"], note: "A fermented base for breakfast, sauces, or snacks.", x: "73%", y: "72%" },
+  { id: "sweet-potato", name: "Sweet Potato", image: "assets/images/real/sweet-potato.jpg", categories: ["carbs", "fiber"], benefits: ["Slow carbs", "Beta carotene", "Comforting"], note: "A bright, filling carbohydrate for bowls and plates.", x: "88%", y: "62%" },
+  { id: "cacao", name: "Cacao", image: "assets/images/real/cacao.jpg", categories: ["advanced", "oils"], benefits: ["Polyphenols", "Magnesium", "Deep flavor"], note: "A rich ingredient for smoothies, yogurt, and warm drinks.", x: "91%", y: "38%" },
+  { id: "pumpkin-seeds", name: "Pumpkin Seeds", image: "assets/images/real/pumpkin-seeds.jpg", categories: ["protein", "oils", "fiber"], benefits: ["Zinc", "Magnesium", "Protein"], note: "A small topping with useful minerals and texture.", x: "86%", y: "87%" }
 ];
 
 const supplements = [
@@ -41,6 +41,7 @@ function saveItem(item) {
 function renderHome() {
   const orbit = document.querySelector("#food-orbit");
   const detailTitle = document.querySelector("#detail-title");
+  const detailImage = document.querySelector("#detail-image");
   const detailBenefits = document.querySelector("#detail-benefits");
   const addButton = document.querySelector("#add-to-list");
   const openDetail = document.querySelector("#open-detail");
@@ -53,6 +54,8 @@ function renderHome() {
   function updateDetail(food) {
     selected = food;
     detailTitle.textContent = food.name;
+    detailImage.src = food.image;
+    detailImage.alt = food.name;
     detailBenefits.innerHTML = food.benefits.map((benefit) => `<li>${benefit}</li>`).join("");
     openDetail.href = `foods.html#${food.id}`;
     savedNote.textContent = "";
@@ -63,8 +66,8 @@ function renderHome() {
   }
 
   function renderBubbles() {
-    orbit.innerHTML = foods.map((food) => `
-      <button class="food-bubble ${food.center ? "is-center" : ""} ${food.categories.includes(activeFilter) ? "" : "is-muted"}" type="button" data-food="${food.id}" style="--x:${food.x}; --y:${food.y};" aria-label="${food.name}">
+    orbit.innerHTML = foods.map((food, index) => `
+      <button class="food-bubble ${food.center ? "is-center" : ""} ${food.categories.includes(activeFilter) ? "" : "is-muted"}" type="button" data-food="${food.id}" style="--x:${food.x}; --y:${food.y}; --delay:${index * -0.43}s; --float:${food.center ? "8px" : "13px"};" aria-label="${food.name}">
         <img src="${food.image}" alt="">
         <span class="bubble-label">${food.name}<span class="mini-action">View benefits</span></span>
       </button>

@@ -122,6 +122,8 @@ select {
 
 .food-bubble {
   --size: 108px;
+  --delay: 0s;
+  --float: 11px;
   align-items: center;
   background: var(--surface);
   border: 1px solid rgba(226, 233, 225, 0.95);
@@ -135,9 +137,12 @@ select {
   padding: 7px;
   position: absolute;
   top: var(--y);
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 180ms ease, opacity 180ms ease, filter 180ms ease, box-shadow 180ms ease;
+  transform: scale(1);
+  translate: -50% -50%;
+  transition: transform 210ms ease, opacity 210ms ease, filter 210ms ease, box-shadow 210ms ease, translate 210ms ease;
   width: var(--size);
+  animation: bubble-float 6.8s ease-in-out infinite;
+  animation-delay: var(--delay);
 }
 
 .food-bubble img {
@@ -157,13 +162,17 @@ select {
 .food-bubble.is-focused,
 .food-bubble:hover,
 .food-bubble:focus-visible {
-  transform: translate(-50%, -50%) scale(1.13);
+  animation-play-state: paused;
+  box-shadow: 0 30px 82px rgba(37, 70, 42, 0.24);
+  filter: saturate(1.12) contrast(1.03);
+  transform: scale(1.15);
   z-index: 8;
 }
 
 .food-bubble.is-muted {
-  filter: saturate(0.65);
-  opacity: 0.38;
+  filter: saturate(0.48) blur(0.5px);
+  opacity: 0.27;
+  translate: -50% calc(-50% + 12px);
 }
 
 .bubble-label {
@@ -204,6 +213,7 @@ select {
   top: 128px;
   width: min(300px, calc(100vw - 36px));
   z-index: 12;
+  animation: detail-in 240ms ease both;
 }
 
 .detail-card.is-hidden {
@@ -213,6 +223,15 @@ select {
 .detail-card h2 {
   font-size: 1.1rem;
   margin: 0 28px 16px 0;
+}
+
+.detail-image {
+  aspect-ratio: 1.35;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 16px;
+  object-fit: cover;
+  width: 100%;
 }
 
 .close-detail {
@@ -275,6 +294,12 @@ select {
   background: var(--leaf);
   color: white;
   width: 100%;
+}
+
+.button.primary:hover,
+.button.ghost:hover,
+.filter-button:hover {
+  transform: translateY(-1px);
 }
 
 .button.ghost {
@@ -382,6 +407,12 @@ h2 {
   box-shadow: 0 14px 38px rgba(65, 86, 70, 0.08);
   min-height: 280px;
   padding: 18px;
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.catalog-card:hover {
+  box-shadow: 0 20px 52px rgba(65, 86, 70, 0.13);
+  transform: translateY(-3px);
 }
 
 .catalog-card img {
@@ -440,24 +471,29 @@ h2 {
 }
 
 .gallery-strip img {
+  aspect-ratio: 1;
   background: white;
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 8px;
   width: 100%;
+  object-fit: cover;
 }
 
 .lumina-panel {
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(239, 247, 238, 0.96)),
-    url("assets/images/broccoli.svg");
-  background-position: center;
-  background-size: cover;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(239, 247, 238, 0.98));
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: var(--shadow);
   max-width: 980px;
   padding: clamp(28px, 6vw, 72px);
+}
+
+.lumina-logo {
+  display: block;
+  height: 82px;
+  margin-bottom: 28px;
+  width: 82px;
 }
 
 .lumina-actions {
@@ -487,6 +523,29 @@ h2 {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+@keyframes bubble-float {
+  0%,
+  100% {
+    translate: -50% -50%;
+  }
+
+  50% {
+    translate: -50% calc(-50% - var(--float));
+  }
+}
+
+@keyframes detail-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 @media (max-width: 1080px) {
@@ -530,7 +589,9 @@ h2 {
     left: auto;
     position: relative;
     top: auto;
+    animation: none;
     transform: none;
+    translate: none;
     width: 100%;
   }
 
@@ -538,6 +599,10 @@ h2 {
   .food-bubble:focus-visible,
   .food-bubble.is-focused {
     transform: scale(1.04);
+  }
+
+  .food-bubble.is-muted {
+    translate: none;
   }
 
   .bubble-label {
