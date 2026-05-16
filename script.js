@@ -59,6 +59,7 @@ function renderHome() {
     detailTitle.textContent = food.name;
     detailImage.src = food.image;
     detailImage.alt = food.name;
+    detailImage.draggable = false;
     detailBenefits.innerHTML = food.benefits.map((benefit) => `<li>${benefit}</li>`).join("");
     openDetail.href = `foods.html#${food.id}`;
     savedNote.textContent = "";

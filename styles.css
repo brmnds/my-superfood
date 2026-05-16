@@ -262,6 +262,9 @@ select {
   display: block;
   margin-bottom: 16px;
   object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
   width: 100%;
 }
 
