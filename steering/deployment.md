@@ -27,6 +27,16 @@ Use:
 
 This is preferred over Amplify for the current version because the app is static and does not need a framework build pipeline, branch previews, or managed backend workflows yet.
 
+## Live AWS Resources
+
+- AWS account: `803663093100`
+- Route 53 hosted zone: `Z0623703111ISXQN9E14T`
+- S3 bucket: `my-superfood-com-site`
+- CloudFront distribution: `E35C2BOUS31X5M`
+- CloudFront domain: `d9jbqlvbu2y8q.cloudfront.net`
+- CloudFront Origin Access Control: `ERNA4ANKIMX0O`
+- ACM certificate: `arn:aws:acm:us-east-1:803663093100:certificate/950fa921-7eca-4bce-bc3e-a0f9d61ee14c`
+
 ## Deployment Flow
 
 1. Verify AWS identity before making infrastructure changes:
