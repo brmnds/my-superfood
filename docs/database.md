@@ -1,0 +1,103 @@
+# Database
+
+My Superfood now has a small AWS-backed persistence layer for saved list items.
+
+## Chosen Option
+
+Use DynamoDB with provisioned capacity:
+
+- Table: `my-superfood-list-items`
+- Region: `eu-central-1`
+- Billing mode: provisioned capacity
+- Capacity: `1` read capacity unit, `1` write capacity unit
+- Primary key:
+  - Partition key: `clientId` string
+  - Sort key: `itemKey` string
+
+This is intentionally cheap and low-maintenance. It avoids running a relational database instance and keeps the project separate from the LuminaOS production database.
+
+## API
+
+The browser does not talk to DynamoDB directly. It calls a Lambda Function URL:
+
+```text
+https://l36bksjavuxnp45gl5fel2jkbq0ertbm.lambda-url.eu-central-1.on.aws
+```
+
+Lambda:
+
+- Function: `my-superfood-list-api`
+- Runtime: Node.js 20
+- Memory: 128 MB
+- Timeout: 10 seconds
+- Role: `my-superfood-list-api-role`
+
+Allowed CORS origins:
+
+- `https://my-superfood.com`
+- `https://www.my-superfood.com`
+- `http://localhost:4173`
+
+## Data Model
+
+The current v1 does not have real user accounts. Each browser gets an anonymous client id stored in local storage under:
+
+```text
+my-superfood-client-id
+```
+
+Saved list items are stored under:
+
+```text
+clientId = anonymous browser id
+itemKey = <type>#<id>
+```
+
+Stored fields:
+
+- `id`
+- `type`
+- `name`
+- `image`
+- `note`
+- `updatedAt`
+
+This is not a sensitive-data store and should not be used for private health data.
+
+## Frontend Behavior
+
+The frontend still writes to `localStorage` first under:
+
+```text
+my-superfood-list
+```
+
+Then it tries to save the same item to DynamoDB through the Lambda API. If the API is unavailable, the local list still works. `lists.html` renders the local list immediately and then refreshes from DynamoDB when the API responds.
+
+## Cost Guardrails
+
+- Keep DynamoDB provisioned at `1` RCU / `1` WCU until usage proves otherwise.
+- Keep Lambda at 128 MB.
+- Do not add API Gateway unless Function URL becomes too limited.
+- Do not use the LuminaOS database unless My Superfood becomes a real LuminaOS product surface with shared auth and a deliberate data model.
+- Do not store secrets or medical/private health data in this v1 list table.
+
+## Verification
+
+Smoke test save:
+
+```bash
+curl -s -i \
+  -H 'Origin: http://localhost:4173' \
+  -H 'Content-Type: application/json' \
+  -X POST 'https://l36bksjavuxnp45gl5fel2jkbq0ertbm.lambda-url.eu-central-1.on.aws/' \
+  --data '{"clientId":"codex-smoke-test","item":{"type":"Food","id":"broccoli","name":"Broccoli","image":"assets/images/real/broccoli.jpg","note":"Smoke test item"}}'
+```
+
+Smoke test read:
+
+```bash
+curl -s -i \
+  -H 'Origin: http://localhost:4173' \
+  'https://l36bksjavuxnp45gl5fel2jkbq0ertbm.lambda-url.eu-central-1.on.aws/?clientId=codex-smoke-test'
+```

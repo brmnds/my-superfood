@@ -2,7 +2,7 @@
 
 A bright static food and nutrition website for discovering superfoods, supplements, healthy recipes, saved lists, and a LuminaOS habit handoff.
 
-The first version is intentionally simple: plain HTML, CSS, and JavaScript with local image assets.
+The first version is intentionally simple: plain HTML, CSS, and JavaScript with local image assets plus a tiny AWS persistence layer for saved lists.
 
 ## Pages
 
@@ -10,7 +10,7 @@ The first version is intentionally simple: plain HTML, CSS, and JavaScript with 
 - `foods.html` - list/catalog view of superfoods.
 - `supplements.html` - supplement cards with source labels.
 - `recipes.html` - healthy recipe feature page.
-- `lists.html` - local saved list powered by browser `localStorage`.
+- `lists.html` - saved list powered by browser `localStorage` with DynamoDB sync.
 - `luminaos.html` - LuminaOS handoff page.
 
 ## Local Preview
@@ -29,7 +29,14 @@ http://localhost:4173/index.html
 
 ## Technology
 
-This repo currently has no package manager, build step, backend, or SDK dependency. It does not require `npm install`.
+This repo currently has no package manager or frontend build step. It does not require `npm install`.
+
+Saved lists use a small AWS backend:
+
+- DynamoDB table: `my-superfood-list-items`
+- Lambda Function URL: `https://l36bksjavuxnp45gl5fel2jkbq0ertbm.lambda-url.eu-central-1.on.aws`
+
+See `docs/database.md`.
 
 The local agent instructions are in `AGENTS.md`.
 
@@ -45,6 +52,11 @@ Steering docs:
 Image validation:
 
 - `docs/image-validation.md`
+
+Backend docs:
+
+- `docs/database.md`
+- `backend/README.md`
 
 ## Deployment
 

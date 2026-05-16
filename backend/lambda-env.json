@@ -1,0 +1,6 @@
+{
+  "Variables": {
+    "TABLE_NAME": "my-superfood-list-items",
+    "ALLOWED_ORIGINS": "https://my-superfood.com,https://www.my-superfood.com,http://localhost:4173"
+  }
+}

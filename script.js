@@ -25,17 +25,64 @@ const supplements = [
 ];
 
 const page = document.body.dataset.page;
+const listApiUrl = "https://l36bksjavuxnp45gl5fel2jkbq0ertbm.lambda-url.eu-central-1.on.aws";
+const listStorageKey = "my-superfood-list";
+const clientStorageKey = "my-superfood-client-id";
 
 function getList() {
-  return JSON.parse(localStorage.getItem("my-superfood-list") || "[]");
+  return JSON.parse(localStorage.getItem(listStorageKey) || "[]");
+}
+
+function setList(list) {
+  localStorage.setItem(listStorageKey, JSON.stringify(list));
+}
+
+function getClientId() {
+  let clientId = localStorage.getItem(clientStorageKey);
+  if (!clientId) {
+    clientId = crypto.randomUUID();
+    localStorage.setItem(clientStorageKey, clientId);
+  }
+  return clientId;
+}
+
+function hasListApi() {
+  return listApiUrl.startsWith("https://");
+}
+
+async function fetchRemoteList() {
+  if (!hasListApi()) return [];
+
+  const url = `${listApiUrl}/?clientId=${encodeURIComponent(getClientId())}`;
+  const response = await fetch(url, { headers: { accept: "application/json" } });
+  if (!response.ok) throw new Error(`List API returned ${response.status}`);
+
+  const payload = await response.json();
+  return Array.isArray(payload.items) ? payload.items : [];
+}
+
+async function saveRemoteItem(item) {
+  if (!hasListApi()) return;
+
+  const response = await fetch(listApiUrl, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ clientId: getClientId(), item }),
+  });
+
+  if (!response.ok) throw new Error(`List API returned ${response.status}`);
 }
 
 function saveItem(item) {
   const list = getList();
   if (!list.some((entry) => entry.id === item.id)) {
     list.push(item);
-    localStorage.setItem("my-superfood-list", JSON.stringify(list));
+    setList(list);
   }
+
+  saveRemoteItem(item).catch((error) => {
+    console.warn("Remote list save failed; local list still saved.", error);
+  });
 }
 
 function renderHome() {
@@ -270,8 +317,8 @@ function renderSupplements() {
 
 function renderSavedList() {
   const target = document.querySelector("#saved-list");
-  const list = getList();
 
+  function render(list) {
   if (list.length === 0) {
     target.innerHTML = `<article class="empty-state">No saved items yet. Add foods from the landing page or supplements from the supplement catalog.</article>`;
     return;
@@ -285,6 +332,19 @@ function renderSavedList() {
       <p>${item.note}</p>
     </article>
   `).join("");
+  }
+
+  render(getList());
+
+  fetchRemoteList()
+    .then((remoteList) => {
+      if (remoteList.length === 0) return;
+      setList(remoteList);
+      render(remoteList);
+    })
+    .catch((error) => {
+      console.warn("Remote list load failed; showing local list.", error);
+    });
 }
 
 if (page === "home") renderHome();

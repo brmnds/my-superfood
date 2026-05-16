@@ -24,6 +24,8 @@ Use:
 - Amazon CloudFront for public delivery, HTTPS, compression, caching, and custom domain support.
 - AWS Certificate Manager in `us-east-1` for the CloudFront TLS certificate.
 - Route 53 for DNS alias records.
+- DynamoDB for cheap saved-list persistence.
+- Lambda Function URL for the browser-facing saved-list API.
 
 This is preferred over Amplify for the current version because the app is static and does not need a framework build pipeline, branch previews, or managed backend workflows yet.
 
@@ -36,6 +38,9 @@ This is preferred over Amplify for the current version because the app is static
 - CloudFront domain: `d9jbqlvbu2y8q.cloudfront.net`
 - CloudFront Origin Access Control: `ERNA4ANKIMX0O`
 - ACM certificate: `arn:aws:acm:us-east-1:803663093100:certificate/950fa921-7eca-4bce-bc3e-a0f9d61ee14c`
+- DynamoDB table: `my-superfood-list-items`
+- Lambda function: `my-superfood-list-api`
+- Lambda Function URL: `https://l36bksjavuxnp45gl5fel2jkbq0ertbm.lambda-url.eu-central-1.on.aws`
 
 ## Deployment Flow
 
@@ -77,6 +82,17 @@ This is preferred over Amplify for the current version because the app is static
    - `A`/`AAAA` for `www.my-superfood.com` to CloudFront.
 
 9. Invalidate CloudFront after uploads.
+
+## Database Flow
+
+- Keep the DynamoDB table in `eu-central-1`.
+- Use provisioned capacity at `1` RCU / `1` WCU until traffic requires a change.
+- Keep the Lambda function at 128 MB and 10 second timeout.
+- Keep Function URL CORS restricted to:
+  - `https://my-superfood.com`
+  - `https://www.my-superfood.com`
+  - `http://localhost:4173`
+- Keep the My Superfood database separate from the LuminaOS database unless there is an explicit product reason to merge identity and data.
 
 ## Operational Notes
 

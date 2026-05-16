@@ -1,0 +1,16 @@
+{
+  "AllowCredentials": false,
+  "AllowHeaders": [
+    "content-type"
+  ],
+  "AllowMethods": [
+    "GET",
+    "POST"
+  ],
+  "AllowOrigins": [
+    "https://my-superfood.com",
+    "https://www.my-superfood.com",
+    "http://localhost:4173"
+  ],
+  "MaxAge": 300
+}
