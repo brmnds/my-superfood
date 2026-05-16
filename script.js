@@ -53,6 +53,8 @@ function renderHome() {
   let cloudX = 0;
   let cloudY = 0;
   let didPan = false;
+  let suppressHoverOpen = false;
+  let closePoint = { x: 0, y: 0 };
 
   function updateDetail(food) {
     selected = food;
@@ -95,13 +97,20 @@ function renderHome() {
 
     document.querySelectorAll(".food-bubble").forEach((button) => {
       const food = foods.find((entry) => entry.id === button.dataset.food);
-      button.addEventListener("mouseenter", () => updateDetail(food));
-      button.addEventListener("focus", () => updateDetail(food));
+      button.addEventListener("mouseenter", () => {
+        if (suppressHoverOpen) return;
+        updateDetail(food);
+      });
+      button.addEventListener("focus", () => {
+        suppressHoverOpen = false;
+        updateDetail(food);
+      });
       button.addEventListener("click", (event) => {
         if (didPan) {
           event.preventDefault();
           return;
         }
+        suppressHoverOpen = false;
         updateDetail(food);
       });
     });
@@ -125,8 +134,25 @@ function renderHome() {
     savedNote.textContent = `${selected.name} added to your list.`;
   });
 
-  closeDetail.addEventListener("click", () => {
+  closeDetail.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    suppressHoverOpen = true;
+    closePoint = { x: event.clientX, y: event.clientY };
     detailCard.classList.add("is-hidden");
+  });
+
+  document.addEventListener("pointermove", (event) => {
+    if (!suppressHoverOpen) return;
+    const moved = Math.hypot(event.clientX - closePoint.x, event.clientY - closePoint.y);
+    if (moved < 10) return;
+
+    suppressHoverOpen = false;
+    const bubble = event.target.closest?.(".food-bubble");
+    if (!bubble) return;
+
+    const food = foods.find((entry) => entry.id === bubble.dataset.food);
+    if (food) updateDetail(food);
   });
 
   detailCard.addEventListener("pointerdown", (event) => {
