@@ -37,6 +37,14 @@ Steering docs:
 
 - `steering/technology.md`
 - `steering/deployment.md`
+- `steering/pictures-food.md`
+- `steering/pictures-recipes.md`
+- `steering/pictures-supplements.md`
+- `steering/pictures-brand.md`
+
+Image validation:
+
+- `docs/image-validation.md`
 
 ## Deployment
 

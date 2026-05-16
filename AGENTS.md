@@ -28,6 +28,12 @@ http://localhost:4173/index.html
 - Store local visual assets in `assets/images/`.
 - Do not commit `.playwright-cli/` browser verification output.
 - Keep generated or downloaded image source notes in `assets/images/real/sources.tsv`.
+- Follow the picture steering files before adding or replacing visuals:
+  - `steering/pictures-food.md`
+  - `steering/pictures-recipes.md`
+  - `steering/pictures-supplements.md`
+  - `steering/pictures-brand.md`
+- Update `docs/image-validation.md` after validating or replacing image assets.
 
 ## Deployment Defaults
 
