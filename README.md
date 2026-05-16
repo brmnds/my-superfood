@@ -8,9 +8,9 @@ The first version is intentionally simple: plain HTML, CSS, and JavaScript with 
 
 - `index.html` - interactive Apple Watch-style superfood landing page.
 - `foods.html` - list/catalog view of superfoods.
-- `supplements.html` - supplement cards with source labels.
+- `supplements.html` - table-first supplement product and ingredient catalog with source labels.
 - `recipes.html` - healthy recipe feature page.
-- `lists.html` - saved list powered by browser `localStorage` with DynamoDB sync.
+- `lists.html` - saved list powered by browser `localStorage`, anonymous DynamoDB sync, and optional LuminaOS account sync.
 - `luminaos.html` - LuminaOS handoff page.
 
 ## Local Preview
@@ -35,6 +35,13 @@ Saved lists use a small AWS backend:
 
 - DynamoDB table: `my-superfood-list-items`
 - Lambda Function URL: `https://l36bksjavuxnp45gl5fel2jkbq0ertbm.lambda-url.eu-central-1.on.aws`
+- Optional production account sync through `/api/*` on `my-superfood.com`
+
+The supplement catalog has a separate read-only DynamoDB/Lambda path with local seed fallback:
+
+- Seed: `data/supplement-catalog.seed.json`
+- Tables: `my-superfood-supplements`, `my-superfood-supplement-products`
+- Routes: `GET /supplements`, `GET /products`
 
 See `docs/database.md`.
 
@@ -57,6 +64,8 @@ Backend docs:
 
 - `docs/database.md`
 - `backend/README.md`
+- `docs/luminaos-auth-handover.md`
+- `docs/supplement-catalog-source-policy.md`
 
 ## Deployment
 
@@ -75,8 +84,15 @@ Run these before committing:
 
 ```bash
 node --check script.js
+node --check backend/list-api.mjs
+node --check backend/catalog-api.mjs
+node --check scripts/validate-supplement-catalog.mjs
+node --check scripts/seed-supplement-catalog.mjs
+node scripts/validate-supplement-catalog.mjs
 git diff --check
 ```
+
+For production smoke checks, verify that public pages still return `200`, `/api/auth/session` returns unauthenticated safe JSON without a session, `/api/auth/start` redirects to the configured LuminaOS Cognito client, and anonymous `/api/list` reads/writes still work before login.
 
 ## GitHub
 

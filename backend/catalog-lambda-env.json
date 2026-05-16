@@ -1,0 +1,6 @@
+{
+  "Variables": {
+    "SUPPLEMENTS_TABLE": "my-superfood-supplements",
+    "SUPPLEMENT_PRODUCTS_TABLE": "my-superfood-supplement-products"
+  }
+}

@@ -1,6 +1,16 @@
 {
   "Variables": {
     "TABLE_NAME": "my-superfood-list-items",
-    "ALLOWED_ORIGINS": "https://my-superfood.com,https://www.my-superfood.com,http://localhost:4173"
+    "ALLOWED_ORIGINS": "https://my-superfood.com,https://www.my-superfood.com,http://localhost:4173",
+    "MY_SUPERFOOD_BASE_URL": "https://my-superfood.com",
+    "MY_SUPERFOOD_AUTH_REDIRECT_URI": "https://my-superfood.com/api/auth/callback",
+    "MY_SUPERFOOD_SESSION_COOKIE": "my_superfood_session",
+    "LUMINAOS_OAUTH_AUTHORIZE_URL": "https://luminaos.app/api/auth/oauth/authorize",
+    "LUMINAOS_OAUTH_TOKEN_URL": "https://luminaos.app/api/auth/oauth/token",
+    "LUMINAOS_OAUTH_SCOPE": "openid email profile",
+    "LUMINAOS_OAUTH_CLIENT_ID": "set-in-aws",
+    "LUMINAOS_OAUTH_JWKS_URL": "set-in-aws",
+    "LUMINAOS_OAUTH_ISSUER": "set-in-aws",
+    "MY_SUPERFOOD_SESSION_SECRET": "set-in-aws-secrets"
   }
 }

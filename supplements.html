@@ -19,16 +19,36 @@
     </header>
     <main class="page-shell">
       <section class="page-heading">
-        <p class="eyebrow">Supplement protocols</p>
-        <h1>Supplements with clear source labels.</h1>
-        <p>Each card separates what Tilman Resch is taking from what public protocols or general recommendations mention.</p>
-        <div class="chip-row" aria-label="Supplement source filters">
-          <span class="chip active">Bryan Johnson</span>
-          <span class="chip">Tilman Resch</span>
-          <span class="chip">Generally recommended</span>
+        <p class="eyebrow">Supplement database</p>
+        <h1>Products and supplement primitives.</h1>
+        <p>Compare purchasable supplement products against the underlying ingredients they contain. Product label amounts are tracked separately from general daily recommendation ranges.</p>
+      </section>
+      <section class="supplement-browser" aria-label="Supplement catalog">
+        <div class="table-toolbar">
+          <div class="tab-list" role="tablist" aria-label="Supplement catalog views">
+            <button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab="products">Products</button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="ingredients">Ingredients</button>
+          </div>
+          <div class="status-note" id="catalog-status" role="status">Loading catalog...</div>
+        </div>
+
+        <div class="category-filter-row" aria-label="Supplement category filters">
+          <button class="filter-button active" type="button" data-catalog-filter="all">All</button>
+          <button class="filter-button" type="button" data-catalog-filter="essentials">Essentials</button>
+          <button class="filter-button" type="button" data-catalog-filter="longevity">Longevity</button>
+          <button class="filter-button" type="button" data-catalog-filter="brain">Brain</button>
+          <button class="filter-button" type="button" data-catalog-filter="energy">Energy</button>
+          <button class="filter-button" type="button" data-catalog-filter="skin">Skin</button>
+          <button class="filter-button" type="button" data-catalog-filter="recovery">Recovery</button>
+          <button class="filter-button" type="button" data-catalog-filter="inflammation">Inflammation</button>
+          <button class="filter-button" type="button" data-catalog-filter="heart">Heart</button>
+          <button class="filter-button" type="button" data-catalog-filter="needs review">Needs review</button>
+        </div>
+
+        <div class="table-wrap">
+          <table class="catalog-table" id="supplement-catalog-table"></table>
         </div>
       </section>
-      <section class="catalog-grid supplement-grid" id="supplement-catalog" aria-label="Supplement catalog"></section>
     </main>
     <script src="script.js"></script>
   </body>

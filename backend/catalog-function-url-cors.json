@@ -1,12 +1,10 @@
 {
-  "AllowCredentials": true,
+  "AllowCredentials": false,
   "AllowHeaders": [
     "content-type"
   ],
   "AllowMethods": [
-    "GET",
-    "POST",
-    "OPTIONS"
+    "GET"
   ],
   "AllowOrigins": [
     "https://my-superfood.com",

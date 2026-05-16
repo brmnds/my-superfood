@@ -21,7 +21,11 @@
       <section class="page-heading">
         <p class="eyebrow">Saved list</p>
         <h1>Foods and supplements you want to keep close.</h1>
-        <p>This first version saves locally in this browser. Account sync can come later.</p>
+        <p id="saved-list-intro">Saved in this browser. Sign in with LuminaOS to sync your list.</p>
+        <div class="account-sync-panel">
+          <p data-auth-status>Checking LuminaOS sync...</p>
+          <div class="lumina-actions" data-auth-actions></div>
+        </div>
       </section>
       <section class="catalog-grid" id="saved-list" aria-label="Saved foods and supplements"></section>
     </main>

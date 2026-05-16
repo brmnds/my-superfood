@@ -26,8 +26,25 @@ const supplements = [
 
 const page = document.body.dataset.page;
 const listApiUrl = "https://l36bksjavuxnp45gl5fel2jkbq0ertbm.lambda-url.eu-central-1.on.aws";
+const accountApiBaseUrl = localStorage.getItem("my-superfood-account-api-base") || (["my-superfood.com", "www.my-superfood.com"].includes(location.hostname) ? "/api" : "");
+const catalogApiUrl = "";
 const listStorageKey = "my-superfood-list";
+const accountListCacheStorageKey = "my-superfood-account-list-cache";
 const clientStorageKey = "my-superfood-client-id";
+const authState = {
+  ready: false,
+  authenticated: false,
+  user: null,
+};
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
 
 function getList() {
   return JSON.parse(localStorage.getItem(listStorageKey) || "[]");
@@ -35,6 +52,35 @@ function getList() {
 
 function setList(list) {
   localStorage.setItem(listStorageKey, JSON.stringify(list));
+}
+
+function getAccountListCache() {
+  return JSON.parse(localStorage.getItem(accountListCacheStorageKey) || "[]");
+}
+
+function setAccountListCache(list) {
+  localStorage.setItem(accountListCacheStorageKey, JSON.stringify(list));
+}
+
+function visibleList() {
+  return authState.authenticated ? getAccountListCache() : getList();
+}
+
+function setVisibleList(list) {
+  if (authState.authenticated) {
+    setAccountListCache(list);
+  } else {
+    setList(list);
+  }
+}
+
+function itemKey(item) {
+  return `${item.type}#${item.id}`;
+}
+
+function addUniqueItem(list, item) {
+  if (list.some((entry) => itemKey(entry) === itemKey(item))) return list;
+  return [...list, item];
 }
 
 function getClientId() {
@@ -50,7 +96,90 @@ function hasListApi() {
   return listApiUrl.startsWith("https://");
 }
 
+function hasAccountApi() {
+  return accountApiBaseUrl.length > 0;
+}
+
+function accountApiPath(path) {
+  return `${accountApiBaseUrl}${path}`;
+}
+
+async function loadAuthSession() {
+  if (!hasAccountApi()) {
+    authState.ready = true;
+    return authState;
+  }
+
+  try {
+    const response = await fetch(accountApiPath("/auth/session"), {
+      credentials: "include",
+      headers: { accept: "application/json" },
+    });
+    if (!response.ok) throw new Error(`Auth session returned ${response.status}`);
+    const payload = await response.json();
+    authState.authenticated = Boolean(payload.authenticated);
+    authState.user = payload.user || null;
+    if (!authState.authenticated) localStorage.removeItem(accountListCacheStorageKey);
+  } catch (error) {
+    authState.authenticated = false;
+    authState.user = null;
+    localStorage.removeItem(accountListCacheStorageKey);
+    console.warn("LuminaOS session check failed; staying in browser-local mode.", error);
+  } finally {
+    authState.ready = true;
+  }
+
+  return authState;
+}
+
+async function mergeLocalListIntoAccount() {
+  if (!hasAccountApi() || !authState.authenticated || !authState.user?.userId) return;
+
+  const mergeKey = `my-superfood-merged-${authState.user.userId}`;
+  if (localStorage.getItem(mergeKey) === "true") return;
+
+  const items = getList();
+  if (items.length === 0) {
+    localStorage.setItem(mergeKey, "true");
+    return;
+  }
+
+  const response = await fetch(accountApiPath("/list/merge"), {
+    method: "POST",
+    credentials: "include",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ items }),
+  });
+  if (!response.ok) throw new Error(`List merge returned ${response.status}`);
+
+  const payload = await response.json();
+  if (Array.isArray(payload.items)) setAccountListCache(payload.items);
+  localStorage.setItem(mergeKey, "true");
+}
+
+function clearAccountSessionState() {
+  authState.authenticated = false;
+  authState.user = null;
+  localStorage.removeItem(accountListCacheStorageKey);
+}
+
 async function fetchRemoteList() {
+  if (hasAccountApi() && authState.authenticated) {
+    const response = await fetch(accountApiPath("/list"), {
+      credentials: "include",
+      headers: { accept: "application/json" },
+    });
+    if (response.status === 401 || response.status === 403) {
+      clearAccountSessionState();
+      renderAuthControls();
+      return fetchRemoteList();
+    }
+    if (!response.ok) throw new Error(`Account list API returned ${response.status}`);
+
+    const payload = await response.json();
+    return Array.isArray(payload.items) ? payload.items : [];
+  }
+
   if (!hasListApi()) return [];
 
   const url = `${listApiUrl}/?clientId=${encodeURIComponent(getClientId())}`;
@@ -62,6 +191,24 @@ async function fetchRemoteList() {
 }
 
 async function saveRemoteItem(item) {
+  if (hasAccountApi() && authState.authenticated) {
+    const response = await fetch(accountApiPath("/list"), {
+      method: "POST",
+      credentials: "include",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ item }),
+    });
+
+    if (response.status === 401 || response.status === 403) {
+      clearAccountSessionState();
+      setList(addUniqueItem(getList(), item));
+      renderAuthControls();
+      return saveRemoteItem(item);
+    }
+    if (!response.ok) throw new Error(`Account list API returned ${response.status}`);
+    return;
+  }
+
   if (!hasListApi()) return;
 
   const response = await fetch(listApiUrl, {
@@ -74,14 +221,47 @@ async function saveRemoteItem(item) {
 }
 
 function saveItem(item) {
-  const list = getList();
-  if (!list.some((entry) => entry.id === item.id)) {
-    list.push(item);
-    setList(list);
-  }
+  setVisibleList(addUniqueItem(visibleList(), item));
 
   saveRemoteItem(item).catch((error) => {
     console.warn("Remote list save failed; local list still saved.", error);
+  });
+}
+
+function authStatusText() {
+  if (authState.authenticated) {
+    return `Synced with LuminaOS${authState.user?.displayName ? ` as ${authState.user.displayName}` : ""}.`;
+  }
+  if (hasAccountApi()) return "Saved in this browser. Sign in with LuminaOS to sync.";
+  return "Saved in this browser. Account sync activates on the My Superfood production domain.";
+}
+
+function renderAuthControls() {
+  document.querySelectorAll("[data-auth-status]").forEach((target) => {
+    target.textContent = authStatusText();
+  });
+
+  document.querySelectorAll("[data-auth-actions]").forEach((target) => {
+    if (!hasAccountApi()) {
+      target.innerHTML = `<span class="tag">LuminaOS sync available after API deployment</span>`;
+      return;
+    }
+
+    if (authState.authenticated) {
+      target.innerHTML = `<button class="button ghost auth-logout" type="button">Sign out</button>`;
+    } else {
+      target.innerHTML = `<a class="button primary" href="${accountApiPath("/auth/start")}">Sign in with LuminaOS</a>`;
+    }
+  });
+
+  document.querySelectorAll(".auth-logout").forEach((button) => {
+    button.addEventListener("click", async () => {
+      if (!hasAccountApi()) return;
+      await fetch(accountApiPath("/auth/logout"), { method: "POST", credentials: "include" });
+      clearAccountSessionState();
+      renderAuthControls();
+      if (page === "lists") renderSavedList();
+    });
   });
 }
 
@@ -295,28 +475,191 @@ function renderFoods() {
 }
 
 function renderSupplements() {
-  const catalog = document.querySelector("#supplement-catalog");
-  catalog.innerHTML = supplements.map((supplement) => `
-    <article class="catalog-card" id="${supplement.id}">
-      <img src="${supplement.image}" alt="${supplement.name}">
-      <h2>${supplement.name}</h2>
-      <p>${supplement.note}</p>
-      <div class="tag-row">${supplement.labels.map((label) => `<span class="tag">${label}</span>`).join("")}</div>
-      <button class="button ghost save-supplement" type="button" data-supplement="${supplement.id}">Add to list</button>
-    </article>
-  `).join("");
+  const table = document.querySelector("#supplement-catalog-table");
+  const status = document.querySelector("#catalog-status");
+  const tabs = document.querySelectorAll(".tab-button");
+  const filters = document.querySelectorAll("[data-catalog-filter]");
+  let activeTab = "products";
+  let activeFilter = "all";
+  let catalog = { supplements: [], products: [] };
 
-  document.querySelectorAll(".save-supplement").forEach((button) => {
+  function formatCategories(categories) {
+    return (categories || []).map((category) => `<span class="tag">${escapeHtml(category)}</span>`).join("");
+  }
+
+  function formatStatus(sourceStatus) {
+    const label = sourceStatus.replaceAll("_", " ");
+    return `<span class="source-status source-status-${escapeHtml(sourceStatus)}">${escapeHtml(label)}</span>`;
+  }
+
+  function formatAmount(amount) {
+    if (!amount) return "Needs review";
+    const values = [amount.min, amount.medium, amount.max].filter((value) => value !== null && value !== undefined);
+    if (values.length === 0) return "Needs review";
+    const uniqueValues = [...new Set(values)];
+    const numberText = uniqueValues.length === 1 ? uniqueValues[0] : `${amount.min ?? "?"}-${amount.max ?? "?"}`;
+    return `${numberText} ${amount.unit || ""}`.trim();
+  }
+
+  function productIngredientText(product) {
+    return product.ingredients.map((ingredient) => {
+      const supplement = catalog.supplements.find((entry) => entry.id === ingredient.supplementId);
+      const name = supplement?.name || ingredient.supplementId;
+      const amount = ingredient.amount === null ? "needs review" : `${ingredient.amount} ${ingredient.unit}`;
+      return `${name} ${amount}`;
+    }).join(", ");
+  }
+
+  function productsForSupplement(supplementId) {
+    return catalog.products
+      .filter((product) => product.contains.includes(supplementId))
+      .map((product) => product.name)
+      .join(", ") || "Not in current products";
+  }
+
+  function matchesFilter(entry) {
+    if (activeFilter === "all") return true;
+    if (activeFilter === "needs review") return entry.sourceStatus === "needs_review" || entry.categories.includes("needs review");
+    return entry.categories.includes(activeFilter);
+  }
+
+  function renderProducts() {
+    const products = catalog.products.filter(matchesFilter);
+    table.innerHTML = `
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Provider</th>
+          <th>Purpose</th>
+          <th>Categories</th>
+          <th>Key ingredients</th>
+          <th>Source status</th>
+          <th>Add to list</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${products.map((product) => `
+          <tr>
+            <td><strong>${escapeHtml(product.name)}</strong><span>${escapeHtml(product.productType)}</span></td>
+            <td>${escapeHtml(product.provider)}</td>
+            <td>${escapeHtml(product.purpose)}</td>
+            <td><div class="tag-row">${formatCategories(product.categories)}</div></td>
+            <td>${escapeHtml(productIngredientText(product))}</td>
+            <td>${formatStatus(product.sourceStatus)}</td>
+            <td><button class="button ghost table-action save-catalog-item" type="button" data-kind="Supplement Product" data-id="${escapeHtml(product.id)}">Add</button></td>
+          </tr>
+        `).join("") || `<tr><td colspan="7">No products match this filter.</td></tr>`}
+      </tbody>
+    `;
+  }
+
+  function renderIngredients() {
+    const ingredients = catalog.supplements.filter(matchesFilter);
+    table.innerHTML = `
+      <thead>
+        <tr>
+          <th>Supplement</th>
+          <th>Purpose</th>
+          <th>Recommended daily amount</th>
+          <th>Included in products</th>
+          <th>Source status</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${ingredients.map((supplement) => `
+          <tr>
+            <td><strong>${escapeHtml(supplement.name)}</strong><span>${escapeHtml((supplement.aliases || []).join(", "))}</span></td>
+            <td>${escapeHtml(supplement.purpose)}</td>
+            <td>${escapeHtml(formatAmount(supplement.recommendedDailyAmount))}</td>
+            <td>${escapeHtml(productsForSupplement(supplement.id))}</td>
+            <td>${formatStatus(supplement.sourceStatus)}</td>
+          </tr>
+        `).join("") || `<tr><td colspan="5">No supplements match this filter.</td></tr>`}
+      </tbody>
+    `;
+  }
+
+  function bindSaveButtons() {
+    document.querySelectorAll(".save-catalog-item").forEach((button) => {
+      button.addEventListener("click", () => {
+        const product = catalog.products.find((entry) => entry.id === button.dataset.id);
+        if (!product) return;
+        saveItem({
+          type: button.dataset.kind,
+          id: product.id,
+          name: product.name,
+          image: product.image,
+          note: product.purpose,
+        });
+        button.textContent = "Added";
+      });
+    });
+  }
+
+  function render() {
+    if (activeTab === "products") renderProducts();
+    if (activeTab === "ingredients") renderIngredients();
+    bindSaveButtons();
+  }
+
+  async function fetchCatalog() {
+    if (catalogApiUrl) {
+      try {
+        const [supplementsResponse, productsResponse] = await Promise.all([
+          fetch(`${catalogApiUrl}/supplements`, { headers: { accept: "application/json" } }),
+          fetch(`${catalogApiUrl}/products`, { headers: { accept: "application/json" } }),
+        ]);
+        if (!supplementsResponse.ok || !productsResponse.ok) throw new Error("Catalog API returned an error.");
+        const [supplementsPayload, productsPayload] = await Promise.all([supplementsResponse.json(), productsResponse.json()]);
+        status.textContent = "Loaded from catalog API.";
+        return { supplements: supplementsPayload.supplements || [], products: productsPayload.products || [] };
+      } catch (error) {
+        console.warn("Catalog API failed; loading local seed fallback.", error);
+      }
+    }
+
+    const seedResponse = await fetch("data/supplement-catalog.seed.json", { headers: { accept: "application/json" } });
+    if (!seedResponse.ok) throw new Error("Local catalog seed could not be loaded.");
+    const seed = await seedResponse.json();
+    status.textContent = "Loaded from reviewed local fallback seed.";
+    return { supplements: seed.supplements || [], products: seed.supplementProducts || [] };
+  }
+
+  tabs.forEach((button) => {
     button.addEventListener("click", () => {
-      const supplement = supplements.find((entry) => entry.id === button.dataset.supplement);
-      saveItem({ type: "Supplement", id: supplement.id, name: supplement.name, image: supplement.image, note: supplement.note });
-      button.textContent = "Added";
+      activeTab = button.dataset.tab;
+      tabs.forEach((entry) => {
+        entry.classList.toggle("active", entry === button);
+        entry.setAttribute("aria-selected", entry === button ? "true" : "false");
+      });
+      render();
     });
   });
+
+  filters.forEach((button) => {
+    button.addEventListener("click", () => {
+      activeFilter = button.dataset.catalogFilter;
+      filters.forEach((entry) => entry.classList.toggle("active", entry === button));
+      render();
+    });
+  });
+
+  fetchCatalog()
+    .then((loadedCatalog) => {
+      catalog = loadedCatalog;
+      render();
+    })
+    .catch((error) => {
+      console.error(error);
+      status.textContent = "Catalog could not be loaded.";
+      table.innerHTML = `<tbody><tr><td>Catalog could not be loaded.</td></tr></tbody>`;
+    });
 }
 
 function renderSavedList() {
   const target = document.querySelector("#saved-list");
+  const intro = document.querySelector("#saved-list-intro");
+  if (intro) intro.textContent = authStatusText();
 
   function render(list) {
   if (list.length === 0) {
@@ -334,20 +677,34 @@ function renderSavedList() {
   `).join("");
   }
 
-  render(getList());
+  render(visibleList());
+  renderAuthControls();
 
-  fetchRemoteList()
+  const remoteLoad = authReady
+    .then(() => mergeLocalListIntoAccount().catch((error) => {
+      console.warn("LuminaOS list merge failed; local list still works.", error);
+    }))
+    .then(fetchRemoteList);
+
+  remoteLoad
     .then((remoteList) => {
       if (remoteList.length === 0) return;
-      setList(remoteList);
+      setVisibleList(remoteList);
       render(remoteList);
+      if (intro) intro.textContent = authStatusText();
     })
     .catch((error) => {
       console.warn("Remote list load failed; showing local list.", error);
     });
 }
 
+const authReady = loadAuthSession().then(() => {
+  renderAuthControls();
+  return authState;
+});
+
 if (page === "home") renderHome();
 if (page === "foods") renderFoods();
 if (page === "supplements") renderSupplements();
 if (page === "lists") renderSavedList();
+if (page === "luminaos") authReady.then(renderAuthControls);

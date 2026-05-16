@@ -20,6 +20,12 @@ Then open:
 http://localhost:4173/index.html
 ```
 
+## Browser Preview
+
+Use the Codex in-app browser as the default browser for local preview and QA of this repository, especially for `localhost:4173` pages.
+
+Use Playwright only when Tilman explicitly asks for Playwright, or when the Codex in-app browser is unavailable and a browser automation fallback is needed.
+
 ## Implementation Defaults
 
 - Keep the app static for the current version.

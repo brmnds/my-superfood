@@ -1,0 +1,58 @@
+# Supplement Catalog Source Policy
+
+The supplement catalog is a reviewed informational database. It is not medical advice and does not provide personalized dosing guidance.
+
+## Naming
+
+- **Supplement** means the primitive ingredient or nutrient, for example NAC, Curcumin, Omega-3, DHA, Collagen Peptides, or Ashwagandha.
+- **Supplement Product** means a purchasable product, mix, powder, capsule, or bundle from any provider.
+- Product ingredient rows must reference primitives with `supplementId`.
+- Product display names should follow the package or official provider name. Alternate names go in `aliases`.
+
+## Sources
+
+Use sources in this order:
+
+1. Package photos supplied by Tilman.
+2. Official provider product pages.
+3. `needs_review` when neither source is clear enough.
+
+The current package-photo evidence folder is:
+
+```text
+/Users/tilmanresch/Downloads/iloveimg-converted (1)
+```
+
+The package photos are evidence and provenance, not public product thumbnails.
+
+## Source Status
+
+Allowed values:
+
+- `package_verified`: package label was readable and used for the relevant amount.
+- `website_sourced`: official provider page was used because package evidence was incomplete.
+- `needs_review`: amount or interpretation was uncertain.
+
+Do not silently guess unclear amounts. Store an ingredient with `amount: null` and `sourceStatus: "needs_review"` when needed.
+
+## Reseeding
+
+The reviewed source of truth is:
+
+```text
+data/supplement-catalog.seed.json
+```
+
+Before seeding:
+
+```bash
+node scripts/validate-supplement-catalog.mjs
+```
+
+Then import:
+
+```bash
+node scripts/seed-supplement-catalog.mjs
+```
+
+The frontend falls back to this seed file if the catalog API is unavailable.
