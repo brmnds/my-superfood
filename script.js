@@ -1,8 +1,8 @@
 const foods = [
   { id: "broccoli", name: "Broccoli", image: "assets/images/real/broccoli.jpg", categories: ["fiber", "advanced"], benefits: ["Fiber rich", "Vitamin C", "Supports gut health"], note: "Cruciferous vegetable with fiber, vitamin C, and plant compounds.", x: "50%", y: "47%", center: true },
   { id: "chickpeas", name: "Chickpeas", image: "assets/images/real/chickpeas.jpg", categories: ["protein", "carbs", "fiber"], benefits: ["Plant protein", "Slow carbs", "High fiber"], note: "A practical base for bowls, hummus, and satisfying meals.", x: "24%", y: "20%" },
-  { id: "lentils", name: "Lentils", image: "assets/images/real/lentils.jpg", categories: ["protein", "carbs", "fiber"], benefits: ["Protein", "Iron", "Folate"], note: "A dense pantry staple for soups, salads, and meal prep.", x: "39%", y: "16%" },
-  { id: "cauliflower", name: "Cauliflower", image: "assets/images/real/cauliflower.jpg", categories: ["fiber", "advanced"], benefits: ["Light fiber", "Vitamin C", "Cruciferous"], note: "Mild, flexible, and easy to use as a vegetable base.", x: "63%", y: "17%" },
+  { id: "lentils", name: "Lentils", image: "assets/images/real/lentils-uncooked.jpg", categories: ["protein", "carbs", "fiber"], benefits: ["Protein", "Iron", "Folate"], note: "A dense pantry staple for soups, salads, and meal prep.", x: "39%", y: "16%" },
+  { id: "cauliflower", name: "Cauliflower", image: "assets/images/real/cauliflower-market.jpg", categories: ["fiber", "advanced"], benefits: ["Light fiber", "Vitamin C", "Cruciferous"], note: "Mild, flexible, and easy to use as a vegetable base.", x: "63%", y: "17%" },
   { id: "banana", name: "Banana", image: "assets/images/real/banana-transparent.png", categories: ["carbs", "fiber"], benefits: ["Quick carbs", "Potassium", "Portable"], note: "A simple energy fruit for breakfast or training snacks.", x: "79%", y: "20%" },
   { id: "avocado", name: "Avocado", image: "assets/images/real/avocado.jpg", categories: ["oils", "fiber"], benefits: ["Healthy fats", "Potassium", "Satisfying"], note: "Creamy fats and fiber that make simple meals feel complete.", x: "18%", y: "43%" },
   { id: "blueberries", name: "Blueberries", image: "assets/images/real/blueberries.jpg", categories: ["carbs", "advanced", "fiber"], benefits: ["Polyphenols", "Vitamin C", "Fresh sweetness"], note: "A colorful fruit for breakfast bowls and snacks.", x: "34%", y: "38%" },
@@ -98,6 +98,47 @@ function renderHome() {
 
   closeDetail.addEventListener("click", () => {
     detailCard.classList.add("is-hidden");
+  });
+
+  detailCard.addEventListener("pointerdown", (event) => {
+    if (window.matchMedia("(max-width: 780px)").matches) return;
+    if (event.target.closest("button, a")) return;
+
+    const stage = document.querySelector(".bubble-stage");
+    const stageRect = stage.getBoundingClientRect();
+    const cardRect = detailCard.getBoundingClientRect();
+    const offsetX = event.clientX - cardRect.left;
+    const offsetY = event.clientY - cardRect.top;
+
+    detailCard.classList.add("is-dragging");
+    detailCard.setPointerCapture(event.pointerId);
+
+    const moveCard = (moveEvent) => {
+      const nextX = Math.min(
+        Math.max(8, moveEvent.clientX - stageRect.left - offsetX),
+        stageRect.width - cardRect.width - 8
+      );
+      const nextY = Math.min(
+        Math.max(8, moveEvent.clientY - stageRect.top - offsetY),
+        stageRect.height - cardRect.height - 8
+      );
+
+      detailCard.style.left = `${nextX}px`;
+      detailCard.style.top = `${nextY}px`;
+      detailCard.style.right = "auto";
+      detailCard.style.bottom = "auto";
+    };
+
+    const stopDrag = () => {
+      detailCard.classList.remove("is-dragging");
+      detailCard.removeEventListener("pointermove", moveCard);
+      detailCard.removeEventListener("pointerup", stopDrag);
+      detailCard.removeEventListener("pointercancel", stopDrag);
+    };
+
+    detailCard.addEventListener("pointermove", moveCard);
+    detailCard.addEventListener("pointerup", stopDrag);
+    detailCard.addEventListener("pointercancel", stopDrag);
   });
 
   renderBubbles();
