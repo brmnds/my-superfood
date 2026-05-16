@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Superfood</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="My Superfood home">
+        <span class="brand-mark">MS</span>
+        <span>My Superfood</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#planner">Planner</a>
+        <a href="#foods">Foods</a>
+        <a href="#guides">Guides</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Food intelligence for real routines</p>
+          <h1 id="hero-title">Build nourishing meals without turning lunch into a research project.</h1>
+          <p class="hero-text">
+            Plan balanced plates, discover ingredient benefits, and turn everyday groceries into food that actually supports your energy.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#planner">Build a plate</a>
+            <a class="button secondary" href="#foods">Explore foods</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Daily nutrition snapshot">
+          <div>
+            <span class="metric-label">Today</span>
+            <strong class="metric-value">82%</strong>
+            <span class="metric-caption">nutrition balance</span>
+          </div>
+          <ul class="balance-list">
+            <li><span>Fiber</span><strong>31g</strong></li>
+            <li><span>Protein</span><strong>92g</strong></li>
+            <li><span>Plants</span><strong>9 kinds</strong></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section planner" id="planner" aria-labelledby="planner-title">
+        <div class="section-heading">
+          <p class="eyebrow">Smart plate builder</p>
+          <h2 id="planner-title">Choose a goal and get a simple meal direction.</h2>
+        </div>
+        <div class="planner-grid">
+          <form class="goal-form" id="goal-form">
+            <label for="goal">Nutrition goal</label>
+            <select id="goal" name="goal">
+              <option value="energy">Steady energy</option>
+              <option value="recovery">Workout recovery</option>
+              <option value="focus">Deep focus</option>
+              <option value="light">Light and fresh</option>
+            </select>
+
+            <label for="base">Favorite base</label>
+            <select id="base" name="base">
+              <option value="grain">Whole grain bowl</option>
+              <option value="greens">Leafy salad</option>
+              <option value="toast">Sourdough toast</option>
+              <option value="soup">Comfort soup</option>
+            </select>
+
+            <button class="button primary" type="submit">Suggest meal</button>
+          </form>
+          <article class="meal-result" id="meal-result" aria-live="polite">
+            <p class="eyebrow">Suggested plate</p>
+            <h3>Quinoa, chickpea, avocado, spinach, lemon tahini</h3>
+            <p>Balanced slow carbs, plant protein, fats, and bright greens for a steady afternoon.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="foods" aria-labelledby="foods-title">
+        <div class="section-heading">
+          <p class="eyebrow">Ingredient library</p>
+          <h2 id="foods-title">Superfoods worth keeping in rotation.</h2>
+        </div>
+        <div class="food-grid">
+          <article class="food-card">
+            <span class="food-icon">A</span>
+            <h3>Avocado</h3>
+            <p>Monounsaturated fats, potassium, and fiber for satisfying meals.</p>
+          </article>
+          <article class="food-card">
+            <span class="food-icon">B</span>
+            <h3>Blueberries</h3>
+            <p>Polyphenols and vitamin C in a quick snack or breakfast topping.</p>
+          </article>
+          <article class="food-card">
+            <span class="food-icon">L</span>
+            <h3>Lentils</h3>
+            <p>Plant protein, iron, folate, and slow-release carbohydrates.</p>
+          </article>
+          <article class="food-card">
+            <span class="food-icon">S</span>
+            <h3>Spinach</h3>
+            <p>Leafy minerals, vitamin K, and an easy green boost for bowls.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section guides" id="guides" aria-labelledby="guides-title">
+        <div class="section-heading">
+          <p class="eyebrow">Kitchen rhythm</p>
+          <h2 id="guides-title">A practical nutrition pattern.</h2>
+        </div>
+        <ol class="guide-list">
+          <li>Anchor each meal with protein, color, fiber, and a satisfying fat.</li>
+          <li>Prep one sauce, one grain, and two vegetables to make weekday meals fast.</li>
+          <li>Use cravings as signal, then add structure instead of strict rules.</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>My Superfood</span>
+      <span>Food and nutrition planning for everyday life.</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
