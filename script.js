@@ -1,5 +1,5 @@
 const foods = [
-  { id: "broccoli", name: "Broccoli", image: "assets/images/real/broccoli.jpg", categories: ["fiber", "advanced"], benefits: ["Fiber rich", "Vitamin C", "Supports gut health"], note: "Cruciferous vegetable with fiber, vitamin C, and plant compounds.", x: "50%", y: "47%", center: true },
+  { id: "broccoli", name: "Broccoli", image: "assets/images/real/broccoli.jpg", categories: ["fiber", "advanced"], benefits: ["Fiber rich", "Vitamin C", "Supports gut health"], note: "Cruciferous vegetable with fiber, vitamin C, and plant compounds.", x: "50%", y: "47%" },
   { id: "chickpeas", name: "Chickpeas", image: "assets/images/real/chickpeas.png", categories: ["protein", "carbs", "fiber"], benefits: ["Plant protein", "Slow carbs", "High fiber"], note: "A practical base for bowls, hummus, and satisfying meals.", x: "24%", y: "20%" },
   { id: "lentils", name: "Lentils", image: "assets/images/real/lentils-uncooked.jpg", categories: ["protein", "carbs", "fiber"], benefits: ["Protein", "Iron", "Folate"], note: "A dense pantry staple for soups, salads, and meal prep.", x: "39%", y: "16%" },
   { id: "cauliflower", name: "Cauliflower", image: "assets/images/real/cauliflower.png", categories: ["fiber", "advanced"], benefits: ["Light fiber", "Vitamin C", "Cruciferous"], note: "Mild, flexible, and easy to use as a vegetable base.", x: "63%", y: "17%" },
@@ -50,6 +50,9 @@ function renderHome() {
   const closeDetail = document.querySelector(".close-detail");
   let selected = foods[0];
   let activeFilter = "fiber";
+  let cloudX = 0;
+  let cloudY = 0;
+  let didPan = false;
 
   function updateDetail(food) {
     selected = food;
@@ -60,25 +63,50 @@ function renderHome() {
     openDetail.href = `foods.html#${food.id}`;
     savedNote.textContent = "";
     detailCard.classList.remove("is-hidden");
-    document.querySelectorAll(".food-bubble").forEach((button) => {
-      button.classList.toggle("is-focused", button.dataset.food === food.id);
-    });
+    document.querySelectorAll(".food-bubble").forEach((button) => button.classList.toggle("is-selected", button.dataset.food === food.id));
+  }
+
+  function setCloudPosition(x, y) {
+    const cloud = orbit.querySelector(".food-cloud");
+    if (!cloud) return;
+
+    const orbitRect = orbit.getBoundingClientRect();
+    const cloudRect = cloud.getBoundingClientRect();
+    const minX = Math.min(0, orbitRect.width - cloudRect.width);
+    const minY = Math.min(0, orbitRect.height - cloudRect.height);
+
+    cloudX = Math.min(0, Math.max(minX, x));
+    cloudY = Math.min(0, Math.max(minY, y));
+    cloud.style.transform = `translate3d(${cloudX}px, ${cloudY}px, 0)`;
   }
 
   function renderBubbles() {
-    orbit.innerHTML = foods.map((food, index) => `
-      <button class="food-bubble ${food.center ? "is-center" : ""} ${food.categories.includes(activeFilter) ? "" : "is-muted"}" type="button" data-food="${food.id}" style="--x:${food.x}; --y:${food.y}; --delay:${index * -0.43}s; --float:${food.center ? "8px" : "13px"};" aria-label="${food.name}">
-        <img src="${food.image}" alt="">
-        <span class="bubble-label">${food.name}<span class="mini-action">View benefits</span></span>
-      </button>
-    `).join("");
+    orbit.innerHTML = `
+      <div class="food-cloud" id="food-cloud">
+        ${foods.map((food, index) => `
+          <button class="food-bubble ${food.categories.includes(activeFilter) ? "" : "is-muted"}" type="button" data-food="${food.id}" style="--x:${food.x}; --y:${food.y}; --delay:${index * -0.43}s; --float:13px;" aria-label="${food.name}">
+            <img src="${food.image}" alt="">
+            <span class="bubble-label">${food.name}<span class="mini-action">View benefits</span></span>
+          </button>
+        `).join("")}
+      </div>
+    `;
 
     document.querySelectorAll(".food-bubble").forEach((button) => {
       const food = foods.find((entry) => entry.id === button.dataset.food);
       button.addEventListener("mouseenter", () => updateDetail(food));
       button.addEventListener("focus", () => updateDetail(food));
-      button.addEventListener("click", () => updateDetail(food));
+      button.addEventListener("click", (event) => {
+        if (didPan) {
+          event.preventDefault();
+          return;
+        }
+        updateDetail(food);
+      });
     });
+
+    setCloudPosition(cloudX, cloudY);
+    updateDetail(selected);
   }
 
   document.querySelectorAll(".filter-button").forEach((button) => {
@@ -139,6 +167,41 @@ function renderHome() {
     detailCard.addEventListener("pointermove", moveCard);
     detailCard.addEventListener("pointerup", stopDrag);
     detailCard.addEventListener("pointercancel", stopDrag);
+  });
+
+  orbit.addEventListener("pointerdown", (event) => {
+    if (window.matchMedia("(max-width: 780px)").matches) return;
+    if (!event.isPrimary) return;
+
+    const startX = event.clientX;
+    const startY = event.clientY;
+    const originX = cloudX;
+    const originY = cloudY;
+    didPan = false;
+
+    orbit.classList.add("is-panning");
+    orbit.setPointerCapture(event.pointerId);
+
+    const moveCloud = (moveEvent) => {
+      const deltaX = moveEvent.clientX - startX;
+      const deltaY = moveEvent.clientY - startY;
+      if (Math.abs(deltaX) > 4 || Math.abs(deltaY) > 4) didPan = true;
+      setCloudPosition(originX + deltaX, originY + deltaY);
+    };
+
+    const stopPan = () => {
+      orbit.classList.remove("is-panning");
+      orbit.removeEventListener("pointermove", moveCloud);
+      orbit.removeEventListener("pointerup", stopPan);
+      orbit.removeEventListener("pointercancel", stopPan);
+      window.setTimeout(() => {
+        didPan = false;
+      }, 0);
+    };
+
+    orbit.addEventListener("pointermove", moveCloud);
+    orbit.addEventListener("pointerup", stopPan);
+    orbit.addEventListener("pointercancel", stopPan);
   });
 
   renderBubbles();
