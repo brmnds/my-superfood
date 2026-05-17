@@ -15,6 +15,7 @@ Small AWS backend for My Superfood saved lists and the read-only supplement cata
 - `catalog-function-url-cors.json` - catalog Function URL CORS config.
 - `catalog-table-supplements.json` - DynamoDB table definition for supplement primitives.
 - `catalog-table-products.json` - DynamoDB table definition for supplement products.
+- `clean-url-cloudfront-function.js` - CloudFront Function source for clean static page URLs.
 
 ## AWS Resources
 
@@ -107,3 +108,9 @@ aws lambda wait function-updated \
 ```
 
 See `docs/database.md` for the data model and cost notes.
+
+## Deploy Clean URL Function
+
+The production CloudFront distribution uses `backend/clean-url-cloudfront-function.js` as a viewer request function on the static site behavior. It rewrites clean paths such as `/lists` to the physical S3 object `/lists.html`, and redirects legacy `.html` URLs to their clean canonical URLs.
+
+After changing this function, publish a new CloudFront Function version, associate it with the distribution default cache behavior if needed, and invalidate CloudFront.

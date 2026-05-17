@@ -75,6 +75,13 @@ This is preferred over Amplify for the current version because the app is static
    - Default root object: `index.html`.
    - Viewer protocol policy: redirect HTTP to HTTPS.
    - Alternate domain names: `my-superfood.com`, `www.my-superfood.com`.
+   - Viewer request CloudFront Function for clean URLs:
+     - `/foods` -> `/foods.html`
+     - `/supplements` -> `/supplements.html`
+     - `/recipes` -> `/recipes.html`
+     - `/lists` -> `/lists.html`
+     - `/luminaos` -> `/luminaos.html`
+     - `/*.html` -> matching clean URL with a `301`.
 
 8. Add Route 53 alias records:
 
@@ -107,6 +114,9 @@ Verify:
 
 - `https://my-superfood.com`
 - `https://www.my-superfood.com`
-- direct navigation to static pages such as `/foods.html`
+- direct navigation to clean pages such as `/foods`
+- `.html` URLs redirect to clean equivalents
+- canonical tags point at clean URLs
+- `robots.txt` and `sitemap.xml` load
 - image assets load correctly
 - browser console has no missing asset errors

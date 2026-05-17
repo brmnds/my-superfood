@@ -27,6 +27,8 @@ Then open:
 http://localhost:4173/index.html
 ```
 
+Production uses clean URLs through CloudFront, for example `/foods`, `/supplements`, and `/lists`. Local preview still serves the physical `.html` files directly unless you use a local server with rewrite support.
+
 ## Technology
 
 This repo currently has no package manager or frontend build step. It does not require `npm install`.
@@ -73,6 +75,7 @@ The chosen production deployment path is:
 
 - S3 for static files.
 - CloudFront for HTTPS and global delivery.
+- CloudFront Function for clean URL rewrites and `.html` redirects.
 - ACM for TLS certificates.
 - Route 53 for `my-superfood.com` and `www.my-superfood.com`.
 

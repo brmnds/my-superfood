@@ -290,7 +290,7 @@ function renderHome() {
     detailImage.alt = food.name;
     detailImage.draggable = false;
     detailBenefits.innerHTML = food.benefits.map((benefit) => `<li>${benefit}</li>`).join("");
-    openDetail.href = `foods.html#${food.id}`;
+    openDetail.href = `/foods#${food.id}`;
     savedNote.textContent = "";
     detailCard.classList.remove("is-hidden");
     document.querySelectorAll(".food-bubble").forEach((button) => button.classList.toggle("is-selected", button.dataset.food === food.id));

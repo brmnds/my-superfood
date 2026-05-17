@@ -369,7 +369,7 @@ async function handleAuthCallback(event) {
       exp: now + sessionMaxAgeSeconds,
     });
 
-    return redirect("/lists.html?luminaos=connected", appendCookies({}, [
+    return redirect("/lists?luminaos=connected", appendCookies({}, [
       cookieHeader(cookieName, session, { maxAge: sessionMaxAgeSeconds }),
       clearCookieHeader(oauthStateCookie),
       clearCookieHeader(oauthVerifierCookie),
