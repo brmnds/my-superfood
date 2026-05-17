@@ -352,6 +352,42 @@ select {
   cursor: grabbing;
 }
 
+.diet-toggle {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  box-shadow: 0 12px 34px rgba(65, 86, 70, 0.09);
+  display: inline-flex;
+  gap: 4px;
+  padding: 6px;
+  position: absolute;
+  right: clamp(18px, 4vw, 64px);
+  top: 18px;
+  z-index: 15;
+}
+
+.diet-toggle-button {
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 800;
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+
+.diet-toggle-button:hover {
+  transform: translateY(-1px);
+}
+
+.diet-toggle-button.active {
+  background: var(--leaf);
+  color: white;
+}
+
 .food-cloud {
   left: 0;
   position: absolute;
@@ -401,9 +437,9 @@ select {
 .food-bubble:hover,
 .food-bubble:focus-visible {
   animation-play-state: paused;
-  box-shadow: 0 34px 86px rgba(37, 70, 42, 0.26);
+  box-shadow: 0 24px 58px rgba(37, 70, 42, 0.22);
   filter: saturate(1.12) contrast(1.03);
-  transform: scale(1.78);
+  transform: scale(1.16);
   z-index: 8;
 }
 
@@ -457,12 +493,18 @@ select {
   box-shadow: var(--shadow);
   cursor: grab;
   padding: 20px;
+  pointer-events: none;
   position: absolute;
   right: clamp(18px, 4vw, 80px);
   top: 128px;
   width: min(300px, calc(100vw - 36px));
   z-index: 12;
   animation: detail-in 240ms ease both;
+}
+
+.detail-card a,
+.detail-card button {
+  pointer-events: auto;
 }
 
 .detail-card.is-dragging {
@@ -803,14 +845,22 @@ h2 {
   gap: 8px;
 }
 
-.protocol-stack span {
+.protocol-stack button {
   background: var(--surface);
   border: 1px solid #dceadd;
   border-radius: 999px;
   color: var(--leaf-dark);
+  cursor: pointer;
   font-size: 0.78rem;
   font-weight: 850;
   padding: 6px 10px;
+}
+
+.protocol-stack button:hover,
+.protocol-stack button:focus-visible {
+  background: #edf8ee;
+  border-color: rgba(47, 125, 50, 0.32);
+  transform: translateY(-1px);
 }
 
 .saved-list-browser {
@@ -954,6 +1004,10 @@ h2 {
   color: var(--muted);
   display: block;
   font-size: 0.8rem;
+}
+
+.catalog-table tr {
+  scroll-margin-top: 92px;
 }
 
 .ingredient-link-list {
@@ -1306,6 +1360,15 @@ h2 {
 
   .bubble-stage {
     padding-bottom: 180px;
+    padding-top: 68px;
+  }
+
+  .diet-toggle {
+    border-radius: 8px;
+    left: 18px;
+    justify-content: center;
+    right: 18px;
+    top: 14px;
   }
 
   .food-orbit {

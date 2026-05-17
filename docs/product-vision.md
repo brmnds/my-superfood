@@ -29,6 +29,7 @@ The focused overlay should:
 
 The main page should include prominent simple filters:
 
+- Vegan / Pescatarian / Vegetarian dietary modes
 - View all
 - Protein
 - Carbs
@@ -36,7 +37,7 @@ The main page should include prominent simple filters:
 - Fiber
 - Tilman protocol
 
-`View all` is the default. Category filters should show only foods that contain a lot of the selected category. The Tilman filter should show only foods marked `Yes` in the sheet's Tilman Protocol column.
+`View all` is the default category filter. Category filters should show only foods that contain a lot of the selected category. The Tilman filter should show only foods marked `Yes` in the sheet's Tilman Protocol column. Dietary modes are broader: Vegan shows vegan foods, Pescatarian includes vegan foods plus fish, and Vegetarian includes vegan foods plus vegetarian non-fish foods such as eggs or dairy if those are added later.
 
 There should also be advanced filters where users can filter by highly represented nutrients. Examples can include vitamins, minerals, amino acids, fatty acids, antioxidants, or other meaningful nutrition attributes.
 
@@ -110,6 +111,8 @@ Each supplement should be able to show recommendation/source labels, for example
 There should be a dedicated section for supplements recommended by Bryan Johnson.
 
 The same supplement may have multiple labels. For example, a supplement can be both recommended by Bryan Johnson and marked as actually taken by Tilman Resch.
+
+Tilman's supplement protocol should act as a navigation layer into the catalog: clicking a named supplement kit in the stack should switch to the Supplement Kits tab, scroll to the matching product row, and highlight it.
 
 Supplement cards or detail pages should make the distinction clear between:
 

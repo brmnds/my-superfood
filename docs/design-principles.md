@@ -30,6 +30,7 @@ The icon should appear next to the `My Superfood` wordmark in the site header. D
 - The landing-page food explorer must use responsive, non-overlapping food-circle placement that still feels organic and random. As more foods are added, reflow the circles into a balanced scattered cloud rather than a visibly ordered list, lonely single-item bands, blank corridors, or fixed coordinates that collide.
 - The food cloud does not need to fit every item into one viewport. When the cloud is larger than the visible stage, users should be able to pan it with mouse or touch to reach off-screen foods.
 - The default landing-page nutrition filter is `View all`; category filters such as Protein, Carbs, Oils, Fiber, Advanced nutrients, and Tilman should rebuild the cloud with only matching foods.
+- The landing-page dietary toggle uses `dietType` values on food records. `Vegan` shows only vegan foods, `Pescatarian` shows vegan plus pescatarian foods such as fish, and `Vegetarian` shows vegan plus vegetarian non-fish foods when those are added.
 
 ## Components
 
@@ -38,6 +39,7 @@ The icon should appear next to the `My Superfood` wordmark in the site header. D
 - Tables should use readable spacing, visible headers, and non-overflowing cells.
 - Source/status badges should be visible but quiet.
 - The saved-list tabs are the structure; do not add extra list-summary cards unless requested.
+- Protocol chips, such as Tilman's supplement stack, should behave as navigation controls when they reference catalog entities: clicking a chip should open the relevant tab, scroll to the row, and use a quiet green highlight.
 
 ## Content Tone
 

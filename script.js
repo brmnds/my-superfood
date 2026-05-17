@@ -15,6 +15,7 @@ const foods = [
     "note": "Cruciferous vegetable with fiber, vitamin C, and plant compounds.",
     "x": "50%",
     "y": "47%",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -34,6 +35,7 @@ const foods = [
     "note": "A practical base for bowls, hummus, and satisfying meals.",
     "x": "24%",
     "y": "20%",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -53,6 +55,7 @@ const foods = [
     "note": "A dense pantry staple for soups, salads, and meal prep.",
     "x": "39%",
     "y": "16%",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -71,6 +74,7 @@ const foods = [
     "note": "Mild, flexible, and easy to use as a vegetable base.",
     "x": "63%",
     "y": "17%",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -89,6 +93,7 @@ const foods = [
     "note": "A simple energy fruit for breakfast or training snacks.",
     "x": "79%",
     "y": "20%",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -107,6 +112,7 @@ const foods = [
     "note": "Creamy fats and fiber that make simple meals feel complete.",
     "x": "18%",
     "y": "43%",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -126,6 +132,7 @@ const foods = [
     "note": "A colorful fruit for breakfast bowls and snacks.",
     "x": "34%",
     "y": "38%",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -144,6 +151,7 @@ const foods = [
     "note": "Quick greens for bowls, eggs, smoothies, and soups.",
     "x": "17%",
     "y": "70%",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -162,6 +170,7 @@ const foods = [
     "note": "A protein-rich fish with naturally occurring omega-3 fats.",
     "x": "35%",
     "y": "69%",
+    "dietType": "pescatarian",
     "tilmanProtocol": true
   },
   {
@@ -180,6 +189,7 @@ const foods = [
     "note": "A steady breakfast grain with soluble fiber.",
     "x": "28%",
     "y": "88%",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -198,6 +208,7 @@ const foods = [
     "note": "A classic fat for salads, vegetables, and sauces.",
     "x": "48%",
     "y": "83%",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -217,6 +228,7 @@ const foods = [
     "note": "A dense topping for breakfast bowls and salads.",
     "x": "62%",
     "y": "87%",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -235,6 +247,7 @@ const foods = [
     "note": "A dairy-free fermented base for breakfast bowls, sauces, or snacks.",
     "x": "73%",
     "y": "72%",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -253,6 +266,7 @@ const foods = [
     "note": "A bright, filling carbohydrate for bowls and plates.",
     "x": "88%",
     "y": "62%",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -271,6 +285,7 @@ const foods = [
     "note": "A rich ingredient for smoothies, yogurt, and warm drinks.",
     "x": "91%",
     "y": "38%",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -290,6 +305,7 @@ const foods = [
     "note": "A small topping with useful minerals and texture.",
     "x": "86%",
     "y": "87%",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -309,6 +325,7 @@ const foods = [
     "note": "Small dark lentils that hold their shape well in salads, bowls, and meal prep.",
     "x": "7%",
     "y": "12%",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -328,6 +345,7 @@ const foods = [
     "note": "A filling bean for bowls, soups, tacos, and simple batch cooking.",
     "x": "57%",
     "y": "7%",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -347,6 +365,7 @@ const foods = [
     "note": "A hearty bean for chilis, stews, salads, and mixed grain plates.",
     "x": "96%",
     "y": "12%",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -366,6 +385,7 @@ const foods = [
     "note": "Mild white beans that work well in soups, dips, salads, and vegetable plates.",
     "x": "7%",
     "y": "57%",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -385,6 +405,7 @@ const foods = [
     "note": "A quick freezer-friendly vegetable legume for bowls, soups, and sides.",
     "x": "52%",
     "y": "57%",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -404,6 +425,7 @@ const foods = [
     "note": "Young soybeans that make a protein-rich snack or bowl topping.",
     "x": "101%",
     "y": "57%",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -423,6 +445,7 @@ const foods = [
     "note": "A versatile legume base behind tofu, tempeh, edamame, and other soy foods.",
     "x": "10%",
     "y": "102%",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -440,6 +463,7 @@ const foods = [
     "note": "A flexible soy protein for stir-fries, bowls, scrambles, and marinades.",
     "x": "38%",
     "y": "106%",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -459,6 +483,7 @@ const foods = [
     "note": "Fermented soy with a firm bite for bowls, sandwiches, and high-protein plates.",
     "x": "67%",
     "y": "106%",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -476,6 +501,7 @@ const foods = [
     "note": "A salty fermented soy paste that adds depth to broths, dressings, and sauces.",
     "x": "97%",
     "y": "102%",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -492,6 +518,7 @@ const foods = [
       "Vitamin C"
     ],
     "note": "Concentrated cruciferous sprouts that add a fresh, peppery crunch to bowls and salads.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -508,6 +535,7 @@ const foods = [
       "Cruciferous"
     ],
     "note": "A compact cruciferous vegetable for roasted sides, salads, and simple vegetable plates.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -524,6 +552,7 @@ const foods = [
       "Minerals"
     ],
     "note": "A sturdy leafy green for salads, soups, smoothies, and cooked vegetable sides.",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -539,6 +568,7 @@ const foods = [
       "Budget friendly"
     ],
     "note": "A crisp cruciferous vegetable for slaws, soups, stir-fries, and fermented preparations.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -555,6 +585,7 @@ const foods = [
       "Crunch"
     ],
     "note": "A colorful cruciferous vegetable that brings crunch and deep purple pigments to meals.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -571,6 +602,7 @@ const foods = [
       "Nitrates"
     ],
     "note": "A peppery green for salads, sandwiches, soups, and nutrient-dense side plates.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -586,6 +618,7 @@ const foods = [
       "Fresh bite"
     ],
     "note": "A crisp root vegetable that adds a sharp, refreshing bite to salads and snack plates.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -601,6 +634,7 @@ const foods = [
       "Crunch"
     ],
     "note": "A crunchy cruciferous vegetable that works raw in slaws or cooked in simple sides.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -617,6 +651,7 @@ const foods = [
       "Vitamin K"
     ],
     "note": "A mineral-rich leafy green with colorful stems for sautees, soups, and grain bowls.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -632,6 +667,7 @@ const foods = [
       "Crunch"
     ],
     "note": "A crisp leafy green for salads, wraps, and fresh high-volume meal bases.",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -648,6 +684,7 @@ const foods = [
       "Folate"
     ],
     "note": "Leafy beet tops that bring minerals and color to sautees, soups, and bowls.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -664,6 +701,7 @@ const foods = [
       "Minerals"
     ],
     "note": "Bitter leafy greens for salads, sautees, and nutrient-dense vegetable plates.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -680,6 +718,7 @@ const foods = [
       "Fresh flavor"
     ],
     "note": "A fresh herb that works like a leafy green in salads, sauces, and bowls.",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -696,6 +735,7 @@ const foods = [
       "Micronutrients"
     ],
     "note": "A bright herb for bowls, salsas, soups, and fresh vegetable plates.",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -712,6 +752,7 @@ const foods = [
       "Fresh crunch"
     ],
     "note": "Young greens that add concentrated flavor, color, and texture to meals.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -728,6 +769,7 @@ const foods = [
       "Fiber"
     ],
     "note": "A sweet root vegetable for snacks, soups, salads, and roasted plates.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -744,6 +786,7 @@ const foods = [
       "Potassium"
     ],
     "note": "An orange squash for soups, bowls, roasting, and seasonal meal prep.",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -761,6 +804,7 @@ const foods = [
       "Folate"
     ],
     "note": "A deep red root vegetable for salads, bowls, juices, and roasted sides.",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -777,6 +821,7 @@ const foods = [
       "Fresh acidity"
     ],
     "note": "A versatile vegetable fruit for salads, sauces, bowls, and snacks.",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -793,6 +838,7 @@ const foods = [
       "Antioxidants"
     ],
     "note": "Colorful peppers that add crunch, sweetness, and vitamin C to meals.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -809,6 +855,7 @@ const foods = [
       "Sharp flavor"
     ],
     "note": "An allium vegetable for salads, sauces, cooked dishes, and quick pickles.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -824,6 +871,7 @@ const foods = [
       "Plant compounds"
     ],
     "note": "A concentrated allium ingredient for sauces, soups, dressings, and cooked plates.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -840,6 +888,7 @@ const foods = [
       "Fiber"
     ],
     "note": "A mild allium vegetable for soups, braises, and vegetable sides.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -856,6 +905,7 @@ const foods = [
       "Spring vegetable"
     ],
     "note": "A fiber-rich vegetable for quick sides, salads, and grain bowls.",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -872,6 +922,7 @@ const foods = [
       "Minerals"
     ],
     "note": "A fiber-dense vegetable for Mediterranean-style plates and salads.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -888,6 +939,7 @@ const foods = [
       "Savory base"
     ],
     "note": "A savory ingredient for soups, stir-fries, bowls, and vegetable plates.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -904,6 +956,7 @@ const foods = [
       "Umami"
     ],
     "note": "A mineral-rich sea vegetable for soups, salads, bowls, and snacks.",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -920,6 +973,7 @@ const foods = [
       "Tangy crunch"
     ],
     "note": "Fermented cabbage that adds acidity and crunch to bowls and plates.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -936,6 +990,7 @@ const foods = [
       "Flavor booster"
     ],
     "note": "A spicy fermented vegetable for bowls, rice plates, soups, and sides.",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -953,6 +1008,7 @@ const foods = [
       "Fresh sweetness"
     ],
     "note": "Dark berries for breakfast bowls, snacks, smoothies, and desserts.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -970,6 +1026,7 @@ const foods = [
       "Deep color"
     ],
     "note": "A dark berry-like fruit often used in smoothie bowls and low-sugar fruit blends.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -987,6 +1044,7 @@ const foods = [
       "Colorful"
     ],
     "note": "A bright fruit with tart seeds for salads, yogurt bowls, and snacks.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1003,6 +1061,7 @@ const foods = [
       "Flavor lift"
     ],
     "note": "A citrus fruit for dressings, water, sauces, and bright finishing flavor.",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -1020,6 +1079,7 @@ const foods = [
       "Fresh sweetness"
     ],
     "note": "A vitamin-C-rich fruit for breakfast bowls, snacks, and smoothies.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1037,6 +1097,7 @@ const foods = [
       "Crunch"
     ],
     "note": "A versatile nut for snacks, toppings, nut butter, and baking.",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -1054,6 +1115,7 @@ const foods = [
       "Minerals"
     ],
     "note": "A colorful nut for snacks, toppings, salads, and desserts.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1071,6 +1133,7 @@ const foods = [
       "Crunch"
     ],
     "note": "A rich nut for toppings, snacks, and cacao-forward recipes.",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -1088,6 +1151,7 @@ const foods = [
       "Minerals"
     ],
     "note": "A mild nut for snacks, sauces, creamy blends, and stir-fries.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1105,6 +1169,7 @@ const foods = [
       "Dense snack"
     ],
     "note": "A selenium-rich nut best used in small amounts as a snack or topping.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1122,6 +1187,7 @@ const foods = [
       "Rich flavor"
     ],
     "note": "A buttery nut for salads, oats, snacks, and low-sugar desserts.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1139,6 +1205,7 @@ const foods = [
       "Dense energy"
     ],
     "note": "A creamy nut for snacks, toppings, and high-fat meal additions.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1156,6 +1223,7 @@ const foods = [
       "Minerals"
     ],
     "note": "Tiny seeds that thicken puddings, oats, smoothies, and breakfast bowls.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1173,6 +1241,7 @@ const foods = [
       "Lignans"
     ],
     "note": "Seeds often ground into oats, smoothies, and baked goods for fiber and fats.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1190,6 +1259,7 @@ const foods = [
       "Soft texture"
     ],
     "note": "Soft seeds for smoothies, salads, yogurt bowls, and savory toppings.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1207,6 +1277,7 @@ const foods = [
       "Minerals"
     ],
     "note": "A seed topping for salads, bowls, snacks, and homemade mixes.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1224,6 +1295,7 @@ const foods = [
       "Crunch"
     ],
     "note": "Small seeds for toppings, dressings, tahini, and savory dishes.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1241,6 +1313,7 @@ const foods = [
       "Creamy sauces"
     ],
     "note": "A sesame seed paste for dressings, sauces, dips, and bowls.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1257,6 +1330,7 @@ const foods = [
       "Breakfast base"
     ],
     "note": "A coarse oat grain for warm breakfasts and batch-prepped bowls.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1274,6 +1348,7 @@ const foods = [
       "Minerals"
     ],
     "note": "A quick-cooking pseudograin for bowls, salads, and meal prep.",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -1291,6 +1366,7 @@ const foods = [
       "Nutty flavor"
     ],
     "note": "A gluten-free pseudograin for porridge, salads, and savory bowls.",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -1307,6 +1383,7 @@ const foods = [
       "Minerals"
     ],
     "note": "A whole grain rice for bowls, sides, soups, and meal prep.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1324,6 +1401,7 @@ const foods = [
       "Minerals"
     ],
     "note": "A chewy grain-like seed for bowls, soups, and mixed grain salads.",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -1341,6 +1419,7 @@ const foods = [
       "Meal prep"
     ],
     "note": "A hearty wheat grain for salads, soups, bowls, and vegetable plates.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1357,6 +1436,7 @@ const foods = [
       "Fiber"
     ],
     "note": "A quick whole grain for salads, pilafs, bowls, and vegetable sides.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1373,6 +1453,7 @@ const foods = [
       "Minerals"
     ],
     "note": "A small grain for porridge, bowls, sides, and gluten-free cooking.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1389,6 +1470,7 @@ const foods = [
       "Neutral flavor"
     ],
     "note": "A mild oil for dressings, cooking, and adding fats to simple meals.",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -1406,6 +1488,7 @@ const foods = [
       "Savory"
     ],
     "note": "A savory fruit for salads, bowls, snacks, and Mediterranean-style plates.",
+    "dietType": "vegan",
     "tilmanProtocol": true
   },
   {
@@ -1423,6 +1506,7 @@ const foods = [
       "Distinct texture"
     ],
     "note": "A fermented soy food traditionally used with rice and savory bowls.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1438,6 +1522,7 @@ const foods = [
       "Low sugar option"
     ],
     "note": "A fermented tea drink; choose low-sugar versions when possible.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1454,6 +1539,7 @@ const foods = [
       "Small fish"
     ],
     "note": "A small fatty fish with protein and omega-3 fats for simple savory meals.",
+    "dietType": "pescatarian",
     "tilmanProtocol": false
   },
   {
@@ -1470,6 +1556,7 @@ const foods = [
       "Fatty fish"
     ],
     "note": "A rich fatty fish for omega-3-forward meals and protein plates.",
+    "dietType": "pescatarian",
     "tilmanProtocol": false
   },
   {
@@ -1486,6 +1573,7 @@ const foods = [
       "Mild fish"
     ],
     "note": "A mild fish option for protein-rich meals and simple plates.",
+    "dietType": "pescatarian",
     "tilmanProtocol": false
   },
   {
@@ -1502,6 +1590,7 @@ const foods = [
       "Fatty fish"
     ],
     "note": "A fatty fish for savory meals, salads, and omega-3-rich plates.",
+    "dietType": "pescatarian",
     "tilmanProtocol": false
   },
   {
@@ -1517,6 +1606,7 @@ const foods = [
       "Flavor"
     ],
     "note": "A golden spice or root for curries, drinks, sauces, and seasoning blends.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1532,6 +1622,7 @@ const foods = [
       "Plant compounds"
     ],
     "note": "A sharp root for tea, dressings, stir-fries, sauces, and smoothies.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1547,6 +1638,7 @@ const foods = [
       "Polyphenols"
     ],
     "note": "A warming spice for oats, yogurt, smoothies, and low-sugar desserts.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1562,6 +1654,7 @@ const foods = [
       "Polyphenols"
     ],
     "note": "A woody herb for vegetables, potatoes, fish, sauces, and roasted plates.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1577,6 +1670,7 @@ const foods = [
       "Polyphenols"
     ],
     "note": "A savory herb for sauces, salads, vegetables, and Mediterranean dishes.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1592,6 +1686,7 @@ const foods = [
       "Aromatic"
     ],
     "note": "A small-leaf herb for soups, vegetables, fish, and grain dishes.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1607,6 +1702,7 @@ const foods = [
       "Drink"
     ],
     "note": "A tea ingredient for a light caffeinated drink with plant compounds.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1622,6 +1718,7 @@ const foods = [
       "Caffeine"
     ],
     "note": "A powdered green tea for drinks, smoothies, and occasional recipes.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1638,6 +1735,7 @@ const foods = [
       "Nutty flavor"
     ],
     "note": "A heat-sensitive finishing oil for salads, vegetables, and grain dishes.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   },
   {
@@ -1654,6 +1752,7 @@ const foods = [
       "Rich flavor"
     ],
     "note": "A vitamin-E-rich oil best used in small amounts as a finishing oil.",
+    "dietType": "vegan",
     "tilmanProtocol": false
   }
 ];
@@ -1930,6 +2029,7 @@ function renderHome() {
   if (!orbit || !detailTitle || !detailImage || !detailBenefits || !addButton || !openDetail || !detailCard || !closeDetail) return;
   let selected = foods[0];
   let activeFilter = "all";
+  let activeDiet = "pescatarian";
   let cloudX = 0;
   let cloudY = 0;
   let didPan = false;
@@ -1977,8 +2077,12 @@ function renderHome() {
     const orbitRect = orbit.getBoundingClientRect();
     const orbitWidth = orbitRect.width;
     const orbitHeight = orbitRect.height;
-    const cloudWidth = Math.round(Math.max(orbitWidth * (orbitWidth < 560 ? 2.15 : 1.52), orbitWidth + 420));
-    const cloudHeight = Math.round(Math.max(orbitHeight * (orbitWidth < 560 ? 1.65 : 1.38), orbitHeight + 210));
+    const bubbles = Array.from(cloud.querySelectorAll(".food-bubble"));
+    const isFullCloud = activeFilter === "all" && bubbles.length > 60;
+    const widthScale = isFullCloud ? (orbitWidth < 560 ? 3.1 : 3.2) : (orbitWidth < 560 ? 2.15 : 1.52);
+    const heightScale = isFullCloud ? (orbitWidth < 560 ? 1.9 : 1.72) : (orbitWidth < 560 ? 1.65 : 1.38);
+    const cloudWidth = Math.round(Math.max(orbitWidth * widthScale, orbitWidth + (isFullCloud ? 920 : 420)));
+    const cloudHeight = Math.round(Math.max(orbitHeight * heightScale, orbitHeight + (isFullCloud ? 340 : 210)));
     const edgePadding = orbitWidth < 560 ? 88 : 120;
     const rowCount = orbitWidth < 560 ? 7 : 5;
     const usableWidth = cloudWidth - edgePadding * 2;
@@ -1989,7 +2093,6 @@ function renderHome() {
     cloud.style.width = `${cloudWidth}px`;
     cloud.style.height = `${cloudHeight}px`;
 
-    const bubbles = Array.from(cloud.querySelectorAll(".food-bubble"));
     const rowBuckets = Array.from({ length: rowCount }, () => []);
     bubbles
       .slice()
@@ -2031,9 +2134,18 @@ function renderHome() {
   }
 
   function filteredFoods() {
-    if (activeFilter === "all") return foods;
-    if (activeFilter === "tilman") return foods.filter((food) => food.tilmanProtocol);
-    return foods.filter((food) => food.categories.includes(activeFilter));
+    const dietFoods = foods.filter((food) => matchesDiet(food));
+    if (activeFilter === "all") return dietFoods;
+    if (activeFilter === "tilman") return dietFoods.filter((food) => food.tilmanProtocol);
+    return dietFoods.filter((food) => food.categories.includes(activeFilter));
+  }
+
+  function matchesDiet(food) {
+    const dietType = food.dietType || "vegan";
+    if (activeDiet === "vegan") return dietType === "vegan";
+    if (activeDiet === "pescatarian") return dietType === "vegan" || dietType === "pescatarian";
+    if (activeDiet === "vegetarian") return dietType === "vegan" || dietType === "vegetarian";
+    return true;
   }
 
   function renderBubbles() {
@@ -2074,6 +2186,15 @@ function renderHome() {
     button.addEventListener("click", () => {
       activeFilter = button.dataset.filter;
       document.querySelectorAll(".filter-button").forEach((entry) => entry.classList.toggle("active", entry === button));
+      renderBubbles();
+      hideDetail();
+    });
+  });
+
+  document.querySelectorAll(".diet-toggle-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      activeDiet = button.dataset.diet;
+      document.querySelectorAll(".diet-toggle-button").forEach((entry) => entry.classList.toggle("active", entry === button));
       renderBubbles();
       hideDetail();
     });
@@ -2144,6 +2265,7 @@ function renderHome() {
     const startY = event.clientY;
     const originX = cloudX;
     const originY = cloudY;
+    const startBubble = event.target.closest(".food-bubble");
     didPan = false;
 
     orbit.classList.add("is-panning");
@@ -2152,7 +2274,9 @@ function renderHome() {
     const moveCloud = (moveEvent) => {
       const deltaX = moveEvent.clientX - startX;
       const deltaY = moveEvent.clientY - startY;
-      if (Math.abs(deltaX) > 4 || Math.abs(deltaY) > 4) didPan = true;
+      const hasMovedEnoughToPan = Math.hypot(deltaX, deltaY) > 12;
+      if (!hasMovedEnoughToPan && !didPan) return;
+      didPan = true;
       setCloudPosition(originX + deltaX, originY + deltaY);
     };
 
@@ -2162,6 +2286,13 @@ function renderHome() {
       orbit.removeEventListener("pointerup", stopPan);
       orbit.removeEventListener("pointercancel", stopPan);
       if (didPan) panBlockUntil = Date.now() + 180;
+      if (!didPan && startBubble) {
+        const food = foods.find((entry) => entry.id === startBubble.dataset.food);
+        if (food) {
+          clickToOpenOnly = false;
+          updateDetail(food, { fromClick: true });
+        }
+      }
       window.setTimeout(() => {
         didPan = false;
       }, 180);
@@ -2217,6 +2348,7 @@ function renderSupplements() {
   let catalog = { supplements: [], products: [] };
   const expandedProducts = new Set();
   let highlightedSupplementId = "";
+  let highlightedProductId = "";
 
   const referenceSources = {
     "vitamin-c": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/" },
@@ -2406,7 +2538,7 @@ function renderSupplements() {
       </thead>
       <tbody>
         ${products.map((product) => `
-          <tr>
+          <tr id="product-${escapeHtml(product.id)}" class="${product.id === highlightedProductId ? "row-highlight" : ""}">
             <td><strong>${escapeHtml(product.name)}</strong><span>${escapeHtml(product.productType)}</span></td>
             <td>${escapeHtml(product.provider)}</td>
             <td>${escapeHtml(product.purpose)}</td>
@@ -2493,6 +2625,15 @@ function renderSupplements() {
     });
   }
 
+  function openProduct(productId) {
+    highlightedProductId = productId;
+    highlightedSupplementId = "";
+    setActiveTab("products");
+    setActiveFilter("all");
+    render();
+    document.getElementById(`product-${productId}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
   function render() {
     if (activeTab === "products") renderProducts();
     if (activeTab === "ingredients") renderIngredients();
@@ -2531,8 +2672,15 @@ function renderSupplements() {
   filters.forEach((button) => {
     button.addEventListener("click", () => {
       highlightedSupplementId = "";
+      highlightedProductId = "";
       setActiveFilter(button.dataset.catalogFilter);
       render();
+    });
+  });
+
+  document.querySelectorAll("[data-protocol-product]").forEach((button) => {
+    button.addEventListener("click", () => {
+      openProduct(button.dataset.protocolProduct);
     });
   });
 
