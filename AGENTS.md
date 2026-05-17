@@ -33,6 +33,8 @@ Use Playwright only when Tilman explicitly asks for Playwright, or when the Code
 - Keep the app static for the current version.
 - Prefer plain HTML, CSS, and vanilla JavaScript.
 - Keep shared data in `script.js` until the project needs a structured data source.
+- Use the Google Sheet "Superfoods Ingredient List" as the working source of truth for food-catalog expansion: `https://docs.google.com/spreadsheets/d/1dCEn155n5p6si9olz1SYZJUy_Do3g6rTR7k3RLuh4nE/edit?gid=1787756073#gid=1787756073`.
+- When adding foods from that sheet, prioritize rows where `Prioritization` is `Show`, preserve `Tilman Protocol` context where relevant, and do not add `Hide` rows unless Tilman explicitly asks for them.
 - Keep saved-list persistence on the existing DynamoDB + Lambda Function URL backend documented in `docs/database.md`.
 - Store local visual assets in `assets/images/`.
 - Do not commit `.playwright-cli/` browser verification output.

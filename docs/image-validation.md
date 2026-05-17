@@ -49,6 +49,69 @@ This report validates current My Superfood images against the picture steering f
 | Kohlrabi | `assets/images/real/kohlrabi.png` | Pass | Generated product-style image of raw kohlrabi on a clean white background. |
 | Swiss Chard | `assets/images/real/swiss-chard.png` | Pass | Generated product-style image of raw Swiss chard on a clean white background. |
 | Romaine Lettuce | `assets/images/real/romaine-lettuce.png` | Pass | Generated product-style image of raw romaine lettuce on a clean white background. |
+| Beet Greens | `assets/images/real/beet-greens.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Dandelion Greens | `assets/images/real/dandelion-greens.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Parsley | `assets/images/real/parsley.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Cilantro | `assets/images/real/cilantro.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Microgreens | `assets/images/real/microgreens.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Carrots | `assets/images/real/carrots.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Pumpkin | `assets/images/real/pumpkin.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Beets | `assets/images/real/beets.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Tomatoes | `assets/images/real/tomatoes.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Bell Peppers | `assets/images/real/bell-peppers.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Red Onions | `assets/images/real/red-onions.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Garlic | `assets/images/real/garlic.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Leeks | `assets/images/real/leeks.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Asparagus | `assets/images/real/asparagus.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Artichokes | `assets/images/real/artichokes.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Mushrooms | `assets/images/real/mushrooms.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Seaweed | `assets/images/real/seaweed.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Sauerkraut | `assets/images/real/sauerkraut.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Kimchi | `assets/images/real/kimchi.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Blackberries | `assets/images/real/blackberries.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Acai | `assets/images/real/acai.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Pomegranate | `assets/images/real/pomegranate.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Lemons | `assets/images/real/lemons.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Kiwi | `assets/images/real/kiwi.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Almonds | `assets/images/real/almonds.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Pistachios | `assets/images/real/pistachios.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Hazelnuts | `assets/images/real/hazelnuts.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Cashews | `assets/images/real/cashews.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Brazil Nuts | `assets/images/real/brazil-nuts.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Pecans | `assets/images/real/pecans.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Macadamia Nuts | `assets/images/real/macadamia-nuts.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Chia Seeds | `assets/images/real/chia-seeds.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Flaxseeds | `assets/images/real/flaxseeds.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Hemp Seeds | `assets/images/real/hemp-seeds.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Sunflower Seeds | `assets/images/real/sunflower-seeds.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Sesame Seeds | `assets/images/real/sesame-seeds.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Tahini | `assets/images/real/tahini.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Steel-Cut Oats | `assets/images/real/steel-cut-oats.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Quinoa | `assets/images/real/quinoa.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Buckwheat | `assets/images/real/buckwheat.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Brown Rice | `assets/images/real/brown-rice.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Wild Rice | `assets/images/real/wild-rice.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Farro | `assets/images/real/farro.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Bulgur | `assets/images/real/bulgur.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Millet | `assets/images/real/millet.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Avocado Oil | `assets/images/real/avocado-oil.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Olives | `assets/images/real/olives.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Natto | `assets/images/real/natto.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Kombucha | `assets/images/real/kombucha.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Sardines | `assets/images/real/sardines.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Mackerel | `assets/images/real/mackerel.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Trout | `assets/images/real/trout.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Herring | `assets/images/real/herring.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Turmeric | `assets/images/real/turmeric.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Ginger | `assets/images/real/ginger.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Cinnamon | `assets/images/real/cinnamon.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Rosemary | `assets/images/real/rosemary.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Oregano | `assets/images/real/oregano.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Thyme | `assets/images/real/thyme.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Green Tea | `assets/images/real/green-tea.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Matcha | `assets/images/real/matcha.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Walnut Oil | `assets/images/real/walnut-oil.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Wheat Germ Oil | `assets/images/real/wheat-germ-oil.png` | Pass | Generated product-style ingredient image on a clean white background. |
 
 ## Recipe Images
 

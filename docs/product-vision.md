@@ -34,8 +34,9 @@ The main page should include prominent simple filters:
 - Carbs
 - Oils / fats
 - Fiber
+- Tilman protocol
 
-`View all` is the default. Category filters should show or emphasize foods that contain a lot of the selected category.
+`View all` is the default. Category filters should show only foods that contain a lot of the selected category. The Tilman filter should show only foods marked `Yes` in the sheet's Tilman Protocol column.
 
 There should also be advanced filters where users can filter by highly represented nutrients. Examples can include vitamins, minerals, amino acids, fatty acids, antioxidants, or other meaningful nutrition attributes.
 
