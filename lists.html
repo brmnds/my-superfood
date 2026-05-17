@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lists - My Superfood</title>
-    <meta name="description" content="Review foods and supplements saved in this browser or synced with an optional LuminaOS account.">
+    <meta name="description" content="Review saved food, supplement, and recipe lists in tabular views with optional LuminaOS sync.">
     <link rel="canonical" href="https://my-superfood.com/lists">
     <meta property="og:title" content="Lists - My Superfood">
-    <meta property="og:description" content="Review saved foods and supplements with optional LuminaOS sync.">
+    <meta property="og:description" content="Review saved food, supplement, and recipe lists with optional LuminaOS sync.">
     <meta property="og:url" content="https://my-superfood.com/lists">
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="styles.css">
@@ -25,15 +25,26 @@
     </header>
     <main class="page-shell">
       <section class="page-heading">
-        <p class="eyebrow">Saved list</p>
-        <h1>Foods and supplements you want to keep close.</h1>
+        <p class="eyebrow">Saved lists</p>
+        <h1>Foods, supplements, and recipes you want to keep close.</h1>
         <p id="saved-list-intro">Saved in this browser. Sign in with LuminaOS to sync your list.</p>
         <div class="account-sync-panel">
           <p data-auth-status>Checking LuminaOS sync...</p>
           <div class="lumina-actions" data-auth-actions></div>
         </div>
       </section>
-      <section class="catalog-grid" id="saved-list" aria-label="Saved foods and supplements"></section>
+      <section class="saved-list-browser" aria-label="Saved lists">
+        <div class="table-toolbar">
+          <div class="tab-list" role="tablist" aria-label="Saved list views">
+            <button class="tab-button active" type="button" role="tab" aria-selected="true" data-list-tab="foods">Food lists <span data-list-count="foods">0</span></button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" data-list-tab="supplements">Supplement lists <span data-list-count="supplements">0</span></button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" data-list-tab="recipes">Recipe lists <span data-list-count="recipes">0</span></button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="catalog-table saved-list-table" id="saved-list"></table>
+        </div>
+      </section>
     </main>
     <script src="script.js"></script>
   </body>

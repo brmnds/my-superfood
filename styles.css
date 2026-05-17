@@ -485,6 +485,11 @@ h2 {
   gap: 18px;
 }
 
+.saved-list-browser {
+  display: grid;
+  gap: 18px;
+}
+
 .table-toolbar {
   align-items: center;
   display: flex;
@@ -513,6 +518,23 @@ h2 {
 .tab-button.active {
   background: var(--ink);
   border-color: var(--ink);
+  color: white;
+}
+
+.tab-button span {
+  background: rgba(63, 143, 79, 0.12);
+  border-radius: 999px;
+  color: var(--leaf-dark);
+  display: inline-flex;
+  font-size: 0.75rem;
+  justify-content: center;
+  margin-left: 8px;
+  min-width: 22px;
+  padding: 2px 7px;
+}
+
+.tab-button.active span {
+  background: rgba(255, 255, 255, 0.18);
   color: white;
 }
 
@@ -606,6 +628,33 @@ h2 {
   margin: 0;
   min-width: 82px;
   width: auto;
+}
+
+.saved-list-table {
+  min-width: 900px;
+}
+
+.list-item-cell {
+  align-items: center;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 52px minmax(0, 1fr);
+}
+
+.list-item-cell img {
+  aspect-ratio: 1;
+  background: var(--mint);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;
+  width: 52px;
+}
+
+.empty-table-cell {
+  color: var(--muted);
+  font-weight: 750;
+  padding: 28px;
 }
 
 .recipe-feature {

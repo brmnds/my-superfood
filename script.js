@@ -24,6 +24,17 @@ const supplements = [
   { id: "magnesium", name: "Magnesium Glycinate", image: "assets/images/magnesium.svg", labels: ["Taking: Tilman Resch", "Recommended by: Bryan Johnson"], note: "Often used in evening routines; tolerance and dosage are individual." }
 ];
 
+const recipes = [
+  {
+    id: "green-recovery-bowl",
+    name: "Green recovery bowl with citrus tahini",
+    image: "assets/images/real/recipe-bowl.jpg",
+    components: ["Greens", "Quinoa", "Avocado", "Chickpeas", "Citrus tahini"],
+    focus: ["Fiber", "Plant protein", "Minerals", "Healthy fats"],
+    note: "A bright recovery bowl built around greens, quinoa, avocado, chickpeas, and citrus tahini."
+  }
+];
+
 const page = document.body.dataset.page;
 const listApiUrl = "https://l36bksjavuxnp45gl5fel2jkbq0ertbm.lambda-url.eu-central-1.on.aws";
 const accountApiBaseUrl = localStorage.getItem("my-superfood-account-api-base") || (["my-superfood.com", "www.my-superfood.com"].includes(location.hostname) ? "/api" : "");
@@ -474,6 +485,25 @@ function renderFoods() {
   `).join("");
 }
 
+function renderRecipes() {
+  document.querySelectorAll(".save-recipe").forEach((button) => {
+    button.addEventListener("click", () => {
+      const recipe = recipes.find((entry) => entry.id === button.dataset.recipe);
+      if (!recipe) return;
+      saveItem({
+        type: "Recipe",
+        id: recipe.id,
+        name: recipe.name,
+        image: recipe.image,
+        note: recipe.note,
+      });
+      button.textContent = "Added";
+      const savedNote = document.querySelector("#recipe-saved-note");
+      if (savedNote) savedNote.textContent = `${recipe.name} added to your recipe list.`;
+    });
+  });
+}
+
 function renderSupplements() {
   const table = document.querySelector("#supplement-catalog-table");
   const status = document.querySelector("#catalog-status");
@@ -659,23 +689,145 @@ function renderSupplements() {
 function renderSavedList() {
   const target = document.querySelector("#saved-list");
   const intro = document.querySelector("#saved-list-intro");
+  const tabs = document.querySelectorAll("[data-list-tab]");
+  let activeTab = "foods";
   if (intro) intro.textContent = authStatusText();
 
-  function render(list) {
-  if (list.length === 0) {
-    target.innerHTML = `<article class="empty-state">No saved items yet. Add foods from the landing page or supplements from the supplement catalog.</article>`;
-    return;
+  function listGroups(list) {
+    return {
+      foods: list.filter((item) => item.type === "Food"),
+      supplements: list.filter((item) => item.type === "Supplement" || item.type === "Supplement Product"),
+      recipes: list.filter((item) => item.type === "Recipe"),
+    };
   }
 
-  target.innerHTML = list.map((item) => `
-    <article class="catalog-card">
-      <img src="${item.image}" alt="${item.name}">
-      <span class="tag">${item.type}</span>
-      <h2>${item.name}</h2>
-      <p>${item.note}</p>
-    </article>
-  `).join("");
+  function foodDetails(item) {
+    return foods.find((food) => food.id === item.id) || {};
   }
+
+  function recipeDetails(item) {
+    return recipes.find((recipe) => recipe.id === item.id) || {};
+  }
+
+  function formatTags(values) {
+    return (values || []).map((value) => `<span class="tag">${escapeHtml(value)}</span>`).join("");
+  }
+
+  function updateCounts(groups) {
+    Object.entries(groups).forEach(([key, items]) => {
+      document.querySelectorAll(`[data-list-count="${key}"]`).forEach((target) => {
+        target.textContent = items.length;
+      });
+    });
+  }
+
+  function emptyRow(label) {
+    return `<tbody><tr><td colspan="5" class="empty-table-cell">No saved ${label} yet.</td></tr></tbody>`;
+  }
+
+  function renderFoodTable(items) {
+    if (items.length === 0) return emptyRow("foods");
+    return `
+      <thead>
+        <tr>
+          <th>Food</th>
+          <th>Categories</th>
+          <th>Benefits</th>
+          <th>Note</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${items.map((item) => {
+          const detail = foodDetails(item);
+          return `
+            <tr>
+              <td><div class="list-item-cell"><img src="${escapeHtml(item.image)}" alt=""><div><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.id)}</span></div></div></td>
+              <td><div class="tag-row">${formatTags(detail.categories)}</div></td>
+              <td>${escapeHtml((detail.benefits || []).join(", ") || "Saved food")}</td>
+              <td>${escapeHtml(item.note)}</td>
+              <td>${authState.authenticated ? "LuminaOS sync" : "Browser list"}</td>
+            </tr>
+          `;
+        }).join("")}
+      </tbody>
+    `;
+  }
+
+  function renderSupplementTable(items) {
+    if (items.length === 0) return emptyRow("supplements");
+    return `
+      <thead>
+        <tr>
+          <th>Supplement product</th>
+          <th>Type</th>
+          <th>Purpose</th>
+          <th>List note</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${items.map((item) => `
+          <tr>
+            <td><div class="list-item-cell"><img src="${escapeHtml(item.image)}" alt=""><div><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.id)}</span></div></div></td>
+            <td>${escapeHtml(item.type)}</td>
+            <td>${escapeHtml(item.note || "Saved supplement")}</td>
+            <td>${escapeHtml(item.note)}</td>
+            <td>${authState.authenticated ? "LuminaOS sync" : "Browser list"}</td>
+          </tr>
+        `).join("")}
+      </tbody>
+    `;
+  }
+
+  function renderRecipeTable(items) {
+    if (items.length === 0) return emptyRow("recipes");
+    return `
+      <thead>
+        <tr>
+          <th>Recipe</th>
+          <th>Components</th>
+          <th>Focus</th>
+          <th>Note</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${items.map((item) => {
+          const detail = recipeDetails(item);
+          return `
+            <tr>
+              <td><div class="list-item-cell"><img src="${escapeHtml(item.image)}" alt=""><div><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.id)}</span></div></div></td>
+              <td>${escapeHtml((detail.components || []).join(", ") || "Saved recipe")}</td>
+              <td><div class="tag-row">${formatTags(detail.focus)}</div></td>
+              <td>${escapeHtml(item.note)}</td>
+              <td>${authState.authenticated ? "LuminaOS sync" : "Browser list"}</td>
+            </tr>
+          `;
+        }).join("")}
+      </tbody>
+    `;
+  }
+
+  function render(list) {
+    const groups = listGroups(list);
+    updateCounts(groups);
+
+    if (activeTab === "foods") target.innerHTML = renderFoodTable(groups.foods);
+    if (activeTab === "supplements") target.innerHTML = renderSupplementTable(groups.supplements);
+    if (activeTab === "recipes") target.innerHTML = renderRecipeTable(groups.recipes);
+  }
+
+  tabs.forEach((button) => {
+    button.addEventListener("click", () => {
+      activeTab = button.dataset.listTab;
+      tabs.forEach((entry) => {
+        entry.classList.toggle("active", entry === button);
+        entry.setAttribute("aria-selected", entry === button ? "true" : "false");
+      });
+      render(visibleList());
+    });
+  });
 
   render(visibleList());
   renderAuthControls();
@@ -705,6 +857,7 @@ const authReady = loadAuthSession().then(() => {
 
 if (page === "home") renderHome();
 if (page === "foods") renderFoods();
+if (page === "recipes") renderRecipes();
 if (page === "supplements") renderSupplements();
 if (page === "lists") renderSavedList();
 if (page === "luminaos") authReady.then(renderAuthControls);
