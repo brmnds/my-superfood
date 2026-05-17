@@ -95,7 +95,15 @@ Signed-in LuminaOS list rows use a separate browser cache:
 my-superfood-account-list-cache
 ```
 
-That account cache stores only saved-list display rows, never LuminaOS tokens. It is cleared on logout or session expiry. After each local write, the frontend tries to save the same item to DynamoDB through the Lambda API. If the API is unavailable, the current browser list still works. `lists.html` renders the local list immediately and then refreshes from DynamoDB when the API responds.
+That account cache stores only saved-list display rows, never LuminaOS tokens. It is cleared on logout or session expiry. After each local write, the frontend tries to save the same item to DynamoDB through the Lambda API. If the API is unavailable, the current browser list still works.
+
+`lists.html` renders saved rows as a tabbed table workspace:
+
+- Food lists
+- Supplement lists
+- Recipe lists
+
+The tabs are a frontend view over the same saved-list rows. The saved item `type` field determines which table receives each row.
 
 In local static preview, account sync is shown as unavailable until a same-origin `/api` route exists. In production, CloudFront should route `/api/*` to the list Lambda so My Superfood session cookies are scoped to `my-superfood.com`.
 

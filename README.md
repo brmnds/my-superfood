@@ -10,7 +10,7 @@ The first version is intentionally simple: plain HTML, CSS, and JavaScript with 
 - `foods.html` - list/catalog view of superfoods.
 - `supplements.html` - table-first supplement product and ingredient catalog with source labels.
 - `recipes.html` - healthy recipe feature page.
-- `lists.html` - saved list powered by browser `localStorage`, anonymous DynamoDB sync, and optional LuminaOS account sync.
+- `lists.html` - tabbed saved-list workspace for foods, supplements, and recipes, powered by browser `localStorage`, anonymous DynamoDB sync, and optional LuminaOS account sync.
 - `luminaos.html` - LuminaOS handoff page.
 
 ## Local Preview
@@ -38,6 +38,12 @@ Saved lists use a small AWS backend:
 - DynamoDB table: `my-superfood-list-items`
 - Lambda Function URL: `https://l36bksjavuxnp45gl5fel2jkbq0ertbm.lambda-url.eu-central-1.on.aws`
 - Optional production account sync through `/api/*` on `my-superfood.com`
+
+The Lists page groups saved rows into tabular views:
+
+- Food lists
+- Supplement lists
+- Recipe lists
 
 The supplement catalog has a separate read-only DynamoDB/Lambda path with local seed fallback:
 
