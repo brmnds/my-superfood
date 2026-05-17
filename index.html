@@ -38,7 +38,7 @@
 
         <div class="food-orbit" id="food-orbit" aria-label="Interactive superfood explorer"></div>
 
-        <article class="detail-card" id="detail-card" aria-live="polite">
+        <article class="detail-card is-hidden" id="detail-card" aria-live="polite">
           <button class="icon-button close-detail" type="button" aria-label="Close detail">x</button>
           <img class="detail-image" id="detail-image" src="assets/images/real/broccoli.jpg" alt="Broccoli" draggable="false">
           <h2 id="detail-title">Broccoli</h2>
@@ -53,10 +53,11 @@
         </article>
 
         <div class="filter-bar" aria-label="Nutrition filters">
+          <button class="filter-button active" type="button" data-filter="all">View all</button>
           <button class="filter-button" type="button" data-filter="protein">Protein</button>
           <button class="filter-button" type="button" data-filter="carbs">Carbs</button>
           <button class="filter-button" type="button" data-filter="oils">Oils</button>
-          <button class="filter-button active" type="button" data-filter="fiber">Fiber</button>
+          <button class="filter-button" type="button" data-filter="fiber">Fiber</button>
           <button class="filter-button" type="button" data-filter="advanced">Advanced nutrients</button>
         </div>
       </section>

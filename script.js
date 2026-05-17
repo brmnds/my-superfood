@@ -24,7 +24,17 @@ const foods = [
   { id: "soybeans", name: "Soybeans", image: "assets/images/real/soybeans.png", categories: ["protein", "carbs", "fiber"], benefits: ["Plant protein", "Isoflavones", "Minerals"], note: "A versatile legume base behind tofu, tempeh, edamame, and other soy foods.", x: "10%", y: "102%" },
   { id: "tofu", name: "Tofu", image: "assets/images/real/tofu.png", categories: ["protein"], benefits: ["Plant protein", "Calcium options", "Meal prep"], note: "A flexible soy protein for stir-fries, bowls, scrambles, and marinades.", x: "38%", y: "106%" },
   { id: "tempeh", name: "Tempeh", image: "assets/images/real/tempeh.png", categories: ["protein", "fiber", "advanced"], benefits: ["Fermented", "Plant protein", "Firm texture"], note: "Fermented soy with a firm bite for bowls, sandwiches, and high-protein plates.", x: "67%", y: "106%" },
-  { id: "miso", name: "Miso", image: "assets/images/real/miso.png", categories: ["advanced"], benefits: ["Fermented", "Umami", "Flavor booster"], note: "A salty fermented soy paste that adds depth to broths, dressings, and sauces.", x: "97%", y: "102%" }
+  { id: "miso", name: "Miso", image: "assets/images/real/miso.png", categories: ["advanced"], benefits: ["Fermented", "Umami", "Flavor booster"], note: "A salty fermented soy paste that adds depth to broths, dressings, and sauces.", x: "97%", y: "102%" },
+  { id: "broccoli-sprouts", name: "Broccoli Sprouts", image: "assets/images/real/broccoli-sprouts.png", categories: ["fiber", "advanced"], benefits: ["Sulforaphane", "Cruciferous", "Vitamin C"], note: "Concentrated cruciferous sprouts that add a fresh, peppery crunch to bowls and salads." },
+  { id: "brussels-sprouts", name: "Brussels Sprouts", image: "assets/images/real/brussels-sprouts.png", categories: ["fiber", "advanced"], benefits: ["Fiber", "Vitamin K", "Cruciferous"], note: "A compact cruciferous vegetable for roasted sides, salads, and simple vegetable plates." },
+  { id: "kale", name: "Kale", image: "assets/images/real/kale.png", categories: ["fiber", "advanced"], benefits: ["Leafy greens", "Vitamin K", "Minerals"], note: "A sturdy leafy green for salads, soups, smoothies, and cooked vegetable sides." },
+  { id: "cabbage", name: "Cabbage", image: "assets/images/real/cabbage.png", categories: ["fiber"], benefits: ["Fiber", "Vitamin C", "Budget friendly"], note: "A crisp cruciferous vegetable for slaws, soups, stir-fries, and fermented preparations." },
+  { id: "red-cabbage", name: "Red Cabbage", image: "assets/images/real/red-cabbage.png", categories: ["fiber", "advanced"], benefits: ["Anthocyanins", "Vitamin C", "Crunch"], note: "A colorful cruciferous vegetable that brings crunch and deep purple pigments to meals." },
+  { id: "watercress", name: "Watercress", image: "assets/images/real/watercress.png", categories: ["fiber", "advanced"], benefits: ["Peppery greens", "Vitamin K", "Nitrates"], note: "A peppery green for salads, sandwiches, soups, and nutrient-dense side plates." },
+  { id: "radishes", name: "Radishes", image: "assets/images/real/radishes.png", categories: ["fiber"], benefits: ["Crunch", "Cruciferous", "Fresh bite"], note: "A crisp root vegetable that adds a sharp, refreshing bite to salads and snack plates." },
+  { id: "kohlrabi", name: "Kohlrabi", image: "assets/images/real/kohlrabi.png", categories: ["fiber"], benefits: ["Fiber", "Vitamin C", "Crunch"], note: "A crunchy cruciferous vegetable that works raw in slaws or cooked in simple sides." },
+  { id: "swiss-chard", name: "Swiss Chard", image: "assets/images/real/swiss-chard.png", categories: ["fiber", "advanced"], benefits: ["Leafy minerals", "Colorful stems", "Vitamin K"], note: "A mineral-rich leafy green with colorful stems for sautees, soups, and grain bowls." },
+  { id: "romaine-lettuce", name: "Romaine Lettuce", image: "assets/images/real/romaine-lettuce.png", categories: ["fiber"], benefits: ["Hydrating", "Folate", "Crunch"], note: "A crisp leafy green for salads, wraps, and fresh high-volume meal bases." }
 ];
 
 const supplements = [
@@ -298,11 +308,11 @@ function renderHome() {
   const closeDetail = document.querySelector(".close-detail");
   if (!orbit || !detailTitle || !detailImage || !detailBenefits || !addButton || !openDetail || !detailCard || !closeDetail) return;
   let selected = foods[0];
-  let activeFilter = "fiber";
+  let activeFilter = "all";
   let cloudX = 0;
   let cloudY = 0;
   let didPan = false;
-  let clickToOpenOnly = false;
+  let clickToOpenOnly = true;
   let panBlockUntil = 0;
 
   function hideDetail() {
@@ -343,22 +353,67 @@ function renderHome() {
     const cloud = orbit.querySelector(".food-cloud");
     if (!cloud) return;
 
-    const orbitWidth = orbit.getBoundingClientRect().width;
-    const columns = orbitWidth < 560 ? 3 : orbitWidth < 820 ? 4 : orbitWidth < 1120 ? 5 : 6;
-    const cellSize = orbitWidth < 560 ? 132 : orbitWidth < 820 ? 148 : 168;
-    const bubbleSize = orbitWidth < 560 ? 86 : orbitWidth < 820 ? 96 : 108;
+    const orbitRect = orbit.getBoundingClientRect();
+    const orbitWidth = orbitRect.width;
+    const orbitHeight = orbitRect.height;
+    const cloudWidth = Math.round(Math.max(orbitWidth * (orbitWidth < 560 ? 2.15 : 1.52), orbitWidth + 420));
+    const cloudHeight = Math.round(Math.max(orbitHeight * (orbitWidth < 560 ? 1.65 : 1.38), orbitHeight + 210));
+    const edgePadding = orbitWidth < 560 ? 88 : 120;
+    const rowCount = orbitWidth < 560 ? 7 : 5;
+    const usableWidth = cloudWidth - edgePadding * 2;
+    const usableHeight = cloudHeight - edgePadding * 2;
+    const cellHeight = usableHeight / rowCount;
+    const baseBubbleSize = orbitWidth < 560 ? 82 : orbitWidth < 900 ? 100 : 112;
 
-    cloud.style.setProperty("--cloud-columns", columns);
-    cloud.style.setProperty("--bubble-cell", `${cellSize}px`);
-    cloud.style.setProperty("--bubble-size", `${bubbleSize}px`);
+    cloud.style.width = `${cloudWidth}px`;
+    cloud.style.height = `${cloudHeight}px`;
+
+    const bubbles = Array.from(cloud.querySelectorAll(".food-bubble"));
+    const rowBuckets = Array.from({ length: rowCount }, () => []);
+    bubbles
+      .slice()
+      .sort((a, b) => seededFraction(`food:${a.dataset.food}`) - seededFraction(`food:${b.dataset.food}`))
+      .forEach((button, index) => {
+        rowBuckets[index % rowCount].push(button);
+      });
+
+    rowBuckets.forEach((row, rowIndex) => {
+      row
+        .slice()
+        .sort((a, b) => seededFraction(`row:${rowIndex}:${a.dataset.food}`) - seededFraction(`row:${rowIndex}:${b.dataset.food}`))
+        .forEach((button, slotIndex) => {
+          const foodId = button.dataset.food || "";
+          const bubbleSize = Math.round(baseBubbleSize * (0.84 + seededFraction(`${foodId}:size`) * 0.2));
+          const slotWidth = usableWidth / row.length;
+          const rowOffset = (seededFraction(`row-offset:${rowIndex}`) - 0.5) * slotWidth * 0.42;
+          const jitterX = (seededFraction(`${foodId}:x`) - 0.5) * Math.max(20, slotWidth - bubbleSize - 24);
+          const jitterY = (seededFraction(`${foodId}:y`) - 0.5) * Math.max(12, cellHeight - bubbleSize - 34);
+          const x = edgePadding + slotIndex * slotWidth + (slotWidth - bubbleSize) / 2 + rowOffset + jitterX;
+          const y = edgePadding + rowIndex * cellHeight + (cellHeight - bubbleSize) / 2 + jitterY;
+          button.style.setProperty("--bubble-size", `${bubbleSize}px`);
+          button.style.setProperty("--bubble-x", `${Math.max(edgePadding, Math.min(cloudWidth - bubbleSize - edgePadding, x))}px`);
+          button.style.setProperty("--bubble-y", `${Math.max(edgePadding, Math.min(cloudHeight - bubbleSize - edgePadding, y))}px`);
+        });
+    });
+
     setCloudPosition(cloudX, cloudY);
+  }
+
+  function seededFraction(value) {
+    let hash = 2166136261;
+    const input = `my-superfood:${value}`;
+    for (let index = 0; index < input.length; index += 1) {
+      hash ^= input.charCodeAt(index);
+      hash = Math.imul(hash, 16777619);
+    }
+    return (hash >>> 0) / 4294967295;
   }
 
   function renderBubbles() {
     orbit.innerHTML = `
       <div class="food-cloud" id="food-cloud">
         ${foods.map((food, index) => `
-          <button class="food-bubble ${food.categories.includes(activeFilter) ? "" : "is-muted"}" type="button" data-food="${food.id}" style="--delay:${index * -0.43}s; --float:13px;" aria-label="${food.name}">
+          <button class="food-bubble ${activeFilter !== "all" && food.categories.includes(activeFilter) ? "is-featured" : ""}" type="button" data-food="${food.id}" style="--delay:${index * -0.43}s; --float:13px;" aria-label="${food.name}">
             <img src="${food.image}" alt="" draggable="false">
             <span class="bubble-label">${food.name}</span>
           </button>
@@ -388,7 +443,7 @@ function renderHome() {
       activeFilter = button.dataset.filter;
       document.querySelectorAll(".filter-button").forEach((entry) => entry.classList.toggle("active", entry === button));
       renderBubbles();
-      const firstMatch = foods.find((food) => food.categories.includes(activeFilter)) || foods[0];
+      const firstMatch = activeFilter === "all" ? foods[0] : foods.find((food) => food.categories.includes(activeFilter)) || foods[0];
       updateDetail(firstMatch);
     });
   });

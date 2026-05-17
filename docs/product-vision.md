@@ -29,12 +29,13 @@ The focused overlay should:
 
 The main page should include prominent simple filters:
 
+- View all
 - Protein
 - Carbs
 - Oils / fats
 - Fiber
 
-These filters should show foods that contain a lot of the selected category.
+`View all` is the default. Category filters should show or emphasize foods that contain a lot of the selected category.
 
 There should also be advanced filters where users can filter by highly represented nutrients. Examples can include vitamins, minerals, amino acids, fatty acids, antioxidants, or other meaningful nutrition attributes.
 

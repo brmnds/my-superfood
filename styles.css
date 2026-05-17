@@ -337,23 +337,27 @@ select {
   user-select: none;
 }
 
+.food-orbit::before {
+  background:
+    linear-gradient(90deg, rgba(252, 252, 252, 0.52), rgba(252, 252, 252, 0) 8%, rgba(252, 252, 252, 0) 92%, rgba(252, 252, 252, 0.52)),
+    linear-gradient(180deg, rgba(252, 252, 252, 0.5), rgba(252, 252, 252, 0) 10%, rgba(252, 252, 252, 0) 92%, rgba(252, 252, 252, 0.34));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 9;
+}
+
 .food-orbit.is-panning {
   cursor: grabbing;
 }
 
 .food-cloud {
-  display: grid;
-  gap: 0;
-  grid-auto-rows: var(--bubble-cell, 168px);
-  grid-template-columns: repeat(var(--cloud-columns, 6), var(--bubble-cell, 168px));
-  height: max-content;
   left: 0;
   position: absolute;
-  place-items: center;
   top: 0;
   transform: translate3d(0, 0, 0);
   transition: transform 140ms ease-out;
-  width: max-content;
   will-change: transform;
 }
 
@@ -374,8 +378,10 @@ select {
   display: inline-flex;
   height: var(--size);
   justify-content: center;
+  left: var(--bubble-x, 0);
   padding: 3px;
-  position: relative;
+  position: absolute;
+  top: var(--bubble-y, 0);
   transform: scale(1);
   transition: transform 210ms ease, opacity 210ms ease, filter 210ms ease, box-shadow 210ms ease, translate 210ms ease;
   width: var(--size);
@@ -401,17 +407,9 @@ select {
   z-index: 8;
 }
 
-.food-bubble.is-muted {
-  filter: saturate(0.48) blur(0.5px);
-  opacity: 0.27;
-  translate: 0 12px;
-}
-
-.food-bubble.is-muted:hover,
-.food-bubble.is-muted:focus-visible {
-  filter: saturate(1.12) contrast(1.03);
-  opacity: 1;
-  translate: 0 0;
+.food-bubble.is-featured {
+  border-color: rgba(47, 125, 50, 0.55);
+  box-shadow: 0 22px 54px rgba(47, 125, 50, 0.22);
 }
 
 .bubble-label {
@@ -1328,10 +1326,6 @@ h2 {
   .food-bubble:hover,
   .food-bubble:focus-visible {
     transform: scale(1.04);
-  }
-
-  .food-bubble.is-muted {
-    translate: 0 8px;
   }
 
   .bubble-label {

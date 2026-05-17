@@ -27,8 +27,9 @@ The icon should appear next to the `My Superfood` wordmark in the site header. D
 - Use cards only for real grouped content, repeated items, status panels, or modals.
 - Avoid adding dashboard summary sections unless they serve an existing workflow.
 - On mobile, preserve access to navigation, filters, tabs, and primary actions without horizontal text overflow.
-- The landing-page food explorer must use responsive, non-overlapping food-circle placement. As more foods are added, reflow the circles into a spaced cloud/grid rather than hand-placing fixed coordinates that collide.
+- The landing-page food explorer must use responsive, non-overlapping food-circle placement that still feels organic and random. As more foods are added, reflow the circles into a balanced scattered cloud rather than a visibly ordered list, lonely single-item bands, blank corridors, or fixed coordinates that collide.
 - The food cloud does not need to fit every item into one viewport. When the cloud is larger than the visible stage, users should be able to pan it with mouse or touch to reach off-screen foods.
+- The default landing-page nutrition filter is `View all`; category filters such as Protein, Carbs, Oils, Fiber, and Advanced nutrients should highlight matching foods without blurring or hiding the rest of the cloud.
 
 ## Components
 

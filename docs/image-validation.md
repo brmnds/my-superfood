@@ -1,6 +1,6 @@
 # Image Validation
 
-Last validated: 2026-05-16
+Last validated: 2026-05-17
 
 This report validates current My Superfood images against the picture steering files:
 
@@ -39,6 +39,16 @@ This report validates current My Superfood images against the picture steering f
 | Tofu | `assets/images/real/tofu.png` | Pass | Generated product-style image of plain tofu blocks on a clean white background. |
 | Tempeh | `assets/images/real/tempeh.png` | Pass | Generated product-style image of plain tempeh with visible soybean texture on a clean white background. |
 | Miso | `assets/images/real/miso.png` | Pass | Generated product-style image of miso paste in a plain white dish on a clean white background. |
+| Broccoli Sprouts | `assets/images/real/broccoli-sprouts.png` | Pass | Generated product-style image of raw broccoli sprouts on a clean white background. |
+| Brussels Sprouts | `assets/images/real/brussels-sprouts.png` | Pass | Generated product-style image of raw Brussels sprouts on a clean white background. |
+| Kale | `assets/images/real/kale.png` | Pass | Generated product-style image of raw kale leaves on a clean white background. |
+| Cabbage | `assets/images/real/cabbage.png` | Pass | Generated product-style image of raw green cabbage on a clean white background. |
+| Red Cabbage | `assets/images/real/red-cabbage.png` | Pass | Generated product-style image of raw red cabbage on a clean white background. |
+| Watercress | `assets/images/real/watercress.png` | Pass | Generated product-style image of raw watercress on a clean white background. |
+| Radishes | `assets/images/real/radishes.png` | Pass | Generated product-style image of raw red radishes on a clean white background. |
+| Kohlrabi | `assets/images/real/kohlrabi.png` | Pass | Generated product-style image of raw kohlrabi on a clean white background. |
+| Swiss Chard | `assets/images/real/swiss-chard.png` | Pass | Generated product-style image of raw Swiss chard on a clean white background. |
+| Romaine Lettuce | `assets/images/real/romaine-lettuce.png` | Pass | Generated product-style image of raw romaine lettuce on a clean white background. |
 
 ## Recipe Images
 
