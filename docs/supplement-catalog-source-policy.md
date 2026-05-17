@@ -13,9 +13,9 @@ The supplement catalog is a reviewed informational database. It is not medical a
 
 Use sources in this order:
 
-1. Package photos supplied by Tilman.
-2. Official provider product pages.
-3. `needs_review` when neither source is clear enough.
+1. Official provider product pages when they expose exact supplement-facts data, including ingredient amount, unit, and serving basis.
+2. Package photos supplied by Tilman as verification evidence, cross-checks, and fallback when official online facts are missing or ambiguous.
+3. `needs_review` when neither source is exact enough.
 
 The current package-photo evidence folder is:
 
@@ -23,14 +23,14 @@ The current package-photo evidence folder is:
 /Users/tilmanresch/Downloads/iloveimg-converted (1)
 ```
 
-The package photos are evidence and provenance, not public product thumbnails.
+The package photos are evidence and provenance, not public product thumbnails. For Blueprint/Bryan Johnson products, official Blueprint pages are the preferred source of truth when the exact supplement facts are available online.
 
 ## Source Status
 
 Allowed values:
 
 - `package_verified`: package label was readable and used for the relevant amount.
-- `website_sourced`: official provider page was used because package evidence was incomplete.
+- `website_sourced`: official provider page was used for the relevant amount.
 - `needs_review`: amount or interpretation was uncertain.
 
 Do not silently guess unclear amounts. Store an ingredient with `amount: null` and `sourceStatus: "needs_review"` when needed.

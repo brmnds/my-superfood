@@ -1,42 +1,93 @@
 {
   "schemaVersion": 1,
-  "captureDate": "2026-05-16",
-  "sourcePolicy": "Package photos first, official provider pages second. Mark uncertain label reads as needs_review.",
+  "captureDate": "2026-05-17",
+  "sourcePolicy": "Official provider supplement facts first when exact; package photos are verification evidence and fallback. Mark uncertain reads as needs_review.",
   "supplements": [
     {
       "id": "vitamin-c",
       "name": "Vitamin C",
-      "aliases": ["Ascorbic Acid"],
+      "aliases": [
+        "Ascorbic Acid"
+      ],
       "purpose": "Antioxidant and immune-support nutrient.",
-      "categories": ["essentials", "longevity", "recovery"],
-      "recommendedDailyAmount": { "min": null, "medium": 90, "max": 2000, "unit": "mg", "basis": "General adult daily-value context; not personalized advice.", "source": "needs_review" },
+      "categories": [
+        "essentials",
+        "longevity",
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 90,
+        "max": 2000,
+        "unit": "mg",
+        "basis": "General adult daily-value context; not personalized advice.",
+        "source": "needs_review"
+      },
       "sourceStatus": "needs_review"
     },
     {
       "id": "magnesium",
       "name": "Magnesium",
-      "aliases": ["Magnesium Citrate"],
+      "aliases": [
+        "Magnesium Citrate"
+      ],
       "purpose": "Mineral commonly used for muscle, mood, and sleep-support contexts.",
-      "categories": ["essentials", "recovery"],
-      "recommendedDailyAmount": { "min": null, "medium": 400, "max": 420, "unit": "mg", "basis": "General adult daily-value context; not personalized advice.", "source": "needs_review" },
+      "categories": [
+        "essentials",
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 400,
+        "max": 420,
+        "unit": "mg",
+        "basis": "General adult daily-value context; not personalized advice.",
+        "source": "needs_review"
+      },
       "sourceStatus": "needs_review"
     },
     {
       "id": "creatine-monohydrate",
       "name": "Creatine Monohydrate",
-      "aliases": ["Creatine"],
+      "aliases": [
+        "Creatine"
+      ],
       "purpose": "Performance and recovery supplement commonly used for strength and muscle support.",
-      "categories": ["energy", "recovery", "brain"],
-      "recommendedDailyAmount": { "min": 3000, "medium": 5000, "max": 5000, "unit": "mg", "basis": "Common daily maintenance range; not personalized advice.", "source": "needs_review" },
+      "categories": [
+        "energy",
+        "recovery",
+        "brain"
+      ],
+      "recommendedDailyAmount": {
+        "min": 3000,
+        "medium": 5000,
+        "max": 5000,
+        "unit": "mg",
+        "basis": "Common daily maintenance range; not personalized advice.",
+        "source": "needs_review"
+      },
       "sourceStatus": "needs_review"
     },
     {
       "id": "calcium-alpha-ketoglutarate",
       "name": "Calcium Alpha-Ketoglutarate",
-      "aliases": ["CaAKG", "Calcium AKG"],
+      "aliases": [
+        "CaAKG",
+        "Calcium AKG"
+      ],
       "purpose": "Longevity-oriented molecule used in Blueprint Longevity Mix.",
-      "categories": ["longevity", "energy"],
-      "recommendedDailyAmount": { "min": null, "medium": 2000, "max": null, "unit": "mg", "basis": "Blueprint product serving amount; general recommendation needs review.", "source": "website_sourced" },
+      "categories": [
+        "longevity",
+        "energy"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 2000,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
       "sourceStatus": "website_sourced"
     },
     {
@@ -44,8 +95,19 @@
       "name": "Taurine",
       "aliases": [],
       "purpose": "Amino sulfonic acid used in energy and cellular-support contexts.",
-      "categories": ["energy", "longevity", "heart"],
-      "recommendedDailyAmount": { "min": null, "medium": 1500, "max": null, "unit": "mg", "basis": "Blueprint product serving amount; general recommendation needs review.", "source": "website_sourced" },
+      "categories": [
+        "energy",
+        "longevity",
+        "heart"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 1500,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
       "sourceStatus": "website_sourced"
     },
     {
@@ -53,208 +115,1568 @@
       "name": "Glycine",
       "aliases": [],
       "purpose": "Amino acid used in recovery, sleep, and collagen-support contexts.",
-      "categories": ["recovery", "skin"],
-      "recommendedDailyAmount": { "min": null, "medium": 1200, "max": null, "unit": "mg", "basis": "Blueprint product serving amount; general recommendation needs review.", "source": "website_sourced" },
+      "categories": [
+        "recovery",
+        "skin"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 1200,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
       "sourceStatus": "website_sourced"
     },
     {
       "id": "l-theanine",
       "name": "L-Theanine",
-      "aliases": ["Theanine"],
+      "aliases": [
+        "Theanine"
+      ],
       "purpose": "Amino acid commonly used for calm focus.",
-      "categories": ["brain", "energy"],
-      "recommendedDailyAmount": { "min": 100, "medium": 200, "max": 400, "unit": "mg", "basis": "Common supplemental range; not personalized advice.", "source": "needs_review" },
+      "categories": [
+        "brain",
+        "energy"
+      ],
+      "recommendedDailyAmount": {
+        "min": 100,
+        "medium": 200,
+        "max": 400,
+        "unit": "mg",
+        "basis": "Common supplemental range; not personalized advice.",
+        "source": "needs_review"
+      },
       "sourceStatus": "needs_review"
     },
     {
       "id": "omega-3",
       "name": "Omega-3",
-      "aliases": ["Total Omega-3s", "EPA + DHA"],
+      "aliases": [
+        "Total Omega-3s",
+        "EPA + DHA"
+      ],
       "purpose": "Fatty-acid category commonly used for heart, brain, and inflammatory-function support.",
-      "categories": ["heart", "brain", "inflammation", "recovery"],
-      "recommendedDailyAmount": { "min": 250, "medium": 800, "max": 2000, "unit": "mg", "basis": "General EPA/DHA intake context; not personalized advice.", "source": "needs_review" },
+      "categories": [
+        "heart",
+        "brain",
+        "inflammation",
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": 250,
+        "medium": 800,
+        "max": 2000,
+        "unit": "mg",
+        "basis": "General EPA/DHA intake context; not personalized advice.",
+        "source": "needs_review"
+      },
       "sourceStatus": "needs_review"
     },
     {
       "id": "epa",
       "name": "EPA",
-      "aliases": ["Eicosapentaenoic Acid"],
+      "aliases": [
+        "Eicosapentaenoic Acid"
+      ],
       "purpose": "Long-chain omega-3 fatty acid used for heart and inflammatory-function support.",
-      "categories": ["heart", "inflammation", "recovery"],
-      "recommendedDailyAmount": { "min": null, "medium": 400, "max": null, "unit": "mg", "basis": "Blueprint product serving amount; general recommendation needs review.", "source": "package_verified" },
-      "sourceStatus": "package_verified"
+      "categories": [
+        "heart",
+        "inflammation",
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 400,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
     },
     {
       "id": "dha",
       "name": "DHA",
-      "aliases": ["Docosahexaenoic Acid"],
+      "aliases": [
+        "Docosahexaenoic Acid"
+      ],
       "purpose": "Long-chain omega-3 fatty acid used for brain and eye-health contexts.",
-      "categories": ["brain", "heart"],
-      "recommendedDailyAmount": { "min": null, "medium": 400, "max": null, "unit": "mg", "basis": "Blueprint product serving amount; general recommendation needs review.", "source": "package_verified" },
-      "sourceStatus": "package_verified"
+      "categories": [
+        "brain",
+        "heart"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 400,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
     },
     {
       "id": "collagen-peptides",
       "name": "Collagen Peptides",
-      "aliases": ["Collagen Types I & III"],
+      "aliases": [
+        "Collagen Types I & III"
+      ],
       "purpose": "Protein peptides used for skin, hair, nails, connective tissue, and recovery contexts.",
-      "categories": ["skin", "recovery"],
-      "recommendedDailyAmount": { "min": 2500, "medium": 10000, "max": 20000, "unit": "mg", "basis": "Common supplemental range; not personalized advice.", "source": "needs_review" },
+      "categories": [
+        "skin",
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": 2500,
+        "medium": 10000,
+        "max": 20000,
+        "unit": "mg",
+        "basis": "Common supplemental range; not personalized advice.",
+        "source": "needs_review"
+      },
       "sourceStatus": "needs_review"
     },
     {
       "id": "n-acetyl-cysteine",
       "name": "N-Acetyl Cysteine",
-      "aliases": ["NAC", "N-Acetyl-L-Cysteine"],
+      "aliases": [
+        "NAC",
+        "N-Acetyl-L-Cysteine"
+      ],
       "purpose": "Glutathione-support precursor used in antioxidant and immune contexts.",
-      "categories": ["inflammation", "longevity", "recovery"],
-      "recommendedDailyAmount": { "min": 600, "medium": 1200, "max": 1800, "unit": "mg", "basis": "Common supplemental range; not personalized advice.", "source": "needs_review" },
+      "categories": [
+        "inflammation",
+        "longevity",
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": 600,
+        "medium": 1200,
+        "max": 1800,
+        "unit": "mg",
+        "basis": "Common supplemental range; not personalized advice.",
+        "source": "needs_review"
+      },
       "sourceStatus": "needs_review"
     },
     {
       "id": "ginger-extract",
       "name": "Ginger Extract",
-      "aliases": ["Zingiber officinale"],
+      "aliases": [
+        "Zingiber officinale"
+      ],
       "purpose": "Botanical extract used for digestive balance and inflammatory-function contexts.",
-      "categories": ["inflammation", "recovery"],
-      "recommendedDailyAmount": { "min": null, "medium": 400, "max": null, "unit": "mg", "basis": "Blueprint product serving amount; general recommendation needs review.", "source": "website_sourced" },
+      "categories": [
+        "inflammation",
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 400,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
       "sourceStatus": "website_sourced"
     },
     {
       "id": "curcumin",
       "name": "Curcumin",
-      "aliases": ["Curcuminoids", "Curcumin Extract"],
+      "aliases": [
+        "Curcuminoids",
+        "Curcumin Extract"
+      ],
       "purpose": "Turmeric-derived compound used for antioxidant and inflammatory-function contexts.",
-      "categories": ["inflammation", "longevity", "recovery"],
-      "recommendedDailyAmount": { "min": 250, "medium": 500, "max": 1000, "unit": "mg", "basis": "Common supplemental range; not personalized advice.", "source": "needs_review" },
+      "categories": [
+        "inflammation",
+        "longevity",
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": 250,
+        "medium": 500,
+        "max": 1000,
+        "unit": "mg",
+        "basis": "Common supplemental range; not personalized advice.",
+        "source": "needs_review"
+      },
       "sourceStatus": "needs_review"
     },
     {
       "id": "rhodiola-rosea",
       "name": "Rhodiola Rosea",
-      "aliases": ["Rhodiola"],
+      "aliases": [
+        "Rhodiola"
+      ],
       "purpose": "Adaptogenic botanical used for stamina, stress balance, and focus contexts.",
-      "categories": ["brain", "energy"],
-      "recommendedDailyAmount": { "min": 200, "medium": 300, "max": 600, "unit": "mg", "basis": "Common supplemental range; not personalized advice.", "source": "needs_review" },
+      "categories": [
+        "brain",
+        "energy"
+      ],
+      "recommendedDailyAmount": {
+        "min": 200,
+        "medium": 300,
+        "max": 600,
+        "unit": "mg",
+        "basis": "Common supplemental range; not personalized advice.",
+        "source": "needs_review"
+      },
       "sourceStatus": "needs_review"
     },
     {
       "id": "ashwagandha",
       "name": "Ashwagandha",
-      "aliases": ["Withania somnifera"],
+      "aliases": [
+        "Withania somnifera"
+      ],
       "purpose": "Adaptogenic botanical used for stress-response, sleep, and mood contexts.",
-      "categories": ["brain", "recovery"],
-      "recommendedDailyAmount": { "min": 120, "medium": 300, "max": 600, "unit": "mg", "basis": "Common supplemental range varies by extract; not personalized advice.", "source": "needs_review" },
+      "categories": [
+        "brain",
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": 120,
+        "medium": 300,
+        "max": 600,
+        "unit": "mg",
+        "basis": "Common supplemental range varies by extract; not personalized advice.",
+        "source": "needs_review"
+      },
       "sourceStatus": "needs_review"
     },
     {
       "id": "vitamin-d3",
       "name": "Vitamin D3",
-      "aliases": ["Cholecalciferol", "Vitamin D"],
+      "aliases": [
+        "Cholecalciferol",
+        "Vitamin D"
+      ],
       "purpose": "Vitamin used in bone, immune, and daily nutrition contexts.",
-      "categories": ["essentials", "longevity"],
-      "recommendedDailyAmount": { "min": 15, "medium": 50, "max": 100, "unit": "mcg", "basis": "General adult daily-value context; not personalized advice.", "source": "needs_review" },
+      "categories": [
+        "essentials",
+        "longevity"
+      ],
+      "recommendedDailyAmount": {
+        "min": 15,
+        "medium": 50,
+        "max": 100,
+        "unit": "mcg",
+        "basis": "General adult daily-value context; not personalized advice.",
+        "source": "needs_review"
+      },
       "sourceStatus": "needs_review"
     },
     {
       "id": "nicotinamide-riboside",
       "name": "Nicotinamide Riboside",
-      "aliases": ["NR"],
+      "aliases": [
+        "NR"
+      ],
       "purpose": "NAD+ precursor used in longevity and cellular-energy contexts.",
-      "categories": ["longevity", "energy"],
-      "recommendedDailyAmount": { "min": null, "medium": 300, "max": null, "unit": "mg", "basis": "Blueprint product serving amount; general recommendation needs review.", "source": "package_verified" },
-      "sourceStatus": "package_verified"
+      "categories": [
+        "longevity",
+        "energy"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 300,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
     },
     {
       "id": "fisetin",
       "name": "Fisetin",
       "aliases": [],
       "purpose": "Polyphenol used in cellular-defense and longevity contexts.",
-      "categories": ["longevity", "inflammation"],
-      "recommendedDailyAmount": { "min": null, "medium": 100, "max": null, "unit": "mg", "basis": "Blueprint product serving amount; general recommendation needs review.", "source": "package_verified" },
-      "sourceStatus": "package_verified"
+      "categories": [
+        "longevity",
+        "inflammation"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 100,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
     },
     {
       "id": "spermidine",
       "name": "Spermidine",
-      "aliases": ["Spermidine Trihydrochloride"],
+      "aliases": [
+        "Spermidine Trihydrochloride"
+      ],
       "purpose": "Longevity-oriented compound used in cellular-maintenance contexts.",
-      "categories": ["longevity"],
-      "recommendedDailyAmount": { "min": null, "medium": 10, "max": null, "unit": "mg", "basis": "Blueprint product serving amount; general recommendation needs review.", "source": "package_verified" },
-      "sourceStatus": "package_verified"
+      "categories": [
+        "longevity"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 10,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
     },
     {
       "id": "astaxanthin",
       "name": "Astaxanthin",
       "aliases": [],
       "purpose": "Carotenoid antioxidant used in skin and cellular-defense contexts.",
-      "categories": ["skin", "longevity", "inflammation"],
-      "recommendedDailyAmount": { "min": null, "medium": null, "max": null, "unit": "mg", "basis": "Amount needs package or official-page review.", "source": "needs_review" },
-      "sourceStatus": "needs_review"
+      "categories": [
+        "skin",
+        "longevity",
+        "inflammation"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 12,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "calcium",
+      "name": "Calcium",
+      "aliases": [
+        "Calcium from CaAKG",
+        "Calcium from Dicalcium Phosphate"
+      ],
+      "purpose": "Essential mineral used in bone, muscle, and daily nutrition contexts.",
+      "categories": [
+        "essentials",
+        "longevity"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 400,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "l-lysine",
+      "name": "L-Lysine",
+      "aliases": [
+        "Lysine"
+      ],
+      "purpose": "Essential amino acid used in protein and recovery contexts.",
+      "categories": [
+        "recovery",
+        "energy"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 1000,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "glucosamine-sulfate",
+      "name": "Glucosamine Sulfate",
+      "aliases": [
+        "Glucosamine Sulfate as KCl"
+      ],
+      "purpose": "Joint-support compound used in connective-tissue contexts.",
+      "categories": [
+        "recovery",
+        "inflammation"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 750,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "l-glutathione",
+      "name": "L-Glutathione",
+      "aliases": [
+        "Reduced Glutathione"
+      ],
+      "purpose": "Antioxidant compound used in cellular-defense contexts.",
+      "categories": [
+        "longevity",
+        "inflammation",
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 250,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "sodium-hyaluronate",
+      "name": "Sodium Hyaluronate",
+      "aliases": [
+        "Hyaluronic Acid Sodium Salt"
+      ],
+      "purpose": "Hyaluronic-acid form used in skin and connective-tissue contexts.",
+      "categories": [
+        "skin",
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 120,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "microalgae-oil-concentrate",
+      "name": "Microalgae Oil Concentrate",
+      "aliases": [
+        "Schizochytrium sp."
+      ],
+      "purpose": "Algae oil concentrate that provides EPA and DHA omega-3 fatty acids.",
+      "categories": [
+        "heart",
+        "brain",
+        "inflammation"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 1.35,
+        "max": null,
+        "unit": "g",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "standardized-cartilage",
+      "name": "Standardized Cartilage",
+      "aliases": [
+        "Chicken Cartilage"
+      ],
+      "purpose": "Chicken cartilage ingredient that provides undenatured type II collagen.",
+      "categories": [
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 40,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "undenatured-type-ii-collagen",
+      "name": "Undenatured Type II Collagen",
+      "aliases": [
+        "Type II Collagen"
+      ],
+      "purpose": "Collagen fraction used in cartilage and joint-support contexts.",
+      "categories": [
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 10,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "broccoli-seed-extract",
+      "name": "Broccoli Seed Extract",
+      "aliases": [
+        "Glucoraphanin"
+      ],
+      "purpose": "Broccoli seed extract standardized for glucoraphanin.",
+      "categories": [
+        "longevity",
+        "inflammation"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 200,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "luteolin",
+      "name": "Luteolin",
+      "aliases": [
+        "Sophora japonica bud extract"
+      ],
+      "purpose": "Polyphenol used in cellular-defense and longevity contexts.",
+      "categories": [
+        "longevity",
+        "inflammation"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 100,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "ubiquinol",
+      "name": "Ubiquinol",
+      "aliases": [
+        "Reduced CoQ10",
+        "CoQ10"
+      ],
+      "purpose": "Reduced CoQ10 used in mitochondrial and cellular-energy contexts.",
+      "categories": [
+        "energy",
+        "heart",
+        "longevity"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 50,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "lactobacillus-acidophilus",
+      "name": "Lactobacillus Acidophilus",
+      "aliases": [
+        "L. acidophilus"
+      ],
+      "purpose": "Probiotic organism used in gut and immune-support contexts.",
+      "categories": [
+        "essentials",
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 20,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "boron",
+      "name": "Boron",
+      "aliases": [
+        "Boron Glycinate"
+      ],
+      "purpose": "Trace mineral used in bone and daily nutrition contexts.",
+      "categories": [
+        "essentials"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 3,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "lithium-orotate",
+      "name": "Lithium Orotate",
+      "aliases": [
+        "Lithium"
+      ],
+      "purpose": "Trace-dose lithium salt used in Blueprint Essential Capsules.",
+      "categories": [
+        "brain",
+        "longevity"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 1,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "vitamin-e",
+      "name": "Vitamin E",
+      "aliases": [
+        "d-alpha-Tocopherol"
+      ],
+      "purpose": "Fat-soluble antioxidant vitamin used in cellular-defense contexts.",
+      "categories": [
+        "essentials",
+        "longevity"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 67,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "thiamin",
+      "name": "Thiamin",
+      "aliases": [
+        "Vitamin B1",
+        "Thiamin HCl"
+      ],
+      "purpose": "B vitamin used in energy metabolism contexts.",
+      "categories": [
+        "essentials",
+        "energy"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 1.1,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "riboflavin",
+      "name": "Riboflavin",
+      "aliases": [
+        "Vitamin B2"
+      ],
+      "purpose": "B vitamin used in energy metabolism contexts.",
+      "categories": [
+        "essentials",
+        "energy"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 1.4,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "niacin",
+      "name": "Niacin",
+      "aliases": [
+        "Niacinamide"
+      ],
+      "purpose": "B vitamin used in energy metabolism and daily nutrition contexts.",
+      "categories": [
+        "essentials",
+        "energy"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 15,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "vitamin-b6",
+      "name": "Vitamin B6",
+      "aliases": [
+        "Pyridoxine HCl"
+      ],
+      "purpose": "B vitamin used in metabolism and nervous-system contexts.",
+      "categories": [
+        "essentials",
+        "brain",
+        "energy"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 1.4,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "folate",
+      "name": "Folate",
+      "aliases": [
+        "Calcium L-5 Methyltetrahydrofolate",
+        "5-MTHF"
+      ],
+      "purpose": "B vitamin used in methylation and daily nutrition contexts.",
+      "categories": [
+        "essentials",
+        "brain"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 200,
+        "max": null,
+        "unit": "mcg DFE",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "vitamin-b12",
+      "name": "Vitamin B12",
+      "aliases": [
+        "Methylcobalamin"
+      ],
+      "purpose": "B vitamin used in nervous-system and energy contexts.",
+      "categories": [
+        "essentials",
+        "brain",
+        "energy"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 125,
+        "max": null,
+        "unit": "mcg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "biotin",
+      "name": "Biotin",
+      "aliases": [],
+      "purpose": "B vitamin used in hair, skin, nails, and daily nutrition contexts.",
+      "categories": [
+        "essentials",
+        "skin"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 50,
+        "max": null,
+        "unit": "mcg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "pantothenic-acid",
+      "name": "Pantothenic Acid",
+      "aliases": [
+        "Vitamin B5",
+        "D-Calcium Pantothenate"
+      ],
+      "purpose": "B vitamin used in energy metabolism contexts.",
+      "categories": [
+        "essentials",
+        "energy"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 6,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "iodine",
+      "name": "Iodine",
+      "aliases": [
+        "Potassium Iodide"
+      ],
+      "purpose": "Trace mineral used in thyroid and daily nutrition contexts.",
+      "categories": [
+        "essentials",
+        "energy"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 200,
+        "max": null,
+        "unit": "mcg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "zinc",
+      "name": "Zinc",
+      "aliases": [
+        "Zinc Bisglycinate"
+      ],
+      "purpose": "Mineral used in immune, skin, and daily nutrition contexts.",
+      "categories": [
+        "essentials",
+        "skin",
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 15,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "selenium",
+      "name": "Selenium",
+      "aliases": [
+        "L-Selenomethionine"
+      ],
+      "purpose": "Trace mineral used in antioxidant and daily nutrition contexts.",
+      "categories": [
+        "essentials",
+        "longevity"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 28,
+        "max": null,
+        "unit": "mcg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "manganese",
+      "name": "Manganese",
+      "aliases": [
+        "Manganese Citrate"
+      ],
+      "purpose": "Trace mineral used in daily nutrition contexts.",
+      "categories": [
+        "essentials"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 1,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "vitamin-k1",
+      "name": "Vitamin K1",
+      "aliases": [
+        "Phytonadione"
+      ],
+      "purpose": "Vitamin K form used in blood-clotting and bone-health contexts.",
+      "categories": [
+        "essentials",
+        "heart"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 1500,
+        "max": null,
+        "unit": "mcg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "lycopene",
+      "name": "Lycopene",
+      "aliases": [],
+      "purpose": "Carotenoid antioxidant used in heart and cellular-health contexts.",
+      "categories": [
+        "heart",
+        "longevity",
+        "skin"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 15,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "lutein",
+      "name": "Lutein",
+      "aliases": [
+        "Marigold Flower Extract"
+      ],
+      "purpose": "Carotenoid used in eye-health and cellular-defense contexts.",
+      "categories": [
+        "brain",
+        "skin",
+        "longevity"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 10,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "vitamin-k2-mk4",
+      "name": "Vitamin K2 MK-4",
+      "aliases": [
+        "Menaquinone-4"
+      ],
+      "purpose": "Vitamin K2 form used in vascular and bone-health contexts.",
+      "categories": [
+        "heart",
+        "essentials"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 5,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "zeaxanthin",
+      "name": "Zeaxanthin",
+      "aliases": [
+        "Marigold Flower Extract"
+      ],
+      "purpose": "Carotenoid used in eye-health contexts.",
+      "categories": [
+        "brain",
+        "skin"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 2,
+        "max": null,
+        "unit": "mg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "vitamin-k2-mk7",
+      "name": "Vitamin K2 MK-7",
+      "aliases": [
+        "Menaquinone-7"
+      ],
+      "purpose": "Vitamin K2 form used in heart and bone-health contexts.",
+      "categories": [
+        "heart",
+        "essentials"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 600,
+        "max": null,
+        "unit": "mcg",
+        "basis": "Blueprint product serving amount; general recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
     }
   ],
   "supplementProducts": [
     {
       "id": "blueprint-longevity-mix-blood-orange",
       "name": "Longevity Mix - Blood Orange",
-      "aliases": ["Longevity Mix"],
+      "aliases": [
+        "Longevity Mix"
+      ],
       "provider": "Bryan Johnson / Blueprint",
       "productType": "mix",
       "purpose": "Morning drink mix for energy, focus, recovery, metabolism, and longevity support.",
-      "categories": ["longevity", "energy", "brain", "recovery"],
+      "categories": [
+        "longevity",
+        "energy",
+        "brain",
+        "recovery"
+      ],
       "image": "assets/images/creatine.svg",
       "ingredients": [
-        { "supplementId": "vitamin-c", "amount": 250, "unit": "mg", "perServing": "1 level scoop", "labelNotes": "As ascorbic acid.", "sourceIds": ["website-longevity-mix"] },
-        { "supplementId": "magnesium", "amount": 150, "unit": "mg", "perServing": "1 level scoop", "labelNotes": "As magnesium citrate.", "sourceIds": ["website-longevity-mix"] },
-        { "supplementId": "creatine-monohydrate", "amount": 2500, "unit": "mg", "perServing": "1 level scoop", "labelNotes": "As creatine monohydrate.", "sourceIds": ["website-longevity-mix"] },
-        { "supplementId": "calcium-alpha-ketoglutarate", "amount": 2000, "unit": "mg", "perServing": "1 level scoop", "labelNotes": "CaAKG.", "sourceIds": ["website-longevity-mix"] },
-        { "supplementId": "taurine", "amount": 1500, "unit": "mg", "perServing": "1 level scoop", "labelNotes": "", "sourceIds": ["website-longevity-mix"] },
-        { "supplementId": "glycine", "amount": 1200, "unit": "mg", "perServing": "1 level scoop", "labelNotes": "", "sourceIds": ["website-longevity-mix"] },
-        { "supplementId": "l-theanine", "amount": 200, "unit": "mg", "perServing": "1 level scoop", "labelNotes": "", "sourceIds": ["website-longevity-mix"] }
+        {
+          "supplementId": "vitamin-c",
+          "amount": 250,
+          "unit": "mg",
+          "perServing": "1 level scoop",
+          "labelNotes": "As ascorbic acid.",
+          "sourceIds": [
+            "website-longevity-mix"
+          ]
+        },
+        {
+          "supplementId": "calcium",
+          "amount": 400,
+          "unit": "mg",
+          "perServing": "1 level scoop",
+          "labelNotes": "From CaAKG.",
+          "sourceIds": [
+            "website-longevity-mix"
+          ]
+        },
+        {
+          "supplementId": "magnesium",
+          "amount": 150,
+          "unit": "mg",
+          "perServing": "1 level scoop",
+          "labelNotes": "As magnesium citrate.",
+          "sourceIds": [
+            "website-longevity-mix"
+          ]
+        },
+        {
+          "supplementId": "creatine-monohydrate",
+          "amount": 2500,
+          "unit": "mg",
+          "perServing": "1 level scoop",
+          "labelNotes": "As creatine monohydrate.",
+          "sourceIds": [
+            "website-longevity-mix"
+          ]
+        },
+        {
+          "supplementId": "calcium-alpha-ketoglutarate",
+          "amount": 2000,
+          "unit": "mg",
+          "perServing": "1 level scoop",
+          "labelNotes": "CaAKG.",
+          "sourceIds": [
+            "website-longevity-mix"
+          ]
+        },
+        {
+          "supplementId": "taurine",
+          "amount": 1500,
+          "unit": "mg",
+          "perServing": "1 level scoop",
+          "labelNotes": "",
+          "sourceIds": [
+            "website-longevity-mix"
+          ]
+        },
+        {
+          "supplementId": "glycine",
+          "amount": 1200,
+          "unit": "mg",
+          "perServing": "1 level scoop",
+          "labelNotes": "",
+          "sourceIds": [
+            "website-longevity-mix"
+          ]
+        },
+        {
+          "supplementId": "l-lysine",
+          "amount": 1000,
+          "unit": "mg",
+          "perServing": "1 level scoop",
+          "labelNotes": "As HCl.",
+          "sourceIds": [
+            "website-longevity-mix"
+          ]
+        },
+        {
+          "supplementId": "glucosamine-sulfate",
+          "amount": 750,
+          "unit": "mg",
+          "perServing": "1 level scoop",
+          "labelNotes": "As KCl.",
+          "sourceIds": [
+            "website-longevity-mix"
+          ]
+        },
+        {
+          "supplementId": "l-glutathione",
+          "amount": 250,
+          "unit": "mg",
+          "perServing": "1 level scoop",
+          "labelNotes": "Reduced glutathione.",
+          "sourceIds": [
+            "website-longevity-mix"
+          ]
+        },
+        {
+          "supplementId": "l-theanine",
+          "amount": 200,
+          "unit": "mg",
+          "perServing": "1 level scoop",
+          "labelNotes": "",
+          "sourceIds": [
+            "website-longevity-mix"
+          ]
+        },
+        {
+          "supplementId": "sodium-hyaluronate",
+          "amount": 120,
+          "unit": "mg",
+          "perServing": "1 level scoop",
+          "labelNotes": "",
+          "sourceIds": [
+            "website-longevity-mix"
+          ]
+        }
       ],
-      "includedIn": ["Easy Stack"],
-      "contains": ["vitamin-c", "magnesium", "creatine-monohydrate", "calcium-alpha-ketoglutarate", "taurine", "glycine", "l-theanine"],
+      "includedIn": [
+        "Easy Stack"
+      ],
+      "contains": [
+        "vitamin-c",
+        "calcium",
+        "magnesium",
+        "creatine-monohydrate",
+        "calcium-alpha-ketoglutarate",
+        "taurine",
+        "glycine",
+        "l-lysine",
+        "glucosamine-sulfate",
+        "l-glutathione",
+        "l-theanine",
+        "sodium-hyaluronate"
+      ],
       "sourceStatus": "website_sourced",
-      "sources": ["photo-longevity-1", "photo-longevity-2", "photo-longevity-3", "website-longevity-mix"]
+      "sources": [
+        "photo-longevity-1",
+        "photo-longevity-2",
+        "photo-longevity-3",
+        "website-longevity-mix"
+      ]
     },
     {
       "id": "blueprint-essential-capsules",
       "name": "Essential Capsules",
-      "aliases": ["Daily Essentials", "Essentials Capsules"],
+      "aliases": [
+        "Daily Essentials",
+        "Essentials Capsules"
+      ],
       "provider": "Bryan Johnson / Blueprint",
       "productType": "capsules",
       "purpose": "Daily micronutrient and longevity capsule stack for energy, immunity, cognition, bone health, and cell defense.",
-      "categories": ["essentials", "longevity", "brain", "energy"],
+      "categories": [
+        "essentials",
+        "longevity",
+        "brain",
+        "energy"
+      ],
       "image": "assets/images/vitamin-d3-k2.svg",
       "ingredients": [
-        { "supplementId": "vitamin-d3", "amount": 50, "unit": "mcg", "perServing": "2 veggie capsules", "labelNotes": "As cholecalciferol; 2000 IU.", "sourceIds": ["photo-daily-essentials", "website-essential-capsules"] },
-        { "supplementId": "nicotinamide-riboside", "amount": 300, "unit": "mg", "perServing": "2 veggie capsules", "labelNotes": "As chloride.", "sourceIds": ["photo-daily-essentials", "website-essential-capsules"] },
-        { "supplementId": "fisetin", "amount": 100, "unit": "mg", "perServing": "2 veggie capsules", "labelNotes": "From stem of smoketree extract.", "sourceIds": ["photo-daily-essentials", "website-essential-capsules"] },
-        { "supplementId": "spermidine", "amount": 10, "unit": "mg", "perServing": "2 veggie capsules", "labelNotes": "As trihydrochloride.", "sourceIds": ["photo-daily-essentials", "website-essential-capsules"] }
+        {
+          "supplementId": "vitamin-d3",
+          "amount": 50,
+          "unit": "mcg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "As cholecalciferol; 2000 IU.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "nicotinamide-riboside",
+          "amount": 300,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "As chloride.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "broccoli-seed-extract",
+          "amount": 200,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "Glucoraphanin 20 mg.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "fisetin",
+          "amount": 100,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "From stem of smoketree extract.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "luteolin",
+          "amount": 100,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "From Sophora japonica bud extract.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "ubiquinol",
+          "amount": 50,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "As reduced CoQ10.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "lactobacillus-acidophilus",
+          "amount": 20,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "4 billion CFU.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "spermidine",
+          "amount": 10,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "As trihydrochloride.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "boron",
+          "amount": 3,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "As glycinate.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "lithium-orotate",
+          "amount": 1,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "As orotate.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "vitamin-e",
+          "amount": 67,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "d-alpha-tocopherol.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "thiamin",
+          "amount": 1.1,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "Vitamin B1 as HCl.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "riboflavin",
+          "amount": 1.4,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "Vitamin B2.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "niacin",
+          "amount": 15,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "As niacinamide.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "vitamin-b6",
+          "amount": 1.4,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "As pyridoxine HCl.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "folate",
+          "amount": 200,
+          "unit": "mcg DFE",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "As calcium L-5 methyltetrahydrofolate.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "vitamin-b12",
+          "amount": 125,
+          "unit": "mcg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "As methylcobalamin.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "biotin",
+          "amount": 50,
+          "unit": "mcg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "pantothenic-acid",
+          "amount": 6,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "As D-calcium pantothenate.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "calcium",
+          "amount": 50,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "From dicalcium phosphate.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "iodine",
+          "amount": 200,
+          "unit": "mcg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "As potassium iodide.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "zinc",
+          "amount": 15,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "As bisglycinate.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "selenium",
+          "amount": 28,
+          "unit": "mcg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "As L-selenomethionine.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        },
+        {
+          "supplementId": "manganese",
+          "amount": 1,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "As citrate.",
+          "sourceIds": [
+            "website-essential-capsules"
+          ]
+        }
       ],
-      "includedIn": ["Easy Stack"],
-      "contains": ["vitamin-d3", "nicotinamide-riboside", "fisetin", "spermidine"],
-      "sourceStatus": "package_verified",
-      "sources": ["photo-daily-essentials", "website-essential-capsules"]
+      "includedIn": [
+        "Easy Stack"
+      ],
+      "contains": [
+        "vitamin-d3",
+        "nicotinamide-riboside",
+        "broccoli-seed-extract",
+        "fisetin",
+        "luteolin",
+        "ubiquinol",
+        "lactobacillus-acidophilus",
+        "spermidine",
+        "boron",
+        "lithium-orotate",
+        "vitamin-e",
+        "thiamin",
+        "riboflavin",
+        "niacin",
+        "vitamin-b6",
+        "folate",
+        "vitamin-b12",
+        "biotin",
+        "pantothenic-acid",
+        "calcium",
+        "iodine",
+        "zinc",
+        "selenium",
+        "manganese"
+      ],
+      "sourceStatus": "website_sourced",
+      "sources": [
+        "photo-daily-essentials",
+        "website-essential-capsules"
+      ]
     },
     {
       "id": "blueprint-omega-3",
       "name": "Omega-3",
-      "aliases": ["Algae EPA + DHA 800mg"],
+      "aliases": [
+        "Algae EPA + DHA 800mg"
+      ],
       "provider": "Bryan Johnson / Blueprint",
       "productType": "capsules",
       "purpose": "Algae-sourced omega-3 product for brain, heart, joint, and inflammatory-function support.",
-      "categories": ["heart", "brain", "inflammation", "recovery"],
+      "categories": [
+        "heart",
+        "brain",
+        "inflammation",
+        "recovery"
+      ],
       "image": "assets/images/omega-3.svg",
       "ingredients": [
-        { "supplementId": "omega-3", "amount": 800, "unit": "mg", "perServing": "2 liquid veggie capsules", "labelNotes": "Total omega-3s from microalgae oil concentrate.", "sourceIds": ["photo-omega-3-1", "website-omega-3"] },
-        { "supplementId": "epa", "amount": 400, "unit": "mg", "perServing": "2 liquid veggie capsules", "labelNotes": "Eicosapentaenoic acid.", "sourceIds": ["photo-omega-3-1", "website-omega-3"] },
-        { "supplementId": "dha", "amount": 400, "unit": "mg", "perServing": "2 liquid veggie capsules", "labelNotes": "Docosahexaenoic acid.", "sourceIds": ["photo-omega-3-1", "website-omega-3"] }
+        {
+          "supplementId": "microalgae-oil-concentrate",
+          "amount": 1.35,
+          "unit": "g",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "From Schizochytrium sp.",
+          "sourceIds": [
+            "website-omega-3"
+          ]
+        },
+        {
+          "supplementId": "omega-3",
+          "amount": 800,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "Total omega-3s from microalgae oil concentrate.",
+          "sourceIds": [
+            "website-omega-3"
+          ]
+        },
+        {
+          "supplementId": "epa",
+          "amount": 400,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "Eicosapentaenoic acid.",
+          "sourceIds": [
+            "website-omega-3"
+          ]
+        },
+        {
+          "supplementId": "dha",
+          "amount": 400,
+          "unit": "mg",
+          "perServing": "2 veggie capsules",
+          "labelNotes": "Docosahexaenoic acid.",
+          "sourceIds": [
+            "website-omega-3"
+          ]
+        }
       ],
       "includedIn": [],
-      "contains": ["omega-3", "epa", "dha"],
-      "sourceStatus": "package_verified",
-      "sources": ["photo-omega-3-1", "photo-omega-3-3", "website-omega-3"]
+      "contains": [
+        "microalgae-oil-concentrate",
+        "omega-3",
+        "epa",
+        "dha"
+      ],
+      "sourceStatus": "website_sourced",
+      "sources": [
+        "photo-omega-3-1",
+        "photo-omega-3-3",
+        "website-omega-3"
+      ]
     },
     {
       "id": "blueprint-collagen-peptides",
@@ -263,52 +1685,165 @@
       "provider": "Bryan Johnson / Blueprint",
       "productType": "powder",
       "purpose": "Collagen powder for hair, nails, cartilage, connective tissue, and recovery support.",
-      "categories": ["skin", "recovery"],
+      "categories": [
+        "skin",
+        "recovery"
+      ],
       "image": "assets/images/creatine.svg",
       "ingredients": [
-        { "supplementId": "collagen-peptides", "amount": 20, "unit": "g", "perServing": "1 scoop", "labelNotes": "Types I & III from bovine hide; also includes standardized cartilage with 10 mg undenatured type II collagen.", "sourceIds": ["website-collagen"] }
+        {
+          "supplementId": "collagen-peptides",
+          "amount": 20,
+          "unit": "g",
+          "perServing": "1 scoop",
+          "labelNotes": "Types I & III from bovine hide.",
+          "sourceIds": [
+            "website-collagen"
+          ]
+        },
+        {
+          "supplementId": "standardized-cartilage",
+          "amount": 40,
+          "unit": "mg",
+          "perServing": "1 scoop",
+          "labelNotes": "From chicken.",
+          "sourceIds": [
+            "website-collagen"
+          ]
+        },
+        {
+          "supplementId": "undenatured-type-ii-collagen",
+          "amount": 10,
+          "unit": "mg",
+          "perServing": "1 scoop",
+          "labelNotes": "Type II collagen from standardized cartilage.",
+          "sourceIds": [
+            "website-collagen"
+          ]
+        }
       ],
       "includedIn": [],
-      "contains": ["collagen-peptides"],
+      "contains": [
+        "collagen-peptides",
+        "standardized-cartilage",
+        "undenatured-type-ii-collagen"
+      ],
       "sourceStatus": "website_sourced",
-      "sources": ["photo-collagen-1", "photo-collagen-2", "photo-collagen-3", "website-collagen"]
+      "sources": [
+        "photo-collagen-1",
+        "photo-collagen-2",
+        "photo-collagen-3",
+        "website-collagen"
+      ]
     },
     {
       "id": "blueprint-nac-ginger-curcumin",
       "name": "NAC + Ginger + Curcumin",
-      "aliases": ["NAC Ginger Curcumin"],
+      "aliases": [
+        "NAC Ginger Curcumin"
+      ],
       "provider": "Bryan Johnson / Blueprint",
       "productType": "capsules",
       "purpose": "Three-ingredient antioxidant product for immune support, glutathione support, and inflammatory-function context.",
-      "categories": ["inflammation", "longevity", "recovery"],
+      "categories": [
+        "inflammation",
+        "longevity",
+        "recovery"
+      ],
       "image": "assets/images/magnesium.svg",
       "ingredients": [
-        { "supplementId": "n-acetyl-cysteine", "amount": 1200, "unit": "mg", "perServing": "3 veggie capsules", "labelNotes": "N-Acetyl-Cysteine.", "sourceIds": ["website-nac-ginger-curcumin"] },
-        { "supplementId": "ginger-extract", "amount": 400, "unit": "mg", "perServing": "3 veggie capsules", "labelNotes": "Standardized 26% gingerols.", "sourceIds": ["website-nac-ginger-curcumin"] },
-        { "supplementId": "curcumin", "amount": 250, "unit": "mg", "perServing": "3 veggie capsules", "labelNotes": "Curcumin extract standardized 85% curcuminoids.", "sourceIds": ["website-nac-ginger-curcumin"] }
+        {
+          "supplementId": "n-acetyl-cysteine",
+          "amount": 1200,
+          "unit": "mg",
+          "perServing": "3 veggie capsules",
+          "labelNotes": "N-Acetyl-Cysteine.",
+          "sourceIds": [
+            "website-nac-ginger-curcumin"
+          ]
+        },
+        {
+          "supplementId": "ginger-extract",
+          "amount": 400,
+          "unit": "mg",
+          "perServing": "3 veggie capsules",
+          "labelNotes": "Standardized 26% gingerols.",
+          "sourceIds": [
+            "website-nac-ginger-curcumin"
+          ]
+        },
+        {
+          "supplementId": "curcumin",
+          "amount": 250,
+          "unit": "mg",
+          "perServing": "3 veggie capsules",
+          "labelNotes": "Curcumin extract standardized 85% curcuminoids.",
+          "sourceIds": [
+            "website-nac-ginger-curcumin"
+          ]
+        }
       ],
       "includedIn": [],
-      "contains": ["n-acetyl-cysteine", "ginger-extract", "curcumin"],
+      "contains": [
+        "n-acetyl-cysteine",
+        "ginger-extract",
+        "curcumin"
+      ],
       "sourceStatus": "website_sourced",
-      "sources": ["photo-nac-ginger-curcumin", "photo-r-curcumin-2", "website-nac-ginger-curcumin"]
+      "sources": [
+        "photo-nac-ginger-curcumin",
+        "photo-r-curcumin-2",
+        "website-nac-ginger-curcumin"
+      ]
     },
     {
       "id": "blueprint-ashwagandha-rhodiola",
       "name": "Ashwagandha + Rhodiola",
-      "aliases": ["Ashwagandha Rhodiola"],
+      "aliases": [
+        "Ashwagandha Rhodiola"
+      ],
       "provider": "Bryan Johnson / Blueprint",
       "productType": "capsules",
       "purpose": "Adaptogen capsule for balance, focus, calm, stress-response, cognition, and mood contexts.",
-      "categories": ["brain", "energy", "recovery"],
+      "categories": [
+        "brain",
+        "energy",
+        "recovery"
+      ],
       "image": "assets/images/magnesium.svg",
       "ingredients": [
-        { "supplementId": "rhodiola-rosea", "amount": 300, "unit": "mg", "perServing": "1 veggie capsule", "labelNotes": "Root extract standardized 3% rosavins / 1% salidroside; 9 mg total rosavins.", "sourceIds": ["website-ashwagandha-rhodiola"] },
-        { "supplementId": "ashwagandha", "amount": 120, "unit": "mg", "perServing": "1 veggie capsule", "labelNotes": "Root and leaves extract.", "sourceIds": ["website-ashwagandha-rhodiola"] }
+        {
+          "supplementId": "rhodiola-rosea",
+          "amount": 300,
+          "unit": "mg",
+          "perServing": "1 veggie capsule",
+          "labelNotes": "Root extract standardized 3% rosavins / 1% salidroside; 9 mg total rosavins.",
+          "sourceIds": [
+            "website-ashwagandha-rhodiola"
+          ]
+        },
+        {
+          "supplementId": "ashwagandha",
+          "amount": 120,
+          "unit": "mg",
+          "perServing": "1 veggie capsule",
+          "labelNotes": "Root and leaves extract.",
+          "sourceIds": [
+            "website-ashwagandha-rhodiola"
+          ]
+        }
       ],
       "includedIn": [],
-      "contains": ["rhodiola-rosea", "ashwagandha"],
+      "contains": [
+        "rhodiola-rosea",
+        "ashwagandha"
+      ],
       "sourceStatus": "website_sourced",
-      "sources": ["photo-ashwagandha-1", "photo-ashwagandha-2", "website-ashwagandha-rhodiola"]
+      "sources": [
+        "photo-ashwagandha-1",
+        "photo-ashwagandha-2",
+        "website-ashwagandha-rhodiola"
+      ]
     },
     {
       "id": "blueprint-advanced-antioxidants",
@@ -316,40 +1851,324 @@
       "aliases": [],
       "provider": "Bryan Johnson / Blueprint",
       "productType": "softgels",
-      "purpose": "Antioxidant-focused product for cellular-defense and skin/longevity context.",
-      "categories": ["longevity", "skin", "inflammation", "needs review"],
+      "purpose": "Antioxidant-focused product for vision, heart, bone, skin, and cellular-defense contexts.",
+      "categories": [
+        "longevity",
+        "skin",
+        "inflammation",
+        "heart"
+      ],
       "image": "assets/images/vitamin-d3-k2.svg",
       "ingredients": [
-        { "supplementId": "astaxanthin", "amount": null, "unit": "mg", "perServing": "needs review", "labelNotes": "Package photos are present but amount was not confidently readable in this pass.", "sourceIds": ["photo-advanced-antioxidants-1", "photo-advanced-antioxidants-2"] }
+        {
+          "supplementId": "vitamin-k1",
+          "amount": 1500,
+          "unit": "mcg",
+          "perServing": "1 liquid capsule",
+          "labelNotes": "As phytonadione.",
+          "sourceIds": [
+            "website-advanced-antioxidants"
+          ]
+        },
+        {
+          "supplementId": "lycopene",
+          "amount": 15,
+          "unit": "mg",
+          "perServing": "1 liquid capsule",
+          "labelNotes": "",
+          "sourceIds": [
+            "website-advanced-antioxidants"
+          ]
+        },
+        {
+          "supplementId": "astaxanthin",
+          "amount": 12,
+          "unit": "mg",
+          "perServing": "1 liquid capsule",
+          "labelNotes": "From microalgae Haematococcus pluvialis.",
+          "sourceIds": [
+            "website-advanced-antioxidants"
+          ]
+        },
+        {
+          "supplementId": "lutein",
+          "amount": 10,
+          "unit": "mg",
+          "perServing": "1 liquid capsule",
+          "labelNotes": "From marigold flower extract.",
+          "sourceIds": [
+            "website-advanced-antioxidants"
+          ]
+        },
+        {
+          "supplementId": "vitamin-k2-mk4",
+          "amount": 5,
+          "unit": "mg",
+          "perServing": "1 liquid capsule",
+          "labelNotes": "As menaquinone-4.",
+          "sourceIds": [
+            "website-advanced-antioxidants"
+          ]
+        },
+        {
+          "supplementId": "zeaxanthin",
+          "amount": 2,
+          "unit": "mg",
+          "perServing": "1 liquid capsule",
+          "labelNotes": "From marigold flower extract.",
+          "sourceIds": [
+            "website-advanced-antioxidants"
+          ]
+        },
+        {
+          "supplementId": "vitamin-k2-mk7",
+          "amount": 600,
+          "unit": "mcg",
+          "perServing": "1 liquid capsule",
+          "labelNotes": "As menaquinone-7.",
+          "sourceIds": [
+            "website-advanced-antioxidants"
+          ]
+        }
       ],
       "includedIn": [],
-      "contains": ["astaxanthin"],
+      "contains": [
+        "vitamin-k1",
+        "lycopene",
+        "astaxanthin",
+        "lutein",
+        "vitamin-k2-mk4",
+        "zeaxanthin",
+        "vitamin-k2-mk7"
+      ],
+      "sourceStatus": "website_sourced",
+      "sources": [
+        "photo-advanced-antioxidants-1",
+        "photo-advanced-antioxidants-2",
+        "website-advanced-antioxidants"
+      ]
+    },
+    {
+      "id": "altapharma-d3-k2-drops",
+      "name": "D3 + K2 Drops",
+      "aliases": [
+        "altapharma D3 + K2 Tropfen",
+        "Vitamin D3 + K2 Drops"
+      ],
+      "provider": "Rossmann / altapharma",
+      "productType": "drops",
+      "purpose": "Vitamin D3 + K2 drop supplement used in Tilman's morning protocol.",
+      "categories": [
+        "essentials",
+        "longevity"
+      ],
+      "image": "assets/images/vitamin-d3-k2.svg",
+      "ingredients": [
+        {
+          "supplementId": "vitamin-d3",
+          "amount": null,
+          "unit": "mcg",
+          "perServing": "5 drops daily serving",
+          "labelNotes": "Exact cholecalciferol amount needs label or official product-page verification.",
+          "sourceIds": [
+            "photo-d3-k2-drops-front",
+            "photo-d3-k2-drops-back"
+          ]
+        },
+        {
+          "supplementId": "vitamin-k2-mk7",
+          "amount": null,
+          "unit": "mcg",
+          "perServing": "5 drops daily serving",
+          "labelNotes": "K2 ingredient inferred from product name; exact menaquinone form and amount need official verification.",
+          "sourceIds": [
+            "photo-d3-k2-drops-front",
+            "photo-d3-k2-drops-back"
+          ]
+        }
+      ],
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ],
+      "contains": [
+        "vitamin-d3",
+        "vitamin-k2-mk7"
+      ],
       "sourceStatus": "needs_review",
-      "sources": ["photo-advanced-antioxidants-1", "photo-advanced-antioxidants-2", "website-advanced-antioxidants"]
+      "sources": [
+        "photo-d3-k2-drops-front",
+        "photo-d3-k2-drops-back"
+      ]
     }
   ],
   "sources": [
-    { "id": "photo-longevity-1", "type": "package_photo", "filename": "Longevity Mix Picture One.jpg", "captureDate": "2026-05-16", "notes": "Provided package photo; label not fully readable in local view." },
-    { "id": "photo-longevity-2", "type": "package_photo", "filename": "Longevity Mix Picture 2.jpg", "captureDate": "2026-05-16", "notes": "Provided package photo; label not fully readable in local view." },
-    { "id": "photo-longevity-3", "type": "package_photo", "filename": "Longevity Mix Picture 3.jpg", "captureDate": "2026-05-16", "notes": "Provided package photo; label not fully readable in local view." },
-    { "id": "photo-daily-essentials", "type": "package_photo", "filename": "daily essentials.jpg", "captureDate": "2026-05-16", "notes": "Readable supplement facts for key daily essential ingredients." },
-    { "id": "photo-omega-3-1", "type": "package_photo", "filename": "omega 3 - pic 1.jpg", "captureDate": "2026-05-16", "notes": "Readable supplement facts: total omega-3s 800 mg, EPA 400 mg, DHA 400 mg." },
-    { "id": "photo-omega-3-3", "type": "package_photo", "filename": "omega 3 - pic 3.jpg", "captureDate": "2026-05-16", "notes": "Front label confirms Omega-3 algae EPA + DHA 800 mg." },
-    { "id": "photo-collagen-1", "type": "package_photo", "filename": "collagen 1.jpg", "captureDate": "2026-05-16", "notes": "Provided package photo; label not fully readable in local view." },
-    { "id": "photo-collagen-2", "type": "package_photo", "filename": "collagen 2.jpg", "captureDate": "2026-05-16", "notes": "Provided package photo; label not fully readable in local view." },
-    { "id": "photo-collagen-3", "type": "package_photo", "filename": "collagen 3.jpg", "captureDate": "2026-05-16", "notes": "Provided package photo; label not fully readable in local view." },
-    { "id": "photo-nac-ginger-curcumin", "type": "package_photo", "filename": "nac ginger corcumin.jpg", "captureDate": "2026-05-16", "notes": "Provided package photo; official page used for amounts." },
-    { "id": "photo-r-curcumin-2", "type": "package_photo", "filename": "r corcumin 2.jpg", "captureDate": "2026-05-16", "notes": "Provided package photo; product naming typo preserved in filename." },
-    { "id": "photo-ashwagandha-1", "type": "package_photo", "filename": "ashawanga 1.jpg", "captureDate": "2026-05-16", "notes": "Provided package photo; official page used for amounts." },
-    { "id": "photo-ashwagandha-2", "type": "package_photo", "filename": "asnawanga 2.jpg", "captureDate": "2026-05-16", "notes": "Provided package photo; product naming typo preserved in filename." },
-    { "id": "photo-advanced-antioxidants-1", "type": "package_photo", "filename": "advanced antioxidamnts 1.jpg", "captureDate": "2026-05-16", "notes": "Provided package photo; product naming typo preserved in filename; amounts need review." },
-    { "id": "photo-advanced-antioxidants-2", "type": "package_photo", "filename": "advanced antioxidamnts 2.jpg", "captureDate": "2026-05-16", "notes": "Provided package photo; amounts need review." },
-    { "id": "website-longevity-mix", "type": "official_page", "url": "https://blueprint.bryanjohnson.com/products/longevity-blend-multinutrient-drink-mix-blood-orange-flavor", "captureDate": "2026-05-16", "notes": "Official Blueprint product page fallback for supplement facts." },
-    { "id": "website-essential-capsules", "type": "official_page", "url": "https://blueprint.bryanjohnson.com/products/essentials-capsules", "captureDate": "2026-05-16", "notes": "Official Blueprint product page cross-check for supplement facts." },
-    { "id": "website-omega-3", "type": "official_page", "url": "https://blueprint.bryanjohnson.com/products/omega-3", "captureDate": "2026-05-16", "notes": "Official Blueprint product page cross-check for supplement facts." },
-    { "id": "website-collagen", "type": "official_page", "url": "https://blueprint.bryanjohnson.com/products/collagen", "captureDate": "2026-05-16", "notes": "Official Blueprint product page fallback for supplement facts." },
-    { "id": "website-nac-ginger-curcumin", "type": "official_page", "url": "https://blueprint.bryanjohnson.com/products/nac-ginger-capsules", "captureDate": "2026-05-16", "notes": "Official Blueprint product page fallback for supplement facts." },
-    { "id": "website-ashwagandha-rhodiola", "type": "official_page", "url": "https://blueprint.bryanjohnson.com/products/ashwagandha-rhodiola-120mg", "captureDate": "2026-05-16", "notes": "Official Blueprint product page fallback for supplement facts." },
-    { "id": "website-advanced-antioxidants", "type": "official_page", "url": "https://blueprint.bryanjohnson.com/products/advanced-antioxidants", "captureDate": "2026-05-16", "notes": "Official Blueprint product page listed; amount extraction still needs review." }
+    {
+      "id": "photo-longevity-1",
+      "type": "package_photo",
+      "filename": "Longevity Mix Picture One.jpg",
+      "captureDate": "2026-05-16",
+      "notes": "Provided package photo; label not fully readable in local view."
+    },
+    {
+      "id": "photo-longevity-2",
+      "type": "package_photo",
+      "filename": "Longevity Mix Picture 2.jpg",
+      "captureDate": "2026-05-16",
+      "notes": "Provided package photo; label not fully readable in local view."
+    },
+    {
+      "id": "photo-longevity-3",
+      "type": "package_photo",
+      "filename": "Longevity Mix Picture 3.jpg",
+      "captureDate": "2026-05-16",
+      "notes": "Provided package photo; label not fully readable in local view."
+    },
+    {
+      "id": "photo-daily-essentials",
+      "type": "package_photo",
+      "filename": "daily essentials.jpg",
+      "captureDate": "2026-05-16",
+      "notes": "Readable supplement facts for key daily essential ingredients."
+    },
+    {
+      "id": "photo-omega-3-1",
+      "type": "package_photo",
+      "filename": "omega 3 - pic 1.jpg",
+      "captureDate": "2026-05-16",
+      "notes": "Readable supplement facts: total omega-3s 800 mg, EPA 400 mg, DHA 400 mg."
+    },
+    {
+      "id": "photo-omega-3-3",
+      "type": "package_photo",
+      "filename": "omega 3 - pic 3.jpg",
+      "captureDate": "2026-05-16",
+      "notes": "Front label confirms Omega-3 algae EPA + DHA 800 mg."
+    },
+    {
+      "id": "photo-collagen-1",
+      "type": "package_photo",
+      "filename": "collagen 1.jpg",
+      "captureDate": "2026-05-16",
+      "notes": "Provided package photo; label not fully readable in local view."
+    },
+    {
+      "id": "photo-collagen-2",
+      "type": "package_photo",
+      "filename": "collagen 2.jpg",
+      "captureDate": "2026-05-16",
+      "notes": "Provided package photo; label not fully readable in local view."
+    },
+    {
+      "id": "photo-collagen-3",
+      "type": "package_photo",
+      "filename": "collagen 3.jpg",
+      "captureDate": "2026-05-16",
+      "notes": "Provided package photo; label not fully readable in local view."
+    },
+    {
+      "id": "photo-nac-ginger-curcumin",
+      "type": "package_photo",
+      "filename": "nac ginger corcumin.jpg",
+      "captureDate": "2026-05-16",
+      "notes": "Provided package photo; official page used for amounts."
+    },
+    {
+      "id": "photo-r-curcumin-2",
+      "type": "package_photo",
+      "filename": "r corcumin 2.jpg",
+      "captureDate": "2026-05-16",
+      "notes": "Provided package photo; product naming typo preserved in filename."
+    },
+    {
+      "id": "photo-ashwagandha-1",
+      "type": "package_photo",
+      "filename": "ashawanga 1.jpg",
+      "captureDate": "2026-05-16",
+      "notes": "Provided package photo; official page used for amounts."
+    },
+    {
+      "id": "photo-ashwagandha-2",
+      "type": "package_photo",
+      "filename": "asnawanga 2.jpg",
+      "captureDate": "2026-05-16",
+      "notes": "Provided package photo; product naming typo preserved in filename."
+    },
+    {
+      "id": "photo-advanced-antioxidants-1",
+      "type": "package_photo",
+      "filename": "advanced antioxidamnts 1.jpg",
+      "captureDate": "2026-05-16",
+      "notes": "Provided package photo; product naming typo preserved in filename; amounts need review."
+    },
+    {
+      "id": "photo-advanced-antioxidants-2",
+      "type": "package_photo",
+      "filename": "advanced antioxidamnts 2.jpg",
+      "captureDate": "2026-05-16",
+      "notes": "Provided package photo; amounts need review."
+    },
+    {
+      "id": "website-longevity-mix",
+      "type": "official_page",
+      "url": "https://blueprint.bryanjohnson.com/products/longevity-blend-multinutrient-drink-mix-blood-orange-flavor",
+      "captureDate": "2026-05-17",
+      "notes": "Official Blueprint page used as preferred source for exact supplement facts available in page HTML."
+    },
+    {
+      "id": "website-essential-capsules",
+      "type": "official_page",
+      "url": "https://blueprint.bryanjohnson.com/products/essentials-capsules",
+      "captureDate": "2026-05-17",
+      "notes": "Official Blueprint page used as preferred source for exact supplement facts available in page HTML."
+    },
+    {
+      "id": "website-omega-3",
+      "type": "official_page",
+      "url": "https://blueprint.bryanjohnson.com/products/omega-3",
+      "captureDate": "2026-05-17",
+      "notes": "Official Blueprint page used as preferred source for exact supplement facts available in page HTML."
+    },
+    {
+      "id": "website-collagen",
+      "type": "official_page",
+      "url": "https://blueprint.bryanjohnson.com/products/collagen",
+      "captureDate": "2026-05-17",
+      "notes": "Official Blueprint page used as preferred source for exact supplement facts available in page HTML."
+    },
+    {
+      "id": "website-nac-ginger-curcumin",
+      "type": "official_page",
+      "url": "https://blueprint.bryanjohnson.com/products/nac-ginger-capsules",
+      "captureDate": "2026-05-17",
+      "notes": "Official Blueprint page used as preferred source for exact supplement facts available in page HTML."
+    },
+    {
+      "id": "website-ashwagandha-rhodiola",
+      "type": "official_page",
+      "url": "https://blueprint.bryanjohnson.com/products/ashwagandha-rhodiola-120mg",
+      "captureDate": "2026-05-17",
+      "notes": "Official Blueprint page used as preferred source for exact supplement facts available in page HTML."
+    },
+    {
+      "id": "website-advanced-antioxidants",
+      "type": "official_page",
+      "url": "https://blueprint.bryanjohnson.com/products/advanced-antioxidants",
+      "captureDate": "2026-05-17",
+      "notes": "Official Blueprint page used as preferred source for exact supplement facts available in page HTML."
+    },
+    {
+      "id": "photo-d3-k2-drops-front",
+      "type": "package_photo",
+      "filename": "IMG_4924.jpeg",
+      "captureDate": "2026-05-17",
+      "notes": "Provided package photo for Rossmann altapharma D3 + K2 drops; front label and daily serving visible, exact active amounts not readable in this pass."
+    },
+    {
+      "id": "photo-d3-k2-drops-back",
+      "type": "package_photo",
+      "filename": "IMG_4923.jpeg",
+      "captureDate": "2026-05-17",
+      "notes": "Provided package photo for Rossmann altapharma D3 + K2 drops; back label shows 5 drops per day and ingredients, exact active amounts not readable in this pass."
+    }
   ]
 }

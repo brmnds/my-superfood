@@ -10,11 +10,13 @@
     <meta property="og:description" content="Compare supplement products, ingredient primitives, daily ranges, and source status.">
     <meta property="og:url" content="https://my-superfood.com/supplements">
     <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/my-superfood-icon-512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/my-superfood-icon.png">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body data-page="supplements">
     <header class="site-header">
-      <a class="brand" href="/"><span class="brand-mark">M</span><span>My Superfood</span></a>
+      <a class="brand" href="/"><img class="brand-mark" src="/assets/images/my-superfood-icon.png" alt="" aria-hidden="true"><span>My Superfood</span></a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="/foods">Foods</a>
         <a class="active" href="/supplements">Supplements</a>
@@ -24,31 +26,49 @@
       </nav>
     </header>
     <main class="page-shell">
-      <section class="page-heading">
-        <p class="eyebrow">Supplement database</p>
-        <h1>Products and supplement primitives.</h1>
-        <p>Compare purchasable supplement products against the underlying ingredients they contain. Product label amounts are tracked separately from general daily recommendation ranges.</p>
+      <section class="page-heading page-heading-card">
+        <h1>Supplements and Supplement-Kits</h1>
+      </section>
+      <section class="protocol-card" aria-labelledby="tilman-protocol-title">
+        <div class="protocol-profile">
+          <img src="/assets/images/tilman-headshot.jpeg" alt="Tilman Resch">
+          <div>
+            <p class="eyebrow">Current stack</p>
+            <h2 id="tilman-protocol-title">Tilman's supplement protocol</h2>
+          </div>
+        </div>
+        <div class="protocol-content">
+          <div class="protocol-stack" aria-label="Tilman's supplements">
+            <span>Daily Essentials</span>
+            <span>Longevity Mix</span>
+            <span>Collagen</span>
+            <span>Antioxidants</span>
+            <span>Ashwagandha</span>
+            <span>DynaC</span>
+            <span>Cumin</span>
+            <span>Omega-3</span>
+            <span>D3 + K2 drops</span>
+          </div>
+          <p>Tilman takes this morning stack with a vegan protein shake and one teaspoon of olive oil to support absorption of fat-soluble ingredients.</p>
+        </div>
       </section>
       <section class="supplement-browser" aria-label="Supplement catalog">
         <div class="table-toolbar">
           <div class="tab-list" role="tablist" aria-label="Supplement catalog views">
-            <button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab="products">Products</button>
-            <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="ingredients">Ingredients</button>
+            <button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab="ingredients">Supplements</button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="products">Supplement Kits</button>
           </div>
-          <div class="status-note" id="catalog-status" role="status">Loading catalog...</div>
-        </div>
-
-        <div class="category-filter-row" aria-label="Supplement category filters">
-          <button class="filter-button active" type="button" data-catalog-filter="all">All</button>
-          <button class="filter-button" type="button" data-catalog-filter="essentials">Essentials</button>
-          <button class="filter-button" type="button" data-catalog-filter="longevity">Longevity</button>
-          <button class="filter-button" type="button" data-catalog-filter="brain">Brain</button>
-          <button class="filter-button" type="button" data-catalog-filter="energy">Energy</button>
-          <button class="filter-button" type="button" data-catalog-filter="skin">Skin</button>
-          <button class="filter-button" type="button" data-catalog-filter="recovery">Recovery</button>
-          <button class="filter-button" type="button" data-catalog-filter="inflammation">Inflammation</button>
-          <button class="filter-button" type="button" data-catalog-filter="heart">Heart</button>
-          <button class="filter-button" type="button" data-catalog-filter="needs review">Needs review</button>
+          <div class="category-filter-row" aria-label="Supplement category filters">
+            <button class="filter-button active" type="button" data-catalog-filter="all">All</button>
+            <button class="filter-button" type="button" data-catalog-filter="essentials">Essentials</button>
+            <button class="filter-button" type="button" data-catalog-filter="longevity">Longevity</button>
+            <button class="filter-button" type="button" data-catalog-filter="brain">Brain</button>
+            <button class="filter-button" type="button" data-catalog-filter="energy">Energy</button>
+            <button class="filter-button" type="button" data-catalog-filter="skin">Skin</button>
+            <button class="filter-button" type="button" data-catalog-filter="recovery">Recovery</button>
+            <button class="filter-button" type="button" data-catalog-filter="inflammation">Inflammation</button>
+            <button class="filter-button" type="button" data-catalog-filter="heart">Heart</button>
+          </div>
         </div>
 
         <div class="table-wrap">

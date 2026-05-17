@@ -3,18 +3,28 @@ const foods = [
   { id: "chickpeas", name: "Chickpeas", image: "assets/images/real/chickpeas.png", categories: ["protein", "carbs", "fiber"], benefits: ["Plant protein", "Slow carbs", "High fiber"], note: "A practical base for bowls, hummus, and satisfying meals.", x: "24%", y: "20%" },
   { id: "lentils", name: "Lentils", image: "assets/images/real/lentils-uncooked.jpg", categories: ["protein", "carbs", "fiber"], benefits: ["Protein", "Iron", "Folate"], note: "A dense pantry staple for soups, salads, and meal prep.", x: "39%", y: "16%" },
   { id: "cauliflower", name: "Cauliflower", image: "assets/images/real/cauliflower.png", categories: ["fiber", "advanced"], benefits: ["Light fiber", "Vitamin C", "Cruciferous"], note: "Mild, flexible, and easy to use as a vegetable base.", x: "63%", y: "17%" },
-  { id: "banana", name: "Banana", image: "assets/images/real/banana-transparent.png", categories: ["carbs", "fiber"], benefits: ["Quick carbs", "Potassium", "Portable"], note: "A simple energy fruit for breakfast or training snacks.", x: "79%", y: "20%" },
+  { id: "banana", name: "Banana", image: "assets/images/real/banana.png", categories: ["carbs", "fiber"], benefits: ["Quick carbs", "Potassium", "Portable"], note: "A simple energy fruit for breakfast or training snacks.", x: "79%", y: "20%" },
   { id: "avocado", name: "Avocado", image: "assets/images/real/avocado.jpg", categories: ["oils", "fiber"], benefits: ["Healthy fats", "Potassium", "Satisfying"], note: "Creamy fats and fiber that make simple meals feel complete.", x: "18%", y: "43%" },
   { id: "blueberries", name: "Blueberries", image: "assets/images/real/blueberries.jpg", categories: ["carbs", "advanced", "fiber"], benefits: ["Polyphenols", "Vitamin C", "Fresh sweetness"], note: "A colorful fruit for breakfast bowls and snacks.", x: "34%", y: "38%" },
   { id: "spinach", name: "Spinach", image: "assets/images/real/spinach.jpg", categories: ["fiber", "advanced"], benefits: ["Leafy minerals", "Vitamin K", "Easy greens"], note: "Quick greens for bowls, eggs, smoothies, and soups.", x: "17%", y: "70%" },
   { id: "salmon", name: "Salmon", image: "assets/images/real/salmon.png", categories: ["protein", "oils"], benefits: ["Protein", "Omega-3 fats", "Recovery"], note: "A protein-rich fish with naturally occurring omega-3 fats.", x: "35%", y: "69%" },
   { id: "oats", name: "Oats", image: "assets/images/real/oats.png", categories: ["carbs", "fiber"], benefits: ["Beta-glucan", "Slow carbs", "Breakfast base"], note: "A steady breakfast grain with soluble fiber.", x: "28%", y: "88%" },
   { id: "olive-oil", name: "Olive Oil", image: "assets/images/real/olive-oil.jpg", categories: ["oils", "advanced"], benefits: ["Monounsaturated fats", "Polyphenols", "Kitchen staple"], note: "A classic fat for salads, vegetables, and sauces.", x: "48%", y: "83%" },
-  { id: "walnuts", name: "Walnuts", image: "assets/images/real/walnuts.jpg", categories: ["oils", "protein", "fiber"], benefits: ["Healthy fats", "Minerals", "Crunch"], note: "A dense topping for breakfast bowls and salads.", x: "62%", y: "87%" },
-  { id: "yogurt", name: "Yogurt", image: "assets/images/real/yogurt.png", categories: ["protein", "advanced"], benefits: ["Protein", "Fermented", "Calcium"], note: "A fermented base for breakfast, sauces, or snacks.", x: "73%", y: "72%" },
+  { id: "walnuts", name: "Walnuts", image: "assets/images/real/walnuts.png", categories: ["oils", "protein", "fiber"], benefits: ["Healthy fats", "Minerals", "Crunch"], note: "A dense topping for breakfast bowls and salads.", x: "62%", y: "87%" },
+  { id: "yogurt", name: "Coconut Yogurt", image: "assets/images/real/coconut-yogurt.png", categories: ["protein", "advanced"], benefits: ["Fermented", "Plant-based", "Creamy base"], note: "A dairy-free fermented base for breakfast bowls, sauces, or snacks.", x: "73%", y: "72%" },
   { id: "sweet-potato", name: "Sweet Potato", image: "assets/images/real/sweet-potato.png", categories: ["carbs", "fiber"], benefits: ["Slow carbs", "Beta carotene", "Comforting"], note: "A bright, filling carbohydrate for bowls and plates.", x: "88%", y: "62%" },
   { id: "cacao", name: "Cacao", image: "assets/images/real/cacao.png", categories: ["advanced", "oils"], benefits: ["Polyphenols", "Magnesium", "Deep flavor"], note: "A rich ingredient for smoothies, yogurt, and warm drinks.", x: "91%", y: "38%" },
-  { id: "pumpkin-seeds", name: "Pumpkin Seeds", image: "assets/images/real/pumpkin-seeds.png", categories: ["protein", "oils", "fiber"], benefits: ["Zinc", "Magnesium", "Protein"], note: "A small topping with useful minerals and texture.", x: "86%", y: "87%" }
+  { id: "pumpkin-seeds", name: "Pumpkin Seeds", image: "assets/images/real/pumpkin-seeds.png", categories: ["protein", "oils", "fiber"], benefits: ["Zinc", "Magnesium", "Protein"], note: "A small topping with useful minerals and texture.", x: "86%", y: "87%" },
+  { id: "black-beluga-lentils", name: "Black Beluga Lentils", image: "assets/images/real/black-beluga-lentils.png", categories: ["protein", "carbs", "fiber"], benefits: ["Plant protein", "Iron", "Dense fiber"], note: "Small dark lentils that hold their shape well in salads, bowls, and meal prep.", x: "7%", y: "12%" },
+  { id: "black-beans", name: "Black Beans", image: "assets/images/real/black-beans.png", categories: ["protein", "carbs", "fiber"], benefits: ["Plant protein", "Slow carbs", "Polyphenols"], note: "A filling bean for bowls, soups, tacos, and simple batch cooking.", x: "57%", y: "7%" },
+  { id: "kidney-beans", name: "Kidney Beans", image: "assets/images/real/kidney-beans.png", categories: ["protein", "carbs", "fiber"], benefits: ["Fiber", "Plant protein", "Potassium"], note: "A hearty bean for chilis, stews, salads, and mixed grain plates.", x: "96%", y: "12%" },
+  { id: "cannellini-beans", name: "Cannellini Beans", image: "assets/images/real/cannellini-beans.png", categories: ["protein", "carbs", "fiber"], benefits: ["Plant protein", "Creamy texture", "High fiber"], note: "Mild white beans that work well in soups, dips, salads, and vegetable plates.", x: "7%", y: "57%" },
+  { id: "green-peas", name: "Green Peas", image: "assets/images/real/green-peas.png", categories: ["protein", "carbs", "fiber"], benefits: ["Fiber", "Plant protein", "Vitamin K"], note: "A quick freezer-friendly vegetable legume for bowls, soups, and sides.", x: "52%", y: "57%" },
+  { id: "edamame", name: "Edamame", image: "assets/images/real/edamame.png", categories: ["protein", "carbs", "fiber"], benefits: ["Complete protein", "Fiber", "Folate"], note: "Young soybeans that make a protein-rich snack or bowl topping.", x: "101%", y: "57%" },
+  { id: "soybeans", name: "Soybeans", image: "assets/images/real/soybeans.png", categories: ["protein", "carbs", "fiber"], benefits: ["Plant protein", "Isoflavones", "Minerals"], note: "A versatile legume base behind tofu, tempeh, edamame, and other soy foods.", x: "10%", y: "102%" },
+  { id: "tofu", name: "Tofu", image: "assets/images/real/tofu.png", categories: ["protein"], benefits: ["Plant protein", "Calcium options", "Meal prep"], note: "A flexible soy protein for stir-fries, bowls, scrambles, and marinades.", x: "38%", y: "106%" },
+  { id: "tempeh", name: "Tempeh", image: "assets/images/real/tempeh.png", categories: ["protein", "fiber", "advanced"], benefits: ["Fermented", "Plant protein", "Firm texture"], note: "Fermented soy with a firm bite for bowls, sandwiches, and high-protein plates.", x: "67%", y: "106%" },
+  { id: "miso", name: "Miso", image: "assets/images/real/miso.png", categories: ["advanced"], benefits: ["Fermented", "Umami", "Flavor booster"], note: "A salty fermented soy paste that adds depth to broths, dressings, and sauces.", x: "97%", y: "102%" }
 ];
 
 const supplements = [
@@ -286,15 +296,23 @@ function renderHome() {
   const savedNote = document.querySelector("#saved-note");
   const detailCard = document.querySelector("#detail-card");
   const closeDetail = document.querySelector(".close-detail");
+  if (!orbit || !detailTitle || !detailImage || !detailBenefits || !addButton || !openDetail || !detailCard || !closeDetail) return;
   let selected = foods[0];
   let activeFilter = "fiber";
   let cloudX = 0;
   let cloudY = 0;
   let didPan = false;
-  let suppressHoverOpen = false;
-  let closePoint = { x: 0, y: 0 };
+  let clickToOpenOnly = false;
+  let panBlockUntil = 0;
 
-  function updateDetail(food) {
+  function hideDetail() {
+    clickToOpenOnly = true;
+    detailCard.classList.add("is-hidden");
+    document.querySelectorAll(".food-bubble").forEach((button) => button.classList.remove("is-selected"));
+  }
+
+  function updateDetail(food, options = {}) {
+    if (clickToOpenOnly && !options.fromClick) return;
     selected = food;
     detailTitle.textContent = food.name;
     detailImage.src = food.image;
@@ -321,13 +339,28 @@ function renderHome() {
     cloud.style.transform = `translate3d(${cloudX}px, ${cloudY}px, 0)`;
   }
 
+  function layoutCloud() {
+    const cloud = orbit.querySelector(".food-cloud");
+    if (!cloud) return;
+
+    const orbitWidth = orbit.getBoundingClientRect().width;
+    const columns = orbitWidth < 560 ? 3 : orbitWidth < 820 ? 4 : orbitWidth < 1120 ? 5 : 6;
+    const cellSize = orbitWidth < 560 ? 132 : orbitWidth < 820 ? 148 : 168;
+    const bubbleSize = orbitWidth < 560 ? 86 : orbitWidth < 820 ? 96 : 108;
+
+    cloud.style.setProperty("--cloud-columns", columns);
+    cloud.style.setProperty("--bubble-cell", `${cellSize}px`);
+    cloud.style.setProperty("--bubble-size", `${bubbleSize}px`);
+    setCloudPosition(cloudX, cloudY);
+  }
+
   function renderBubbles() {
     orbit.innerHTML = `
       <div class="food-cloud" id="food-cloud">
         ${foods.map((food, index) => `
-          <button class="food-bubble ${food.categories.includes(activeFilter) ? "" : "is-muted"}" type="button" data-food="${food.id}" style="--x:${food.x}; --y:${food.y}; --delay:${index * -0.43}s; --float:13px;" aria-label="${food.name}">
-            <img src="${food.image}" alt="">
-            <span class="bubble-label">${food.name}<span class="mini-action">View benefits</span></span>
+          <button class="food-bubble ${food.categories.includes(activeFilter) ? "" : "is-muted"}" type="button" data-food="${food.id}" style="--delay:${index * -0.43}s; --float:13px;" aria-label="${food.name}">
+            <img src="${food.image}" alt="" draggable="false">
+            <span class="bubble-label">${food.name}</span>
           </button>
         `).join("")}
       </div>
@@ -335,25 +368,18 @@ function renderHome() {
 
     document.querySelectorAll(".food-bubble").forEach((button) => {
       const food = foods.find((entry) => entry.id === button.dataset.food);
-      button.addEventListener("mouseenter", () => {
-        if (suppressHoverOpen) return;
-        updateDetail(food);
-      });
-      button.addEventListener("focus", () => {
-        suppressHoverOpen = false;
-        updateDetail(food);
-      });
       button.addEventListener("click", (event) => {
-        if (didPan) {
+        event.stopPropagation();
+        if (didPan || Date.now() < panBlockUntil) {
           event.preventDefault();
           return;
         }
-        suppressHoverOpen = false;
-        updateDetail(food);
+        clickToOpenOnly = false;
+        updateDetail(food, { fromClick: true });
       });
     });
 
-    setCloudPosition(cloudX, cloudY);
+    layoutCloud();
     updateDetail(selected);
   }
 
@@ -375,22 +401,13 @@ function renderHome() {
   closeDetail.addEventListener("click", (event) => {
     event.preventDefault();
     event.stopPropagation();
-    suppressHoverOpen = true;
-    closePoint = { x: event.clientX, y: event.clientY };
-    detailCard.classList.add("is-hidden");
+    hideDetail();
   });
 
-  document.addEventListener("pointermove", (event) => {
-    if (!suppressHoverOpen) return;
-    const moved = Math.hypot(event.clientX - closePoint.x, event.clientY - closePoint.y);
-    if (moved < 10) return;
-
-    suppressHoverOpen = false;
-    const bubble = event.target.closest?.(".food-bubble");
-    if (!bubble) return;
-
-    const food = foods.find((entry) => entry.id === bubble.dataset.food);
-    if (food) updateDetail(food);
+  document.addEventListener("pointerdown", (event) => {
+    if (detailCard.classList.contains("is-hidden")) return;
+    if (event.target.closest(".detail-card, .food-bubble")) return;
+    hideDetail();
   });
 
   detailCard.addEventListener("pointerdown", (event) => {
@@ -435,7 +452,6 @@ function renderHome() {
   });
 
   orbit.addEventListener("pointerdown", (event) => {
-    if (window.matchMedia("(max-width: 780px)").matches) return;
     if (!event.isPrimary) return;
 
     const startX = event.clientX;
@@ -459,9 +475,10 @@ function renderHome() {
       orbit.removeEventListener("pointermove", moveCloud);
       orbit.removeEventListener("pointerup", stopPan);
       orbit.removeEventListener("pointercancel", stopPan);
+      if (didPan) panBlockUntil = Date.now() + 180;
       window.setTimeout(() => {
         didPan = false;
-      }, 0);
+      }, 180);
     };
 
     orbit.addEventListener("pointermove", moveCloud);
@@ -469,6 +486,7 @@ function renderHome() {
     orbit.addEventListener("pointercancel", stopPan);
   });
 
+  window.addEventListener("resize", layoutCloud);
   renderBubbles();
   updateDetail(selected);
 }
@@ -506,20 +524,62 @@ function renderRecipes() {
 
 function renderSupplements() {
   const table = document.querySelector("#supplement-catalog-table");
-  const status = document.querySelector("#catalog-status");
   const tabs = document.querySelectorAll(".tab-button");
   const filters = document.querySelectorAll("[data-catalog-filter]");
-  let activeTab = "products";
+  let activeTab = "ingredients";
   let activeFilter = "all";
   let catalog = { supplements: [], products: [] };
+  const expandedProducts = new Set();
+  let highlightedSupplementId = "";
+
+  const referenceSources = {
+    "vitamin-c": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/" },
+    "magnesium": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/" },
+    "creatine-monohydrate": { label: "ISSN", url: "https://jissn.biomedcentral.com/articles/10.1186/s12970-017-0173-z" },
+    "omega-3": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/" },
+    "epa": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/" },
+    "dha": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/" },
+    "vitamin-d3": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/" },
+    "vitamin-e": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/VitaminE-HealthProfessional/" },
+    "vitamin-k1": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/" },
+    "vitamin-k2-mk4": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/" },
+    "vitamin-k2-mk7": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/" },
+    "thiamin": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/Thiamin-HealthProfessional/" },
+    "riboflavin": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/Riboflavin-HealthProfessional/" },
+    "niacin": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/Niacin-HealthProfessional/" },
+    "vitamin-b6": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/VitaminB6-HealthProfessional/" },
+    "folate": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/Folate-HealthProfessional/" },
+    "vitamin-b12": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/" },
+    "biotin": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/Biotin-HealthProfessional/" },
+    "pantothenic-acid": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/PantothenicAcid-HealthProfessional/" },
+    "calcium": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/Calcium-HealthProfessional/" },
+    "iodine": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/Iodine-HealthProfessional/" },
+    "zinc": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/Zinc-HealthProfessional/" },
+    "selenium": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/Selenium-HealthProfessional/" },
+    "manganese": { label: "NIH ODS", url: "https://ods.od.nih.gov/factsheets/Manganese-HealthProfessional/" },
+    "curcumin": { label: "NCCIH", url: "https://www.nccih.nih.gov/health/turmeric/ataglance.htm" },
+    "ginger-extract": { label: "NCCIH", url: "https://www.nccih.nih.gov/health/ginger" },
+    "ashwagandha": { label: "NCCIH", url: "https://www.nccih.nih.gov/health/ashwagandha" },
+    "rhodiola-rosea": { label: "NCCIH", url: "https://www.nccih.nih.gov/health/rhodiola" },
+  };
+
+  const defaultReferenceSource = {
+    label: "FDA DV",
+    url: "https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels",
+  };
+
+  const officialSourceUrls = {
+    "website-longevity-mix": "https://blueprint.bryanjohnson.com/products/longevity-blend-multinutrient-drink-mix-blood-orange-flavor",
+    "website-essential-capsules": "https://blueprint.bryanjohnson.com/products/essentials-capsules",
+    "website-omega-3": "https://blueprint.bryanjohnson.com/products/omega-3",
+    "website-collagen": "https://blueprint.bryanjohnson.com/products/collagen",
+    "website-nac-ginger-curcumin": "https://blueprint.bryanjohnson.com/products/nac-ginger-capsules",
+    "website-ashwagandha-rhodiola": "https://blueprint.bryanjohnson.com/products/ashwagandha-rhodiola-120mg",
+    "website-advanced-antioxidants": "https://blueprint.bryanjohnson.com/products/advanced-antioxidants",
+  };
 
   function formatCategories(categories) {
     return (categories || []).map((category) => `<span class="tag">${escapeHtml(category)}</span>`).join("");
-  }
-
-  function formatStatus(sourceStatus) {
-    const label = sourceStatus.replaceAll("_", " ");
-    return `<span class="source-status source-status-${escapeHtml(sourceStatus)}">${escapeHtml(label)}</span>`;
   }
 
   function formatAmount(amount) {
@@ -527,22 +587,114 @@ function renderSupplements() {
     const values = [amount.min, amount.medium, amount.max].filter((value) => value !== null && value !== undefined);
     if (values.length === 0) return "Needs review";
     const uniqueValues = [...new Set(values)];
-    const numberText = uniqueValues.length === 1 ? uniqueValues[0] : `${amount.min ?? "?"}-${amount.max ?? "?"}`;
+    let numberText = uniqueValues[0];
+    if (uniqueValues.length > 1) {
+      if (amount.min === null || amount.min === undefined) numberText = `Up to ${amount.max}`;
+      else if (amount.max === null || amount.max === undefined) numberText = `${amount.min}+`;
+      else numberText = `${amount.min}-${amount.max}`;
+    }
     return `${numberText} ${amount.unit || ""}`.trim();
   }
 
-  function productIngredientText(product) {
-    return product.ingredients.map((ingredient) => {
+  function sourceById(sourceId) {
+    const source = catalog.sources?.find((entry) => entry.id === sourceId);
+    if (!source?.url) return null;
+    return source;
+  }
+
+  function blueprintSourcesForSupplement(supplementId) {
+    const sources = [];
+    catalog.products.forEach((product) => {
+      (product.ingredients || [])
+        .filter((ingredient) => ingredient.supplementId === supplementId)
+        .forEach((ingredient) => {
+          (ingredient.sourceIds || []).forEach((sourceId) => {
+            const source = sourceById(sourceId);
+            const sourceUrl = source?.url || officialSourceUrls[sourceId];
+            if (sourceUrl) {
+              sources.push({
+                label: product.provider.includes("Blueprint") ? "Blueprint" : product.provider,
+                url: sourceUrl,
+                amount: ingredient.amount === null ? "" : `${ingredient.amount} ${ingredient.unit}`,
+                product: product.name,
+              });
+            }
+          });
+        });
+    });
+    return sources;
+  }
+
+  function amountSources(supplement) {
+    const blueprintSources = blueprintSourcesForSupplement(supplement.id);
+    const reference = referenceSources[supplement.id] || defaultReferenceSource;
+    const uniqueBlueprintSources = [];
+    const seen = new Set();
+    blueprintSources.forEach((source) => {
+      const key = `${source.url}-${source.amount}`;
+      if (!seen.has(key)) {
+        seen.add(key);
+        uniqueBlueprintSources.push(source);
+      }
+    });
+    return [...uniqueBlueprintSources.slice(0, 2), reference];
+  }
+
+  function amountWithSources(supplement) {
+    const amountText = formatAmount(supplement.recommendedDailyAmount);
+    const sources = amountSources(supplement);
+    const sourceLinks = sources.map((source) => {
+      const prefix = source.amount ? `${source.label}: ${source.amount}` : source.label;
+      return `<a href="${escapeHtml(source.url)}" target="_blank" rel="noopener">${escapeHtml(prefix)}</a>`;
+    }).join("");
+    const basis = supplement.recommendedDailyAmount?.basis || "Informational amount; not medical advice.";
+
+    return `
+      <div class="amount-source-cell">
+        <div class="amount-main">
+          <strong>${escapeHtml(amountText)}</strong>
+          <button class="amount-info" type="button" title="${escapeHtml(basis)}" aria-label="${escapeHtml(basis)}">i</button>
+        </div>
+        <div class="amount-sources" aria-label="Amount sources">${sourceLinks}</div>
+      </div>
+    `;
+  }
+
+  function productIngredientItems(product) {
+    return (product.ingredients || []).map((ingredient) => {
       const supplement = catalog.supplements.find((entry) => entry.id === ingredient.supplementId);
       const name = supplement?.name || ingredient.supplementId;
       const amount = ingredient.amount === null ? "needs review" : `${ingredient.amount} ${ingredient.unit}`;
-      return `${name} ${amount}`;
-    }).join(", ");
+      return { ...ingredient, name, amount };
+    });
+  }
+
+  function productIngredientList(product) {
+    const ingredients = productIngredientItems(product);
+    const expanded = expandedProducts.has(product.id);
+    const visibleIngredients = expanded ? ingredients : ingredients.slice(0, 3);
+    const hiddenCount = Math.max(ingredients.length - visibleIngredients.length, 0);
+
+    return `
+      <div class="ingredient-link-list" data-product-ingredients="${escapeHtml(product.id)}">
+        ${visibleIngredients.map((ingredient) => `
+          <button class="ingredient-entity-link" type="button" data-supplement-id="${escapeHtml(ingredient.supplementId)}">
+            <span>${escapeHtml(ingredient.name)}</span>
+            <small>${escapeHtml(ingredient.amount)}</small>
+          </button>
+        `).join("")}
+        ${hiddenCount > 0 ? `
+          <button class="ingredient-show-more" type="button" data-expand-product="${escapeHtml(product.id)}">
+            Show more
+          </button>
+        ` : ""}
+      </div>
+    `;
   }
 
   function productsForSupplement(supplementId) {
     return catalog.products
-      .filter((product) => product.contains.includes(supplementId))
+      .filter((product) => (product.contains || []).includes(supplementId))
       .map((product) => product.name)
       .join(", ") || "Not in current products";
   }
@@ -558,12 +710,11 @@ function renderSupplements() {
     table.innerHTML = `
       <thead>
         <tr>
-          <th>Product</th>
+          <th>Supplement Kit</th>
           <th>Provider</th>
           <th>Purpose</th>
           <th>Categories</th>
           <th>Key ingredients</th>
-          <th>Source status</th>
           <th>Add to list</th>
         </tr>
       </thead>
@@ -574,11 +725,10 @@ function renderSupplements() {
             <td>${escapeHtml(product.provider)}</td>
             <td>${escapeHtml(product.purpose)}</td>
             <td><div class="tag-row">${formatCategories(product.categories)}</div></td>
-            <td>${escapeHtml(productIngredientText(product))}</td>
-            <td>${formatStatus(product.sourceStatus)}</td>
+            <td>${productIngredientList(product)}</td>
             <td><button class="button ghost table-action save-catalog-item" type="button" data-kind="Supplement Product" data-id="${escapeHtml(product.id)}">Add</button></td>
           </tr>
-        `).join("") || `<tr><td colspan="7">No products match this filter.</td></tr>`}
+        `).join("") || `<tr><td colspan="6">No products match this filter.</td></tr>`}
       </tbody>
     `;
   }
@@ -592,19 +742,17 @@ function renderSupplements() {
           <th>Purpose</th>
           <th>Recommended daily amount</th>
           <th>Included in products</th>
-          <th>Source status</th>
         </tr>
       </thead>
       <tbody>
         ${ingredients.map((supplement) => `
-          <tr>
+          <tr id="supplement-${escapeHtml(supplement.id)}" class="${supplement.id === highlightedSupplementId ? "row-highlight" : ""}">
             <td><strong>${escapeHtml(supplement.name)}</strong><span>${escapeHtml((supplement.aliases || []).join(", "))}</span></td>
             <td>${escapeHtml(supplement.purpose)}</td>
-            <td>${escapeHtml(formatAmount(supplement.recommendedDailyAmount))}</td>
+            <td>${amountWithSources(supplement)}</td>
             <td>${escapeHtml(productsForSupplement(supplement.id))}</td>
-            <td>${formatStatus(supplement.sourceStatus)}</td>
           </tr>
-        `).join("") || `<tr><td colspan="5">No supplements match this filter.</td></tr>`}
+        `).join("") || `<tr><td colspan="4">No supplements match this filter.</td></tr>`}
       </tbody>
     `;
   }
@@ -626,10 +774,44 @@ function renderSupplements() {
     });
   }
 
+  function setActiveTab(nextTab) {
+    activeTab = nextTab;
+    tabs.forEach((entry) => {
+      const selected = entry.dataset.tab === nextTab;
+      entry.classList.toggle("active", selected);
+      entry.setAttribute("aria-selected", selected ? "true" : "false");
+    });
+  }
+
+  function setActiveFilter(nextFilter) {
+    activeFilter = nextFilter;
+    filters.forEach((entry) => entry.classList.toggle("active", entry.dataset.catalogFilter === nextFilter));
+  }
+
+  function bindIngredientLinks() {
+    document.querySelectorAll(".ingredient-entity-link").forEach((button) => {
+      button.addEventListener("click", () => {
+        highlightedSupplementId = button.dataset.supplementId || "";
+        setActiveTab("ingredients");
+        setActiveFilter("all");
+        render();
+        document.getElementById(`supplement-${highlightedSupplementId}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    });
+
+    document.querySelectorAll("[data-expand-product]").forEach((button) => {
+      button.addEventListener("click", () => {
+        expandedProducts.add(button.dataset.expandProduct);
+        render();
+      });
+    });
+  }
+
   function render() {
     if (activeTab === "products") renderProducts();
     if (activeTab === "ingredients") renderIngredients();
     bindSaveButtons();
+    bindIngredientLinks();
   }
 
   async function fetchCatalog() {
@@ -641,8 +823,7 @@ function renderSupplements() {
         ]);
         if (!supplementsResponse.ok || !productsResponse.ok) throw new Error("Catalog API returned an error.");
         const [supplementsPayload, productsPayload] = await Promise.all([supplementsResponse.json(), productsResponse.json()]);
-        status.textContent = "Loaded from catalog API.";
-        return { supplements: supplementsPayload.supplements || [], products: productsPayload.products || [] };
+        return { supplements: supplementsPayload.supplements || [], products: productsPayload.products || [], sources: [] };
       } catch (error) {
         console.warn("Catalog API failed; loading local seed fallback.", error);
       }
@@ -651,25 +832,20 @@ function renderSupplements() {
     const seedResponse = await fetch("data/supplement-catalog.seed.json", { headers: { accept: "application/json" } });
     if (!seedResponse.ok) throw new Error("Local catalog seed could not be loaded.");
     const seed = await seedResponse.json();
-    status.textContent = "Loaded from reviewed local fallback seed.";
-    return { supplements: seed.supplements || [], products: seed.supplementProducts || [] };
+    return { supplements: seed.supplements || [], products: seed.supplementProducts || [], sources: seed.sources || [] };
   }
 
   tabs.forEach((button) => {
     button.addEventListener("click", () => {
-      activeTab = button.dataset.tab;
-      tabs.forEach((entry) => {
-        entry.classList.toggle("active", entry === button);
-        entry.setAttribute("aria-selected", entry === button ? "true" : "false");
-      });
+      setActiveTab(button.dataset.tab);
       render();
     });
   });
 
   filters.forEach((button) => {
     button.addEventListener("click", () => {
-      activeFilter = button.dataset.catalogFilter;
-      filters.forEach((entry) => entry.classList.toggle("active", entry === button));
+      highlightedSupplementId = "";
+      setActiveFilter(button.dataset.catalogFilter);
       render();
     });
   });
@@ -681,7 +857,6 @@ function renderSupplements() {
     })
     .catch((error) => {
       console.error(error);
-      status.textContent = "Catalog could not be loaded.";
       table.innerHTML = `<tbody><tr><td>Catalog could not be loaded.</td></tr></tbody>`;
     });
 }

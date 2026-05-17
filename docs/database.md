@@ -188,13 +188,15 @@ The UI still calls these rows "Supplement Products" in docs and user-facing copy
 
 ## Catalog Source Policy
 
-Use package photos first, official provider pages second. The current reviewed seed uses the JPEG package evidence in:
+Use official provider product pages first when they expose exact supplement-facts data, including ingredient amount, unit, and serving basis. Use package photos supplied by Tilman as verification evidence, cross-checks, and fallback when official online facts are missing or ambiguous.
+
+The current reviewed seed uses the JPEG package evidence in:
 
 ```text
 /Users/tilmanresch/Downloads/iloveimg-converted (1)
 ```
 
-Package photos are evidence/provenance and are not public product thumbnails in this pass.
+Package photos are evidence/provenance and are not public product thumbnails in this pass. For Blueprint/Bryan Johnson products, official Blueprint pages are the preferred source of truth when exact supplement facts are available online.
 
 Every product ingredient must reference a supplement primitive through `supplementId`. Exact per-serving product amounts live on product ingredient rows. General daily recommendation ranges live on supplement rows and are informational only, not medical advice.
 

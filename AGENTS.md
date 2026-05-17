@@ -8,17 +8,19 @@ There is currently no frontend package manager, build system, OpenAI Agents SDK,
 
 ## Local Preview
 
-Use a simple static server from the repository root:
+Use the local preview server from the repository root:
 
 ```bash
-python3 -m http.server 4173
+node scripts/local-preview-server.mjs
 ```
 
 Then open:
 
 ```text
-http://localhost:4173/index.html
+http://localhost:4173/
 ```
+
+This local server mirrors the production CloudFront clean URL behavior for `/foods`, `/supplements`, `/recipes`, `/lists`, and `/luminaos`. If using `python3 -m http.server 4173` as a fallback, open physical `.html` files directly because Python's built-in server does not rewrite clean URLs.
 
 ## Browser Preview
 
@@ -62,6 +64,7 @@ Before committing changes, run:
 
 ```bash
 node --check script.js
+node --check scripts/local-preview-server.mjs
 git diff --check
 ```
 

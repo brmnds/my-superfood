@@ -15,19 +15,21 @@ The first version is intentionally simple: plain HTML, CSS, and JavaScript with 
 
 ## Local Preview
 
-Serve the folder with a static server:
+Serve the folder with the local preview server:
 
 ```bash
-python3 -m http.server 4173
+node scripts/local-preview-server.mjs
 ```
 
 Then open:
 
 ```text
-http://localhost:4173/index.html
+http://localhost:4173/
 ```
 
-Production uses clean URLs through CloudFront, for example `/foods`, `/supplements`, and `/lists`. Local preview still serves the physical `.html` files directly unless you use a local server with rewrite support.
+This mirrors the production clean URL behavior, so `/foods`, `/supplements`, `/recipes`, `/lists`, and `/luminaos` work locally.
+
+If you use `python3 -m http.server 4173` directly, open the physical `.html` files such as `http://localhost:4173/lists.html`; Python's built-in static server does not rewrite `/lists` to `lists.html`.
 
 ## Technology
 
@@ -71,6 +73,7 @@ Image validation:
 Backend docs:
 
 - `docs/database.md`
+- `docs/design-principles.md`
 - `backend/README.md`
 - `docs/luminaos-auth-handover.md`
 - `docs/supplement-catalog-source-policy.md`
@@ -95,6 +98,7 @@ Run these before committing:
 node --check script.js
 node --check backend/list-api.mjs
 node --check backend/catalog-api.mjs
+node --check scripts/local-preview-server.mjs
 node --check scripts/validate-supplement-catalog.mjs
 node --check scripts/seed-supplement-catalog.mjs
 node scripts/validate-supplement-catalog.mjs
