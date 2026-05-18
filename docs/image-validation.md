@@ -23,7 +23,7 @@ This report validates current My Superfood images against the picture steering f
 | Spinach | `assets/images/real/spinach.jpg` | Pass | Raw spinach leaves. |
 | Salmon | `assets/images/real/salmon.png` | Pass | Clean raw salmon fillet on a white background. |
 | Oats | `assets/images/real/oats.png` | Pass | Small mountain of rolled oats on a clean white background. |
-| Olive Oil | `assets/images/real/olive-oil.jpg` | Pass | Clean bottle/product-style image. |
+| Olive Oil | `assets/images/real/olive-oil.png` | Pass | Generated clean bottle-and-olives image; olives make the oil source identifiable in the circular crop. |
 | Walnuts | `assets/images/real/walnuts.png` | Pass | Generated product-style raw walnut image on a clean white background. |
 | Coconut Yogurt | `assets/images/real/coconut-yogurt.png` | Pass | Generated coconut yogurt image with a coconut piece in the yogurt on a clean white background. |
 | Sweet Potato | `assets/images/real/sweet-potato.png` | Pass | Raw sweet potato with cut pieces on a clean white background. |
@@ -94,7 +94,7 @@ This report validates current My Superfood images against the picture steering f
 | Farro | `assets/images/real/farro.png` | Pass | Generated product-style ingredient image on a clean white background. |
 | Bulgur | `assets/images/real/bulgur.png` | Pass | Generated product-style ingredient image on a clean white background. |
 | Millet | `assets/images/real/millet.png` | Pass | Generated product-style ingredient image on a clean white background. |
-| Avocado Oil | `assets/images/real/avocado-oil.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Avocado Oil | `assets/images/real/avocado-oil.png` | Pass | Regenerated product-style ingredient image on a clean white background; visible avocado half and wedge make the oil identifiable. |
 | Olives | `assets/images/real/olives.png` | Pass | Generated product-style ingredient image on a clean white background. |
 | Natto | `assets/images/real/natto.png` | Pass | Generated product-style ingredient image on a clean white background. |
 | Kombucha | `assets/images/real/kombucha.png` | Pass | Generated product-style ingredient image on a clean white background. |

@@ -85,6 +85,9 @@ This is preferred over Amplify for the current version because the app is static
      - `/recipes` -> `/recipes.html`
      - `/lists` -> `/lists.html`
      - `/luminaos` -> `/luminaos.html`
+     - `/privacy` -> `/privacy.html`
+     - `/terms` -> `/terms.html`
+     - `/imprint` -> `/imprint.html`
      - `/*.html` -> matching clean URL with a `301`.
 
 8. Add Route 53 alias records:
@@ -119,6 +122,7 @@ Verify:
 - `https://my-superfood.com`
 - `https://www.my-superfood.com`
 - direct navigation to clean pages such as `/foods`
+- legal footer pages load at `/privacy`, `/terms`, and `/imprint`
 - `.html` URLs redirect to clean equivalents
 - canonical tags point at clean URLs
 - `robots.txt` and `sitemap.xml` load

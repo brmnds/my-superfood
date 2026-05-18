@@ -12,6 +12,7 @@ The first version is intentionally simple: plain HTML, CSS, and JavaScript with 
 - `recipes.html` - healthy recipe feature page.
 - `lists.html` - tabbed saved-list workspace for foods, supplements, and recipes, powered by browser `localStorage`, anonymous DynamoDB sync, and optional LuminaOS account sync.
 - `luminaos.html` - LuminaOS handoff page.
+- `privacy.html`, `terms.html`, `imprint.html` - simple legal and informational pages with clean URL routes.
 
 ## Local Preview
 
@@ -27,7 +28,7 @@ Then open:
 http://localhost:4173/
 ```
 
-This mirrors the production clean URL behavior, so `/foods`, `/supplements`, `/recipes`, `/lists`, and `/luminaos` work locally.
+This mirrors the production clean URL behavior, so `/foods`, `/supplements`, `/recipes`, `/lists`, `/luminaos`, `/privacy`, `/terms`, and `/imprint` work locally.
 
 If you use `python3 -m http.server 4173` directly, open the physical `.html` files such as `http://localhost:4173/lists.html`; Python's built-in static server does not rewrite `/lists` to `lists.html`.
 

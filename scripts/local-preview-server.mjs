@@ -13,6 +13,9 @@ const cleanRoutes = new Map([
   ["/recipes", "recipes.html"],
   ["/lists", "lists.html"],
   ["/luminaos", "luminaos.html"],
+  ["/privacy", "privacy.html"],
+  ["/terms", "terms.html"],
+  ["/imprint", "imprint.html"],
 ]);
 
 const contentTypes = new Map([
@@ -72,5 +75,5 @@ createServer((request, response) => {
   createReadStream(filePath).pipe(response);
 }).listen(port, () => {
   console.log(`My Superfood preview server running at http://localhost:${port}`);
-  console.log("Clean URLs enabled: /foods /supplements /recipes /lists /luminaos");
+  console.log("Clean URLs enabled: /foods /supplements /recipes /lists /luminaos /privacy /terms /imprint");
 });

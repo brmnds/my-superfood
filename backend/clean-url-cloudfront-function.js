@@ -6,7 +6,10 @@ function handler(event) {
     "/supplements": "/supplements.html",
     "/recipes": "/recipes.html",
     "/lists": "/lists.html",
-    "/luminaos": "/luminaos.html"
+    "/luminaos": "/luminaos.html",
+    "/privacy": "/privacy.html",
+    "/terms": "/terms.html",
+    "/imprint": "/imprint.html"
   };
 
   if (uri === "/index.html") {

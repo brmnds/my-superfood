@@ -195,7 +195,7 @@ const foods = [
   {
     "id": "olive-oil",
     "name": "Olive Oil",
-    "image": "assets/images/real/olive-oil.jpg",
+    "image": "assets/images/real/olive-oil.png",
     "categories": [
       "oils",
       "advanced"
@@ -1814,8 +1814,18 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function parseStoredList(key) {
+  try {
+    const value = JSON.parse(localStorage.getItem(key) || "[]");
+    return Array.isArray(value) ? value : [];
+  } catch (error) {
+    console.warn(`Ignoring invalid saved list data for ${key}.`, error);
+    return [];
+  }
+}
+
 function getList() {
-  return JSON.parse(localStorage.getItem(listStorageKey) || "[]");
+  return parseStoredList(listStorageKey);
 }
 
 function setList(list) {
@@ -1823,7 +1833,7 @@ function setList(list) {
 }
 
 function getAccountListCache() {
-  return JSON.parse(localStorage.getItem(accountListCacheStorageKey) || "[]");
+  return parseStoredList(accountListCacheStorageKey);
 }
 
 function setAccountListCache(list) {
@@ -1854,7 +1864,7 @@ function addUniqueItem(list, item) {
 function getClientId() {
   let clientId = localStorage.getItem(clientStorageKey);
   if (!clientId) {
-    clientId = crypto.randomUUID();
+    clientId = crypto.randomUUID ? crypto.randomUUID() : `client-${Date.now()}-${Math.random().toString(16).slice(2)}`;
     localStorage.setItem(clientStorageKey, clientId);
   }
   return clientId;
@@ -2066,7 +2076,7 @@ function renderHome() {
     detailImage.src = food.image;
     detailImage.alt = food.name;
     detailImage.draggable = false;
-    detailBenefits.innerHTML = food.benefits.map((benefit) => `<li>${benefit}</li>`).join("");
+    detailBenefits.innerHTML = food.benefits.map((benefit) => `<li>${escapeHtml(benefit)}</li>`).join("");
     openDetail.href = `/foods#${food.id}`;
     savedNote.textContent = "";
     detailCard.classList.remove("is-hidden");
@@ -2174,9 +2184,9 @@ function renderHome() {
     orbit.innerHTML = `
       <div class="food-cloud" id="food-cloud">
         ${visibleFoods.map((food, index) => `
-          <button class="food-bubble" type="button" data-food="${food.id}" style="--delay:${index * -0.43}s; --float:13px;" aria-label="${food.name}">
-            <img src="${food.image}" alt="" draggable="false">
-            <span class="bubble-label">${food.name}</span>
+          <button class="food-bubble" type="button" data-food="${escapeHtml(food.id)}" style="--delay:${index * -0.43}s; --float:13px;" aria-label="${escapeHtml(food.name)}">
+            <img src="${escapeHtml(food.image)}" alt="" draggable="false">
+            <span class="bubble-label">${escapeHtml(food.name)}</span>
           </button>
         `).join("")}
       </div>
@@ -2328,13 +2338,23 @@ function renderHome() {
 function renderFoods() {
   const catalog = document.querySelector("#food-catalog");
   catalog.innerHTML = foods.map((food) => `
-    <article class="catalog-card" id="${food.id}">
-      <img src="${food.image}" alt="${food.name}">
-      <h2>${food.name}</h2>
-      <p>${food.note}</p>
-      <div class="tag-row">${food.benefits.map((benefit) => `<span class="tag">${benefit}</span>`).join("")}</div>
+    <article class="catalog-card" id="${escapeHtml(food.id)}">
+      <img src="${escapeHtml(food.image)}" alt="${escapeHtml(food.name)}" loading="lazy" decoding="async">
+      <h2>${escapeHtml(food.name)}</h2>
+      <p>${escapeHtml(food.note)}</p>
+      <div class="tag-row">${food.benefits.map((benefit) => `<span class="tag">${escapeHtml(benefit)}</span>`).join("")}</div>
+      <button class="button ghost save-food-card" type="button" data-food-id="${escapeHtml(food.id)}">Add to list</button>
     </article>
   `).join("");
+
+  catalog.querySelectorAll(".save-food-card").forEach((button) => {
+    button.addEventListener("click", () => {
+      const food = foods.find((entry) => entry.id === button.dataset.foodId);
+      if (!food) return;
+      saveItem({ type: "Food", id: food.id, name: food.name, image: food.image, note: food.note });
+      button.textContent = "Added";
+    });
+  });
 }
 
 function renderRecipes() {
@@ -2659,6 +2679,22 @@ function renderSupplements() {
   }
 
   async function fetchCatalog() {
+    async function fetchSeedCatalog() {
+      const seedResponse = await fetch("data/supplement-catalog.seed.json", { headers: { accept: "application/json" } });
+      if (!seedResponse.ok) throw new Error("Local catalog seed could not be loaded.");
+      return seedResponse.json();
+    }
+
+    async function fetchSeedSources() {
+      try {
+        const seed = await fetchSeedCatalog();
+        return seed.sources || [];
+      } catch (error) {
+        console.warn("Catalog source metadata could not be loaded.", error);
+        return [];
+      }
+    }
+
     if (catalogApiUrl) {
       try {
         const [supplementsResponse, productsResponse] = await Promise.all([
@@ -2667,15 +2703,17 @@ function renderSupplements() {
         ]);
         if (!supplementsResponse.ok || !productsResponse.ok) throw new Error("Catalog API returned an error.");
         const [supplementsPayload, productsPayload] = await Promise.all([supplementsResponse.json(), productsResponse.json()]);
-        return { supplements: supplementsPayload.supplements || [], products: productsPayload.products || [], sources: [] };
+        return {
+          supplements: supplementsPayload.supplements || [],
+          products: productsPayload.products || [],
+          sources: await fetchSeedSources(),
+        };
       } catch (error) {
         console.warn("Catalog API failed; loading local seed fallback.", error);
       }
     }
 
-    const seedResponse = await fetch("data/supplement-catalog.seed.json", { headers: { accept: "application/json" } });
-    if (!seedResponse.ok) throw new Error("Local catalog seed could not be loaded.");
-    const seed = await seedResponse.json();
+    const seed = await fetchSeedCatalog();
     return { supplements: seed.supplements || [], products: seed.supplementProducts || [], sources: seed.sources || [] };
   }
 

@@ -47,3 +47,5 @@ The icon should appear next to the `My Superfood` wordmark in the site header. D
 - Avoid medical claims, personalized dosing claims, and overconfident supplement guidance.
 - Keep supplement data provenance visible where relevant.
 - Keep LuminaOS references as optional account sync and habit handoff, not as the main My Superfood identity.
+- Keep a simple footer on public pages with Privacy Policy, Terms, and Imprint links.
+- Legal and informational pages should clearly state that My Superfood is an informational catalog by Tilman Resch and not medical advice. Users should be pointed toward qualified health professionals for personal nutrition, food, and supplement decisions.
