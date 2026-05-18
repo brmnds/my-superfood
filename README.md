@@ -51,7 +51,9 @@ The supplement catalog has a separate read-only DynamoDB/Lambda path with local 
 
 - Seed: `data/supplement-catalog.seed.json`
 - Tables: `my-superfood-supplements`, `my-superfood-supplement-products`
+- Catalog API: `https://z4kxvkidmk35kelru4rrjbbsbi0gcpqt.lambda-url.eu-central-1.on.aws`
 - Routes: `GET /supplements`, `GET /products`
+- Frontend behavior: fetch the catalog API first, then fall back to the reviewed seed JSON if the API is unavailable.
 
 See `docs/database.md`.
 
@@ -77,6 +79,7 @@ Backend docs:
 - `backend/README.md`
 - `docs/luminaos-auth-handover.md`
 - `docs/supplement-catalog-source-policy.md`
+- `docs/sunday-natural-supplement-research.md`
 
 ## Deployment
 

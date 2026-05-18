@@ -25,6 +25,12 @@ The current package-photo evidence folder is:
 
 The package photos are evidence and provenance, not public product thumbnails. For Blueprint/Bryan Johnson products, official Blueprint pages are the preferred source of truth when the exact supplement facts are available online.
 
+For Sunday Natural products, use the exact product page matching the ordered name and SKU. Store the purchased item as a **Supplement Product** and connect its ingredients to primitive **Supplement** rows. Keep prices out of the catalog. The current Sunday Natural research note is:
+
+```text
+docs/sunday-natural-supplement-research.md
+```
+
 ## Source Status
 
 Allowed values:
@@ -55,4 +61,10 @@ Then import:
 node scripts/seed-supplement-catalog.mjs
 ```
 
-The frontend falls back to this seed file if the catalog API is unavailable.
+The frontend tries the live read-only catalog API first:
+
+```text
+https://z4kxvkidmk35kelru4rrjbbsbi0gcpqt.lambda-url.eu-central-1.on.aws
+```
+
+If the API is unavailable, it falls back to the reviewed seed file so the public page still renders.

@@ -2,26 +2,13 @@ import { DynamoDBClient, ScanCommand } from "@aws-sdk/client-dynamodb";
 
 const supplementsTable = process.env.SUPPLEMENTS_TABLE;
 const productsTable = process.env.SUPPLEMENT_PRODUCTS_TABLE;
-const allowedOrigins = new Set([
-  "https://my-superfood.com",
-  "https://www.my-superfood.com",
-  "http://localhost:4173",
-]);
 const ddb = new DynamoDBClient({});
 
-function headersFor(event) {
-  const origin = event.headers?.origin || event.headers?.Origin || "";
-  const headers = {
+function headersFor() {
+  return {
     "content-type": "application/json; charset=utf-8",
     "cache-control": "public, max-age=300",
   };
-
-  if (allowedOrigins.has(origin)) {
-    headers["access-control-allow-origin"] = origin;
-    headers["vary"] = "origin";
-  }
-
-  return headers;
 }
 
 function response(event, statusCode, body) {
@@ -56,7 +43,7 @@ export const handler = async (event) => {
     return {
       statusCode: 204,
       headers: {
-        ...headersFor(event),
+        ...headersFor(),
         "access-control-allow-methods": "GET,OPTIONS",
         "access-control-allow-headers": "content-type",
       },

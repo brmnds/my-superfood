@@ -1736,7 +1736,24 @@ const foods = [
     ],
     "note": "A heat-sensitive finishing oil for salads, vegetables, and grain dishes.",
     "dietType": "vegan",
-    "tilmanProtocol": false
+    "tilmanProtocol": true
+  },
+  {
+    "id": "hemp-seed-oil",
+    "name": "Hemp Seed Oil",
+    "image": "assets/images/real/hemp-seed-oil.png",
+    "categories": [
+      "oils",
+      "advanced"
+    ],
+    "benefits": [
+      "Omega-3 ALA",
+      "Cold finishing oil",
+      "Nutty flavor"
+    ],
+    "note": "A heat-sensitive seed oil best used cold for salads, bowls, and dressings.",
+    "dietType": "vegan",
+    "tilmanProtocol": true
   },
   {
     "id": "wheat-germ-oil",
@@ -1778,7 +1795,7 @@ const recipes = [
 const page = document.body.dataset.page;
 const listApiUrl = "https://l36bksjavuxnp45gl5fel2jkbq0ertbm.lambda-url.eu-central-1.on.aws";
 const accountApiBaseUrl = localStorage.getItem("my-superfood-account-api-base") || (["my-superfood.com", "www.my-superfood.com"].includes(location.hostname) ? "/api" : "");
-const catalogApiUrl = "";
+const catalogApiUrl = "https://z4kxvkidmk35kelru4rrjbbsbi0gcpqt.lambda-url.eu-central-1.on.aws";
 const listStorageKey = "my-superfood-list";
 const accountListCacheStorageKey = "my-superfood-account-list-cache";
 const clientStorageKey = "my-superfood-client-id";

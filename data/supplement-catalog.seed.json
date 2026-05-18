@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "captureDate": "2026-05-17",
+  "captureDate": "2026-05-18",
   "sourcePolicy": "Official provider supplement facts first when exact; package photos are verification evidence and fallback. Mark uncertain reads as needs_review.",
   "supplements": [
     {
@@ -1146,6 +1146,243 @@
         "source": "website_sourced"
       },
       "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "beetroot-powder",
+      "name": "Beetroot Powder",
+      "aliases": [
+        "Beet Root Powder"
+      ],
+      "purpose": "Beetroot powder used in sport recovery and nitric-oxide-adjacent nutrition contexts.",
+      "categories": [
+        "recovery",
+        "energy",
+        "heart"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 400,
+        "max": null,
+        "unit": "mg",
+        "basis": "Sunday Natural Ashwa Pro Muscle Recover daily serving amount; not personalized advice.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "saffron-extract",
+      "name": "Saffron Extract",
+      "aliases": [
+        "Crocus sativus",
+        "Saffron Crocus Extract"
+      ],
+      "purpose": "Saffron extract used in mood, relaxation, and recovery-support contexts.",
+      "categories": [
+        "brain",
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 20,
+        "max": null,
+        "unit": "mg",
+        "basis": "Sunday Natural Ashwa Pro Muscle Recover daily serving amount; not personalized advice.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "quercetin",
+      "name": "Quercetin",
+      "aliases": [
+        "Sophora japonica Blossom Extract"
+      ],
+      "purpose": "Polyphenol flavonoid used in antioxidant and inflammatory-function contexts.",
+      "categories": [
+        "inflammation",
+        "longevity",
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 10,
+        "max": null,
+        "unit": "mg",
+        "basis": "Sunday Natural Ashwa Pro Muscle Recover daily serving amount; not personalized advice.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "aliases": [
+        "Nicotinamide Adenine Dinucleotide Hydride",
+        "Coenzyme 1"
+      ],
+      "purpose": "Reduced NAD form used in cellular-energy and mitochondrial contexts.",
+      "categories": [
+        "energy",
+        "longevity",
+        "brain"
+      ],
+      "recommendedDailyAmount": {
+        "min": 2.5,
+        "medium": 50,
+        "max": 50,
+        "unit": "mg",
+        "basis": "Sunday Natural product serving amounts: 2.5 mg in B Complex Extra Forte and 50 mg in NADH 50; not personalized advice.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "d-ribose",
+      "name": "D-Ribose",
+      "aliases": [
+        "Ribose"
+      ],
+      "purpose": "Functional sugar used in cellular-energy support contexts.",
+      "categories": [
+        "energy"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 500,
+        "max": null,
+        "unit": "mg",
+        "basis": "Sunday Natural NADH 50 daily serving amount; not personalized advice.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "d-galactose",
+      "name": "D-Galactose",
+      "aliases": [
+        "D(+) Galactose"
+      ],
+      "purpose": "Functional sugar included with NADH products.",
+      "categories": [
+        "energy"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 200,
+        "max": null,
+        "unit": "mg",
+        "basis": "Sunday Natural NADH 50 daily serving amount; not personalized advice.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "inositol",
+      "name": "Inositol",
+      "aliases": [
+        "Myo-Inositol",
+        "Vitamin B8"
+      ],
+      "purpose": "B-vitamin-adjacent cofactor used in nervous-system and metabolic contexts.",
+      "categories": [
+        "brain",
+        "energy"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 50,
+        "max": null,
+        "unit": "mg",
+        "basis": "Sunday Natural Vitamin B Complex Extra Forte daily serving amount; not personalized advice.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "citicoline",
+      "name": "Citicoline",
+      "aliases": [
+        "CDP-Choline"
+      ],
+      "purpose": "Choline donor used in brain and cognitive-function contexts.",
+      "categories": [
+        "brain",
+        "energy"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 25,
+        "max": null,
+        "unit": "mg",
+        "basis": "Sunday Natural Vitamin B Complex Extra Forte daily serving amount; not personalized advice.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "paba",
+      "name": "PABA",
+      "aliases": [
+        "p-Aminobenzoic Acid",
+        "Vitamin B10"
+      ],
+      "purpose": "B-vitamin-adjacent cofactor included in high-dose B-complex products.",
+      "categories": [
+        "essentials",
+        "skin"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 50,
+        "max": null,
+        "unit": "mg",
+        "basis": "Sunday Natural Vitamin B Complex Extra Forte daily serving amount; not personalized advice.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "betaine",
+      "name": "Betaine",
+      "aliases": [
+        "Trimethylglycine",
+        "TMG"
+      ],
+      "purpose": "Methyl donor used in methylation and homocysteine-support contexts.",
+      "categories": [
+        "heart",
+        "energy"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 75,
+        "max": null,
+        "unit": "mg",
+        "basis": "Sunday Natural Vitamin B Complex Extra Forte daily serving amount; not personalized advice.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
+    },
+    {
+      "id": "hyaluronic-acid",
+      "name": "Hyaluronic Acid",
+      "aliases": [
+        "Hyaluronan"
+      ],
+      "purpose": "Water-binding compound used in skin, connective-tissue, and joint contexts.",
+      "categories": [
+        "skin",
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": 250,
+        "medium": 500,
+        "max": 500,
+        "unit": "mg",
+        "basis": "Sunday Natural Hyaluronic Acid 250 mg directions allow 1-2 tablets daily; not personalized advice.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced"
     }
   ],
   "supplementProducts": [
@@ -1999,6 +2236,641 @@
         "photo-d3-k2-drops-front",
         "photo-d3-k2-drops-back"
       ]
+    },
+    {
+      "id": "sunday-magnesium-complex-11-ultra-xl",
+      "name": "Magnesium Complex 11 Ultra XL",
+      "aliases": [
+        "Magnesium Complex 11 Ultra XL 200mg",
+        "SKU 8043"
+      ],
+      "provider": "Sunday Natural",
+      "productType": "capsules",
+      "purpose": "Broad-spectrum magnesium complex for daily magnesium supplementation and muscle, energy, nervous-system, and recovery contexts.",
+      "categories": [
+        "essentials",
+        "recovery",
+        "energy",
+        "brain"
+      ],
+      "image": "assets/images/magnesium.svg",
+      "ingredients": [
+        {
+          "supplementId": "magnesium",
+          "amount": 200,
+          "unit": "mg",
+          "perServing": "1 capsule; directions: 1-2 capsules daily with a meal",
+          "labelNotes": "11 magnesium forms including citrate, malate, gluconate, taurate, glycinate, lysinate, ascorbate, lactate, ConcenTrace minerals, magnesium oxide, and Sango coral.",
+          "sourceIds": [
+            "website-sunday-magnesium-complex-11-ultra-xl"
+          ]
+        },
+        {
+          "supplementId": "vitamin-c",
+          "amount": 38,
+          "unit": "mg",
+          "perServing": "1 capsule",
+          "labelNotes": "From magnesium ascorbate / buffered vitamin C.",
+          "sourceIds": [
+            "website-sunday-magnesium-complex-11-ultra-xl"
+          ]
+        },
+        {
+          "supplementId": "calcium",
+          "amount": 10,
+          "unit": "mg",
+          "perServing": "1 capsule",
+          "labelNotes": "From Sango coral powder.",
+          "sourceIds": [
+            "website-sunday-magnesium-complex-11-ultra-xl"
+          ]
+        }
+      ],
+      "contains": [
+        "magnesium",
+        "vitamin-c",
+        "calcium"
+      ],
+      "sources": [
+        "website-sunday-magnesium-complex-11-ultra-xl"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ]
+    },
+    {
+      "id": "sunday-magnesium-active-calm",
+      "name": "Magnesium Active Calm",
+      "aliases": [
+        "Magnesium Active Calm Magtein ATA Mg",
+        "SKU N8759CDE"
+      ],
+      "provider": "Sunday Natural",
+      "productType": "capsules",
+      "purpose": "Magnesium L-threonate and magnesium acetyl taurate complex for nerves, psyche, relaxation, and fatigue-support contexts.",
+      "categories": [
+        "brain",
+        "recovery",
+        "energy"
+      ],
+      "image": "assets/images/magnesium.svg",
+      "ingredients": [
+        {
+          "supplementId": "magnesium",
+          "amount": 119,
+          "unit": "mg",
+          "perServing": "3 capsules daily",
+          "labelNotes": "Elemental magnesium from Magtein magnesium L-threonate and ATA Mg magnesium acetyl taurate.",
+          "sourceIds": [
+            "website-sunday-magnesium-active-calm"
+          ]
+        }
+      ],
+      "contains": [
+        "magnesium"
+      ],
+      "sources": [
+        "website-sunday-magnesium-active-calm"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ]
+    },
+    {
+      "id": "sunday-muscle-recover-ashwa-pro-complex",
+      "name": "Muscle Recover Ashwa Pro Complex",
+      "aliases": [
+        "Ashwa Pro Muscle Recover",
+        "SKU N8128CDE"
+      ],
+      "provider": "Sunday Natural",
+      "productType": "capsules",
+      "purpose": "Post-exercise recovery complex with KSM-66 ashwagandha, magnesium, beetroot, saffron, and quercetin.",
+      "categories": [
+        "recovery",
+        "brain",
+        "energy",
+        "inflammation"
+      ],
+      "image": "assets/images/magnesium.svg",
+      "ingredients": [
+        {
+          "supplementId": "ashwagandha",
+          "amount": 600,
+          "unit": "mg",
+          "perServing": "2 capsules daily, 30 minutes before bed",
+          "labelNotes": "KSM-66 root extract; includes 30 mg withanolides.",
+          "sourceIds": [
+            "website-sunday-muscle-recover-ashwa-pro"
+          ]
+        },
+        {
+          "supplementId": "magnesium",
+          "amount": 60,
+          "unit": "mg",
+          "perServing": "2 capsules daily",
+          "labelNotes": "Dual magnesium complex of magnesium citrate and magnesium glycinate.",
+          "sourceIds": [
+            "website-sunday-muscle-recover-ashwa-pro"
+          ]
+        },
+        {
+          "supplementId": "beetroot-powder",
+          "amount": 400,
+          "unit": "mg",
+          "perServing": "2 capsules daily",
+          "labelNotes": "Beetroot powder.",
+          "sourceIds": [
+            "website-sunday-muscle-recover-ashwa-pro"
+          ]
+        },
+        {
+          "supplementId": "saffron-extract",
+          "amount": 20,
+          "unit": "mg",
+          "perServing": "2 capsules daily",
+          "labelNotes": "Saffron extract; 0.3 mg safranal noted by product page.",
+          "sourceIds": [
+            "website-sunday-muscle-recover-ashwa-pro"
+          ]
+        },
+        {
+          "supplementId": "quercetin",
+          "amount": 10,
+          "unit": "mg",
+          "perServing": "2 capsules daily",
+          "labelNotes": "From Sophora japonica blossom extract.",
+          "sourceIds": [
+            "website-sunday-muscle-recover-ashwa-pro"
+          ]
+        }
+      ],
+      "contains": [
+        "ashwagandha",
+        "magnesium",
+        "beetroot-powder",
+        "saffron-extract",
+        "quercetin"
+      ],
+      "sources": [
+        "website-sunday-muscle-recover-ashwa-pro"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ]
+    },
+    {
+      "id": "sunday-vitamin-b-complex-extra-forte",
+      "name": "Vitamin B Complex Extra Forte",
+      "aliases": [
+        "Bioactive Vitamin B Complex Extra Forte",
+        "SKU 4546"
+      ],
+      "provider": "Sunday Natural",
+      "productType": "capsules",
+      "purpose": "High-dose bioactive B complex with all eight B vitamins and five cofactors for energy, brain, skin, and methylation contexts.",
+      "categories": [
+        "essentials",
+        "energy",
+        "brain",
+        "skin"
+      ],
+      "image": "assets/images/vitamin-d3-k2.svg",
+      "ingredients": [
+        {
+          "supplementId": "thiamin",
+          "amount": 100,
+          "unit": "mg",
+          "perServing": "1 capsule daily",
+          "labelNotes": "Thiamine HCl.",
+          "sourceIds": [
+            "website-sunday-vitamin-b-complex-extra-forte"
+          ]
+        },
+        {
+          "supplementId": "riboflavin",
+          "amount": 50,
+          "unit": "mg",
+          "perServing": "1 capsule daily",
+          "labelNotes": "Riboflavin 5-phosphate.",
+          "sourceIds": [
+            "website-sunday-vitamin-b-complex-extra-forte"
+          ]
+        },
+        {
+          "supplementId": "niacin",
+          "amount": 150,
+          "unit": "mg",
+          "perServing": "1 capsule daily",
+          "labelNotes": "Nicotinamide / flush-free niacin.",
+          "sourceIds": [
+            "website-sunday-vitamin-b-complex-extra-forte"
+          ]
+        },
+        {
+          "supplementId": "vitamin-b6",
+          "amount": 25,
+          "unit": "mg",
+          "perServing": "1 capsule daily",
+          "labelNotes": "Pyridoxal-5-phosphate PLP.",
+          "sourceIds": [
+            "website-sunday-vitamin-b-complex-extra-forte"
+          ]
+        },
+        {
+          "supplementId": "folate",
+          "amount": 1000,
+          "unit": "mcg",
+          "perServing": "1 capsule daily",
+          "labelNotes": "5-MTHF folate forms plus lemon extract with folic acid.",
+          "sourceIds": [
+            "website-sunday-vitamin-b-complex-extra-forte"
+          ]
+        },
+        {
+          "supplementId": "vitamin-b12",
+          "amount": 1000,
+          "unit": "mcg",
+          "perServing": "1 capsule daily",
+          "labelNotes": "MH3A formula: methylcobalamin, hydroxocobalamin, and adenosylcobalamin forms.",
+          "sourceIds": [
+            "website-sunday-vitamin-b-complex-extra-forte"
+          ]
+        },
+        {
+          "supplementId": "biotin",
+          "amount": 2.5,
+          "unit": "mg",
+          "perServing": "1 capsule daily",
+          "labelNotes": "D-biotin.",
+          "sourceIds": [
+            "website-sunday-vitamin-b-complex-extra-forte"
+          ]
+        },
+        {
+          "supplementId": "pantothenic-acid",
+          "amount": 75,
+          "unit": "mg",
+          "perServing": "1 capsule daily",
+          "labelNotes": "Calcium-D-pantothenate.",
+          "sourceIds": [
+            "website-sunday-vitamin-b-complex-extra-forte"
+          ]
+        },
+        {
+          "supplementId": "inositol",
+          "amount": 50,
+          "unit": "mg",
+          "perServing": "1 capsule daily",
+          "labelNotes": "Cofactor.",
+          "sourceIds": [
+            "website-sunday-vitamin-b-complex-extra-forte"
+          ]
+        },
+        {
+          "supplementId": "citicoline",
+          "amount": 25,
+          "unit": "mg",
+          "perServing": "1 capsule daily",
+          "labelNotes": "Cofactor.",
+          "sourceIds": [
+            "website-sunday-vitamin-b-complex-extra-forte"
+          ]
+        },
+        {
+          "supplementId": "paba",
+          "amount": 50,
+          "unit": "mg",
+          "perServing": "1 capsule daily",
+          "labelNotes": "p-Aminobenzoic acid.",
+          "sourceIds": [
+            "website-sunday-vitamin-b-complex-extra-forte"
+          ]
+        },
+        {
+          "supplementId": "betaine",
+          "amount": 75,
+          "unit": "mg",
+          "perServing": "1 capsule daily",
+          "labelNotes": "TMG / methyl donor cofactor.",
+          "sourceIds": [
+            "website-sunday-vitamin-b-complex-extra-forte"
+          ]
+        },
+        {
+          "supplementId": "nadh",
+          "amount": 2.5,
+          "unit": "mg",
+          "perServing": "1 capsule daily",
+          "labelNotes": "Nicotinamide adenine dinucleotide hydride.",
+          "sourceIds": [
+            "website-sunday-vitamin-b-complex-extra-forte"
+          ]
+        }
+      ],
+      "contains": [
+        "thiamin",
+        "riboflavin",
+        "niacin",
+        "vitamin-b6",
+        "folate",
+        "vitamin-b12",
+        "biotin",
+        "pantothenic-acid",
+        "inositol",
+        "citicoline",
+        "paba",
+        "betaine",
+        "nadh"
+      ],
+      "sources": [
+        "website-sunday-vitamin-b-complex-extra-forte"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ]
+    },
+    {
+      "id": "sunday-nadh-50-d-ribose-galactose",
+      "name": "NADH 50 D-Ribose & D(+) Galactose",
+      "aliases": [
+        "NADH 50",
+        "SKU 7595"
+      ],
+      "provider": "Sunday Natural",
+      "productType": "capsules",
+      "purpose": "NADH capsule with D-ribose and D-galactose for cellular-energy contexts.",
+      "categories": [
+        "energy",
+        "longevity",
+        "brain"
+      ],
+      "image": "assets/images/vitamin-d3-k2.svg",
+      "ingredients": [
+        {
+          "supplementId": "nadh",
+          "amount": 50,
+          "unit": "mg",
+          "perServing": "1 capsule daily before a meal",
+          "labelNotes": "Natural NADH / coenzyme 1.",
+          "sourceIds": [
+            "website-sunday-nadh-50-d-ribose-galactose"
+          ]
+        },
+        {
+          "supplementId": "d-ribose",
+          "amount": 500,
+          "unit": "mg",
+          "perServing": "1 capsule daily",
+          "labelNotes": "D-ribose functional sugar.",
+          "sourceIds": [
+            "website-sunday-nadh-50-d-ribose-galactose"
+          ]
+        },
+        {
+          "supplementId": "d-galactose",
+          "amount": 200,
+          "unit": "mg",
+          "perServing": "1 capsule daily",
+          "labelNotes": "D(+) galactose functional sugar.",
+          "sourceIds": [
+            "website-sunday-nadh-50-d-ribose-galactose"
+          ]
+        }
+      ],
+      "contains": [
+        "nadh",
+        "d-ribose",
+        "d-galactose"
+      ],
+      "sources": [
+        "website-sunday-nadh-50-d-ribose-galactose"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ]
+    },
+    {
+      "id": "sunday-vitamin-d3-k2-mk7-20000-iu-200mcg",
+      "name": "Vitamin D3 + K2 MK-7 20,000 IU + 200 µg Tablets",
+      "aliases": [
+        "Vitamin D3 + K2 MK-7 20,000 IU + 200 mcg",
+        "SKU 5503"
+      ],
+      "provider": "Sunday Natural",
+      "productType": "tablets",
+      "purpose": "High-dose D3 + K2 MK-7 product for periodic vitamin D and K support.",
+      "categories": [
+        "essentials",
+        "longevity",
+        "heart"
+      ],
+      "image": "assets/images/vitamin-d3-k2.svg",
+      "ingredients": [
+        {
+          "supplementId": "vitamin-d3",
+          "amount": 500,
+          "unit": "mcg",
+          "perServing": "1 tablet every 20 days",
+          "labelNotes": "20,000 IU vitamin D3 from lanolin; 500 mcg conversion.",
+          "sourceIds": [
+            "website-sunday-vitamin-d3-k2-20000"
+          ]
+        },
+        {
+          "supplementId": "vitamin-k2-mk7",
+          "amount": 200,
+          "unit": "mcg",
+          "perServing": "1 tablet every 20 days",
+          "labelNotes": "All-trans MK-7 as K2VITAL by Kappa.",
+          "sourceIds": [
+            "website-sunday-vitamin-d3-k2-20000"
+          ]
+        }
+      ],
+      "contains": [
+        "vitamin-d3",
+        "vitamin-k2-mk7"
+      ],
+      "sources": [
+        "website-sunday-vitamin-d3-k2-20000"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ]
+    },
+    {
+      "id": "sunday-hyaluronic-acid-250-high-dose",
+      "name": "Hyaluronic Acid 250 mg High-Dose",
+      "aliases": [
+        "Hyaluronic Acid 250mg High-Dose",
+        "SKU 4998"
+      ],
+      "provider": "Sunday Natural",
+      "productType": "tablets",
+      "purpose": "Vegan fermented hyaluronic acid for skin, connective-tissue, and joint-support contexts.",
+      "categories": [
+        "skin",
+        "recovery"
+      ],
+      "image": "assets/images/vitamin-d3-k2.svg",
+      "ingredients": [
+        {
+          "supplementId": "hyaluronic-acid",
+          "amount": 250,
+          "unit": "mg",
+          "perServing": "1 tablet; directions: 1-2 tablets daily with meals",
+          "labelNotes": "Medium molecular weight 0.8-1.3 million daltons; nutrition table gives 500 mg per 2 tablets.",
+          "sourceIds": [
+            "website-sunday-hyaluronic-acid-250"
+          ]
+        }
+      ],
+      "contains": [
+        "hyaluronic-acid"
+      ],
+      "sources": [
+        "website-sunday-hyaluronic-acid-250"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ]
+    },
+    {
+      "id": "sunday-astaxanthin-12-bioastin",
+      "name": "Astaxanthin 12 mg BioAstin",
+      "aliases": [
+        "Astaxanthin 12 mg BioAstin®",
+        "SKU N8357CDE"
+      ],
+      "provider": "Sunday Natural",
+      "productType": "capsules",
+      "purpose": "BioAstin astaxanthin from Haematococcus pluvialis for antioxidant, skin, and cellular-defense contexts.",
+      "categories": [
+        "skin",
+        "longevity",
+        "inflammation"
+      ],
+      "image": "assets/images/vitamin-d3-k2.svg",
+      "ingredients": [
+        {
+          "supplementId": "astaxanthin",
+          "amount": 12,
+          "unit": "mg",
+          "perServing": "1 capsule every other day with a meal",
+          "labelNotes": "BioAstin from Haematococcus pluvialis extract in safflower oil and coconut MCT oil.",
+          "sourceIds": [
+            "website-sunday-astaxanthin-12-bioastin"
+          ]
+        }
+      ],
+      "contains": [
+        "astaxanthin"
+      ],
+      "sources": [
+        "website-sunday-astaxanthin-12-bioastin"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ]
+    },
+    {
+      "id": "sunday-coenzyme-q10-kaneka-ubiquinol-200",
+      "name": "Coenzyme Q10 Kaneka Ubiquinol 200 mg",
+      "aliases": [
+        "Coenzyme Q10 Kaneka Ubiquinol® 200 mg",
+        "SKU N8500CDE"
+      ],
+      "provider": "Sunday Natural",
+      "productType": "softgels",
+      "purpose": "Kaneka Ubiquinol product for mitochondrial, energy, heart, and longevity contexts.",
+      "categories": [
+        "energy",
+        "heart",
+        "longevity"
+      ],
+      "image": "assets/images/vitamin-d3-k2.svg",
+      "ingredients": [
+        {
+          "supplementId": "ubiquinol",
+          "amount": 200,
+          "unit": "mg",
+          "perServing": "1 softgel daily before meals",
+          "labelNotes": "Kaneka Ubiquinol dissolved in coconut MCT oil.",
+          "sourceIds": [
+            "website-sunday-coq10-kaneka-ubiquinol-200"
+          ]
+        }
+      ],
+      "contains": [
+        "ubiquinol"
+      ],
+      "sources": [
+        "website-sunday-coq10-kaneka-ubiquinol-200"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ]
+    },
+    {
+      "id": "sunday-liposomal-vitamin-c-zinc",
+      "name": "Liposomal Vitamin C + Zinc",
+      "aliases": [
+        "Liposomal Vitamin C + Zinc 1000mg + 25mg",
+        "SKU N7427CDE"
+      ],
+      "provider": "Sunday Natural",
+      "productType": "liquid",
+      "purpose": "Liposomal vitamin C and zinc product for immune, skin, antioxidant, and recovery contexts.",
+      "categories": [
+        "essentials",
+        "skin",
+        "recovery",
+        "inflammation"
+      ],
+      "image": "assets/images/vitamin-d3-k2.svg",
+      "ingredients": [
+        {
+          "supplementId": "vitamin-c",
+          "amount": 1000,
+          "unit": "mg",
+          "perServing": "10 ml / 2 teaspoons daily",
+          "labelNotes": "Buffered sodium L-ascorbate in genuine liposomal formula.",
+          "sourceIds": [
+            "website-sunday-liposomal-vitamin-c-zinc"
+          ]
+        },
+        {
+          "supplementId": "zinc",
+          "amount": 25,
+          "unit": "mg",
+          "perServing": "10 ml / 2 teaspoons daily",
+          "labelNotes": "Zinc L-ascorbate; formula includes sunflower phospholipids 13%, glycerol, malic acid, and rosemary extract.",
+          "sourceIds": [
+            "website-sunday-liposomal-vitamin-c-zinc"
+          ]
+        }
+      ],
+      "contains": [
+        "vitamin-c",
+        "zinc"
+      ],
+      "sources": [
+        "website-sunday-liposomal-vitamin-c-zinc"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ]
     }
   ],
   "sources": [
@@ -2169,6 +3041,76 @@
       "filename": "IMG_4923.jpeg",
       "captureDate": "2026-05-17",
       "notes": "Provided package photo for Rossmann altapharma D3 + K2 drops; back label shows 5 drops per day and ingredients, exact active amounts not readable in this pass."
+    },
+    {
+      "id": "website-sunday-magnesium-complex-11-ultra-xl",
+      "type": "official_page",
+      "url": "https://www.sunday.de/en/mg-complex-11-ultra-xl-capsules.html",
+      "captureDate": "2026-05-18",
+      "notes": "Official Sunday Natural page for SKU 8043; used for ingredients, amounts, and directions."
+    },
+    {
+      "id": "website-sunday-magnesium-active-calm",
+      "type": "official_page",
+      "url": "https://www.sunday.de/en/magnesium-active-calm-complex-capsules.html",
+      "captureDate": "2026-05-18",
+      "notes": "Official Sunday Natural page for SKU N8759CDE; used for ingredients, amounts, and directions."
+    },
+    {
+      "id": "website-sunday-muscle-recover-ashwa-pro",
+      "type": "official_page",
+      "url": "https://www.sunday.de/en/muscle-recover-sport-ashwagandha-complex.html",
+      "captureDate": "2026-05-18",
+      "notes": "Official Sunday Natural page for SKU N8128CDE; used for ingredients, amounts, and directions."
+    },
+    {
+      "id": "website-sunday-vitamin-b-complex-extra-forte",
+      "type": "official_page",
+      "url": "https://www.sunday.de/en/vitamin-b-complex-forte-high-dose-capsules-bioactive-b12-mh3a.html",
+      "captureDate": "2026-05-18",
+      "notes": "Official Sunday Natural page for SKU 4546; used for ingredients, amounts, and directions."
+    },
+    {
+      "id": "website-sunday-nadh-50-d-ribose-galactose",
+      "type": "official_page",
+      "url": "https://www.sunday.de/en/nadh-50mg-capsules.html",
+      "captureDate": "2026-05-18",
+      "notes": "Official Sunday Natural page for SKU 7595; used for ingredients, amounts, and directions."
+    },
+    {
+      "id": "website-sunday-vitamin-d3-k2-20000",
+      "type": "official_page",
+      "url": "https://www.sunday.de/en/vitamin-d-tabletten-20000-ie-plus-k2-mk7-200mcg.html",
+      "captureDate": "2026-05-18",
+      "notes": "Official Sunday Natural page for SKU 5503; search result and official page text used for ingredients, amounts, and every-20-days directions."
+    },
+    {
+      "id": "website-sunday-hyaluronic-acid-250",
+      "type": "official_page",
+      "url": "https://www.sunday.de/en/hyaluronic-acid-250mg-high-dose-vegan-from-fermentation.html",
+      "captureDate": "2026-05-18",
+      "notes": "Official Sunday Natural page for SKU 4998; used for ingredients, amounts, and directions."
+    },
+    {
+      "id": "website-sunday-astaxanthin-12-bioastin",
+      "type": "official_page",
+      "url": "https://www.sunday.de/en/astaxanthin-bioastin-capsules-12mg.html",
+      "captureDate": "2026-05-18",
+      "notes": "Official Sunday Natural page for SKU N8357CDE; used for ingredients, amounts, and directions."
+    },
+    {
+      "id": "website-sunday-coq10-kaneka-ubiquinol-200",
+      "type": "official_page",
+      "url": "https://www.sunday.de/en/coenzyme-q10-capsules-200mg-ubiquinol-kaneka.html",
+      "captureDate": "2026-05-18",
+      "notes": "Official Sunday Natural page for SKU N8500CDE; used for ingredients, amounts, and directions."
+    },
+    {
+      "id": "website-sunday-liposomal-vitamin-c-zinc",
+      "type": "official_page",
+      "url": "https://www.sunday.de/en/vitamin-c-zinc-liposomal-liquid.html",
+      "captureDate": "2026-05-18",
+      "notes": "Official Sunday Natural page for SKU N7427CDE; used for ingredients, amounts, and directions."
     }
   ]
 }

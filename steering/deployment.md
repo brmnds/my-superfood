@@ -24,8 +24,8 @@ Use:
 - Amazon CloudFront for public delivery, HTTPS, compression, caching, and custom domain support.
 - AWS Certificate Manager in `us-east-1` for the CloudFront TLS certificate.
 - Route 53 for DNS alias records.
-- DynamoDB for cheap saved-list persistence.
-- Lambda Function URL for the browser-facing saved-list API.
+- DynamoDB for cheap saved-list persistence and the read-only supplement catalog.
+- Lambda Function URLs for the browser-facing saved-list API and read-only supplement catalog API.
 
 This is preferred over Amplify for the current version because the app is static and does not need a framework build pipeline, branch previews, or managed backend workflows yet.
 
@@ -41,6 +41,10 @@ This is preferred over Amplify for the current version because the app is static
 - DynamoDB table: `my-superfood-list-items`
 - Lambda function: `my-superfood-list-api`
 - Lambda Function URL: `https://l36bksjavuxnp45gl5fel2jkbq0ertbm.lambda-url.eu-central-1.on.aws`
+- DynamoDB table: `my-superfood-supplements`
+- DynamoDB table: `my-superfood-supplement-products`
+- Lambda function: `my-superfood-catalog-api`
+- Catalog Lambda Function URL: `https://z4kxvkidmk35kelru4rrjbbsbi0gcpqt.lambda-url.eu-central-1.on.aws`
 
 ## Deployment Flow
 

@@ -31,6 +31,7 @@ Catalog resources:
 - DynamoDB table: `my-superfood-supplement-products`
 - Lambda function: `my-superfood-catalog-api`
 - Lambda role: `my-superfood-catalog-api-role`
+- Function URL: `https://z4kxvkidmk35kelru4rrjbbsbi0gcpqt.lambda-url.eu-central-1.on.aws`
 - Routes:
   - `GET /supplements`
   - `GET /products`
@@ -76,6 +77,8 @@ curl -s -i "https://my-superfood.com/api/list?clientId=codex-anonymous-smoke"
 
 ## Deploy Catalog Resources
 
+The catalog API is read-only. It serves public supplement catalog documents from DynamoDB and stays separate from the saved-list API.
+
 Create the catalog tables:
 
 ```bash
@@ -94,7 +97,63 @@ node scripts/validate-supplement-catalog.mjs
 node scripts/seed-supplement-catalog.mjs
 ```
 
-Deploy catalog Lambda code after the function and role exist:
+If deploying the catalog Lambda from scratch, create the role and attach the read-only policy:
+
+```bash
+aws iam create-role \
+  --role-name my-superfood-catalog-api-role \
+  --assume-role-policy-document file://backend/lambda-trust-policy.json
+
+aws iam put-role-policy \
+  --role-name my-superfood-catalog-api-role \
+  --policy-name my-superfood-catalog-api-policy \
+  --policy-document file://backend/catalog-api-role-policy.json
+```
+
+Create the function:
+
+```bash
+zip -j /tmp/my-superfood-catalog-api.zip backend/catalog-api.mjs
+aws lambda create-function \
+  --function-name my-superfood-catalog-api \
+  --runtime nodejs20.x \
+  --role arn:aws:iam::803663093100:role/my-superfood-catalog-api-role \
+  --handler catalog-api.handler \
+  --zip-file fileb:///tmp/my-superfood-catalog-api.zip \
+  --environment file://backend/catalog-lambda-env.json \
+  --region eu-central-1
+aws lambda wait function-active \
+  --function-name my-superfood-catalog-api \
+  --region eu-central-1
+```
+
+Create the Function URL and allow public read-only invocation:
+
+```bash
+aws lambda create-function-url-config \
+  --function-name my-superfood-catalog-api \
+  --auth-type NONE \
+  --cors file://backend/catalog-function-url-cors.json \
+  --region eu-central-1
+
+aws lambda add-permission \
+  --function-name my-superfood-catalog-api \
+  --statement-id FunctionURLAllowPublicAccess \
+  --action lambda:InvokeFunctionUrl \
+  --principal '*' \
+  --function-url-auth-type NONE \
+  --region eu-central-1
+
+aws lambda add-permission \
+  --function-name my-superfood-catalog-api \
+  --statement-id FunctionURLAllowPublicInvokeFunction \
+  --action lambda:InvokeFunction \
+  --principal '*' \
+  --invoked-via-function-url \
+  --region eu-central-1
+```
+
+Deploy catalog Lambda code after the function exists:
 
 ```bash
 zip -j /tmp/my-superfood-catalog-api.zip backend/catalog-api.mjs
@@ -105,6 +164,18 @@ aws lambda update-function-code \
 aws lambda wait function-updated \
   --function-name my-superfood-catalog-api \
   --region eu-central-1
+```
+
+Smoke checks:
+
+```bash
+curl -s -i \
+  -H 'Origin: http://localhost:4173' \
+  https://z4kxvkidmk35kelru4rrjbbsbi0gcpqt.lambda-url.eu-central-1.on.aws/supplements
+
+curl -s -i \
+  -H 'Origin: http://localhost:4173' \
+  https://z4kxvkidmk35kelru4rrjbbsbi0gcpqt.lambda-url.eu-central-1.on.aws/products
 ```
 
 See `docs/database.md` for the data model and cost notes.

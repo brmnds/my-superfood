@@ -111,6 +111,7 @@ This report validates current My Superfood images against the picture steering f
 | Green Tea | `assets/images/real/green-tea.png` | Pass | Generated product-style ingredient image on a clean white background. |
 | Matcha | `assets/images/real/matcha.png` | Pass | Generated product-style ingredient image on a clean white background. |
 | Walnut Oil | `assets/images/real/walnut-oil.png` | Pass | Generated product-style ingredient image on a clean white background. |
+| Hemp Seed Oil | `assets/images/real/hemp-seed-oil.png` | Pass | Generated product-style ingredient image on a clean white background. |
 | Wheat Germ Oil | `assets/images/real/wheat-germ-oil.png` | Pass | Generated product-style ingredient image on a clean white background. |
 
 ## Recipe Images

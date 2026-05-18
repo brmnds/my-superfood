@@ -171,9 +171,10 @@ data/supplement-catalog.seed.json
 The catalog API is read-only and separate from the saved-list Lambda:
 
 - Function: `my-superfood-catalog-api`
+- Function URL: `https://z4kxvkidmk35kelru4rrjbbsbi0gcpqt.lambda-url.eu-central-1.on.aws`
 - Runtime: Node.js 20
 - Memory: 128 MB
-- Timeout: 10 seconds
+- Timeout: 3 seconds
 - Routes:
   - `GET /supplements`
   - `GET /products`
@@ -186,6 +187,26 @@ Allowed CORS origins:
 
 The UI still calls these rows "Supplement Products" in docs and user-facing copy. The API route is shorter: `/products`.
 
+`supplements.html` fetches the catalog API first. If the API fails or is unavailable, the page renders the reviewed static fallback from:
+
+```text
+data/supplement-catalog.seed.json
+```
+
+This keeps the public catalog usable while preserving DynamoDB as the deployed source for catalog reads.
+
+Smoke test catalog reads:
+
+```bash
+curl -s -i \
+  -H 'Origin: http://localhost:4173' \
+  'https://z4kxvkidmk35kelru4rrjbbsbi0gcpqt.lambda-url.eu-central-1.on.aws/supplements'
+
+curl -s -i \
+  -H 'Origin: http://localhost:4173' \
+  'https://z4kxvkidmk35kelru4rrjbbsbi0gcpqt.lambda-url.eu-central-1.on.aws/products'
+```
+
 ## Catalog Source Policy
 
 Use official provider product pages first when they expose exact supplement-facts data, including ingredient amount, unit, and serving basis. Use package photos supplied by Tilman as verification evidence, cross-checks, and fallback when official online facts are missing or ambiguous.
@@ -197,6 +218,12 @@ The current reviewed seed uses the JPEG package evidence in:
 ```
 
 Package photos are evidence/provenance and are not public product thumbnails in this pass. For Blueprint/Bryan Johnson products, official Blueprint pages are the preferred source of truth when exact supplement facts are available online.
+
+For Sunday Natural products, use the exact official product page that matches the ordered name and SKU. The current research note is:
+
+```text
+docs/sunday-natural-supplement-research.md
+```
 
 Every product ingredient must reference a supplement primitive through `supplementId`. Exact per-serving product amounts live on product ingredient rows. General daily recommendation ranges live on supplement rows and are informational only, not medical advice.
 
