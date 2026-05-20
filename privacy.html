@@ -5,19 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Privacy Policy - My Superfood</title>
     <meta name="description" content="Privacy information for My Superfood, an informational food and supplement catalog by Tilman Resch.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Tilman Resch">
+    <meta name="theme-color" content="#4caf50">
     <link rel="canonical" href="https://my-superfood.com/privacy">
+    <meta property="og:site_name" content="My Superfood">
     <meta property="og:title" content="Privacy Policy - My Superfood">
     <meta property="og:description" content="How My Superfood handles local saved lists, optional LuminaOS sync, and basic website data.">
     <meta property="og:url" content="https://my-superfood.com/privacy">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://my-superfood.com/assets/images/my-superfood-icon-512.png">
+    <meta property="og:image:alt" content="My Superfood leaf icon">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Privacy Policy - My Superfood">
+    <meta name="twitter:description" content="How My Superfood handles saved lists, LuminaOS sync, and website data.">
+    <meta name="twitter:image" content="https://my-superfood.com/assets/images/my-superfood-icon-512.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/my-superfood-icon-512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/my-superfood-icon.png">
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Privacy Policy - My Superfood",
+        "url": "https://my-superfood.com/privacy",
+        "description": "Privacy information for My Superfood, including browser-local saved lists and optional LuminaOS sync.",
+        "publisher": {
+          "@type": "Person",
+          "name": "Tilman Resch"
+        }
+      }
+    </script>
   </head>
   <body data-page="legal">
     <header class="site-header">
       <a class="brand" href="/"><img class="brand-mark" src="/assets/images/my-superfood-icon.png" alt="" aria-hidden="true"><span>My Superfood</span></a>
-      <nav class="nav" aria-label="Primary navigation">
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="primary-nav" aria-label="Primary navigation">
         <a href="/foods">Foods</a>
         <a href="/supplements">Supplements</a>
         <a href="/recipes">Recipes</a>
@@ -29,36 +53,48 @@
       <section class="page-heading">
         <p class="eyebrow">Legal</p>
         <h1>Privacy Policy</h1>
-        <p>Last updated: May 18, 2026</p>
+        <p>Last updated: May 19, 2026</p>
       </section>
       <section class="legal-card">
         <h2>1. Responsible Party</h2>
         <p>My Superfood is an informational catalog page by Tilman Resch.</p>
         <p>Tilman Resch<br>Knoebelstr. 30<br>80538 Munich<br>Germany</p>
-        <p>Email: <a href="mailto:legal@luminaos.app">legal@luminaos.app</a></p>
+        <p>Email: <a href="mailto:info@luminaos.app">info@luminaos.app</a></p>
 
         <h2>2. What This Page Does</h2>
         <p>My Superfood lets visitors browse foods, supplement kits, supplements, recipes, and saved lists. Public browsing does not require an account.</p>
 
-        <h2>3. Local Saved Lists</h2>
+        <h2>3. Legal Basis For Processing</h2>
+        <p>Where GDPR applies, technical website delivery, security logging, and browser-local functionality are processed based on legitimate interests in operating a secure and useful website. Optional LuminaOS sync is processed to provide the requested account-backed saved-list functionality. If consent is requested for a future feature, that processing will be based on consent and can be withdrawn for the future.</p>
+
+        <h2>4. Local Saved Lists</h2>
         <p>If you save foods, supplement kits, supplements, or recipes without signing in, the page stores a browser-local list and a random browser client identifier. This helps the saved list keep working on the same device and browser.</p>
 
-        <h2>4. Optional LuminaOS Sync</h2>
+        <h2>5. Optional LuminaOS Sync</h2>
         <p>If you choose to sign in with LuminaOS, My Superfood uses a server-side OAuth flow. The browser receives a My Superfood session cookie, not LuminaOS or Cognito tokens. Signed-in saved-list data can be synced to My Superfood's AWS-backed saved-list storage under the LuminaOS user identity.</p>
 
-        <h2>5. Hosting And Technical Data</h2>
+        <h2>6. Hosting And Technical Data</h2>
         <p>The site is served through AWS static hosting and CloudFront. Like most websites, hosting infrastructure may process technical request data such as IP address, browser type, requested URL, timestamps, and basic security logs to provide, protect, and troubleshoot the service.</p>
 
-        <h2>6. Cookies And Browser Storage</h2>
+        <h2>7. Cookies And Browser Storage</h2>
         <p>My Superfood may use localStorage for saved-list functionality and a secure session cookie when LuminaOS sync is enabled. The site does not intentionally use advertising cookies in the current version.</p>
 
-        <h2>7. Third-Party Links</h2>
+        <h2>8. Service Providers</h2>
+        <p>My Superfood uses AWS infrastructure for static hosting, CloudFront delivery, Lambda APIs, and DynamoDB saved-list storage. Optional sign-in is provided through LuminaOS/Cognito. These providers process data only as needed to operate the site and requested sync features.</p>
+
+        <h2>9. Data Retention</h2>
+        <p>Browser-local saved lists stay in your browser until you clear them. Account-backed saved-list data is kept while the sync feature is used or until deletion is requested, unless a longer retention period is legally required. Technical logs are kept only as long as reasonably needed for security, troubleshooting, and operations.</p>
+
+        <h2>10. Data Security</h2>
+        <p>The production site uses HTTPS. My Superfood does not store LuminaOS passwords and does not expose LuminaOS/Cognito tokens to browser JavaScript or localStorage.</p>
+
+        <h2>11. Third-Party Links</h2>
         <p>The site may link to LuminaOS, official product pages, or other external sources. Those websites have their own privacy practices and are not controlled by My Superfood.</p>
 
-        <h2>8. Your Rights</h2>
-        <p>If you are in the European Economic Area, you may have rights under GDPR, including access, correction, deletion, restriction, objection, and data portability. Contact <a href="mailto:legal@luminaos.app">legal@luminaos.app</a> for privacy requests.</p>
+        <h2>12. Your Rights</h2>
+        <p>If you are in the European Economic Area, you may have rights under GDPR, including access, correction, deletion, restriction, objection, withdrawal of consent, and data portability. You may also lodge a complaint with a data protection supervisory authority. Contact <a href="mailto:info@luminaos.app">info@luminaos.app</a> for privacy requests.</p>
 
-        <h2>9. Changes</h2>
+        <h2>13. Changes</h2>
         <p>This policy may be updated as My Superfood evolves. The current version will be published on this page.</p>
       </section>
     </main>
@@ -70,5 +106,6 @@
         <a href="/imprint">Imprint</a>
       </nav>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

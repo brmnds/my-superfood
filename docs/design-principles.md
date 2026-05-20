@@ -23,6 +23,7 @@ The icon should appear next to the `My Superfood` wordmark in the site header. D
 ## Layout
 
 - Keep the header sticky, white, and compact.
+- Use a hamburger menu on mobile/responsive widths instead of wrapping all navigation links into multiple rows.
 - Keep page containers centered with generous but practical spacing.
 - Use cards only for real grouped content, repeated items, status panels, or modals.
 - Avoid adding dashboard summary sections unless they serve an existing workflow.
@@ -40,6 +41,8 @@ The icon should appear next to the `My Superfood` wordmark in the site header. D
 - Source/status badges should be visible but quiet.
 - The saved-list tabs are the structure; do not add extra list-summary cards unless requested.
 - Protocol chips, such as Tilman's supplement stack, should behave as navigation controls when they reference catalog entities: clicking a chip should open the relevant tab, scroll to the row, and use a quiet green highlight.
+- Supplement timing belongs under the supplement or supplement-kit name as small CSS icons, not emoji or large badges. Hover/focus tooltips should explain the source-backed reason in one short note.
+- Tilman's protocol timing filter should mute non-matching chips instead of removing them so the full stack stays visible and clickable.
 
 ## Content Tone
 
@@ -49,3 +52,4 @@ The icon should appear next to the `My Superfood` wordmark in the site header. D
 - Keep LuminaOS references as optional account sync and habit handoff, not as the main My Superfood identity.
 - Keep a simple footer on public pages with Privacy Policy, Terms, and Imprint links.
 - Legal and informational pages should clearly state that My Superfood is an informational catalog by Tilman Resch and not medical advice. Users should be pointed toward qualified health professionals for personal nutrition, food, and supplement decisions.
+- SEO and generative-search content should be clear, factual, and crawlable without changing the core app structure. Prefer canonical URLs, concise page summaries, JSON-LD, `sitemap.xml`, `robots.txt`, and `llms.txt` over keyword stuffing or hidden text.

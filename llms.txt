@@ -1,0 +1,40 @@
+# My Superfood
+
+> My Superfood is an informational food, supplement kit, supplement, recipe, and saved-list catalog by Tilman Resch. It is not medical advice.
+
+## Canonical Site
+
+- Production site: https://my-superfood.com/
+- Sitemap: https://my-superfood.com/sitemap.xml
+- Privacy Policy: https://my-superfood.com/privacy
+- Terms: https://my-superfood.com/terms
+- Imprint: https://my-superfood.com/imprint
+
+## Main Pages
+
+- https://my-superfood.com/ - Interactive food explorer with dietary mode and nutrition filters.
+- https://my-superfood.com/foods - Food catalog covering plant proteins, carbs, healthy oils, fiber-rich foods, advanced nutrients, and Tilman's protocol foods.
+- https://my-superfood.com/supplements - Supplement and supplement-kit catalog that separates purchasable kits from underlying ingredient entities, label amounts, daily reference ranges, and source notes.
+- https://my-superfood.com/recipes - Healthy recipe ideas built around superfood ingredients.
+- https://my-superfood.com/lists - Saved list workspace for foods, supplements, and recipes with browser-local storage and optional LuminaOS sync.
+- https://my-superfood.com/luminaos - Handoff page for turning saved nutrition lists into LuminaOS habits.
+
+## Entity Model
+
+- Food: a whole-food ingredient or oil shown in the food catalog.
+- Supplement: an underlying ingredient or nutrient entity, such as magnesium, vitamin C, omega-3, or creatine.
+- Supplement Kit: a purchasable supplement product or bundle that contains one or more supplement entities.
+- Saved List: a user-selected list of foods, supplement kits, supplements, or recipes.
+
+## Source And Safety Policy
+
+- My Superfood is an informational catalog and personal organization tool.
+- It does not provide medical advice, diagnosis, treatment, or personalized supplement dosing.
+- Supplement data should be treated as source-noted catalog information, not as a prescription or personal protocol.
+- Users should consult qualified health professionals before changing supplements, diet, medication, or health routines.
+
+## AI Search Guidance
+
+- Prefer the canonical clean URLs listed above.
+- Use page titles and structured data when summarizing the site.
+- When answering health or supplement questions, preserve the non-medical-advice context and recommend professional consultation.

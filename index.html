@@ -3,16 +3,48 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Superfood</title>
-    <meta name="description" content="Explore superfoods, supplement products, healthy recipes, and saved nutrition lists with My Superfood.">
+    <title>My Superfood | Food, Supplement, and Nutrition Catalog</title>
+    <meta name="description" content="Explore a practical superfood, supplement kit, and healthy recipe catalog by Tilman Resch with saved nutrition lists and optional LuminaOS sync.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Tilman Resch">
+    <meta name="theme-color" content="#4caf50">
     <link rel="canonical" href="https://my-superfood.com/">
-    <meta property="og:title" content="My Superfood">
-    <meta property="og:description" content="Explore superfoods, supplement products, healthy recipes, and saved nutrition lists.">
+    <meta property="og:site_name" content="My Superfood">
+    <meta property="og:title" content="My Superfood | Food, Supplement, and Nutrition Catalog">
+    <meta property="og:description" content="Explore a practical superfood, supplement kit, and healthy recipe catalog by Tilman Resch.">
     <meta property="og:url" content="https://my-superfood.com/">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://my-superfood.com/assets/images/my-superfood-icon-512.png">
+    <meta property="og:image:alt" content="My Superfood leaf icon">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="My Superfood | Food, Supplement, and Nutrition Catalog">
+    <meta name="twitter:description" content="Explore superfoods, supplement kits, recipes, and saved nutrition lists.">
+    <meta name="twitter:image" content="https://my-superfood.com/assets/images/my-superfood-icon-512.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/my-superfood-icon-512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/my-superfood-icon.png">
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "My Superfood",
+        "url": "https://my-superfood.com/",
+        "description": "A practical food, supplement kit, supplement, recipe, and saved-list catalog by Tilman Resch.",
+        "inLanguage": "en",
+        "publisher": {
+          "@type": "Person",
+          "name": "Tilman Resch",
+          "url": "https://my-superfood.com/imprint"
+        },
+        "about": [
+          "superfoods",
+          "supplement kits",
+          "nutrition lists",
+          "healthy recipes",
+          "informational nutrition catalog"
+        ]
+      }
+    </script>
   </head>
   <body data-page="home">
     <header class="site-header">
@@ -20,7 +52,12 @@
         <img class="brand-mark" src="/assets/images/my-superfood-icon.png" alt="" aria-hidden="true">
         <span>My Superfood</span>
       </a>
-      <nav class="nav" aria-label="Primary navigation">
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Primary navigation">
         <a href="/foods">Foods</a>
         <a href="/supplements">Supplements</a>
         <a href="/recipes">Recipes</a>
@@ -67,6 +104,11 @@
           <button class="filter-button" type="button" data-filter="advanced">Advanced nutrients</button>
           <button class="filter-button" type="button" data-filter="tilman">Tilman</button>
         </div>
+      </section>
+      <section class="seo-summary" aria-label="About My Superfood">
+        <h2>Explore foods, supplement kits, and healthy nutrition lists</h2>
+        <p>My Superfood is a practical nutrition catalog by Tilman Resch. It helps people explore whole foods, supplement kits, individual supplements, healthy recipe ideas, and saved lists for personal organization.</p>
+        <p>The site is informational only and does not provide medical advice. Food and supplement decisions should be discussed with qualified health professionals.</p>
       </section>
     </main>
 

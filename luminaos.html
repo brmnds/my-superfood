@@ -3,21 +3,47 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LuminaOS - My Superfood</title>
-    <meta name="description" content="Connect My Superfood saved lists with LuminaOS for optional account-backed nutrition habit sync.">
+    <title>LuminaOS Nutrition Habit Handoff - My Superfood</title>
+    <meta name="description" content="Connect My Superfood saved nutrition lists with LuminaOS for optional account-backed habit support and daily execution.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Tilman Resch">
+    <meta name="theme-color" content="#4caf50">
     <link rel="canonical" href="https://my-superfood.com/luminaos">
-    <meta property="og:title" content="LuminaOS - My Superfood">
-    <meta property="og:description" content="Connect My Superfood saved lists with LuminaOS habit support.">
+    <meta property="og:site_name" content="My Superfood">
+    <meta property="og:title" content="LuminaOS Nutrition Habit Handoff - My Superfood">
+    <meta property="og:description" content="Connect My Superfood saved lists with LuminaOS habit support and daily execution.">
     <meta property="og:url" content="https://my-superfood.com/luminaos">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://my-superfood.com/assets/images/my-superfood-icon-512.png">
+    <meta property="og:image:alt" content="My Superfood leaf icon">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="LuminaOS Nutrition Habit Handoff - My Superfood">
+    <meta name="twitter:description" content="Connect saved nutrition lists with LuminaOS for habit support.">
+    <meta name="twitter:image" content="https://my-superfood.com/assets/images/my-superfood-icon-512.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/my-superfood-icon-512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/my-superfood-icon.png">
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "LuminaOS Nutrition Habit Handoff",
+        "url": "https://my-superfood.com/luminaos",
+        "description": "A handoff page for moving My Superfood saved lists into LuminaOS habit execution.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "My Superfood",
+          "url": "https://my-superfood.com/"
+        },
+        "relatedLink": "https://luminaos.app"
+      }
+    </script>
   </head>
   <body data-page="luminaos">
     <header class="site-header">
       <a class="brand" href="/"><img class="brand-mark" src="/assets/images/my-superfood-icon.png" alt="" aria-hidden="true"><span>My Superfood</span></a>
-      <nav class="nav" aria-label="Primary navigation">
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="primary-nav" aria-label="Primary navigation">
         <a href="/foods">Foods</a>
         <a href="/supplements">Supplements</a>
         <a href="/recipes">Recipes</a>
@@ -39,6 +65,10 @@
           <a class="button primary" href="https://luminaos.app">Create your nutrition habits in LuminaOS</a>
           <a class="button ghost" href="/lists">Review saved list</a>
         </div>
+      </section>
+      <section class="seo-summary" aria-label="LuminaOS handoff context">
+        <h2>From nutrition catalog to daily habits</h2>
+        <p>My Superfood is for discovery and organization. LuminaOS can support the daily habit side when users want to turn saved foods, supplements, and recipes into routines.</p>
       </section>
     </main>
     <footer class="site-footer">

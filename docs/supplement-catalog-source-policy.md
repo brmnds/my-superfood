@@ -15,7 +15,8 @@ Use sources in this order:
 
 1. Official provider product pages when they expose exact supplement-facts data, including ingredient amount, unit, and serving basis.
 2. Package photos supplied by Tilman as verification evidence, cross-checks, and fallback when official online facts are missing or ambiguous.
-3. `needs_review` when neither source is exact enough.
+3. Reputable ingredient/reference pages when product pages do not specify timing or broader ingredient context.
+4. `needs_review` when neither source is exact enough.
 
 The current package-photo evidence folder is:
 
@@ -40,6 +41,30 @@ Allowed values:
 - `needs_review`: amount or interpretation was uncertain.
 
 Do not silently guess unclear amounts. Store an ingredient with `amount: null` and `sourceStatus: "needs_review"` when needed.
+
+## Shop Links And Timing
+
+Supplement Products may include a quiet `shopUrl` that points only to the official provider or shop product page. Do not use affiliate links, price-comparison pages, or marketplace mirrors as shop links.
+
+Timing guidance is informational and not a personalized schedule. Store it on both Supplement and Supplement Product rows as:
+
+```json
+{
+  "slots": ["morning"],
+  "avoidSlots": ["evening"],
+  "note": "Short hover explanation.",
+  "sourceIds": ["website-example"],
+  "sourceStatus": "official_page"
+}
+```
+
+Allowed timing source statuses are:
+
+- `official_page`: the product or provider page gives the timing, directions, or daily routine context.
+- `ingredient_researched`: the catalog timing is inferred from ingredient-level references such as NIH ODS, NCCIH, MedlinePlus, or provider education pages.
+- `needs_review`: timing is unclear, person-specific, or not backed by enough source context.
+
+Use official product directions first. If they only say "with food" or "before meals", avoid overclaiming exact clock time. If an ingredient can feel stimulating, use conservative earlier-day wording and explain the uncertainty. If timing depends on medication, condition, tolerance, or clinician advice, keep the note neutral.
 
 ## Reseeding
 

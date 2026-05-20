@@ -13,6 +13,7 @@ The first version is intentionally simple: plain HTML, CSS, and JavaScript with 
 - `lists.html` - tabbed saved-list workspace for foods, supplements, and recipes, powered by browser `localStorage`, anonymous DynamoDB sync, and optional LuminaOS account sync.
 - `luminaos.html` - LuminaOS handoff page.
 - `privacy.html`, `terms.html`, `imprint.html` - simple legal and informational pages with clean URL routes.
+- `sitemap.xml`, `robots.txt`, `llms.txt` - crawl and AI-search guidance for search engines and generative answer engines.
 
 ## Local Preview
 
@@ -55,6 +56,7 @@ The supplement catalog has a separate read-only DynamoDB/Lambda path with local 
 - Catalog API: `https://z4kxvkidmk35kelru4rrjbbsbi0gcpqt.lambda-url.eu-central-1.on.aws`
 - Routes: `GET /supplements`, `GET /products`
 - Frontend behavior: fetch the catalog API first, then fall back to the reviewed seed JSON if the API is unavailable.
+- Supplement Product rows can include official `shopUrl` links and source-backed `timing` guidance. Timing is informational only and is shown with quiet morning/day/evening icons plus hover notes.
 
 See `docs/database.md`.
 
@@ -72,6 +74,13 @@ Steering docs:
 Image validation:
 
 - `docs/image-validation.md`
+
+SEO and generative search:
+
+- Keep clean canonical URLs in page heads.
+- Keep `sitemap.xml` updated whenever public routes change.
+- Keep `robots.txt` pointing to the sitemap and allowing intended search/AI crawlers.
+- Keep `llms.txt` updated with the public page map, entity model, and non-medical-advice context.
 
 Backend docs:
 

@@ -1824,6 +1824,41 @@ function parseStoredList(key) {
   }
 }
 
+function initMobileMenu() {
+  const header = document.querySelector(".site-header");
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".site-header .nav");
+  if (!header || !toggle || !nav) return;
+
+  function setMenuOpen(isOpen) {
+    header.classList.toggle("menu-open", isOpen);
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  }
+
+  toggle.addEventListener("click", () => {
+    setMenuOpen(!header.classList.contains("menu-open"));
+  });
+
+  nav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) setMenuOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenuOpen(false);
+  });
+
+  const desktopQuery = window.matchMedia("(min-width: 781px)");
+  const closeOnDesktop = (event) => {
+    if (event.matches) setMenuOpen(false);
+  };
+  if (desktopQuery.addEventListener) {
+    desktopQuery.addEventListener("change", closeOnDesktop);
+  } else if (desktopQuery.addListener) {
+    desktopQuery.addListener(closeOnDesktop);
+  }
+}
+
 function getList() {
   return parseStoredList(listStorageKey);
 }
@@ -2380,8 +2415,10 @@ function renderSupplements() {
   const table = document.querySelector("#supplement-catalog-table");
   const tabs = document.querySelectorAll(".tab-button");
   const filters = document.querySelectorAll("[data-catalog-filter]");
+  const protocolTimingButtons = document.querySelectorAll("[data-protocol-timing]");
   let activeTab = "ingredients";
   let activeFilter = "all";
+  let activeProtocolTiming = "all";
   let catalog = { supplements: [], products: [] };
   const expandedProducts = new Set();
   let highlightedSupplementId = "";
@@ -2435,6 +2472,72 @@ function renderSupplements() {
 
   function formatCategories(categories) {
     return (categories || []).map((category) => `<span class="tag">${escapeHtml(category)}</span>`).join("");
+  }
+
+  function timingStatusLabel(status) {
+    if (status === "official_page") return "Official page";
+    if (status === "ingredient_researched") return "Ingredient research";
+    return "Timing needs review";
+  }
+
+  function timingSlotLabel(slot) {
+    if (slot === "morning") return "Morning";
+    if (slot === "daytime") return "Daytime";
+    if (slot === "evening") return "Evening";
+    return slot;
+  }
+
+  function timingMarkup(entry) {
+    const timing = entry?.timing;
+    if (!timing || timing.sourceStatus === "needs_review" || !(timing.slots || []).length) {
+      const note = timing?.note || "Timing needs review.";
+      return `<div class="timing-row"><span class="timing-review" title="${escapeHtml(note)}">Timing needs review</span></div>`;
+    }
+
+    const note = `${timing.note} Source status: ${timingStatusLabel(timing.sourceStatus)}.`;
+    const slots = ["morning", "daytime", "evening"].filter((slot) => timing.slots.includes(slot));
+    return `
+      <div class="timing-row" aria-label="${escapeHtml(note)}">
+        ${slots.map((slot) => `
+          <span class="timing-chip timing-${escapeHtml(slot)}" tabindex="0" aria-label="${escapeHtml(`${timingSlotLabel(slot)} timing. ${note}`)}">
+            <span class="timing-icon timing-icon-${escapeHtml(slot)}" aria-hidden="true"></span>
+            <span class="timing-tooltip" role="tooltip">${escapeHtml(`${timingSlotLabel(slot)}. ${note}`)}</span>
+          </span>
+        `).join("")}
+        ${(timing.avoidSlots || []).map((slot) => `
+          <span class="timing-avoid" tabindex="0" aria-label="${escapeHtml(`Avoid ${timingSlotLabel(slot)}. ${note}`)}">
+            Avoid ${escapeHtml(timingSlotLabel(slot).toLowerCase())}
+            <span class="timing-tooltip" role="tooltip">${escapeHtml(`Avoid ${timingSlotLabel(slot).toLowerCase()}. ${note}`)}</span>
+          </span>
+        `).join("")}
+      </div>
+    `;
+  }
+
+  function shopLink(product) {
+    if (!product.shopUrl) return "";
+    return `<a class="shop-link" href="${escapeHtml(product.shopUrl)}" target="_blank" rel="noopener">Official shop</a>`;
+  }
+
+  function productNameCell(product) {
+    return `
+      <div class="catalog-name-cell">
+        <strong>${escapeHtml(product.name)}</strong>
+        <span>${escapeHtml(product.productType)}</span>
+        ${timingMarkup(product)}
+        ${shopLink(product)}
+      </div>
+    `;
+  }
+
+  function supplementNameCell(supplement) {
+    return `
+      <div class="catalog-name-cell">
+        <strong>${escapeHtml(supplement.name)}</strong>
+        <span>${escapeHtml((supplement.aliases || []).join(", "))}</span>
+        ${timingMarkup(supplement)}
+      </div>
+    `;
   }
 
   function formatAmount(amount) {
@@ -2576,7 +2679,7 @@ function renderSupplements() {
       <tbody>
         ${products.map((product) => `
           <tr id="product-${escapeHtml(product.id)}" class="${product.id === highlightedProductId ? "row-highlight" : ""}">
-            <td><strong>${escapeHtml(product.name)}</strong><span>${escapeHtml(product.productType)}</span></td>
+            <td>${productNameCell(product)}</td>
             <td>${escapeHtml(product.provider)}</td>
             <td>${escapeHtml(product.purpose)}</td>
             <td><div class="tag-row">${formatCategories(product.categories)}</div></td>
@@ -2602,7 +2705,7 @@ function renderSupplements() {
       <tbody>
         ${ingredients.map((supplement) => `
           <tr id="supplement-${escapeHtml(supplement.id)}" class="${supplement.id === highlightedSupplementId ? "row-highlight" : ""}">
-            <td><strong>${escapeHtml(supplement.name)}</strong><span>${escapeHtml((supplement.aliases || []).join(", "))}</span></td>
+            <td>${supplementNameCell(supplement)}</td>
             <td>${escapeHtml(supplement.purpose)}</td>
             <td>${amountWithSources(supplement)}</td>
             <td>${escapeHtml(productsForSupplement(supplement.id))}</td>
@@ -2643,6 +2746,26 @@ function renderSupplements() {
     filters.forEach((entry) => entry.classList.toggle("active", entry.dataset.catalogFilter === nextFilter));
   }
 
+  function setActiveProtocolTiming(nextTiming) {
+    activeProtocolTiming = nextTiming;
+    protocolTimingButtons.forEach((entry) => {
+      const selected = entry.dataset.protocolTiming === nextTiming;
+      entry.classList.toggle("active", selected);
+      entry.setAttribute("aria-pressed", selected ? "true" : "false");
+    });
+    updateProtocolTimingFilter();
+  }
+
+  function updateProtocolTimingFilter() {
+    document.querySelectorAll("[data-protocol-product]").forEach((button) => {
+      const product = catalog.products.find((entry) => entry.id === button.dataset.protocolProduct);
+      const slots = product?.timing?.slots || [];
+      const matches = activeProtocolTiming === "all" || slots.includes(activeProtocolTiming);
+      button.classList.toggle("protocol-muted", !matches);
+      if (product?.timing?.note) button.title = product.timing.note;
+    });
+  }
+
   function bindIngredientLinks() {
     document.querySelectorAll(".ingredient-entity-link").forEach((button) => {
       button.addEventListener("click", () => {
@@ -2676,6 +2799,7 @@ function renderSupplements() {
     if (activeTab === "ingredients") renderIngredients();
     bindSaveButtons();
     bindIngredientLinks();
+    updateProtocolTimingFilter();
   }
 
   async function fetchCatalog() {
@@ -2736,6 +2860,13 @@ function renderSupplements() {
   document.querySelectorAll("[data-protocol-product]").forEach((button) => {
     button.addEventListener("click", () => {
       openProduct(button.dataset.protocolProduct);
+    });
+  });
+
+  protocolTimingButtons.forEach((button) => {
+    button.setAttribute("aria-pressed", button.classList.contains("active") ? "true" : "false");
+    button.addEventListener("click", () => {
+      setActiveProtocolTiming(button.dataset.protocolTiming || "all");
     });
   });
 
@@ -2918,6 +3049,8 @@ const authReady = loadAuthSession().then(() => {
   renderAuthControls();
   return authState;
 });
+
+initMobileMenu();
 
 if (page === "home") renderHome();
 if (page === "foods") renderFoods();

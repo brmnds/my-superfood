@@ -23,7 +23,18 @@
         "basis": "General adult daily-value context; not personalized advice.",
         "source": "needs_review"
       },
-      "sourceStatus": "needs_review"
+      "sourceStatus": "needs_review",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "magnesium",
@@ -44,7 +55,20 @@
         "basis": "General adult daily-value context; not personalized advice.",
         "source": "needs_review"
       },
-      "sourceStatus": "needs_review"
+      "sourceStatus": "needs_review",
+      "timing": {
+        "slots": [
+          "daytime",
+          "evening"
+        ],
+        "avoidSlots": [],
+        "note": "Magnesium timing is flexible; daytime or evening can fit, while product directions and stomach tolerance should lead.",
+        "sourceIds": [
+          "website-sunday-magnesium-active-calm",
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "official_page"
+      }
     },
     {
       "id": "creatine-monohydrate",
@@ -66,7 +90,21 @@
         "basis": "Common daily maintenance range; not personalized advice.",
         "source": "needs_review"
       },
-      "sourceStatus": "needs_review"
+      "sourceStatus": "needs_review",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "calcium-alpha-ketoglutarate",
@@ -88,7 +126,21 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "taurine",
@@ -108,7 +160,21 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "glycine",
@@ -127,7 +193,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "evening"
+        ],
+        "avoidSlots": [],
+        "note": "These calm/recovery-oriented amino acids are commonly placed in an evening routine, but personal response varies.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "l-theanine",
@@ -148,7 +225,18 @@
         "basis": "Common supplemental range; not personalized advice.",
         "source": "needs_review"
       },
-      "sourceStatus": "needs_review"
+      "sourceStatus": "needs_review",
+      "timing": {
+        "slots": [
+          "evening"
+        ],
+        "avoidSlots": [],
+        "note": "These calm/recovery-oriented amino acids are commonly placed in an evening routine, but personal response varies.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "omega-3",
@@ -172,7 +260,18 @@
         "basis": "General EPA/DHA intake context; not personalized advice.",
         "source": "needs_review"
       },
-      "sourceStatus": "needs_review"
+      "sourceStatus": "needs_review",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Fat-soluble compounds generally fit best with a meal; daytime meal timing is the neutral catalog slot.",
+        "sourceIds": [
+          "reference-sunday-general-supplement-timing"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "epa",
@@ -194,7 +293,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Fat-soluble compounds generally fit best with a meal; daytime meal timing is the neutral catalog slot.",
+        "sourceIds": [
+          "reference-sunday-general-supplement-timing"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "dha",
@@ -215,7 +325,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Fat-soluble compounds generally fit best with a meal; daytime meal timing is the neutral catalog slot.",
+        "sourceIds": [
+          "reference-sunday-general-supplement-timing"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "collagen-peptides",
@@ -236,7 +357,18 @@
         "basis": "Common supplemental range; not personalized advice.",
         "source": "needs_review"
       },
-      "sourceStatus": "needs_review"
+      "sourceStatus": "needs_review",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "n-acetyl-cysteine",
@@ -259,7 +391,18 @@
         "basis": "Common supplemental range; not personalized advice.",
         "source": "needs_review"
       },
-      "sourceStatus": "needs_review"
+      "sourceStatus": "needs_review",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "ginger-extract",
@@ -280,7 +423,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "curcumin",
@@ -303,7 +457,18 @@
         "basis": "Common supplemental range; not personalized advice.",
         "source": "needs_review"
       },
-      "sourceStatus": "needs_review"
+      "sourceStatus": "needs_review",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "rhodiola-rosea",
@@ -324,7 +489,22 @@
         "basis": "Common supplemental range; not personalized advice.",
         "source": "needs_review"
       },
-      "sourceStatus": "needs_review"
+      "sourceStatus": "needs_review",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Rhodiola can support energy/focus and may cause insomnia in some people; earlier-day timing is conservative.",
+        "sourceIds": [
+          "website-ashwagandha-rhodiola",
+          "reference-nccih-rhodiola"
+        ],
+        "sourceStatus": "official_page"
+      }
     },
     {
       "id": "ashwagandha",
@@ -345,7 +525,20 @@
         "basis": "Common supplemental range varies by extract; not personalized advice.",
         "source": "needs_review"
       },
-      "sourceStatus": "needs_review"
+      "sourceStatus": "needs_review",
+      "timing": {
+        "slots": [
+          "daytime",
+          "evening"
+        ],
+        "avoidSlots": [],
+        "note": "Ashwagandha timing depends on personal response; daytime or evening can fit calming or stress-support routines.",
+        "sourceIds": [
+          "reference-nccih-ashwagandha",
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "vitamin-d3",
@@ -367,7 +560,20 @@
         "basis": "General adult daily-value context; not personalized advice.",
         "source": "needs_review"
       },
-      "sourceStatus": "needs_review"
+      "sourceStatus": "needs_review",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Vitamin D is fat-soluble; morning or daytime with a fat-containing meal is a practical routine slot.",
+        "sourceIds": [
+          "reference-nih-vitamin-d",
+          "reference-medlineplus-vitamin-d"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "nicotinamide-riboside",
@@ -388,7 +594,21 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "fisetin",
@@ -407,7 +627,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "spermidine",
@@ -427,7 +658,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "astaxanthin",
@@ -447,7 +689,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Fat-soluble compounds generally fit best with a meal; daytime meal timing is the neutral catalog slot.",
+        "sourceIds": [
+          "reference-sunday-general-supplement-timing"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "calcium",
@@ -469,7 +722,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "l-lysine",
@@ -490,7 +754,21 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "glucosamine-sulfate",
@@ -511,7 +789,21 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "l-glutathione",
@@ -533,7 +825,21 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "sodium-hyaluronate",
@@ -554,7 +860,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "microalgae-oil-concentrate",
@@ -576,7 +893,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Fat-soluble compounds generally fit best with a meal; daytime meal timing is the neutral catalog slot.",
+        "sourceIds": [
+          "reference-sunday-general-supplement-timing"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "standardized-cartilage",
@@ -596,7 +924,14 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [],
+        "avoidSlots": [],
+        "note": "Timing needs review; check the product label, personal tolerance, medications, and clinician guidance.",
+        "sourceIds": [],
+        "sourceStatus": "needs_review"
+      }
     },
     {
       "id": "undenatured-type-ii-collagen",
@@ -616,7 +951,14 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [],
+        "avoidSlots": [],
+        "note": "Timing needs review; check the product label, personal tolerance, medications, and clinician guidance.",
+        "sourceIds": [],
+        "sourceStatus": "needs_review"
+      }
     },
     {
       "id": "broccoli-seed-extract",
@@ -637,7 +979,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "luteolin",
@@ -658,7 +1011,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "ubiquinol",
@@ -681,7 +1045,21 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "lactobacillus-acidophilus",
@@ -702,7 +1080,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "boron",
@@ -722,7 +1111,21 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "lithium-orotate",
@@ -743,7 +1146,21 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "vitamin-e",
@@ -764,7 +1181,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Fat-soluble compounds generally fit best with a meal; daytime meal timing is the neutral catalog slot.",
+        "sourceIds": [
+          "reference-sunday-general-supplement-timing"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "thiamin",
@@ -786,7 +1214,21 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "riboflavin",
@@ -807,7 +1249,21 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "niacin",
@@ -828,7 +1284,21 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "vitamin-b6",
@@ -850,7 +1320,21 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "folate",
@@ -872,7 +1356,21 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "vitamin-b12",
@@ -894,7 +1392,21 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "biotin",
@@ -913,7 +1425,21 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "pantothenic-acid",
@@ -935,7 +1461,21 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "iodine",
@@ -956,7 +1496,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "zinc",
@@ -978,7 +1529,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "selenium",
@@ -999,7 +1561,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "manganese",
@@ -1019,7 +1592,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "vitamin-k1",
@@ -1040,7 +1624,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Fat-soluble compounds generally fit best with a meal; daytime meal timing is the neutral catalog slot.",
+        "sourceIds": [
+          "reference-sunday-general-supplement-timing"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "lycopene",
@@ -1060,7 +1655,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Fat-soluble compounds generally fit best with a meal; daytime meal timing is the neutral catalog slot.",
+        "sourceIds": [
+          "reference-sunday-general-supplement-timing"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "lutein",
@@ -1082,7 +1688,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Fat-soluble compounds generally fit best with a meal; daytime meal timing is the neutral catalog slot.",
+        "sourceIds": [
+          "reference-sunday-general-supplement-timing"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "vitamin-k2-mk4",
@@ -1103,7 +1720,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Fat-soluble compounds generally fit best with a meal; daytime meal timing is the neutral catalog slot.",
+        "sourceIds": [
+          "reference-sunday-general-supplement-timing"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "zeaxanthin",
@@ -1124,7 +1752,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Fat-soluble compounds generally fit best with a meal; daytime meal timing is the neutral catalog slot.",
+        "sourceIds": [
+          "reference-sunday-general-supplement-timing"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "vitamin-k2-mk7",
@@ -1145,7 +1784,18 @@
         "basis": "Blueprint product serving amount; general recommendation needs review.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Fat-soluble compounds generally fit best with a meal; daytime meal timing is the neutral catalog slot.",
+        "sourceIds": [
+          "reference-sunday-general-supplement-timing"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "beetroot-powder",
@@ -1167,7 +1817,18 @@
         "basis": "Sunday Natural Ashwa Pro Muscle Recover daily serving amount; not personalized advice.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "saffron-extract",
@@ -1189,7 +1850,18 @@
         "basis": "Sunday Natural Ashwa Pro Muscle Recover daily serving amount; not personalized advice.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "quercetin",
@@ -1211,7 +1883,18 @@
         "basis": "Sunday Natural Ashwa Pro Muscle Recover daily serving amount; not personalized advice.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "nadh",
@@ -1234,7 +1917,21 @@
         "basis": "Sunday Natural product serving amounts: 2.5 mg in B Complex Extra Forte and 50 mg in NADH 50; not personalized advice.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "d-ribose",
@@ -1254,7 +1951,21 @@
         "basis": "Sunday Natural NADH 50 daily serving amount; not personalized advice.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "d-galactose",
@@ -1274,7 +1985,21 @@
         "basis": "Sunday Natural NADH 50 daily serving amount; not personalized advice.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Energy-metabolism or performance-oriented ingredients are placed earlier in the day to avoid late-day stimulation.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "inositol",
@@ -1296,7 +2021,18 @@
         "basis": "Sunday Natural Vitamin B Complex Extra Forte daily serving amount; not personalized advice.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "citicoline",
@@ -1317,7 +2053,18 @@
         "basis": "Sunday Natural Vitamin B Complex Extra Forte daily serving amount; not personalized advice.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "paba",
@@ -1339,7 +2086,18 @@
         "basis": "Sunday Natural Vitamin B Complex Extra Forte daily serving amount; not personalized advice.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "betaine",
@@ -1361,7 +2119,18 @@
         "basis": "Sunday Natural Vitamin B Complex Extra Forte daily serving amount; not personalized advice.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "hyaluronic-acid",
@@ -1382,7 +2151,18 @@
         "basis": "Sunday Natural Hyaluronic Acid 250 mg directions allow 1-2 tablets daily; not personalized advice.",
         "source": "website_sourced"
       },
-      "sourceStatus": "website_sourced"
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "No strict clock time was found; daytime is a neutral routine slot unless the linked product label says otherwise.",
+        "sourceIds": [
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     }
   ],
   "supplementProducts": [
@@ -1547,7 +2327,21 @@
         "photo-longevity-2",
         "photo-longevity-3",
         "website-longevity-mix"
-      ]
+      ],
+      "shopUrl": "https://blueprint.bryanjohnson.com/products/longevity-blend-multinutrient-drink-mix-blood-orange-flavor",
+      "timing": {
+        "slots": [
+          "morning"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Blueprint presents Longevity Mix as part of the morning protocol; avoid late evening if the energy/focus ingredients feel activating.",
+        "sourceIds": [
+          "website-longevity-mix"
+        ],
+        "sourceStatus": "official_page"
+      }
     },
     {
       "id": "blueprint-essential-capsules",
@@ -1841,7 +2635,21 @@
       "sources": [
         "photo-daily-essentials",
         "website-essential-capsules"
-      ]
+      ],
+      "shopUrl": "https://blueprint.bryanjohnson.com/products/essentials-capsules",
+      "timing": {
+        "slots": [
+          "morning"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Blueprint directions say to take 2 capsules in the morning with food, including with Longevity Mix.",
+        "sourceIds": [
+          "website-essential-capsules"
+        ],
+        "sourceStatus": "official_page"
+      }
     },
     {
       "id": "blueprint-omega-3",
@@ -1913,7 +2721,22 @@
         "photo-omega-3-1",
         "photo-omega-3-3",
         "website-omega-3"
-      ]
+      ],
+      "shopUrl": "https://blueprint.bryanjohnson.com/products/omega-3",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime",
+          "evening"
+        ],
+        "avoidSlots": [],
+        "note": "Blueprint directions allow morning or evening with food; the softgel can fit any meal-based slot.",
+        "sourceIds": [
+          "website-omega-3",
+          "reference-sunday-general-supplement-timing"
+        ],
+        "sourceStatus": "official_page"
+      }
     },
     {
       "id": "blueprint-collagen-peptides",
@@ -1971,7 +2794,20 @@
         "photo-collagen-2",
         "photo-collagen-3",
         "website-collagen"
-      ]
+      ],
+      "shopUrl": "https://blueprint.bryanjohnson.com/products/collagen",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Blueprint says collagen can be mixed into protein, Longevity Mix, matcha, smoothies, or meals, so morning/daytime routine timing is flexible.",
+        "sourceIds": [
+          "website-collagen"
+        ],
+        "sourceStatus": "official_page"
+      }
     },
     {
       "id": "blueprint-nac-ginger-curcumin",
@@ -2031,7 +2867,20 @@
         "photo-nac-ginger-curcumin",
         "photo-r-curcumin-2",
         "website-nac-ginger-curcumin"
-      ]
+      ],
+      "shopUrl": "https://blueprint.bryanjohnson.com/products/nac-ginger-capsules",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Blueprint directions say to take daily with food and recommend pairing with EVOO; daytime with a meal is the conservative catalog slot.",
+        "sourceIds": [
+          "website-nac-ginger-curcumin",
+          "reference-sunday-general-supplement-timing"
+        ],
+        "sourceStatus": "official_page"
+      }
     },
     {
       "id": "blueprint-ashwagandha-rhodiola",
@@ -2080,7 +2929,23 @@
         "photo-ashwagandha-1",
         "photo-ashwagandha-2",
         "website-ashwagandha-rhodiola"
-      ]
+      ],
+      "shopUrl": "https://blueprint.bryanjohnson.com/products/ashwagandha-rhodiola-120mg",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Blueprint FAQ says morning or afternoon is ideal for energy and focus; rhodiola may cause insomnia in some people, so avoid late evening.",
+        "sourceIds": [
+          "website-ashwagandha-rhodiola",
+          "reference-nccih-rhodiola"
+        ],
+        "sourceStatus": "official_page"
+      }
     },
     {
       "id": "blueprint-advanced-antioxidants",
@@ -2183,7 +3048,19 @@
         "photo-advanced-antioxidants-1",
         "photo-advanced-antioxidants-2",
         "website-advanced-antioxidants"
-      ]
+      ],
+      "shopUrl": "https://blueprint.bryanjohnson.com/products/advanced-antioxidants",
+      "timing": {
+        "slots": [
+          "morning"
+        ],
+        "avoidSlots": [],
+        "note": "Blueprint recommends taking Advanced Antioxidants every morning with Longevity Mix and Essential Capsules.",
+        "sourceIds": [
+          "website-advanced-antioxidants"
+        ],
+        "sourceStatus": "official_page"
+      }
     },
     {
       "id": "altapharma-d3-k2-drops",
@@ -2203,24 +3080,26 @@
       "ingredients": [
         {
           "supplementId": "vitamin-d3",
-          "amount": null,
+          "amount": 37.5,
           "unit": "mcg",
           "perServing": "5 drops daily serving",
-          "labelNotes": "Exact cholecalciferol amount needs label or official product-page verification.",
+          "labelNotes": "Rossmann product page lists Vitamin D3 37.5 mcg per 5-drop daily serving, equal to 1500 IU.",
           "sourceIds": [
             "photo-d3-k2-drops-front",
-            "photo-d3-k2-drops-back"
+            "photo-d3-k2-drops-back",
+            "website-altapharma-d3-k2-drops"
           ]
         },
         {
           "supplementId": "vitamin-k2-mk7",
-          "amount": null,
+          "amount": 80,
           "unit": "mcg",
           "perServing": "5 drops daily serving",
-          "labelNotes": "K2 ingredient inferred from product name; exact menaquinone form and amount need official verification.",
+          "labelNotes": "Rossmann product page lists Vitamin K2 80 mcg per 5-drop daily serving; page lists menaquinone but does not specify MK-7 form.",
           "sourceIds": [
             "photo-d3-k2-drops-front",
-            "photo-d3-k2-drops-back"
+            "photo-d3-k2-drops-back",
+            "website-altapharma-d3-k2-drops"
           ]
         }
       ],
@@ -2231,11 +3110,26 @@
         "vitamin-d3",
         "vitamin-k2-mk7"
       ],
-      "sourceStatus": "needs_review",
+      "sourceStatus": "website_sourced",
       "sources": [
         "photo-d3-k2-drops-front",
-        "photo-d3-k2-drops-back"
-      ]
+        "photo-d3-k2-drops-back",
+        "website-altapharma-d3-k2-drops"
+      ],
+      "shopUrl": "https://www.rossmann.de/de/gesundheit-altapharma-d3--k2-tropfen/p/4068134002600",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Rossmann directions say 5 drops per day; vitamin D/K are fat-soluble, so morning or daytime with a fat-containing meal is a practical fit.",
+        "sourceIds": [
+          "website-altapharma-d3-k2-drops",
+          "reference-medlineplus-vitamin-d"
+        ],
+        "sourceStatus": "official_page"
+      }
     },
     {
       "id": "sunday-magnesium-complex-11-ultra-xl",
@@ -2297,7 +3191,21 @@
       "sourceStatus": "website_sourced",
       "includedIn": [
         "Tilman's supplement protocol"
-      ]
+      ],
+      "shopUrl": "https://www.sunday.de/en/mg-complex-11-ultra-xl-capsules.html",
+      "timing": {
+        "slots": [
+          "daytime",
+          "evening"
+        ],
+        "avoidSlots": [],
+        "note": "Sunday directions are meal-based rather than clock-based; magnesium can be placed in daytime or evening depending on tolerance and routine.",
+        "sourceIds": [
+          "website-sunday-magnesium-complex-11-ultra-xl",
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "official_page"
+      }
     },
     {
       "id": "sunday-magnesium-active-calm",
@@ -2336,7 +3244,21 @@
       "sourceStatus": "website_sourced",
       "includedIn": [
         "Tilman's supplement protocol"
-      ]
+      ],
+      "shopUrl": "https://www.sunday.de/en/magnesium-active-calm-complex-capsules.html",
+      "timing": {
+        "slots": [
+          "daytime",
+          "evening"
+        ],
+        "avoidSlots": [],
+        "note": "Sunday directions are meal-based; the Active Calm positioning makes daytime or evening reasonable, depending on personal response.",
+        "sourceIds": [
+          "website-sunday-magnesium-active-calm",
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "official_page"
+      }
     },
     {
       "id": "sunday-muscle-recover-ashwa-pro-complex",
@@ -2420,7 +3342,20 @@
       "sourceStatus": "website_sourced",
       "includedIn": [
         "Tilman's supplement protocol"
-      ]
+      ],
+      "shopUrl": "https://www.sunday.de/en/muscle-recover-sport-ashwagandha-complex.html",
+      "timing": {
+        "slots": [
+          "evening"
+        ],
+        "avoidSlots": [],
+        "note": "Sunday positions this for muscle recovery and includes calming adaptogen context; evening is a conservative routine slot unless it feels activating.",
+        "sourceIds": [
+          "website-sunday-muscle-recover-ashwa-pro",
+          "reference-nccih-ashwagandha"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "sunday-vitamin-b-complex-extra-forte",
@@ -2592,7 +3527,23 @@
       "sourceStatus": "website_sourced",
       "includedIn": [
         "Tilman's supplement protocol"
-      ]
+      ],
+      "shopUrl": "https://www.sunday.de/en/vitamin-b-complex-forte-high-dose-capsules-bioactive-b12-mh3a.html",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "B vitamins support energy metabolism; use earlier in the day if they feel activating.",
+        "sourceIds": [
+          "website-sunday-vitamin-b-complex-extra-forte",
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "sunday-nadh-50-d-ribose-galactose",
@@ -2653,7 +3604,22 @@
       "sourceStatus": "website_sourced",
       "includedIn": [
         "Tilman's supplement protocol"
-      ]
+      ],
+      "shopUrl": "https://www.sunday.de/en/nadh-50mg-capsules.html",
+      "timing": {
+        "slots": [
+          "morning"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "NADH and functional sugars are energy-focused; morning timing is conservative and avoids late-day stimulation.",
+        "sourceIds": [
+          "website-sunday-nadh-50-d-ribose-galactose",
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "sunday-vitamin-d3-k2-mk7-20000-iu-200mcg",
@@ -2703,7 +3669,21 @@
       "sourceStatus": "website_sourced",
       "includedIn": [
         "Tilman's supplement protocol"
-      ]
+      ],
+      "shopUrl": "https://www.sunday.de/en/vitamin-d-tabletten-20000-ie-plus-k2-mk7-200mcg.html",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Sunday directions are periodic rather than daily; vitamin D/K are fat-soluble, so take with a fat-containing meal earlier in the day when possible.",
+        "sourceIds": [
+          "website-sunday-vitamin-d3-k2-20000",
+          "reference-medlineplus-vitamin-d"
+        ],
+        "sourceStatus": "official_page"
+      }
     },
     {
       "id": "sunday-hyaluronic-acid-250-high-dose",
@@ -2741,7 +3721,20 @@
       "sourceStatus": "website_sourced",
       "includedIn": [
         "Tilman's supplement protocol"
-      ]
+      ],
+      "shopUrl": "https://www.sunday.de/en/hyaluronic-acid-250mg-high-dose-vegan-from-fermentation.html",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Sunday directions are not sleep-specific; morning or daytime keeps this neutral skin/joint-support product out of the evening stack.",
+        "sourceIds": [
+          "website-sunday-hyaluronic-acid-250"
+        ],
+        "sourceStatus": "official_page"
+      }
     },
     {
       "id": "sunday-astaxanthin-12-bioastin",
@@ -2780,7 +3773,20 @@
       "sourceStatus": "website_sourced",
       "includedIn": [
         "Tilman's supplement protocol"
-      ]
+      ],
+      "shopUrl": "https://www.sunday.de/en/astaxanthin-bioastin-capsules-12mg.html",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Astaxanthin is fat-soluble; use with a meal, commonly during the day.",
+        "sourceIds": [
+          "website-sunday-astaxanthin-12-bioastin",
+          "reference-sunday-general-supplement-timing"
+        ],
+        "sourceStatus": "official_page"
+      }
     },
     {
       "id": "sunday-coenzyme-q10-kaneka-ubiquinol-200",
@@ -2819,7 +3825,23 @@
       "sourceStatus": "website_sourced",
       "includedIn": [
         "Tilman's supplement protocol"
-      ]
+      ],
+      "shopUrl": "https://www.sunday.de/en/coenzyme-q10-capsules-200mg-ubiquinol-kaneka.html",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [
+          "evening"
+        ],
+        "note": "Ubiquinol supports mitochondrial energy metabolism; morning/daytime is conservative if it feels energizing.",
+        "sourceIds": [
+          "website-sunday-coq10-kaneka-ubiquinol-200",
+          "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     },
     {
       "id": "sunday-liposomal-vitamin-c-zinc",
@@ -2870,7 +3892,19 @@
       "sourceStatus": "website_sourced",
       "includedIn": [
         "Tilman's supplement protocol"
-      ]
+      ],
+      "shopUrl": "https://www.sunday.de/en/vitamin-c-zinc-liposomal-liquid.html",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Sunday directions are portion-based; daytime with routine hydration keeps it separate from evening sleep timing.",
+        "sourceIds": [
+          "website-sunday-liposomal-vitamin-c-zinc"
+        ],
+        "sourceStatus": "official_page"
+      }
     }
   ],
   "sources": [
@@ -3111,6 +4145,55 @@
       "url": "https://www.sunday.de/en/vitamin-c-zinc-liposomal-liquid.html",
       "captureDate": "2026-05-18",
       "notes": "Official Sunday Natural page for SKU N7427CDE; used for ingredients, amounts, and directions."
+    },
+    {
+      "id": "website-altapharma-d3-k2-drops",
+      "type": "official_page",
+      "url": "https://www.rossmann.de/de/gesundheit-altapharma-d3--k2-tropfen/p/4068134002600",
+      "captureDate": "2026-05-20",
+      "notes": "Official Rossmann product page for altapharma D3 + K2 drops; used for shop link, 5 drops daily direction, active amounts, and ingredient confirmation."
+    },
+    {
+      "id": "reference-sunday-general-supplement-timing",
+      "type": "reference_page",
+      "url": "https://support.sunday.de/hc/de/articles/4414916007186-Wann-Wie-nehme-ich-meine-Nahrungserg%C3%A4nzungsmittel-am-besten-ein",
+      "captureDate": "2026-05-20",
+      "notes": "Sunday Natural support guidance: fat-soluble nutrients are best taken with a meal; minerals and trace elements are best taken outside a meal unless the product says otherwise."
+    },
+    {
+      "id": "reference-sunday-time-of-day",
+      "type": "reference_page",
+      "url": "https://support.sunday.de/hc/es/articles/22957217354258--A-qu%C3%A9-hora-del-d%C3%ADa-es-mejor-tomar-los-suplementos-alimenticios",
+      "captureDate": "2026-05-20",
+      "notes": "Sunday Natural support guidance: time of day is often flexible, but stimulating nutrients may fit better during the day and melatonin-like sleep products in the evening."
+    },
+    {
+      "id": "reference-nih-vitamin-d",
+      "type": "reference_page",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/",
+      "captureDate": "2026-05-20",
+      "notes": "NIH ODS vitamin D fact sheet; vitamin D is fat-soluble and absorption depends on dietary fat handling."
+    },
+    {
+      "id": "reference-medlineplus-vitamin-d",
+      "type": "reference_page",
+      "url": "https://medlineplus.gov/vitamind.html",
+      "captureDate": "2026-05-20",
+      "notes": "MedlinePlus vitamin D page; consumer-facing NIH context that vitamin D is better absorbed with a meal or snack containing fat."
+    },
+    {
+      "id": "reference-nccih-rhodiola",
+      "type": "reference_page",
+      "url": "https://www.nccih.nih.gov/health/rhodiola",
+      "captureDate": "2026-05-20",
+      "notes": "NCCIH rhodiola safety page; side effects can include insomnia, supporting conservative earlier-day timing when rhodiola is present."
+    },
+    {
+      "id": "reference-nccih-ashwagandha",
+      "type": "reference_page",
+      "url": "https://www.nccih.nih.gov/health/ashwagandha",
+      "captureDate": "2026-05-20",
+      "notes": "NCCIH ashwagandha safety page; used as ingredient-level context for adaptogen timing and cautions."
     }
   ]
 }

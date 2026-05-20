@@ -97,6 +97,8 @@ node scripts/validate-supplement-catalog.mjs
 node scripts/seed-supplement-catalog.mjs
 ```
 
+The seed validator also checks official `shopUrl` values and the supplement `timing` shape. Timing is source-backed informational catalog metadata and is stored inside each DynamoDB document without backend transformation.
+
 If deploying the catalog Lambda from scratch, create the role and attach the read-only policy:
 
 ```bash

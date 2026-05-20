@@ -3,21 +3,56 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Recipes - My Superfood</title>
-    <meta name="description" content="Healthy recipe ideas built around real superfoods, fiber, protein, minerals, and colorful meals.">
+    <title>Healthy Superfood Recipes - My Superfood</title>
+    <meta name="description" content="Explore healthy superfood recipe ideas by Tilman Resch, including colorful meals built around fiber, plant protein, healthy fats, and nutrient-dense ingredients.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Tilman Resch">
+    <meta name="theme-color" content="#4caf50">
     <link rel="canonical" href="https://my-superfood.com/recipes">
-    <meta property="og:title" content="Recipes - My Superfood">
-    <meta property="og:description" content="Healthy recipe ideas built around real superfoods and colorful meals.">
+    <meta property="og:site_name" content="My Superfood">
+    <meta property="og:title" content="Healthy Superfood Recipes - My Superfood">
+    <meta property="og:description" content="Healthy recipe ideas built around fiber, plant protein, healthy fats, and colorful whole foods.">
     <meta property="og:url" content="https://my-superfood.com/recipes">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://my-superfood.com/assets/images/real/recipe-bowl.jpg">
+    <meta property="og:image:alt" content="A bright superfood bowl with greens, grains, and vegetables">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Healthy Superfood Recipes - My Superfood">
+    <meta name="twitter:description" content="Healthy recipe ideas built around real superfoods and colorful meals.">
+    <meta name="twitter:image" content="https://my-superfood.com/assets/images/real/recipe-bowl.jpg">
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/my-superfood-icon-512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/my-superfood-icon.png">
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Recipe",
+        "name": "Green recovery bowl with citrus tahini",
+        "url": "https://my-superfood.com/recipes",
+        "description": "A bright superfood bowl with greens, quinoa, avocado, chickpeas, citrus, and tahini.",
+        "image": "https://my-superfood.com/assets/images/real/recipe-bowl.jpg",
+        "author": {
+          "@type": "Person",
+          "name": "Tilman Resch"
+        },
+        "recipeIngredient": [
+          "greens",
+          "quinoa",
+          "avocado",
+          "chickpeas",
+          "citrus",
+          "tahini"
+        ],
+        "recipeCategory": "Healthy recipe",
+        "recipeCuisine": "Superfood"
+      }
+    </script>
   </head>
   <body data-page="recipes">
     <header class="site-header">
       <a class="brand" href="/"><img class="brand-mark" src="/assets/images/my-superfood-icon.png" alt="" aria-hidden="true"><span>My Superfood</span></a>
-      <nav class="nav" aria-label="Primary navigation">
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="primary-nav" aria-label="Primary navigation">
         <a href="/foods">Foods</a>
         <a href="/supplements">Supplements</a>
         <a class="active" href="/recipes">Recipes</a>
@@ -49,6 +84,10 @@
           </div>
           <p class="saved-note" id="recipe-saved-note" role="status"></p>
         </article>
+      </section>
+      <section class="seo-summary" aria-label="Recipe context">
+        <h2>Healthy recipe ideas with superfood ingredients</h2>
+        <p>Recipes on My Superfood focus on practical meals built around colorful vegetables, legumes, grains, healthy fats, and nutrient-dense ingredients from the food catalog.</p>
       </section>
     </main>
     <footer class="site-footer">

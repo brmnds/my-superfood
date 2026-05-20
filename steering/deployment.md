@@ -64,6 +64,9 @@ This is preferred over Amplify for the current version because the app is static
    - `styles.css`
    - `script.js`
    - `favicon.ico`
+   - `robots.txt`
+   - `sitemap.xml`
+   - `llms.txt`
    - `assets/`
 
 5. Create or reuse an ACM certificate in `us-east-1` for:
@@ -126,5 +129,6 @@ Verify:
 - `.html` URLs redirect to clean equivalents
 - canonical tags point at clean URLs
 - `robots.txt` and `sitemap.xml` load
+- `llms.txt` loads for AI-search and generative answer-engine context
 - image assets load correctly
 - browser console has no missing asset errors

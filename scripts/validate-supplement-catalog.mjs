@@ -3,6 +3,9 @@ import path from "node:path";
 
 const seedPath = process.argv[2] || "data/supplement-catalog.seed.json";
 const allowedSourceStatuses = new Set(["package_verified", "website_sourced", "needs_review"]);
+const allowedSourceTypes = new Set(["package_photo", "official_page", "reference_page"]);
+const allowedTimingSlots = new Set(["morning", "daytime", "evening"]);
+const allowedTimingSourceStatuses = new Set(["official_page", "ingredient_researched", "needs_review"]);
 
 function fail(errors) {
   for (const error of errors) console.error(`- ${error}`);
@@ -17,14 +20,48 @@ const seed = JSON.parse(await fs.readFile(path.resolve(seedPath), "utf8"));
 const errors = [];
 const supplementIds = new Set();
 const sourceIds = new Set();
+const officialSourceUrls = new Set();
+
+function validateTiming(record, label) {
+  const timing = record.timing;
+  if (!timing || typeof timing !== "object") {
+    errors.push(`${label} needs timing.`);
+    return;
+  }
+
+  if (!Array.isArray(timing.slots)) errors.push(`${label} timing.slots must be an array.`);
+  if (!Array.isArray(timing.avoidSlots)) errors.push(`${label} timing.avoidSlots must be an array.`);
+  if (!Array.isArray(timing.sourceIds)) errors.push(`${label} timing.sourceIds must be an array.`);
+  if (!isNonEmptyString(timing.note)) errors.push(`${label} timing needs a note.`);
+  if (!allowedTimingSourceStatuses.has(timing.sourceStatus)) errors.push(`${label} has invalid timing.sourceStatus.`);
+
+  for (const slot of timing.slots || []) {
+    if (!allowedTimingSlots.has(slot)) errors.push(`${label} timing has invalid slot: ${slot}`);
+  }
+  for (const slot of timing.avoidSlots || []) {
+    if (!allowedTimingSlots.has(slot)) errors.push(`${label} timing has invalid avoidSlot: ${slot}`);
+  }
+  for (const sourceId of timing.sourceIds || []) {
+    if (!sourceIds.has(sourceId)) errors.push(`${label} timing references missing source ${sourceId}.`);
+  }
+
+  if ((timing.slots || []).length > 0 && (!Array.isArray(timing.sourceIds) || timing.sourceIds.length === 0)) {
+    errors.push(`${label} has timing slots but no timing sourceIds.`);
+  }
+  if (timing.sourceStatus !== "needs_review" && (!Array.isArray(timing.sourceIds) || timing.sourceIds.length === 0)) {
+    errors.push(`${label} has reviewed timing without timing sourceIds.`);
+  }
+}
 
 for (const source of seed.sources || []) {
   if (!isNonEmptyString(source.id)) errors.push("Every source needs an id.");
   if (sourceIds.has(source.id)) errors.push(`Duplicate source id: ${source.id}`);
   sourceIds.add(source.id);
-  if (!["package_photo", "official_page"].includes(source.type)) errors.push(`Invalid source type for ${source.id}.`);
+  if (!allowedSourceTypes.has(source.type)) errors.push(`Invalid source type for ${source.id}.`);
   if (source.type === "package_photo" && !isNonEmptyString(source.filename)) errors.push(`Package source ${source.id} needs a filename.`);
   if (source.type === "official_page" && !isNonEmptyString(source.url)) errors.push(`Official source ${source.id} needs a URL.`);
+  if (source.type === "reference_page" && !isNonEmptyString(source.url)) errors.push(`Reference source ${source.id} needs a URL.`);
+  if (source.type === "official_page" && isNonEmptyString(source.url)) officialSourceUrls.add(source.url);
   if (!isNonEmptyString(source.captureDate)) errors.push(`Source ${source.id} needs a captureDate.`);
 }
 
@@ -41,6 +78,7 @@ for (const supplement of seed.supplements || []) {
   } else if (!isNonEmptyString(supplement.recommendedDailyAmount.basis) || !isNonEmptyString(supplement.recommendedDailyAmount.source)) {
     errors.push(`Supplement ${supplement.id} recommendedDailyAmount needs basis and source.`);
   }
+  validateTiming(supplement, `Supplement ${supplement.id}`);
 }
 
 for (const product of seed.supplementProducts || []) {
@@ -53,6 +91,14 @@ for (const product of seed.supplementProducts || []) {
   if (!Array.isArray(product.ingredients) || product.ingredients.length === 0) errors.push(`Product ${product.id} needs ingredients.`);
   if (!Array.isArray(product.contains)) errors.push(`Product ${product.id} contains must be an array.`);
   if (!Array.isArray(product.sources) || product.sources.length === 0) errors.push(`Product ${product.id} needs sources.`);
+  if (product.shopUrl !== undefined) {
+    if (!isNonEmptyString(product.shopUrl) || !product.shopUrl.startsWith("https://")) {
+      errors.push(`Product ${product.id} shopUrl must be an HTTPS URL.`);
+    } else if (!officialSourceUrls.has(product.shopUrl)) {
+      errors.push(`Product ${product.id} shopUrl must match an official source URL.`);
+    }
+  }
+  validateTiming(product, `Product ${product.id}`);
 
   for (const sourceId of product.sources || []) {
     if (!sourceIds.has(sourceId)) errors.push(`Product ${product.id} references missing source ${sourceId}.`);

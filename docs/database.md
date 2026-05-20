@@ -160,6 +160,8 @@ Records store a small query envelope plus the reviewed JSON document:
 - `document`
 - `updatedAt`
 
+The document payload preserves catalog fields such as `shopUrl` and `timing` unchanged. `shopUrl` is limited to official provider/shop pages. `timing` is source-backed informational guidance for morning/daytime/evening UI hints; it is not medical advice or a personalized schedule.
+
 The repo source of truth is:
 
 ```text
