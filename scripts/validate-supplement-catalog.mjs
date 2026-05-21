@@ -6,6 +6,8 @@ const allowedSourceStatuses = new Set(["package_verified", "website_sourced", "n
 const allowedSourceTypes = new Set(["package_photo", "official_page", "reference_page"]);
 const allowedTimingSlots = new Set(["morning", "daytime", "evening"]);
 const allowedTimingSourceStatuses = new Set(["official_page", "ingredient_researched", "needs_review"]);
+const allowedStorageModes = new Set(["refrigerate", "cool_dry", "room_temperature", "needs_review"]);
+const allowedStorageSourceStatuses = new Set(["official_page", "needs_review"]);
 
 function fail(errors) {
   for (const error of errors) console.error(`- ${error}`);
@@ -50,6 +52,36 @@ function validateTiming(record, label) {
   }
   if (timing.sourceStatus !== "needs_review" && (!Array.isArray(timing.sourceIds) || timing.sourceIds.length === 0)) {
     errors.push(`${label} has reviewed timing without timing sourceIds.`);
+  }
+}
+
+function validateStorage(record, label) {
+  const storage = record.storage;
+  if (!storage || typeof storage !== "object") {
+    errors.push(`${label} needs storage.`);
+    return;
+  }
+
+  if (typeof storage.requiresRefrigeration !== "boolean") errors.push(`${label} storage.requiresRefrigeration must be boolean.`);
+  if (typeof storage.avoidFreezing !== "boolean") errors.push(`${label} storage.avoidFreezing must be boolean.`);
+  if (!allowedStorageModes.has(storage.mode)) errors.push(`${label} has invalid storage.mode.`);
+  if (!isNonEmptyString(storage.label)) errors.push(`${label} storage needs a label.`);
+  if (!isNonEmptyString(storage.note)) errors.push(`${label} storage needs a note.`);
+  if (!Array.isArray(storage.sourceIds)) errors.push(`${label} storage.sourceIds must be an array.`);
+  if (!allowedStorageSourceStatuses.has(storage.sourceStatus)) errors.push(`${label} has invalid storage.sourceStatus.`);
+
+  for (const sourceId of storage.sourceIds || []) {
+    if (!sourceIds.has(sourceId)) errors.push(`${label} storage references missing source ${sourceId}.`);
+  }
+
+  if (storage.sourceStatus !== "needs_review" && (!Array.isArray(storage.sourceIds) || storage.sourceIds.length === 0)) {
+    errors.push(`${label} has reviewed storage without storage sourceIds.`);
+  }
+  if (storage.requiresRefrigeration && storage.mode !== "refrigerate") {
+    errors.push(`${label} requires refrigeration but storage.mode is not refrigerate.`);
+  }
+  if (storage.mode === "refrigerate" && !storage.requiresRefrigeration) {
+    errors.push(`${label} storage.mode is refrigerate but requiresRefrigeration is false.`);
   }
 }
 
@@ -99,6 +131,7 @@ for (const product of seed.supplementProducts || []) {
     }
   }
   validateTiming(product, `Product ${product.id}`);
+  validateStorage(product, `Product ${product.id}`);
 
   for (const sourceId of product.sources || []) {
     if (!sourceIds.has(sourceId)) errors.push(`Product ${product.id} references missing source ${sourceId}.`);

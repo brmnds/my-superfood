@@ -28,6 +28,14 @@ This is informational catalog data, not medical advice or personalized dosing gu
 - NOW Foods L-Theanine Double Strength 200 mg: https://www.nowfoods.com/products/supplements/l-theanine-double-strength-200-mg-veg-capsules
 - natural elements Magnesiumbisglycinat: https://my-ne.com/products/magnesiumbisglycinat-kapseln
 
+## Storage Notes
+
+- Swanson Apigenin: store cool and dry; no refrigerator storage is indicated on the official product page.
+- NOW Foods L-Theanine: store cool and dry after opening; no refrigerator storage is indicated on the official product page.
+- natural elements Magnesiumbisglycinat: store closed, cool, dry, protected from light, and out of reach of small children; this is not a refrigerator instruction.
+
+For the broader Tilman protocol, the current refrigerator-specific item is Sunday Natural Liposomal Vitamin C + Zinc. Sunday Natural states that the liquid should be refrigerated before/during use, used within 8 weeks after opening, and not frozen. Other capsule, tablet, softgel, powder, and drop products are marked as cool/dry or room-temperature unless their official source explicitly says fridge storage.
+
 ## Package Photo Evidence
 
 - `Photo 1.jpg`: Swanson Apigenin front label; confirms Apigenin, 50 mg per capsule, 90 capsules.

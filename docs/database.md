@@ -160,7 +160,7 @@ Records store a small query envelope plus the reviewed JSON document:
 - `document`
 - `updatedAt`
 
-The document payload preserves catalog fields such as `shopUrl` and `timing` unchanged. `shopUrl` is limited to official provider/shop pages. `timing` is source-backed informational guidance for morning/daytime/evening UI hints; it is not medical advice or a personalized schedule.
+The document payload preserves catalog fields such as `shopUrl`, `timing`, and `storage` unchanged. `shopUrl` is limited to official provider/shop pages. `timing` is source-backed informational guidance for morning/daytime/evening UI hints; it is not medical advice or a personalized schedule. `storage` distinguishes true refrigerator storage from ordinary cool/dry or room-temperature storage so the UI can show the subtle snowflake filter without implying that all cool-storage products belong in the fridge.
 
 The repo source of truth is:
 
@@ -234,6 +234,8 @@ docs/tilman-additional-supplement-research.md
 ```
 
 Every product ingredient must reference a supplement primitive through `supplementId`. Exact per-serving product amounts live on product ingredient rows. General daily recommendation ranges live on supplement rows and are informational only, not medical advice.
+
+Storage guidance follows the same source policy. Only products with explicit provider/package refrigerator guidance should set `storage.requiresRefrigeration: true`; "cool dry place" remains `cool_dry`.
 
 Allowed source statuses:
 

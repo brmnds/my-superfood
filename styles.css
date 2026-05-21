@@ -1010,6 +1010,14 @@ h2 {
   gap: 8px;
 }
 
+.protocol-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-between;
+}
+
 .protocol-timing-filter {
   align-items: center;
   display: inline-flex;
@@ -1033,6 +1041,45 @@ h2 {
   background: var(--leaf-dark);
   border-color: var(--leaf-dark);
   color: white;
+}
+
+.protocol-storage-filter {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid #dceadd;
+  border-radius: 999px;
+  color: #6d7b72;
+  cursor: pointer;
+  display: inline-flex;
+  height: 30px;
+  justify-content: center;
+  padding: 0;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+  width: 30px;
+}
+
+.protocol-storage-filter svg {
+  fill: none;
+  height: 15px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  width: 15px;
+}
+
+.protocol-storage-filter:hover,
+.protocol-storage-filter:focus-visible {
+  background: #f0f8f1;
+  border-color: rgba(47, 125, 50, 0.32);
+  color: var(--leaf-dark);
+  transform: translateY(-1px);
+}
+
+.protocol-storage-filter.active {
+  background: #e9f6ff;
+  border-color: #a7cfeb;
+  color: #216c9b;
 }
 
 .protocol-stack button {
@@ -1228,6 +1275,61 @@ h2 {
   position: relative;
 }
 
+.storage-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 1px;
+  position: relative;
+}
+
+.storage-chip,
+.storage-review {
+  align-items: center;
+  border-radius: 999px;
+  cursor: help;
+  display: inline-flex;
+  font-size: 0.68rem;
+  font-weight: 850;
+  gap: 4px;
+  line-height: 1.15;
+  padding: 5px 7px;
+  position: relative;
+}
+
+.storage-chip {
+  background: #f7faf7;
+  border: 1px solid #e3e9e3;
+  color: #68736a;
+}
+
+.storage-refrigerate {
+  background: #eef8ff;
+  border-color: #c4def1;
+  color: #216c9b;
+}
+
+.storage-review {
+  background: #f7faf7;
+  border: 1px solid #e2e7e1;
+  color: #788178;
+}
+
+.storage-snowflake {
+  display: inline-flex;
+}
+
+.storage-snowflake svg {
+  fill: none;
+  height: 12px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  width: 12px;
+}
+
 .timing-chip,
 .timing-avoid {
   align-items: center;
@@ -1343,7 +1445,9 @@ h2 {
 .timing-chip:hover .timing-tooltip,
 .timing-chip:focus-visible .timing-tooltip,
 .timing-avoid:hover .timing-tooltip,
-.timing-avoid:focus-visible .timing-tooltip {
+.timing-avoid:focus-visible .timing-tooltip,
+.storage-chip:hover .timing-tooltip,
+.storage-chip:focus-visible .timing-tooltip {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1676,8 +1780,13 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .protocol-controls,
   .protocol-timing-filter {
     width: 100%;
+  }
+
+  .protocol-storage-filter {
+    margin-left: auto;
   }
 
   .dashboard-stat-grid {

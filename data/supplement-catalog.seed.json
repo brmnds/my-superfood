@@ -2381,6 +2381,17 @@
           "website-longevity-mix"
         ],
         "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "room_temperature",
+        "label": "Room temp",
+        "note": "No refrigerator requirement found on the official product page; keep shelf-stable at room temperature unless the package label says otherwise.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-longevity-mix"
+        ],
+        "sourceStatus": "official_page"
       }
     },
     {
@@ -2689,6 +2700,17 @@
           "website-essential-capsules"
         ],
         "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Official product guidance uses cool, dry storage or gives no refrigerator requirement; keep away from heat, sunlight, and moisture rather than putting it in the fridge.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-essential-capsules"
+        ],
+        "sourceStatus": "official_page"
       }
     },
     {
@@ -2776,6 +2798,17 @@
           "reference-sunday-general-supplement-timing"
         ],
         "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "room_temperature",
+        "label": "Room temp",
+        "note": "Blueprint storage guidance does not require refrigeration; keep the softgels shelf-stable at room temperature unless the package label says otherwise.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-omega-3"
+        ],
+        "sourceStatus": "official_page"
       }
     },
     {
@@ -2843,6 +2876,17 @@
         ],
         "avoidSlots": [],
         "note": "Blueprint says collagen can be mixed into protein, Longevity Mix, matcha, smoothies, or meals, so morning/daytime routine timing is flexible.",
+        "sourceIds": [
+          "website-collagen"
+        ],
+        "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Official product guidance uses cool, dry storage or gives no refrigerator requirement; keep away from heat, sunlight, and moisture rather than putting it in the fridge.",
+        "avoidFreezing": false,
         "sourceIds": [
           "website-collagen"
         ],
@@ -2920,6 +2964,17 @@
           "reference-sunday-general-supplement-timing"
         ],
         "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Official product guidance uses cool, dry storage or gives no refrigerator requirement; keep away from heat, sunlight, and moisture rather than putting it in the fridge.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-nac-ginger-curcumin"
+        ],
+        "sourceStatus": "official_page"
       }
     },
     {
@@ -2983,6 +3038,17 @@
         "sourceIds": [
           "website-ashwagandha-rhodiola",
           "reference-nccih-rhodiola"
+        ],
+        "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Official product guidance uses cool, dry storage or gives no refrigerator requirement; keep away from heat, sunlight, and moisture rather than putting it in the fridge.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-ashwagandha-rhodiola"
         ],
         "sourceStatus": "official_page"
       }
@@ -3100,6 +3166,17 @@
           "website-advanced-antioxidants"
         ],
         "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Official product guidance uses cool, dry storage or gives no refrigerator requirement; keep away from heat, sunlight, and moisture rather than putting it in the fridge.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-advanced-antioxidants"
+        ],
+        "sourceStatus": "official_page"
       }
     },
     {
@@ -3167,6 +3244,17 @@
         "sourceIds": [
           "website-altapharma-d3-k2-drops",
           "reference-medlineplus-vitamin-d"
+        ],
+        "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Store protected from heat and light according to the provider/package guidance; this is not a refrigerator instruction.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-altapharma-d3-k2-drops"
         ],
         "sourceStatus": "official_page"
       }
@@ -3245,6 +3333,17 @@
           "reference-sunday-time-of-day"
         ],
         "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Official product guidance uses cool, dry storage or gives no refrigerator requirement; keep away from heat, sunlight, and moisture rather than putting it in the fridge.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-sunday-magnesium-complex-11-ultra-xl"
+        ],
+        "sourceStatus": "official_page"
       }
     },
     {
@@ -3296,6 +3395,17 @@
         "sourceIds": [
           "website-sunday-magnesium-active-calm",
           "reference-sunday-time-of-day"
+        ],
+        "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Official product guidance uses cool, dry storage or gives no refrigerator requirement; keep away from heat, sunlight, and moisture rather than putting it in the fridge.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-sunday-magnesium-active-calm"
         ],
         "sourceStatus": "official_page"
       }
@@ -3395,6 +3505,17 @@
           "reference-nccih-ashwagandha"
         ],
         "sourceStatus": "ingredient_researched"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Official product guidance uses cool, dry storage or gives no refrigerator requirement; keep away from heat, sunlight, and moisture rather than putting it in the fridge.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-sunday-muscle-recover-ashwa-pro"
+        ],
+        "sourceStatus": "official_page"
       }
     },
     {
@@ -3583,6 +3704,17 @@
           "reference-sunday-time-of-day"
         ],
         "sourceStatus": "ingredient_researched"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Official product guidance uses cool, dry storage or gives no refrigerator requirement; keep away from heat, sunlight, and moisture rather than putting it in the fridge.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-sunday-vitamin-b-complex-extra-forte"
+        ],
+        "sourceStatus": "official_page"
       }
     },
     {
@@ -3659,6 +3791,17 @@
           "reference-sunday-time-of-day"
         ],
         "sourceStatus": "ingredient_researched"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Sunday Natural lists cool, dry storage away from sunlight and heat for this capsule product; no fridge storage is indicated.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-sunday-nadh-50-d-ribose-galactose"
+        ],
+        "sourceStatus": "official_page"
       }
     },
     {
@@ -3723,6 +3866,17 @@
           "reference-medlineplus-vitamin-d"
         ],
         "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Official product guidance uses cool, dry storage or gives no refrigerator requirement; keep away from heat, sunlight, and moisture rather than putting it in the fridge.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-sunday-vitamin-d3-k2-20000"
+        ],
+        "sourceStatus": "official_page"
       }
     },
     {
@@ -3770,6 +3924,17 @@
         ],
         "avoidSlots": [],
         "note": "Sunday directions are not sleep-specific; morning or daytime keeps this neutral skin/joint-support product out of the evening stack.",
+        "sourceIds": [
+          "website-sunday-hyaluronic-acid-250"
+        ],
+        "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Official product guidance uses cool, dry storage or gives no refrigerator requirement; keep away from heat, sunlight, and moisture rather than putting it in the fridge.",
+        "avoidFreezing": false,
         "sourceIds": [
           "website-sunday-hyaluronic-acid-250"
         ],
@@ -3824,6 +3989,17 @@
         "sourceIds": [
           "website-sunday-astaxanthin-12-bioastin",
           "reference-sunday-general-supplement-timing"
+        ],
+        "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Official product guidance uses cool, dry storage or gives no refrigerator requirement; keep away from heat, sunlight, and moisture rather than putting it in the fridge.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-sunday-astaxanthin-12-bioastin"
         ],
         "sourceStatus": "official_page"
       }
@@ -3881,6 +4057,17 @@
           "reference-sunday-time-of-day"
         ],
         "sourceStatus": "ingredient_researched"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Official product guidance uses cool, dry storage or gives no refrigerator requirement; keep away from heat, sunlight, and moisture rather than putting it in the fridge.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-sunday-coq10-kaneka-ubiquinol-200"
+        ],
+        "sourceStatus": "official_page"
       }
     },
     {
@@ -3944,6 +4131,17 @@
           "website-sunday-liposomal-vitamin-c-zinc"
         ],
         "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": true,
+        "mode": "refrigerate",
+        "label": "Refrigerate",
+        "note": "Sunday Natural says refrigeration is ideal before and during use; use within 8 weeks after opening and do not freeze.",
+        "avoidFreezing": true,
+        "sourceIds": [
+          "website-sunday-liposomal-vitamin-c-zinc"
+        ],
+        "sourceStatus": "official_page"
       }
     },
     {
@@ -3994,6 +4192,17 @@
         ],
         "avoidSlots": [],
         "note": "Swanson describes Apigenin around restorative sleep and stress relief; use evening as the catalog timing slot unless personal response differs.",
+        "sourceIds": [
+          "website-swanson-apigenin-50"
+        ],
+        "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Swanson lists cool, dry storage for this capsule product; no fridge storage is indicated.",
+        "avoidFreezing": false,
         "sourceIds": [
           "website-swanson-apigenin-50"
         ],
@@ -4063,6 +4272,17 @@
           "website-now-l-theanine-200"
         ],
         "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "NOW lists cool, dry storage after opening for this capsule product; no fridge storage is indicated.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-now-l-theanine-200"
+        ],
+        "sourceStatus": "official_page"
       }
     },
     {
@@ -4115,6 +4335,17 @@
         ],
         "avoidSlots": [],
         "note": "Natural elements recommends 1 capsule three times daily and says the daily dose can also be taken at once or spread through the day, preferably with or after meals.",
+        "sourceIds": [
+          "website-natural-elements-magnesium-bisglycinat"
+        ],
+        "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Natural Elements lists closed, cool, dry, light-protected storage for this capsule product; no fridge storage is indicated.",
+        "avoidFreezing": false,
         "sourceIds": [
           "website-natural-elements-magnesium-bisglycinat"
         ],

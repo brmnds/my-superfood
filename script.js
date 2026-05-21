@@ -2416,9 +2416,11 @@ function renderSupplements() {
   const tabs = document.querySelectorAll(".tab-button");
   const filters = document.querySelectorAll("[data-catalog-filter]");
   const protocolTimingButtons = document.querySelectorAll("[data-protocol-timing]");
+  const protocolStorageButtons = document.querySelectorAll("[data-protocol-storage]");
   let activeTab = "ingredients";
   let activeFilter = "all";
   let activeProtocolTiming = "all";
+  let activeProtocolStorage = "all";
   let catalog = { supplements: [], products: [] };
   const expandedProducts = new Set();
   let highlightedSupplementId = "";
@@ -2487,6 +2489,18 @@ function renderSupplements() {
     return slot;
   }
 
+  function storageStatusLabel(status) {
+    if (status === "official_page") return "Official page";
+    return "Storage needs review";
+  }
+
+  function storageModeLabel(mode) {
+    if (mode === "refrigerate") return "Refrigerate";
+    if (mode === "cool_dry") return "Cool, dry";
+    if (mode === "room_temperature") return "Room temp";
+    return "Storage review";
+  }
+
   function timingMarkup(entry) {
     const timing = entry?.timing;
     if (!timing || timing.sourceStatus === "needs_review" || !(timing.slots || []).length) {
@@ -2519,12 +2533,45 @@ function renderSupplements() {
     return `<a class="shop-link" href="${escapeHtml(product.shopUrl)}" target="_blank" rel="noopener">Official shop</a>`;
   }
 
+  function storageMarkup(product) {
+    const storage = product?.storage;
+    if (!storage || storage.sourceStatus === "needs_review") {
+      const note = storage?.note || "Storage guidance needs review.";
+      return `<div class="storage-row"><span class="storage-review" title="${escapeHtml(note)}">Storage needs review</span></div>`;
+    }
+
+    const label = storage.label || storageModeLabel(storage.mode);
+    const noteParts = [
+      storage.note,
+      storage.avoidFreezing ? "Do not freeze." : "",
+      `Source status: ${storageStatusLabel(storage.sourceStatus)}.`,
+    ].filter(Boolean);
+    const note = noteParts.join(" ");
+    const isFridge = storage.requiresRefrigeration === true || storage.mode === "refrigerate";
+    return `
+      <div class="storage-row" aria-label="${escapeHtml(note)}">
+        <span class="storage-chip ${isFridge ? "storage-refrigerate" : "storage-cool"}" tabindex="0" aria-label="${escapeHtml(`${label}. ${note}`)}">
+          ${isFridge ? `
+            <span class="storage-snowflake" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3v18M5 7l14 10M19 7 5 17M8 4l4 3 4-3M8 20l4-3 4 3M3.5 10.5l4.5 1.5-4.5 1.5M20.5 10.5 16 12l4.5 1.5" />
+              </svg>
+            </span>
+          ` : ""}
+          <span>${escapeHtml(label)}</span>
+          <span class="timing-tooltip" role="tooltip">${escapeHtml(note)}</span>
+        </span>
+      </div>
+    `;
+  }
+
   function productNameCell(product) {
     return `
       <div class="catalog-name-cell">
         <strong>${escapeHtml(product.name)}</strong>
         <span>${escapeHtml(product.productType)}</span>
         ${timingMarkup(product)}
+        ${storageMarkup(product)}
         ${shopLink(product)}
       </div>
     `;
@@ -2753,16 +2800,29 @@ function renderSupplements() {
       entry.classList.toggle("active", selected);
       entry.setAttribute("aria-pressed", selected ? "true" : "false");
     });
-    updateProtocolTimingFilter();
+    updateProtocolFilters();
   }
 
-  function updateProtocolTimingFilter() {
+  function setActiveProtocolStorage(nextStorage) {
+    activeProtocolStorage = nextStorage;
+    protocolStorageButtons.forEach((entry) => {
+      const selected = entry.dataset.protocolStorage === nextStorage;
+      entry.classList.toggle("active", selected);
+      entry.setAttribute("aria-pressed", selected ? "true" : "false");
+    });
+    updateProtocolFilters();
+  }
+
+  function updateProtocolFilters() {
     document.querySelectorAll("[data-protocol-product]").forEach((button) => {
       const product = catalog.products.find((entry) => entry.id === button.dataset.protocolProduct);
       const slots = product?.timing?.slots || [];
-      const matches = activeProtocolTiming === "all" || slots.includes(activeProtocolTiming);
+      const matchesTiming = activeProtocolTiming === "all" || slots.includes(activeProtocolTiming);
+      const matchesStorage = activeProtocolStorage === "all" || product?.storage?.requiresRefrigeration === true;
+      const matches = matchesTiming && matchesStorage;
       button.classList.toggle("protocol-muted", !matches);
-      if (product?.timing?.note) button.title = product.timing.note;
+      const titleParts = [product?.timing?.note, product?.storage?.note].filter(Boolean);
+      if (titleParts.length) button.title = titleParts.join(" ");
     });
   }
 
@@ -2799,7 +2859,7 @@ function renderSupplements() {
     if (activeTab === "ingredients") renderIngredients();
     bindSaveButtons();
     bindIngredientLinks();
-    updateProtocolTimingFilter();
+    updateProtocolFilters();
   }
 
   async function fetchCatalog() {
@@ -2867,6 +2927,13 @@ function renderSupplements() {
     button.setAttribute("aria-pressed", button.classList.contains("active") ? "true" : "false");
     button.addEventListener("click", () => {
       setActiveProtocolTiming(button.dataset.protocolTiming || "all");
+    });
+  });
+
+  protocolStorageButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const nextStorage = activeProtocolStorage === button.dataset.protocolStorage ? "all" : button.dataset.protocolStorage;
+      setActiveProtocolStorage(nextStorage || "all");
     });
   });
 

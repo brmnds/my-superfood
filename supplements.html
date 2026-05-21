@@ -76,11 +76,19 @@
           </div>
         </div>
         <div class="protocol-content">
-          <div class="protocol-timing-filter" aria-label="Protocol timing filter">
-            <button class="active" type="button" data-protocol-timing="all">All</button>
-            <button type="button" data-protocol-timing="morning">Morning</button>
-            <button type="button" data-protocol-timing="daytime">Daytime</button>
-            <button type="button" data-protocol-timing="evening">Evening</button>
+          <div class="protocol-controls">
+            <div class="protocol-timing-filter" aria-label="Protocol timing filter">
+              <button class="active" type="button" data-protocol-timing="all">All</button>
+              <button type="button" data-protocol-timing="morning">Morning</button>
+              <button type="button" data-protocol-timing="daytime">Daytime</button>
+              <button type="button" data-protocol-timing="evening">Evening</button>
+            </div>
+            <button class="protocol-storage-filter" type="button" data-protocol-storage="refrigerated" aria-pressed="false" title="Show supplement kits that should be refrigerated">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M12 3v18M5 7l14 10M19 7 5 17M8 4l4 3 4-3M8 20l4-3 4 3M3.5 10.5l4.5 1.5-4.5 1.5M20.5 10.5 16 12l4.5 1.5" />
+              </svg>
+              <span class="visually-hidden">Show refrigerated supplement kits</span>
+            </button>
           </div>
           <div class="protocol-stack" aria-label="Tilman's supplements">
             <button type="button" data-protocol-product="blueprint-essential-capsules">Daily Essentials</button>

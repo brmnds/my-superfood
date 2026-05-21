@@ -72,6 +72,33 @@ Allowed timing source statuses are:
 
 Use official product directions first. If they only say "with food" or "before meals", avoid overclaiming exact clock time. If an ingredient can feel stimulating, use conservative earlier-day wording and explain the uncertainty. If timing depends on medication, condition, tolerance, or clinician advice, keep the note neutral.
 
+## Storage And Refrigeration
+
+Supplement Products should include storage guidance when the provider page or package label gives enough evidence. Store it as:
+
+```json
+{
+  "requiresRefrigeration": false,
+  "mode": "cool_dry",
+  "label": "Cool, dry",
+  "note": "Short hover explanation.",
+  "avoidFreezing": false,
+  "sourceIds": ["website-example"],
+  "sourceStatus": "official_page"
+}
+```
+
+Allowed storage modes are:
+
+- `refrigerate`: the product should be stored in the refrigerator.
+- `cool_dry`: the product should be stored cool and dry, away from heat, sunlight, or moisture; this is not a refrigerator instruction.
+- `room_temperature`: the product is described or treated as shelf-stable at normal room temperature.
+- `needs_review`: storage is unclear.
+
+Only mark `requiresRefrigeration: true` when the official product page or package label explicitly says to refrigerate or keep refrigerated. Do not treat "cool", "cool dry place", or "protected from heat" as refrigerator guidance. Refrigerators can introduce moisture and may be unsuitable for some capsules, powders, or tablets unless the provider specifically recommends fridge storage.
+
+As of the 2026-05-21 review, the only current Tilman protocol product marked as refrigerator storage is Sunday Natural Liposomal Vitamin C + Zinc. Sunday Natural says refrigeration is ideal before and during use, to use it within 8 weeks after opening, and not to freeze it.
+
 ## Reseeding
 
 The reviewed source of truth is:
