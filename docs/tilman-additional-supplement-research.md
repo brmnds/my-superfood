@@ -1,0 +1,35 @@
+# Tilman Additional Supplement Research
+
+Capture date: 2026-05-21
+
+This note records mixed-provider supplement products Tilman provided through package photos and official product pages. These products are stored as **Supplement Products** and connected to primitive **Supplement** rows such as Apigenin, L-Theanine, Inositol, and Magnesium.
+
+This is informational catalog data, not medical advice or personalized dosing guidance.
+
+## Source Policy
+
+- Use official provider product pages as the preferred evidence source for exact supplement-facts data, shop links, and directions.
+- Use package photos supplied by Tilman as provenance, front-label verification, and fallback evidence.
+- Store every purchasable bottle as a Supplement Product / Supplement Kit.
+- Store ingredients as primitive Supplement references through `supplementId`.
+- Mark products as included in `Tilman's supplement protocol` when Tilman confirms he takes them.
+
+## Products
+
+| Product | Provider | Recommended intake / directions | Key label amounts stored | Timing slot |
+| --- | --- | --- | --- | --- |
+| Apigenin 50 mg | Swanson | 1 vegan capsule daily with water | Apigenin 50 mg per capsule | Evening |
+| L-Theanine Double Strength 200 mg | NOW Foods | 1 capsule 1-2 times daily as needed, preferably on an empty stomach | L-Theanine 200 mg and Inositol 100 mg per capsule | Daytime / evening |
+| Magnesium bisglycinat | natural elements | 1 capsule 3 times daily; daily dose can also be taken at once or spread through the day, preferably with or after meals | Magnesium 300 mg per 3-capsule daily dose | Morning / daytime / evening |
+
+## Official URLs
+
+- Swanson Apigenin 50 mg: https://www.swansonvitamins.com/p/swanson-ultra-apigenin-50-mg-90-caps
+- NOW Foods L-Theanine Double Strength 200 mg: https://www.nowfoods.com/products/supplements/l-theanine-double-strength-200-mg-veg-capsules
+- natural elements Magnesiumbisglycinat: https://my-ne.com/products/magnesiumbisglycinat-kapseln
+
+## Package Photo Evidence
+
+- `Photo 1.jpg`: Swanson Apigenin front label; confirms Apigenin, 50 mg per capsule, 90 capsules.
+- `Photo 2.jpg`: NOW Double Strength L-Theanine front label; confirms L-Theanine 200 mg, with Inositol, 120 veg capsules.
+- `Photo 3.jpg`: natural elements Magnesium bisglycinat front label; confirms product name, 180 capsules, vegan.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "captureDate": "2026-05-18",
+  "captureDate": "2026-05-21",
   "sourcePolicy": "Official provider supplement facts first when exact; package photos are verification evidence and fallback. Mark uncertain reads as needs_review.",
   "supplements": [
     {
@@ -40,12 +40,16 @@
       "id": "magnesium",
       "name": "Magnesium",
       "aliases": [
-        "Magnesium Citrate"
+        "Magnesium Citrate",
+        "Magnesium Bisglycinate",
+        "Magnesium Glycinate",
+        "Magnesium Chelate"
       ],
       "purpose": "Mineral commonly used for muscle, mood, and sleep-support contexts.",
       "categories": [
         "essentials",
-        "recovery"
+        "recovery",
+        "brain"
       ],
       "recommendedDailyAmount": {
         "min": null,
@@ -62,8 +66,9 @@
           "evening"
         ],
         "avoidSlots": [],
-        "note": "Magnesium timing is flexible; daytime or evening can fit, while product directions and stomach tolerance should lead.",
+        "note": "Magnesium timing is flexible; the natural elements directions allow the daily dose at once or spread through the day, preferably with or after meals.",
         "sourceIds": [
+          "website-natural-elements-magnesium-bisglycinat",
           "website-sunday-magnesium-active-calm",
           "reference-sunday-time-of-day"
         ],
@@ -228,14 +233,15 @@
       "sourceStatus": "needs_review",
       "timing": {
         "slots": [
+          "daytime",
           "evening"
         ],
         "avoidSlots": [],
-        "note": "These calm/recovery-oriented amino acids are commonly placed in an evening routine, but personal response varies.",
+        "note": "NOW positions L-Theanine for relaxation while maintaining alertness, so daytime or evening can fit depending on the desired routine effect.",
         "sourceIds": [
-          "reference-sunday-time-of-day"
+          "website-now-l-theanine-200"
         ],
-        "sourceStatus": "ingredient_researched"
+        "sourceStatus": "official_page"
       }
     },
     {
@@ -2163,6 +2169,40 @@
         ],
         "sourceStatus": "ingredient_researched"
       }
+    },
+    {
+      "id": "apigenin",
+      "name": "Apigenin",
+      "aliases": [
+        "Bioflavonoid",
+        "Chamomile flavone"
+      ],
+      "purpose": "Plant flavonoid used in calm, sleep, and recovery-support contexts.",
+      "categories": [
+        "brain",
+        "recovery",
+        "longevity"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 50,
+        "max": null,
+        "unit": "mg",
+        "basis": "Swanson Apigenin product serving amount; general daily recommendation needs review.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "evening"
+        ],
+        "avoidSlots": [],
+        "note": "Swanson positions Apigenin for restorative sleep and stress relief; evening is the catalog slot unless personal response differs.",
+        "sourceIds": [
+          "website-swanson-apigenin-50"
+        ],
+        "sourceStatus": "official_page"
+      }
     }
   ],
   "supplementProducts": [
@@ -3905,6 +3945,181 @@
         ],
         "sourceStatus": "official_page"
       }
+    },
+    {
+      "id": "swanson-apigenin-50mg-90-caps",
+      "name": "Apigenin 50 mg",
+      "aliases": [
+        "Swanson Apigenin",
+        "Swanson Ultra Apigenin 50 mg",
+        "SWU375"
+      ],
+      "provider": "Swanson",
+      "productType": "capsules",
+      "purpose": "Apigenin supplement for calm, sleep, and stress-relief support contexts.",
+      "categories": [
+        "brain",
+        "recovery",
+        "longevity"
+      ],
+      "image": "assets/images/magnesium.svg",
+      "ingredients": [
+        {
+          "supplementId": "apigenin",
+          "amount": 50,
+          "unit": "mg",
+          "perServing": "1 vegan capsule daily",
+          "labelNotes": "Swanson supplement facts list Apigenin 50 mg per 1 vegan capsule.",
+          "sourceIds": [
+            "website-swanson-apigenin-50",
+            "photo-swanson-apigenin-front"
+          ]
+        }
+      ],
+      "contains": [
+        "apigenin"
+      ],
+      "sources": [
+        "website-swanson-apigenin-50",
+        "photo-swanson-apigenin-front"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ],
+      "shopUrl": "https://www.swansonvitamins.com/p/swanson-ultra-apigenin-50-mg-90-caps",
+      "timing": {
+        "slots": [
+          "evening"
+        ],
+        "avoidSlots": [],
+        "note": "Swanson describes Apigenin around restorative sleep and stress relief; use evening as the catalog timing slot unless personal response differs.",
+        "sourceIds": [
+          "website-swanson-apigenin-50"
+        ],
+        "sourceStatus": "official_page"
+      }
+    },
+    {
+      "id": "now-l-theanine-double-strength-200mg",
+      "name": "L-Theanine Double Strength 200 mg",
+      "aliases": [
+        "NOW Double Strength L-Theanine 200 mg",
+        "L-Theanine 200 mg with Inositol"
+      ],
+      "provider": "NOW Foods",
+      "productType": "capsules",
+      "purpose": "L-Theanine plus inositol supplement for relaxation, calm focus, and stress-management contexts.",
+      "categories": [
+        "brain",
+        "recovery",
+        "energy"
+      ],
+      "image": "assets/images/vitamin-d3-k2.svg",
+      "ingredients": [
+        {
+          "supplementId": "l-theanine",
+          "amount": 200,
+          "unit": "mg",
+          "perServing": "1 veg capsule; directions: 1 capsule 1-2 times daily as needed",
+          "labelNotes": "NOW supplement facts list L-Theanine 200 mg per 1 veg capsule.",
+          "sourceIds": [
+            "website-now-l-theanine-200",
+            "photo-now-l-theanine-front"
+          ]
+        },
+        {
+          "supplementId": "inositol",
+          "amount": 100,
+          "unit": "mg",
+          "perServing": "1 veg capsule",
+          "labelNotes": "NOW supplement facts list Inositol 100 mg per 1 veg capsule.",
+          "sourceIds": [
+            "website-now-l-theanine-200"
+          ]
+        }
+      ],
+      "contains": [
+        "l-theanine",
+        "inositol"
+      ],
+      "sources": [
+        "website-now-l-theanine-200",
+        "photo-now-l-theanine-front"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ],
+      "shopUrl": "https://www.nowfoods.com/products/supplements/l-theanine-double-strength-200-mg-veg-capsules",
+      "timing": {
+        "slots": [
+          "daytime",
+          "evening"
+        ],
+        "avoidSlots": [],
+        "note": "NOW describes L-Theanine as promoting relaxation while maintaining alertness; daytime or evening can both fit depending on the use case.",
+        "sourceIds": [
+          "website-now-l-theanine-200"
+        ],
+        "sourceStatus": "official_page"
+      }
+    },
+    {
+      "id": "natural-elements-magnesium-bisglycinat",
+      "name": "Magnesium bisglycinat",
+      "aliases": [
+        "natural elements Magnesiumbisglycinat",
+        "Magnesium Bisglycinate",
+        "Magnesium Chelate"
+      ],
+      "provider": "natural elements",
+      "productType": "capsules",
+      "purpose": "Vegan magnesium bisglycinate supplement for nervous-system, recovery, and muscle-support contexts.",
+      "categories": [
+        "essentials",
+        "brain",
+        "recovery"
+      ],
+      "image": "assets/images/magnesium.svg",
+      "ingredients": [
+        {
+          "supplementId": "magnesium",
+          "amount": 300,
+          "unit": "mg",
+          "perServing": "3 capsules daily; 1 capsule 3 times daily or daily dose spread as needed",
+          "labelNotes": "Natural elements lists 300 mg elemental magnesium per recommended daily dose of 3 capsules.",
+          "sourceIds": [
+            "website-natural-elements-magnesium-bisglycinat",
+            "photo-natural-elements-magnesium-bisglycinat-front"
+          ]
+        }
+      ],
+      "contains": [
+        "magnesium"
+      ],
+      "sources": [
+        "website-natural-elements-magnesium-bisglycinat",
+        "photo-natural-elements-magnesium-bisglycinat-front"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ],
+      "shopUrl": "https://my-ne.com/products/magnesiumbisglycinat-kapseln",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime",
+          "evening"
+        ],
+        "avoidSlots": [],
+        "note": "Natural elements recommends 1 capsule three times daily and says the daily dose can also be taken at once or spread through the day, preferably with or after meals.",
+        "sourceIds": [
+          "website-natural-elements-magnesium-bisglycinat"
+        ],
+        "sourceStatus": "official_page"
+      }
     }
   ],
   "sources": [
@@ -4194,6 +4409,48 @@
       "url": "https://www.nccih.nih.gov/health/ashwagandha",
       "captureDate": "2026-05-20",
       "notes": "NCCIH ashwagandha safety page; used as ingredient-level context for adaptogen timing and cautions."
+    },
+    {
+      "id": "photo-swanson-apigenin-front",
+      "type": "package_photo",
+      "filename": "Photo 1.jpg",
+      "captureDate": "2026-05-21",
+      "notes": "Provided package photo; front label confirms Swanson Apigenin, 50 mg per capsule, 90 capsules."
+    },
+    {
+      "id": "photo-now-l-theanine-front",
+      "type": "package_photo",
+      "filename": "Photo 2.jpg",
+      "captureDate": "2026-05-21",
+      "notes": "Provided package photo; front label confirms NOW Double Strength L-Theanine 200 mg, with Inositol, 120 veg capsules."
+    },
+    {
+      "id": "photo-natural-elements-magnesium-bisglycinat-front",
+      "type": "package_photo",
+      "filename": "Photo 3.jpg",
+      "captureDate": "2026-05-21",
+      "notes": "Provided package photo; front label confirms natural elements Magnesium bisglycinat, 180 capsules, vegan."
+    },
+    {
+      "id": "website-swanson-apigenin-50",
+      "type": "official_page",
+      "url": "https://www.swansonvitamins.com/p/swanson-ultra-apigenin-50-mg-90-caps",
+      "captureDate": "2026-05-21",
+      "notes": "Official Swanson page used for shop link, serving amount, directions, and sleep/stress-relief positioning."
+    },
+    {
+      "id": "website-now-l-theanine-200",
+      "type": "official_page",
+      "url": "https://www.nowfoods.com/products/supplements/l-theanine-double-strength-200-mg-veg-capsules",
+      "captureDate": "2026-05-21",
+      "notes": "Official NOW Foods page used for shop link, supplement facts, serving amount, and suggested usage."
+    },
+    {
+      "id": "website-natural-elements-magnesium-bisglycinat",
+      "type": "official_page",
+      "url": "https://my-ne.com/products/magnesiumbisglycinat-kapseln",
+      "captureDate": "2026-05-21",
+      "notes": "Official natural elements page used for shop link, magnesium amount, capsule directions, and meal timing."
     }
   ]
 }

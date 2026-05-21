@@ -227,6 +227,12 @@ For Sunday Natural products, use the exact official product page that matches th
 docs/sunday-natural-supplement-research.md
 ```
 
+Mixed-provider products from Swanson, NOW Foods, natural elements, and similar brands follow the same rule: exact official product page first, Tilman's package photo as provenance, and ingredient rows linked back to primitive supplements. The current mixed-provider research note is:
+
+```text
+docs/tilman-additional-supplement-research.md
+```
+
 Every product ingredient must reference a supplement primitive through `supplementId`. Exact per-serving product amounts live on product ingredient rows. General daily recommendation ranges live on supplement rows and are informational only, not medical advice.
 
 Allowed source statuses:

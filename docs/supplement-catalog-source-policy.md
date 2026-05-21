@@ -32,6 +32,12 @@ For Sunday Natural products, use the exact product page matching the ordered nam
 docs/sunday-natural-supplement-research.md
 ```
 
+For non-Sunday, non-Blueprint products such as Swanson, NOW Foods, or natural elements, use the exact official provider product page for shop links, supplement facts, directions, and timing context. Use Tilman's package photos as provenance and cross-check evidence. The current mixed-provider research note is:
+
+```text
+docs/tilman-additional-supplement-research.md
+```
+
 ## Source Status
 
 Allowed values:

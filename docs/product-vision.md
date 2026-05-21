@@ -100,6 +100,7 @@ Supplements can include:
 - Supplements Tilman Resch is actually using.
 - Supplements that are generally recommended.
 - Supplements recommended by specific public figures, protocols, or sources.
+- Supplement kits from multiple providers, including Blueprint/Bryan Johnson, Sunday Natural, Swanson, NOW Foods, natural elements, and future brands.
 
 Each supplement should be able to show recommendation/source labels, for example:
 
@@ -113,6 +114,8 @@ There should be a dedicated section for supplements recommended by Bryan Johnson
 The same supplement may have multiple labels. For example, a supplement can be both recommended by Bryan Johnson and marked as actually taken by Tilman Resch.
 
 Tilman's supplement protocol should act as a navigation layer into the catalog: clicking a named supplement kit in the stack should switch to the Supplement Kits tab, scroll to the matching product row, and highlight it.
+
+Each Supplement Kit must reference primitive supplements rather than storing ingredients only as free text. For example, a NOW L-Theanine kit references `l-theanine` and `inositol`; a magnesium bisglycinate kit references `magnesium`; a Swanson Apigenin kit references `apigenin`.
 
 Supplement cards or detail pages should make the distinction clear between:
 
