@@ -37,6 +37,16 @@ If you use `python3 -m http.server 4173` directly, open the physical `.html` fil
 
 This repo currently has no package manager or frontend build step. It does not require `npm install`.
 
+Frontend JavaScript uses native ES modules:
+
+- `script.js` is the small browser entrypoint and dispatches by `body[data-page]`.
+- `assets/js/data/foods.mjs` and `assets/js/data/recipes.mjs` hold static catalog data.
+- `assets/js/home.mjs`, `assets/js/foods-page.mjs`, `assets/js/recipes-page.mjs`, and `assets/js/supplements-page.mjs` render page-specific UI.
+- `assets/js/saved-list.mjs` owns saved-list persistence and LuminaOS auth/session helpers.
+- `assets/js/navigation.mjs` and `assets/js/shared.mjs` hold shared header and utility code.
+
+All public pages load `script.js` with `<script type="module">`; keep the site no-build unless there is a clear product reason to introduce a bundler.
+
 Saved lists use a small AWS backend:
 
 - DynamoDB table: `my-superfood-list-items`
@@ -55,7 +65,7 @@ The supplement catalog has a separate read-only DynamoDB/Lambda path with local 
 - Tables: `my-superfood-supplements`, `my-superfood-supplement-products`
 - Catalog API: `https://z4kxvkidmk35kelru4rrjbbsbi0gcpqt.lambda-url.eu-central-1.on.aws`
 - Routes: `GET /supplements`, `GET /products`
-- Frontend behavior: fetch the catalog API first, then fall back to the reviewed seed JSON if the API is unavailable.
+- Frontend behavior: use a fresh 5-minute local catalog cache, fetch the live catalog API when stale, fall back to stale cache if the API is unavailable, and finally fall back to the reviewed seed JSON.
 - Supplement Product rows can include official `shopUrl` links and source-backed `timing` guidance. Timing is informational only and is shown with quiet morning/day/evening icons plus hover notes.
 
 See `docs/database.md`.

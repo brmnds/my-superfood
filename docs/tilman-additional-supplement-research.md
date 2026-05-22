@@ -21,7 +21,7 @@ This is informational catalog data, not medical advice or personalized dosing gu
 | Apigenin 50 mg | Swanson | 1 vegan capsule daily with water | Apigenin 50 mg per capsule | Evening |
 | L-Theanine Double Strength 200 mg | NOW Foods | 1 capsule 1-2 times daily as needed, preferably on an empty stomach | L-Theanine 200 mg and Inositol 100 mg per capsule | Daytime / evening |
 | Magnesium bisglycinat | natural elements | 1 capsule 3 times daily; daily dose can also be taken at once or spread through the day, preferably with or after meals | Magnesium 300 mg per 3-capsule daily dose | Morning / daytime / evening |
-| Trans-Resveratrol with Red Wine Polyphenols 510 mg | WeightWorld | Current WeightWorld guidance says daily with a meal; the photographed older 510 mg bottle needs back-label confirmation | Package front confirms 510 mg per capsule; older third-party listing suggests 500 mg trans-resveratrol plus black pepper extract, while red-wine-polyphenol amount needs review | Daytime |
+| Trans-Resveratrol with Red Wine Polyphenols 510 mg | WeightWorld | Current WeightWorld guidance for the newer formula says 1 capsule daily with a meal; the older 510 mg reference listing says 2 capsules daily with food | Package front confirms 510 mg per capsule. Older third-party listing describes 500 mg trans-resveratrol 98% from Japanese knotweed, 10 mg black pepper extract (20:1), red wine polyphenols 1% from grape skin, HPMC capsule shell, and magnesium stearate. Exact older back-label confirmation still needs review | Daytime |
 
 ## Official URLs
 
@@ -37,7 +37,7 @@ This is informational catalog data, not medical advice or personalized dosing gu
 - Swanson Apigenin: store cool and dry; no refrigerator storage is indicated on the official product page.
 - NOW Foods L-Theanine: store cool and dry after opening; no refrigerator storage is indicated on the official product page.
 - natural elements Magnesiumbisglycinat: store closed, cool, dry, protected from light, and out of reach of small children; this is not a refrigerator instruction.
-- WeightWorld Trans-Resveratrol: current WeightWorld storage guidance says cool and dry, out of reach of children. This is not a refrigerator instruction.
+- WeightWorld Trans-Resveratrol: current WeightWorld storage guidance says cool and dry, out of reach of children. This is not a refrigerator instruction. The current official page is a newer 550 mg trans-resveratrol + quercetin formula, so storage/timing context is accepted but the photographed 510 mg ingredient facts remain `needs_review` until a back-label or archived official page confirms them.
 
 For the broader Tilman protocol, the current refrigerator-specific item is Sunday Natural Liposomal Vitamin C + Zinc. Sunday Natural states that the liquid should be refrigerated before/during use, used within 8 weeks after opening, and not frozen. Other capsule, tablet, softgel, powder, and drop products are marked as cool/dry or room-temperature unless their official source explicitly says fridge storage.
 

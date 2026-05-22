@@ -38,7 +38,7 @@ For non-Sunday, non-Blueprint products such as Swanson, NOW Foods, or natural el
 docs/tilman-additional-supplement-research.md
 ```
 
-If a photographed product appears to be an older or discontinued formula and the official provider page now points to a newer formula, keep the photographed product as the catalog item, mark uncertain per-ingredient amounts as `needs_review`, and document that the current official page is only being used for provider, shop-link, timing, or storage context.
+If a photographed product appears to be an older or discontinued formula and the official provider page now points to a newer formula, keep the photographed product as the catalog item, mark uncertain per-ingredient amounts as `needs_review`, and document that the current official page is only being used for provider, shop-link, timing, or storage context. Older third-party listings can support research notes and label caveats, but exact ingredient certainty still requires a readable package/back-label photo or archived official provider page.
 
 ## Source Status
 
@@ -127,4 +127,4 @@ The frontend tries the live read-only catalog API first:
 https://z4kxvkidmk35kelru4rrjbbsbi0gcpqt.lambda-url.eu-central-1.on.aws
 ```
 
-If the API is unavailable, it falls back to the reviewed seed file so the public page still renders.
+The browser keeps a 5-minute `localStorage` cache for public supplement catalog data. It uses the fresh cache first, refreshes from the live API when stale, falls back to stale cache during API trouble, and then falls back to the reviewed seed file so the public page still renders.

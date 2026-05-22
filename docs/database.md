@@ -189,13 +189,21 @@ Allowed CORS origins:
 
 The UI still calls these rows "Supplement Products" in docs and user-facing copy. The API route is shorter: `/products`.
 
-`supplements.html` fetches the catalog API first. If the API fails or is unavailable, the page renders the reviewed static fallback from:
+`supplements.html` keeps a small public catalog cache in browser `localStorage`:
+
+```text
+my-superfood-supplement-catalog-cache-v1
+```
+
+The cache stores only public supplement catalog documents, never auth/session/list data. It uses a 5-minute TTL to match the API `cache-control: public, max-age=300` header. The frontend uses a fresh cache immediately; when the cache is stale it fetches the live catalog API first, falls back to stale cache if the API fails, and finally renders the reviewed static fallback from:
 
 ```text
 data/supplement-catalog.seed.json
 ```
 
 This keeps the public catalog usable while preserving DynamoDB as the deployed source for catalog reads.
+
+The catalog Lambda also keeps module-scope in-memory caches for `/supplements` and `/products` for 5 minutes inside warm Lambda containers. This avoids repeated DynamoDB scans during normal browsing while keeping reseeded catalog changes visible after the short TTL or a cold start.
 
 Smoke test catalog reads:
 

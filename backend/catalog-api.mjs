@@ -3,6 +3,8 @@ import { DynamoDBClient, ScanCommand } from "@aws-sdk/client-dynamodb";
 const supplementsTable = process.env.SUPPLEMENTS_TABLE;
 const productsTable = process.env.SUPPLEMENT_PRODUCTS_TABLE;
 const ddb = new DynamoDBClient({});
+const cacheTtlMs = 5 * 60 * 1000;
+const documentCache = new Map();
 
 function headersFor() {
   return {
@@ -34,6 +36,16 @@ async function scanDocuments(tableName) {
   return items.sort((a, b) => a.name.localeCompare(b.name));
 }
 
+async function cachedDocuments(cacheKey, tableName) {
+  const now = Date.now();
+  const cached = documentCache.get(cacheKey);
+  if (cached && cached.expiresAt > now) return cached.items;
+
+  const items = await scanDocuments(tableName);
+  documentCache.set(cacheKey, { expiresAt: now + cacheTtlMs, items });
+  return items;
+}
+
 export const handler = async (event) => {
   const method = event.requestContext?.http?.method || event.httpMethod || "GET";
   const rawPath = event.rawPath || event.path || "/";
@@ -55,11 +67,11 @@ export const handler = async (event) => {
 
   try {
     if (path === "/supplements") {
-      return response(event, 200, { supplements: await scanDocuments(supplementsTable) });
+      return response(event, 200, { supplements: await cachedDocuments("supplements", supplementsTable) });
     }
 
     if (path === "/products") {
-      return response(event, 200, { products: await scanDocuments(productsTable) });
+      return response(event, 200, { products: await cachedDocuments("products", productsTable) });
     }
 
     return response(event, 404, { error: "Not found" });

@@ -79,6 +79,8 @@ curl -s -i "https://my-superfood.com/api/list?clientId=codex-anonymous-smoke"
 
 The catalog API is read-only. It serves public supplement catalog documents from DynamoDB and stays separate from the saved-list API.
 
+`backend/catalog-api.mjs` uses short module-scope in-memory caches for `/supplements` and `/products`. Warm Lambda containers reuse scanned DynamoDB results for 5 minutes and responses keep `cache-control: public, max-age=300`. Reseeded data may therefore take up to 5 minutes, or a cold Lambda container, to appear through the Function URL.
+
 Create the catalog tables:
 
 ```bash
@@ -97,7 +99,7 @@ node scripts/validate-supplement-catalog.mjs
 node scripts/seed-supplement-catalog.mjs
 ```
 
-The seed validator also checks official `shopUrl` values and the supplement `timing` shape. Timing is source-backed informational catalog metadata and is stored inside each DynamoDB document without backend transformation.
+The seed validator also checks official `shopUrl` values and the supplement `timing` shape. Timing and storage are source-backed informational catalog metadata and are stored inside each DynamoDB document without backend transformation.
 
 If deploying the catalog Lambda from scratch, create the role and attach the read-only policy:
 
