@@ -8,7 +8,7 @@ The first version is intentionally simple: plain HTML, CSS, and JavaScript with 
 
 - `index.html` - interactive Apple Watch-style superfood landing page.
 - `foods.html` - list/catalog view of superfoods.
-- `supplements.html` - table-first supplement product and ingredient catalog with source labels.
+- `supplements.html` - searchable table-first supplement product and ingredient catalog with source labels.
 - `recipes.html` - healthy recipe feature page.
 - `lists.html` - tabbed saved-list workspace for foods, supplements, and recipes, powered by browser `localStorage`, anonymous DynamoDB sync, and optional LuminaOS account sync.
 - `luminaos.html` - LuminaOS handoff page.
@@ -67,6 +67,7 @@ The supplement catalog has a separate read-only DynamoDB/Lambda path with local 
 - Routes: `GET /supplements`, `GET /products`
 - Frontend behavior: use a fresh 5-minute local catalog cache, fetch the live catalog API when stale, fall back to stale cache if the API is unavailable, and finally fall back to the reviewed seed JSON.
 - Supplement Product rows can include official `shopUrl` links and source-backed `timing` guidance. Timing is informational only and is shown with quiet morning/day/evening icons plus hover notes.
+- The supplements page includes a compact search field next to the `Supplements` / `Supplement Kits` tabs. It searches the active tab by title, subtitle/alias metadata, purpose, categories, and kit ingredients where relevant.
 
 See `docs/database.md`.
 
@@ -84,6 +85,13 @@ Steering docs:
 Image validation:
 
 - `docs/image-validation.md`
+
+Food image optimization:
+
+- Original food image files are backed up locally under ignored `assets/images/originals/`.
+- Landing bubbles use generated `assets/images/optimized/landing/*.jpg` variants at up to `320x320`.
+- Food catalog cards and landing detail images use generated `assets/images/optimized/catalog/*.jpg` variants at up to `640x640`.
+- Regenerate variants with `node scripts/generate-food-image-variants.mjs` after adding or replacing food images.
 
 SEO and generative search:
 

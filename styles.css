@@ -1129,14 +1129,15 @@ h2 {
   border: 1px solid var(--line);
   border-radius: 12px;
   box-shadow: var(--shadow-soft);
-  padding: 8px;
+  gap: 10px;
+  padding: 7px;
 }
 
 .tab-list,
 .category-filter-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 7px;
 }
 
 .supplement-browser .tab-list {
@@ -1149,9 +1150,37 @@ h2 {
 }
 
 .supplement-browser .category-filter-row .filter-button {
-  font-size: 0.76rem;
+  font-size: 0.71rem;
+  min-height: 30px;
+  padding: 6px 8px;
+}
+
+.catalog-search {
+  flex: 0 1 190px;
+  min-width: 160px;
+}
+
+.catalog-search input {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 750;
   min-height: 32px;
-  padding: 7px 10px;
+  outline: none;
+  padding: 7px 12px;
+  width: 100%;
+}
+
+.catalog-search input::placeholder {
+  color: var(--muted);
+  opacity: 0.78;
+}
+
+.catalog-search input:focus {
+  border-color: rgba(46, 125, 50, 0.48);
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.14);
 }
 
 .tab-button {
@@ -1160,9 +1189,10 @@ h2 {
   border-radius: 8px;
   color: var(--muted);
   cursor: pointer;
+  font-size: 0.84rem;
   font-weight: 850;
-  min-height: 42px;
-  padding: 10px 16px;
+  min-height: 34px;
+  padding: 7px 11px;
 }
 
 .tab-button.active {
@@ -1908,6 +1938,12 @@ h2 {
   .table-toolbar {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .catalog-search {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: 100%;
   }
 
   .category-filter-row .filter-button {

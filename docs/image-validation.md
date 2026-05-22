@@ -1,6 +1,6 @@
 # Image Validation
 
-Last validated: 2026-05-17
+Last validated: 2026-05-22
 
 This report validates current My Superfood images against the picture steering files:
 
@@ -8,6 +8,23 @@ This report validates current My Superfood images against the picture steering f
 - `steering/pictures-recipes.md`
 - `steering/pictures-supplements.md`
 - `steering/pictures-brand.md`
+
+## Optimization Variants
+
+The original food image files are preserved locally in an ignored backup folder:
+
+```text
+assets/images/originals/
+```
+
+The public UI uses generated optimized variants:
+
+- Landing-page food bubbles: `assets/images/optimized/landing/*.jpg`, maximum `320x320`.
+- Food catalog and landing detail card: `assets/images/optimized/catalog/*.jpg`, maximum `640x640`.
+- Variant manifest: `assets/images/optimized/food-image-variants.json`.
+- Regeneration script: `scripts/generate-food-image-variants.mjs`.
+
+As of the 2026-05-22 optimization pass, 100 food image sets were generated. The original food image set is roughly `56 MB`; optimized landing images are roughly `1.7 MB` total, and optimized catalog/detail images are roughly `5.4 MB` total. This keeps the original source assets available locally while avoiding full-size image downloads in the main UI.
 
 ## Food Images
 

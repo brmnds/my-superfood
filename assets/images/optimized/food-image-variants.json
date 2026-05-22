@@ -1,0 +1,521 @@
+{
+  "generatedAt": "2026-05-22T21:51:57.028Z",
+  "source": "assets/js/data/foods.mjs",
+  "ignoredOriginalBackup": "assets/images/originals",
+  "variants": [
+    {
+      "name": "landing",
+      "maxSize": 320,
+      "format": "jpeg",
+      "quality": "70"
+    },
+    {
+      "name": "catalog",
+      "maxSize": 640,
+      "format": "jpeg",
+      "quality": "78"
+    }
+  ],
+  "images": [
+    {
+      "source": "assets/images/real/acai.png",
+      "landing": "assets/images/optimized/landing/acai.jpg",
+      "catalog": "assets/images/optimized/catalog/acai.jpg"
+    },
+    {
+      "source": "assets/images/real/almonds.png",
+      "landing": "assets/images/optimized/landing/almonds.jpg",
+      "catalog": "assets/images/optimized/catalog/almonds.jpg"
+    },
+    {
+      "source": "assets/images/real/artichokes.png",
+      "landing": "assets/images/optimized/landing/artichokes.jpg",
+      "catalog": "assets/images/optimized/catalog/artichokes.jpg"
+    },
+    {
+      "source": "assets/images/real/asparagus.png",
+      "landing": "assets/images/optimized/landing/asparagus.jpg",
+      "catalog": "assets/images/optimized/catalog/asparagus.jpg"
+    },
+    {
+      "source": "assets/images/real/avocado-oil.png",
+      "landing": "assets/images/optimized/landing/avocado-oil.jpg",
+      "catalog": "assets/images/optimized/catalog/avocado-oil.jpg"
+    },
+    {
+      "source": "assets/images/real/avocado.jpg",
+      "landing": "assets/images/optimized/landing/avocado.jpg",
+      "catalog": "assets/images/optimized/catalog/avocado.jpg"
+    },
+    {
+      "source": "assets/images/real/banana.png",
+      "landing": "assets/images/optimized/landing/banana.jpg",
+      "catalog": "assets/images/optimized/catalog/banana.jpg"
+    },
+    {
+      "source": "assets/images/real/beet-greens.png",
+      "landing": "assets/images/optimized/landing/beet-greens.jpg",
+      "catalog": "assets/images/optimized/catalog/beet-greens.jpg"
+    },
+    {
+      "source": "assets/images/real/beets.png",
+      "landing": "assets/images/optimized/landing/beets.jpg",
+      "catalog": "assets/images/optimized/catalog/beets.jpg"
+    },
+    {
+      "source": "assets/images/real/bell-peppers.png",
+      "landing": "assets/images/optimized/landing/bell-peppers.jpg",
+      "catalog": "assets/images/optimized/catalog/bell-peppers.jpg"
+    },
+    {
+      "source": "assets/images/real/black-beans.png",
+      "landing": "assets/images/optimized/landing/black-beans.jpg",
+      "catalog": "assets/images/optimized/catalog/black-beans.jpg"
+    },
+    {
+      "source": "assets/images/real/black-beluga-lentils.png",
+      "landing": "assets/images/optimized/landing/black-beluga-lentils.jpg",
+      "catalog": "assets/images/optimized/catalog/black-beluga-lentils.jpg"
+    },
+    {
+      "source": "assets/images/real/blackberries.png",
+      "landing": "assets/images/optimized/landing/blackberries.jpg",
+      "catalog": "assets/images/optimized/catalog/blackberries.jpg"
+    },
+    {
+      "source": "assets/images/real/blueberries.jpg",
+      "landing": "assets/images/optimized/landing/blueberries.jpg",
+      "catalog": "assets/images/optimized/catalog/blueberries.jpg"
+    },
+    {
+      "source": "assets/images/real/brazil-nuts.png",
+      "landing": "assets/images/optimized/landing/brazil-nuts.jpg",
+      "catalog": "assets/images/optimized/catalog/brazil-nuts.jpg"
+    },
+    {
+      "source": "assets/images/real/broccoli-sprouts.png",
+      "landing": "assets/images/optimized/landing/broccoli-sprouts.jpg",
+      "catalog": "assets/images/optimized/catalog/broccoli-sprouts.jpg"
+    },
+    {
+      "source": "assets/images/real/broccoli.jpg",
+      "landing": "assets/images/optimized/landing/broccoli.jpg",
+      "catalog": "assets/images/optimized/catalog/broccoli.jpg"
+    },
+    {
+      "source": "assets/images/real/brown-rice.png",
+      "landing": "assets/images/optimized/landing/brown-rice.jpg",
+      "catalog": "assets/images/optimized/catalog/brown-rice.jpg"
+    },
+    {
+      "source": "assets/images/real/brussels-sprouts.png",
+      "landing": "assets/images/optimized/landing/brussels-sprouts.jpg",
+      "catalog": "assets/images/optimized/catalog/brussels-sprouts.jpg"
+    },
+    {
+      "source": "assets/images/real/buckwheat.png",
+      "landing": "assets/images/optimized/landing/buckwheat.jpg",
+      "catalog": "assets/images/optimized/catalog/buckwheat.jpg"
+    },
+    {
+      "source": "assets/images/real/bulgur.png",
+      "landing": "assets/images/optimized/landing/bulgur.jpg",
+      "catalog": "assets/images/optimized/catalog/bulgur.jpg"
+    },
+    {
+      "source": "assets/images/real/cabbage.png",
+      "landing": "assets/images/optimized/landing/cabbage.jpg",
+      "catalog": "assets/images/optimized/catalog/cabbage.jpg"
+    },
+    {
+      "source": "assets/images/real/cacao.png",
+      "landing": "assets/images/optimized/landing/cacao.jpg",
+      "catalog": "assets/images/optimized/catalog/cacao.jpg"
+    },
+    {
+      "source": "assets/images/real/cannellini-beans.png",
+      "landing": "assets/images/optimized/landing/cannellini-beans.jpg",
+      "catalog": "assets/images/optimized/catalog/cannellini-beans.jpg"
+    },
+    {
+      "source": "assets/images/real/carrots.png",
+      "landing": "assets/images/optimized/landing/carrots.jpg",
+      "catalog": "assets/images/optimized/catalog/carrots.jpg"
+    },
+    {
+      "source": "assets/images/real/cashews.png",
+      "landing": "assets/images/optimized/landing/cashews.jpg",
+      "catalog": "assets/images/optimized/catalog/cashews.jpg"
+    },
+    {
+      "source": "assets/images/real/cauliflower.png",
+      "landing": "assets/images/optimized/landing/cauliflower.jpg",
+      "catalog": "assets/images/optimized/catalog/cauliflower.jpg"
+    },
+    {
+      "source": "assets/images/real/chia-seeds.png",
+      "landing": "assets/images/optimized/landing/chia-seeds.jpg",
+      "catalog": "assets/images/optimized/catalog/chia-seeds.jpg"
+    },
+    {
+      "source": "assets/images/real/chickpeas.png",
+      "landing": "assets/images/optimized/landing/chickpeas.jpg",
+      "catalog": "assets/images/optimized/catalog/chickpeas.jpg"
+    },
+    {
+      "source": "assets/images/real/cilantro.png",
+      "landing": "assets/images/optimized/landing/cilantro.jpg",
+      "catalog": "assets/images/optimized/catalog/cilantro.jpg"
+    },
+    {
+      "source": "assets/images/real/cinnamon.png",
+      "landing": "assets/images/optimized/landing/cinnamon.jpg",
+      "catalog": "assets/images/optimized/catalog/cinnamon.jpg"
+    },
+    {
+      "source": "assets/images/real/coconut-yogurt.png",
+      "landing": "assets/images/optimized/landing/coconut-yogurt.jpg",
+      "catalog": "assets/images/optimized/catalog/coconut-yogurt.jpg"
+    },
+    {
+      "source": "assets/images/real/dandelion-greens.png",
+      "landing": "assets/images/optimized/landing/dandelion-greens.jpg",
+      "catalog": "assets/images/optimized/catalog/dandelion-greens.jpg"
+    },
+    {
+      "source": "assets/images/real/edamame.png",
+      "landing": "assets/images/optimized/landing/edamame.jpg",
+      "catalog": "assets/images/optimized/catalog/edamame.jpg"
+    },
+    {
+      "source": "assets/images/real/farro.png",
+      "landing": "assets/images/optimized/landing/farro.jpg",
+      "catalog": "assets/images/optimized/catalog/farro.jpg"
+    },
+    {
+      "source": "assets/images/real/flaxseeds.png",
+      "landing": "assets/images/optimized/landing/flaxseeds.jpg",
+      "catalog": "assets/images/optimized/catalog/flaxseeds.jpg"
+    },
+    {
+      "source": "assets/images/real/garlic.png",
+      "landing": "assets/images/optimized/landing/garlic.jpg",
+      "catalog": "assets/images/optimized/catalog/garlic.jpg"
+    },
+    {
+      "source": "assets/images/real/ginger.png",
+      "landing": "assets/images/optimized/landing/ginger.jpg",
+      "catalog": "assets/images/optimized/catalog/ginger.jpg"
+    },
+    {
+      "source": "assets/images/real/green-peas.png",
+      "landing": "assets/images/optimized/landing/green-peas.jpg",
+      "catalog": "assets/images/optimized/catalog/green-peas.jpg"
+    },
+    {
+      "source": "assets/images/real/green-tea.png",
+      "landing": "assets/images/optimized/landing/green-tea.jpg",
+      "catalog": "assets/images/optimized/catalog/green-tea.jpg"
+    },
+    {
+      "source": "assets/images/real/hazelnuts.png",
+      "landing": "assets/images/optimized/landing/hazelnuts.jpg",
+      "catalog": "assets/images/optimized/catalog/hazelnuts.jpg"
+    },
+    {
+      "source": "assets/images/real/hemp-seed-oil.png",
+      "landing": "assets/images/optimized/landing/hemp-seed-oil.jpg",
+      "catalog": "assets/images/optimized/catalog/hemp-seed-oil.jpg"
+    },
+    {
+      "source": "assets/images/real/hemp-seeds.png",
+      "landing": "assets/images/optimized/landing/hemp-seeds.jpg",
+      "catalog": "assets/images/optimized/catalog/hemp-seeds.jpg"
+    },
+    {
+      "source": "assets/images/real/herring.png",
+      "landing": "assets/images/optimized/landing/herring.jpg",
+      "catalog": "assets/images/optimized/catalog/herring.jpg"
+    },
+    {
+      "source": "assets/images/real/kale.png",
+      "landing": "assets/images/optimized/landing/kale.jpg",
+      "catalog": "assets/images/optimized/catalog/kale.jpg"
+    },
+    {
+      "source": "assets/images/real/kidney-beans.png",
+      "landing": "assets/images/optimized/landing/kidney-beans.jpg",
+      "catalog": "assets/images/optimized/catalog/kidney-beans.jpg"
+    },
+    {
+      "source": "assets/images/real/kimchi.png",
+      "landing": "assets/images/optimized/landing/kimchi.jpg",
+      "catalog": "assets/images/optimized/catalog/kimchi.jpg"
+    },
+    {
+      "source": "assets/images/real/kiwi.png",
+      "landing": "assets/images/optimized/landing/kiwi.jpg",
+      "catalog": "assets/images/optimized/catalog/kiwi.jpg"
+    },
+    {
+      "source": "assets/images/real/kohlrabi.png",
+      "landing": "assets/images/optimized/landing/kohlrabi.jpg",
+      "catalog": "assets/images/optimized/catalog/kohlrabi.jpg"
+    },
+    {
+      "source": "assets/images/real/kombucha.png",
+      "landing": "assets/images/optimized/landing/kombucha.jpg",
+      "catalog": "assets/images/optimized/catalog/kombucha.jpg"
+    },
+    {
+      "source": "assets/images/real/leeks.png",
+      "landing": "assets/images/optimized/landing/leeks.jpg",
+      "catalog": "assets/images/optimized/catalog/leeks.jpg"
+    },
+    {
+      "source": "assets/images/real/lemons.png",
+      "landing": "assets/images/optimized/landing/lemons.jpg",
+      "catalog": "assets/images/optimized/catalog/lemons.jpg"
+    },
+    {
+      "source": "assets/images/real/lentils-uncooked.jpg",
+      "landing": "assets/images/optimized/landing/lentils-uncooked.jpg",
+      "catalog": "assets/images/optimized/catalog/lentils-uncooked.jpg"
+    },
+    {
+      "source": "assets/images/real/macadamia-nuts.png",
+      "landing": "assets/images/optimized/landing/macadamia-nuts.jpg",
+      "catalog": "assets/images/optimized/catalog/macadamia-nuts.jpg"
+    },
+    {
+      "source": "assets/images/real/mackerel.png",
+      "landing": "assets/images/optimized/landing/mackerel.jpg",
+      "catalog": "assets/images/optimized/catalog/mackerel.jpg"
+    },
+    {
+      "source": "assets/images/real/matcha.png",
+      "landing": "assets/images/optimized/landing/matcha.jpg",
+      "catalog": "assets/images/optimized/catalog/matcha.jpg"
+    },
+    {
+      "source": "assets/images/real/microgreens.png",
+      "landing": "assets/images/optimized/landing/microgreens.jpg",
+      "catalog": "assets/images/optimized/catalog/microgreens.jpg"
+    },
+    {
+      "source": "assets/images/real/millet.png",
+      "landing": "assets/images/optimized/landing/millet.jpg",
+      "catalog": "assets/images/optimized/catalog/millet.jpg"
+    },
+    {
+      "source": "assets/images/real/miso.png",
+      "landing": "assets/images/optimized/landing/miso.jpg",
+      "catalog": "assets/images/optimized/catalog/miso.jpg"
+    },
+    {
+      "source": "assets/images/real/mushrooms.png",
+      "landing": "assets/images/optimized/landing/mushrooms.jpg",
+      "catalog": "assets/images/optimized/catalog/mushrooms.jpg"
+    },
+    {
+      "source": "assets/images/real/natto.png",
+      "landing": "assets/images/optimized/landing/natto.jpg",
+      "catalog": "assets/images/optimized/catalog/natto.jpg"
+    },
+    {
+      "source": "assets/images/real/oats.png",
+      "landing": "assets/images/optimized/landing/oats.jpg",
+      "catalog": "assets/images/optimized/catalog/oats.jpg"
+    },
+    {
+      "source": "assets/images/real/olive-oil.png",
+      "landing": "assets/images/optimized/landing/olive-oil.jpg",
+      "catalog": "assets/images/optimized/catalog/olive-oil.jpg"
+    },
+    {
+      "source": "assets/images/real/olives.png",
+      "landing": "assets/images/optimized/landing/olives.jpg",
+      "catalog": "assets/images/optimized/catalog/olives.jpg"
+    },
+    {
+      "source": "assets/images/real/oregano.png",
+      "landing": "assets/images/optimized/landing/oregano.jpg",
+      "catalog": "assets/images/optimized/catalog/oregano.jpg"
+    },
+    {
+      "source": "assets/images/real/parsley.png",
+      "landing": "assets/images/optimized/landing/parsley.jpg",
+      "catalog": "assets/images/optimized/catalog/parsley.jpg"
+    },
+    {
+      "source": "assets/images/real/pecans.png",
+      "landing": "assets/images/optimized/landing/pecans.jpg",
+      "catalog": "assets/images/optimized/catalog/pecans.jpg"
+    },
+    {
+      "source": "assets/images/real/pistachios.png",
+      "landing": "assets/images/optimized/landing/pistachios.jpg",
+      "catalog": "assets/images/optimized/catalog/pistachios.jpg"
+    },
+    {
+      "source": "assets/images/real/pomegranate.png",
+      "landing": "assets/images/optimized/landing/pomegranate.jpg",
+      "catalog": "assets/images/optimized/catalog/pomegranate.jpg"
+    },
+    {
+      "source": "assets/images/real/pumpkin-seeds.png",
+      "landing": "assets/images/optimized/landing/pumpkin-seeds.jpg",
+      "catalog": "assets/images/optimized/catalog/pumpkin-seeds.jpg"
+    },
+    {
+      "source": "assets/images/real/pumpkin.png",
+      "landing": "assets/images/optimized/landing/pumpkin.jpg",
+      "catalog": "assets/images/optimized/catalog/pumpkin.jpg"
+    },
+    {
+      "source": "assets/images/real/quinoa.png",
+      "landing": "assets/images/optimized/landing/quinoa.jpg",
+      "catalog": "assets/images/optimized/catalog/quinoa.jpg"
+    },
+    {
+      "source": "assets/images/real/radishes.png",
+      "landing": "assets/images/optimized/landing/radishes.jpg",
+      "catalog": "assets/images/optimized/catalog/radishes.jpg"
+    },
+    {
+      "source": "assets/images/real/red-cabbage.png",
+      "landing": "assets/images/optimized/landing/red-cabbage.jpg",
+      "catalog": "assets/images/optimized/catalog/red-cabbage.jpg"
+    },
+    {
+      "source": "assets/images/real/red-onions.png",
+      "landing": "assets/images/optimized/landing/red-onions.jpg",
+      "catalog": "assets/images/optimized/catalog/red-onions.jpg"
+    },
+    {
+      "source": "assets/images/real/romaine-lettuce.png",
+      "landing": "assets/images/optimized/landing/romaine-lettuce.jpg",
+      "catalog": "assets/images/optimized/catalog/romaine-lettuce.jpg"
+    },
+    {
+      "source": "assets/images/real/rosemary.png",
+      "landing": "assets/images/optimized/landing/rosemary.jpg",
+      "catalog": "assets/images/optimized/catalog/rosemary.jpg"
+    },
+    {
+      "source": "assets/images/real/salmon.png",
+      "landing": "assets/images/optimized/landing/salmon.jpg",
+      "catalog": "assets/images/optimized/catalog/salmon.jpg"
+    },
+    {
+      "source": "assets/images/real/sardines.png",
+      "landing": "assets/images/optimized/landing/sardines.jpg",
+      "catalog": "assets/images/optimized/catalog/sardines.jpg"
+    },
+    {
+      "source": "assets/images/real/sauerkraut.png",
+      "landing": "assets/images/optimized/landing/sauerkraut.jpg",
+      "catalog": "assets/images/optimized/catalog/sauerkraut.jpg"
+    },
+    {
+      "source": "assets/images/real/seaweed.png",
+      "landing": "assets/images/optimized/landing/seaweed.jpg",
+      "catalog": "assets/images/optimized/catalog/seaweed.jpg"
+    },
+    {
+      "source": "assets/images/real/sesame-seeds.png",
+      "landing": "assets/images/optimized/landing/sesame-seeds.jpg",
+      "catalog": "assets/images/optimized/catalog/sesame-seeds.jpg"
+    },
+    {
+      "source": "assets/images/real/soybeans.png",
+      "landing": "assets/images/optimized/landing/soybeans.jpg",
+      "catalog": "assets/images/optimized/catalog/soybeans.jpg"
+    },
+    {
+      "source": "assets/images/real/spinach.jpg",
+      "landing": "assets/images/optimized/landing/spinach.jpg",
+      "catalog": "assets/images/optimized/catalog/spinach.jpg"
+    },
+    {
+      "source": "assets/images/real/steel-cut-oats.png",
+      "landing": "assets/images/optimized/landing/steel-cut-oats.jpg",
+      "catalog": "assets/images/optimized/catalog/steel-cut-oats.jpg"
+    },
+    {
+      "source": "assets/images/real/sunflower-seeds.png",
+      "landing": "assets/images/optimized/landing/sunflower-seeds.jpg",
+      "catalog": "assets/images/optimized/catalog/sunflower-seeds.jpg"
+    },
+    {
+      "source": "assets/images/real/sweet-potato.png",
+      "landing": "assets/images/optimized/landing/sweet-potato.jpg",
+      "catalog": "assets/images/optimized/catalog/sweet-potato.jpg"
+    },
+    {
+      "source": "assets/images/real/swiss-chard.png",
+      "landing": "assets/images/optimized/landing/swiss-chard.jpg",
+      "catalog": "assets/images/optimized/catalog/swiss-chard.jpg"
+    },
+    {
+      "source": "assets/images/real/tahini.png",
+      "landing": "assets/images/optimized/landing/tahini.jpg",
+      "catalog": "assets/images/optimized/catalog/tahini.jpg"
+    },
+    {
+      "source": "assets/images/real/tempeh.png",
+      "landing": "assets/images/optimized/landing/tempeh.jpg",
+      "catalog": "assets/images/optimized/catalog/tempeh.jpg"
+    },
+    {
+      "source": "assets/images/real/thyme.png",
+      "landing": "assets/images/optimized/landing/thyme.jpg",
+      "catalog": "assets/images/optimized/catalog/thyme.jpg"
+    },
+    {
+      "source": "assets/images/real/tofu.png",
+      "landing": "assets/images/optimized/landing/tofu.jpg",
+      "catalog": "assets/images/optimized/catalog/tofu.jpg"
+    },
+    {
+      "source": "assets/images/real/tomatoes.png",
+      "landing": "assets/images/optimized/landing/tomatoes.jpg",
+      "catalog": "assets/images/optimized/catalog/tomatoes.jpg"
+    },
+    {
+      "source": "assets/images/real/trout.png",
+      "landing": "assets/images/optimized/landing/trout.jpg",
+      "catalog": "assets/images/optimized/catalog/trout.jpg"
+    },
+    {
+      "source": "assets/images/real/turmeric.png",
+      "landing": "assets/images/optimized/landing/turmeric.jpg",
+      "catalog": "assets/images/optimized/catalog/turmeric.jpg"
+    },
+    {
+      "source": "assets/images/real/walnut-oil.png",
+      "landing": "assets/images/optimized/landing/walnut-oil.jpg",
+      "catalog": "assets/images/optimized/catalog/walnut-oil.jpg"
+    },
+    {
+      "source": "assets/images/real/walnuts.png",
+      "landing": "assets/images/optimized/landing/walnuts.jpg",
+      "catalog": "assets/images/optimized/catalog/walnuts.jpg"
+    },
+    {
+      "source": "assets/images/real/watercress.png",
+      "landing": "assets/images/optimized/landing/watercress.jpg",
+      "catalog": "assets/images/optimized/catalog/watercress.jpg"
+    },
+    {
+      "source": "assets/images/real/wheat-germ-oil.png",
+      "landing": "assets/images/optimized/landing/wheat-germ-oil.jpg",
+      "catalog": "assets/images/optimized/catalog/wheat-germ-oil.jpg"
+    },
+    {
+      "source": "assets/images/real/wild-rice.png",
+      "landing": "assets/images/optimized/landing/wild-rice.jpg",
+      "catalog": "assets/images/optimized/catalog/wild-rice.jpg"
+    }
+  ]
+}

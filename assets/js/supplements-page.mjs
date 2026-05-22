@@ -28,10 +28,12 @@ export function renderSupplements() {
   const table = document.querySelector("#supplement-catalog-table");
   const tabs = document.querySelectorAll(".tab-button");
   const filters = document.querySelectorAll("[data-catalog-filter]");
+  const searchInput = document.querySelector("[data-catalog-search]");
   const protocolTimingButtons = document.querySelectorAll("[data-protocol-timing]");
   const protocolStorageButtons = document.querySelectorAll("[data-protocol-storage]");
   let activeTab = "ingredients";
   let activeFilter = "all";
+  let activeSearch = "";
   let activeProtocolTiming = "all";
   let activeProtocolStorage = "all";
   let catalog = { supplements: [], products: [] };
@@ -320,8 +322,42 @@ export function renderSupplements() {
     return entry.categories.includes(activeFilter);
   }
 
+  function normalizeSearch(value) {
+    return String(value || "").trim().toLowerCase();
+  }
+
+  function searchTextForProduct(product) {
+    const ingredients = productIngredientItems(product)
+      .map((ingredient) => `${ingredient.name} ${ingredient.supplementId}`)
+      .join(" ");
+    return normalizeSearch([
+      product.name,
+      (product.aliases || []).join(" "),
+      product.provider,
+      product.productType,
+      product.purpose,
+      (product.categories || []).join(" "),
+      ingredients,
+    ].join(" "));
+  }
+
+  function searchTextForSupplement(supplement) {
+    return normalizeSearch([
+      supplement.name,
+      (supplement.aliases || []).join(" "),
+      supplement.purpose,
+      (supplement.categories || []).join(" "),
+    ].join(" "));
+  }
+
+  function matchesSearch(entry) {
+    if (!activeSearch) return true;
+    const haystack = activeTab === "products" ? searchTextForProduct(entry) : searchTextForSupplement(entry);
+    return haystack.includes(activeSearch);
+  }
+
   function renderProducts() {
-    const products = catalog.products.filter(matchesFilter);
+    const products = catalog.products.filter((product) => matchesFilter(product) && matchesSearch(product));
     table.innerHTML = `
       <thead>
         <tr>
@@ -343,13 +379,13 @@ export function renderSupplements() {
             <td>${productIngredientList(product)}</td>
             <td><button class="button ghost table-action save-catalog-item" type="button" data-kind="Supplement Product" data-id="${escapeHtml(product.id)}">Add</button></td>
           </tr>
-        `).join("") || `<tr><td colspan="6">No products match this filter.</td></tr>`}
+        `).join("") || `<tr><td colspan="6">No supplement kits match this search or filter.</td></tr>`}
       </tbody>
     `;
   }
 
   function renderIngredients() {
-    const ingredients = catalog.supplements.filter(matchesFilter);
+    const ingredients = catalog.supplements.filter((supplement) => matchesFilter(supplement) && matchesSearch(supplement));
     table.innerHTML = `
       <thead>
         <tr>
@@ -367,7 +403,7 @@ export function renderSupplements() {
             <td>${amountWithSources(supplement)}</td>
             <td>${escapeHtml(productsForSupplement(supplement.id))}</td>
           </tr>
-        `).join("") || `<tr><td colspan="4">No supplements match this filter.</td></tr>`}
+        `).join("") || `<tr><td colspan="4">No supplements match this search or filter.</td></tr>`}
       </tbody>
     `;
   }
@@ -396,6 +432,10 @@ export function renderSupplements() {
       entry.classList.toggle("active", selected);
       entry.setAttribute("aria-selected", selected ? "true" : "false");
     });
+    if (searchInput) {
+      searchInput.placeholder = nextTab === "products" ? "Search supplement kits" : "Search supplements";
+      searchInput.setAttribute("aria-label", searchInput.placeholder);
+    }
   }
 
   function setActiveFilter(nextFilter) {
@@ -538,6 +578,13 @@ export function renderSupplements() {
       setActiveFilter(button.dataset.catalogFilter);
       render();
     });
+  });
+
+  searchInput?.addEventListener("input", () => {
+    highlightedSupplementId = "";
+    highlightedProductId = "";
+    activeSearch = normalizeSearch(searchInput.value);
+    render();
   });
 
   document.querySelectorAll("[data-protocol-product]").forEach((button) => {

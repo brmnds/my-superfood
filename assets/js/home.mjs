@@ -1,5 +1,5 @@
 import { foods } from "./data/foods.mjs";
-import { escapeHtml } from "./shared.mjs";
+import { escapeHtml, optimizedFoodImagePath } from "./shared.mjs";
 import { saveItem } from "./saved-list.mjs";
 
 export function renderHome() {
@@ -32,7 +32,7 @@ export function renderHome() {
     if (clickToOpenOnly && !options.fromClick) return;
     selected = food;
     detailTitle.textContent = food.name;
-    detailImage.src = food.image;
+    detailImage.src = optimizedFoodImagePath(food.image, "catalog");
     detailImage.alt = food.name;
     detailImage.draggable = false;
     detailBenefits.innerHTML = food.benefits.map((benefit) => `<li>${escapeHtml(benefit)}</li>`).join("");
@@ -144,7 +144,7 @@ export function renderHome() {
       <div class="food-cloud" id="food-cloud">
         ${visibleFoods.map((food, index) => `
           <button class="food-bubble" type="button" data-food="${escapeHtml(food.id)}" style="--delay:${index * -0.43}s; --float:13px;" aria-label="${escapeHtml(food.name)}">
-            <img src="${escapeHtml(food.image)}" alt="" draggable="false">
+            <img src="${escapeHtml(optimizedFoodImagePath(food.image, "landing"))}" alt="" draggable="false" loading="lazy" decoding="async">
             <span class="bubble-label">${escapeHtml(food.name)}</span>
           </button>
         `).join("")}
@@ -187,7 +187,7 @@ export function renderHome() {
   });
 
   addButton.addEventListener("click", () => {
-    saveItem({ type: "Food", id: selected.id, name: selected.name, image: selected.image, note: selected.note });
+    saveItem({ type: "Food", id: selected.id, name: selected.name, image: optimizedFoodImagePath(selected.image, "catalog"), note: selected.note });
     savedNote.textContent = `${selected.name} added to your list.`;
   });
 
