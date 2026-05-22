@@ -23,6 +23,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/my-superfood-icon-512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/my-superfood-icon.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="alternate" type="text/plain" title="LLMs and AI search guidance" href="/llms.txt">
+    <link rel="alternate" type="application/json" title="My Superfood site entities" href="/data/site-entities.json">
+    <link rel="alternate" type="application/json" title="Supplement catalog seed data" href="/data/supplement-catalog.seed.json">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -48,6 +52,66 @@
             { "@type": "ListItem", "position": 3, "name": "Tilman's supplement protocol" }
           ]
         }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "@id": "https://my-superfood.com/supplements#supplement-catalog-dataset",
+        "name": "My Superfood Supplement Catalog",
+        "description": "A reviewed supplement and supplement-kit catalog that separates purchasable products from primitive supplement ingredients, product label amounts, timing guidance, storage guidance, and source status.",
+        "url": "https://my-superfood.com/supplements",
+        "creator": {
+          "@type": "Person",
+          "name": "Tilman Resch"
+        },
+        "isAccessibleForFree": true,
+        "license": "https://my-superfood.com/terms",
+        "dateModified": "2026-05-22",
+        "keywords": [
+          "supplement catalog",
+          "supplement kits",
+          "supplement ingredients",
+          "Blueprint supplements",
+          "Sunday Natural supplements",
+          "source-noted supplement data",
+          "not medical advice"
+        ],
+        "variableMeasured": [
+          "supplement ingredient",
+          "supplement product amount",
+          "source status",
+          "timing guidance",
+          "storage guidance",
+          "shop URL"
+        ],
+        "measurementTechnique": "Reviewed provider pages, package photo evidence, and reputable reference pages. Uncertain values are marked needs_review.",
+        "distribution": {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://my-superfood.com/data/supplement-catalog.seed.json"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "My Superfood",
+            "item": "https://my-superfood.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Supplements",
+            "item": "https://my-superfood.com/supplements"
+          }
+        ]
       }
     </script>
   </head>

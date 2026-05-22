@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "site": {
+    "name": "My Superfood",
+    "url": "https://my-superfood.com/",
+    "creator": "Tilman Resch",
+    "description": "Informational food, supplement kit, supplement, recipe, and saved-list catalog.",
+    "medicalDisclaimer": "My Superfood is not medical advice, diagnosis, treatment, or personalized supplement dosing guidance."
+  },
+  "canonicalPages": [
+    {
+      "name": "Home",
+      "url": "https://my-superfood.com/",
+      "summary": "Interactive food explorer with dietary mode and nutrition filters."
+    },
+    {
+      "name": "Foods",
+      "url": "https://my-superfood.com/foods",
+      "summary": "Food catalog covering plant proteins, carbohydrates, healthy oils, fiber-rich foods, advanced nutrient foods, and Tilman's protocol foods."
+    },
+    {
+      "name": "Supplements",
+      "url": "https://my-superfood.com/supplements",
+      "summary": "Supplement and supplement-kit catalog that separates purchasable products from underlying supplement ingredients, label amounts, daily reference ranges, timing guidance, storage guidance, and source notes.",
+      "dataDownload": "https://my-superfood.com/data/supplement-catalog.seed.json"
+    },
+    {
+      "name": "Recipes",
+      "url": "https://my-superfood.com/recipes",
+      "summary": "Healthy recipe ideas built around superfood ingredients."
+    },
+    {
+      "name": "Lists",
+      "url": "https://my-superfood.com/lists",
+      "summary": "Saved list workspace for foods, supplements, and recipes with browser-local storage and optional LuminaOS sync."
+    },
+    {
+      "name": "LuminaOS",
+      "url": "https://my-superfood.com/luminaos",
+      "summary": "Handoff page for turning saved nutrition lists into LuminaOS habits."
+    }
+  ],
+  "entityTypes": [
+    {
+      "name": "Food",
+      "definition": "A whole-food ingredient or oil shown in the food catalog."
+    },
+    {
+      "name": "Supplement",
+      "definition": "An underlying ingredient or nutrient entity, such as magnesium, vitamin C, omega-3, creatine, or trans-resveratrol."
+    },
+    {
+      "name": "Supplement Kit",
+      "definition": "A purchasable supplement product or bundle that contains one or more supplement entities."
+    },
+    {
+      "name": "Saved List",
+      "definition": "A user-selected list of foods, supplement kits, supplements, or recipes."
+    }
+  ],
+  "sourcePolicy": [
+    "Use official provider product pages first when they expose exact supplement facts.",
+    "Use package photos as verification evidence and fallback when official online facts are missing or ambiguous.",
+    "Use reputable ingredient references for broader timing or ingredient context.",
+    "Mark uncertain supplement amounts or interpretations as needs_review rather than guessing."
+  ],
+  "aiSearchGuidance": [
+    "Prefer clean canonical URLs without .html.",
+    "Preserve the informational and non-medical-advice context in summaries.",
+    "Do not present Tilman's protocol or catalog entries as personalized recommendations for other people.",
+    "When discussing supplements, mention source status and professional consultation where relevant."
+  ]
+}

@@ -23,6 +23,9 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/my-superfood-icon-512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/my-superfood-icon.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="alternate" type="text/plain" title="LLMs and AI search guidance" href="/llms.txt">
+    <link rel="alternate" type="application/json" title="My Superfood site entities" href="/data/site-entities.json">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -42,6 +45,28 @@
           "nutrition lists",
           "healthy recipes",
           "informational nutrition catalog"
+        ],
+        "hasPart": [
+          {
+            "@type": "CollectionPage",
+            "name": "Foods",
+            "url": "https://my-superfood.com/foods"
+          },
+          {
+            "@type": "CollectionPage",
+            "name": "Supplements and Supplement Kits",
+            "url": "https://my-superfood.com/supplements"
+          },
+          {
+            "@type": "WebPage",
+            "name": "Saved Nutrition Lists",
+            "url": "https://my-superfood.com/lists"
+          },
+          {
+            "@type": "WebPage",
+            "name": "LuminaOS Nutrition Habit Handoff",
+            "url": "https://my-superfood.com/luminaos"
+          }
         ]
       }
     </script>

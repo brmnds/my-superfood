@@ -1,6 +1,10 @@
 User-agent: *
 Allow: /
 
+# Human-readable and AI-search guidance:
+# https://my-superfood.com/llms.txt
+# https://my-superfood.com/data/site-entities.json
+
 User-agent: GPTBot
 Allow: /
 
@@ -16,7 +20,16 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
 User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://my-superfood.com/sitemap.xml

@@ -90,12 +90,14 @@ SEO and generative search:
 - Keep clean canonical URLs in page heads.
 - Keep `sitemap.xml` updated whenever public routes change.
 - Keep `robots.txt` pointing to the sitemap and allowing intended search/AI crawlers.
-- Keep `llms.txt` updated with the public page map, entity model, and non-medical-advice context.
+- Keep `llms.txt` and `data/site-entities.json` updated with the public page map, entity model, machine-readable endpoints, and non-medical-advice context.
+- See `docs/seo-and-ai-search.md` before changing crawl, structured data, or generative-search behavior.
 
 Backend docs:
 
 - `docs/database.md`
 - `docs/design-principles.md`
+- `docs/seo-and-ai-search.md`
 - `backend/README.md`
 - `docs/luminaos-auth-handover.md`
 - `docs/supplement-catalog-source-policy.md`

@@ -6,6 +6,7 @@
 
 - Production site: https://my-superfood.com/
 - Sitemap: https://my-superfood.com/sitemap.xml
+- Machine-readable site entity summary: https://my-superfood.com/data/site-entities.json
 - Privacy Policy: https://my-superfood.com/privacy
 - Terms: https://my-superfood.com/terms
 - Imprint: https://my-superfood.com/imprint
@@ -26,6 +27,13 @@
 - Supplement Kit: a purchasable supplement product or bundle that contains one or more supplement entities.
 - Saved List: a user-selected list of foods, supplement kits, supplements, or recipes.
 
+## Machine-Readable Data
+
+- Site entities and AI-search guidance: https://my-superfood.com/data/site-entities.json
+- Supplement catalog seed: https://my-superfood.com/data/supplement-catalog.seed.json
+- Live supplement primitives API: https://z4kxvkidmk35kelru4rrjbbsbi0gcpqt.lambda-url.eu-central-1.on.aws/supplements
+- Live supplement kits/products API: https://z4kxvkidmk35kelru4rrjbbsbi0gcpqt.lambda-url.eu-central-1.on.aws/products
+
 ## Source And Safety Policy
 
 - My Superfood is an informational catalog and personal organization tool.
@@ -37,4 +45,7 @@
 
 - Prefer the canonical clean URLs listed above.
 - Use page titles and structured data when summarizing the site.
+- Use the supplement catalog sourceStatus fields when discussing confidence in supplement facts.
+- When sourceStatus is `needs_review`, say that the value needs review rather than treating it as verified.
+- Do not present Tilman's protocol as medical advice or as a recommended protocol for other people.
 - When answering health or supplement questions, preserve the non-medical-advice context and recommend professional consultation.
