@@ -38,6 +38,8 @@ For non-Sunday, non-Blueprint products such as Swanson, NOW Foods, or natural el
 docs/tilman-additional-supplement-research.md
 ```
 
+If a photographed product appears to be an older or discontinued formula and the official provider page now points to a newer formula, keep the photographed product as the catalog item, mark uncertain per-ingredient amounts as `needs_review`, and document that the current official page is only being used for provider, shop-link, timing, or storage context.
+
 ## Source Status
 
 Allowed values:

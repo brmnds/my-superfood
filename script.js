@@ -2455,6 +2455,8 @@ function renderSupplements() {
     "ginger-extract": { label: "NCCIH", url: "https://www.nccih.nih.gov/health/ginger" },
     "ashwagandha": { label: "NCCIH", url: "https://www.nccih.nih.gov/health/ashwagandha" },
     "rhodiola-rosea": { label: "NCCIH", url: "https://www.nccih.nih.gov/health/rhodiola" },
+    "trans-resveratrol": { label: "Linus Pauling Institute", url: "https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/resveratrol" },
+    "red-wine-polyphenols": { label: "Linus Pauling Institute", url: "https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/resveratrol" },
   };
 
   const defaultReferenceSource = {

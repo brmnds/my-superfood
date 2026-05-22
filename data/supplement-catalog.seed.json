@@ -2203,6 +2203,106 @@
         ],
         "sourceStatus": "official_page"
       }
+    },
+    {
+      "id": "trans-resveratrol",
+      "name": "Trans-Resveratrol",
+      "aliases": [
+        "Resveratrol",
+        "Trans Resveratrol",
+        "Japanese Knotweed Extract"
+      ],
+      "purpose": "Polyphenol phytochemical used in antioxidant, heart, skin, and longevity supplement contexts.",
+      "categories": [
+        "longevity",
+        "heart",
+        "skin",
+        "inflammation"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 500,
+        "max": null,
+        "unit": "mg",
+        "basis": "WeightWorld product amount context; general daily recommendation needs review and is not personalized advice.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "WeightWorld guidance says to take the product daily with food; no strict clock time was found, so daytime with a meal is used as a neutral catalog slot.",
+        "sourceIds": [
+          "website-weightworld-trans-resveratrol-current"
+        ],
+        "sourceStatus": "official_page"
+      }
+    },
+    {
+      "id": "red-wine-polyphenols",
+      "name": "Red Wine Polyphenols",
+      "aliases": [
+        "Grape Skin Extract",
+        "Red Wine Extract"
+      ],
+      "purpose": "Grape-derived polyphenol complex used in antioxidant and heart-support supplement contexts.",
+      "categories": [
+        "longevity",
+        "heart",
+        "skin",
+        "inflammation"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": null,
+        "max": null,
+        "unit": "mg",
+        "basis": "The photographed bottle names red wine polyphenols, but the exact amount was not visible and needs review.",
+        "source": "needs_review"
+      },
+      "sourceStatus": "needs_review",
+      "timing": {
+        "slots": [],
+        "avoidSlots": [],
+        "note": "Timing needs review because the exact red-wine-polyphenol amount and form are not visible on the supplied front-label photo.",
+        "sourceIds": [],
+        "sourceStatus": "needs_review"
+      }
+    },
+    {
+      "id": "black-pepper-extract",
+      "name": "Black Pepper Extract",
+      "aliases": [
+        "Piper nigrum Extract",
+        "Piperine"
+      ],
+      "purpose": "Bioavailability-oriented botanical extract often paired with polyphenol supplements.",
+      "categories": [
+        "longevity",
+        "inflammation"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": 10,
+        "max": null,
+        "unit": "mg",
+        "basis": "Third-party listing for the older WeightWorld 510 mg product; exact package-label confirmation needs review.",
+        "source": "needs_review"
+      },
+      "sourceStatus": "needs_review",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Use with the parent product timing; no separate clock-time guidance was found for this ingredient in the provided product context.",
+        "sourceIds": [
+          "reference-weightworld-trans-resveratrol-510-grovz"
+        ],
+        "sourceStatus": "ingredient_researched"
+      }
     }
   ],
   "supplementProducts": [
@@ -4351,6 +4451,96 @@
         ],
         "sourceStatus": "official_page"
       }
+    },
+    {
+      "id": "weightworld-trans-resveratrol-510-red-wine-polyphenols",
+      "name": "Trans-Resveratrol with Red Wine Polyphenols 510 mg",
+      "aliases": [
+        "WeightWorld Trans-Resveratrol 510 mg",
+        "WeightWorld Resveratrol 510 mg 60 Capsules"
+      ],
+      "provider": "WeightWorld",
+      "productType": "capsules",
+      "purpose": "Resveratrol and grape-polyphenol capsule for antioxidant, skin, heart, and longevity contexts.",
+      "categories": [
+        "longevity",
+        "heart",
+        "skin",
+        "inflammation",
+        "needs review"
+      ],
+      "image": "assets/images/cacao.svg",
+      "ingredients": [
+        {
+          "supplementId": "trans-resveratrol",
+          "amount": 500,
+          "unit": "mg",
+          "perServing": "1 capsule; serving basis needs label-back confirmation",
+          "labelNotes": "Package front states 510 mg per capsule. Third-party older-product listing describes 500 mg trans-resveratrol from Japanese knotweed; exact back-label confirmation still needed.",
+          "sourceIds": [
+            "photo-weightworld-trans-resveratrol-front",
+            "reference-weightworld-trans-resveratrol-510-grovz"
+          ]
+        },
+        {
+          "supplementId": "black-pepper-extract",
+          "amount": 10,
+          "unit": "mg",
+          "perServing": "1 capsule; serving basis needs label-back confirmation",
+          "labelNotes": "Third-party older-product listing describes black pepper extract. Exact package-back confirmation still needed.",
+          "sourceIds": [
+            "reference-weightworld-trans-resveratrol-510-grovz"
+          ]
+        },
+        {
+          "supplementId": "red-wine-polyphenols",
+          "amount": null,
+          "unit": "mg",
+          "perServing": "1 capsule; amount needs label-back confirmation",
+          "labelNotes": "Package front names red wine polyphenols, but the amount is not visible in the supplied photo.",
+          "sourceIds": [
+            "photo-weightworld-trans-resveratrol-front",
+            "reference-weightworld-trans-resveratrol-510-grovz"
+          ]
+        }
+      ],
+      "contains": [
+        "trans-resveratrol",
+        "black-pepper-extract",
+        "red-wine-polyphenols"
+      ],
+      "sources": [
+        "photo-weightworld-trans-resveratrol-front",
+        "website-weightworld-trans-resveratrol-current",
+        "reference-weightworld-trans-resveratrol-510-grovz"
+      ],
+      "sourceStatus": "needs_review",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ],
+      "shopUrl": "https://www.weightworld.de/products/trans-resveratrol-kapseln-mit-quercetin",
+      "timing": {
+        "slots": [
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "WeightWorld guidance says to take the product daily with food; no strict clock time was found, so daytime with a meal is used as a neutral catalog slot.",
+        "sourceIds": [
+          "website-weightworld-trans-resveratrol-current"
+        ],
+        "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "WeightWorld storage guidance says to keep resveratrol capsules cool, dry, and out of reach of children. This is not refrigerator storage.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-weightworld-trans-resveratrol-current"
+        ],
+        "sourceStatus": "official_page"
+      }
     }
   ],
   "sources": [
@@ -4682,6 +4872,34 @@
       "url": "https://my-ne.com/products/magnesiumbisglycinat-kapseln",
       "captureDate": "2026-05-21",
       "notes": "Official natural elements page used for shop link, magnesium amount, capsule directions, and meal timing."
+    },
+    {
+      "id": "photo-weightworld-trans-resveratrol-front",
+      "type": "package_photo",
+      "filename": "Photo 1.jpg",
+      "captureDate": "2026-05-22",
+      "notes": "Provided package photo; front label confirms WeightWorld Trans-Resveratrol with Red Wine Polyphenols, 510 mg per capsule, 60 capsules, vegan, non-GMO, gluten-free."
+    },
+    {
+      "id": "website-weightworld-trans-resveratrol-current",
+      "type": "official_page",
+      "url": "https://www.weightworld.de/products/trans-resveratrol-kapseln-mit-quercetin",
+      "captureDate": "2026-05-22",
+      "notes": "Current official WeightWorld resveratrol page. It appears to be a newer 550 mg trans-resveratrol plus quercetin variant, so it is used for provider, timing, storage, and shop-link context, not as exact evidence for the photographed 510 mg red-wine-polyphenol bottle."
+    },
+    {
+      "id": "reference-weightworld-trans-resveratrol-510-grovz",
+      "type": "reference_page",
+      "url": "https://www.grovz.co.uk/products/weightworld-resveratrol-supplements-510mg-60-capsules-trans-resveratrol-from-knotweed-skin-supplements-black-pepper-extract-red-wine-polyphenol-from-grape-skin-extract-vegan-resveratrol-powder-capsule",
+      "captureDate": "2026-05-22",
+      "notes": "Third-party listing for the older WeightWorld 510 mg / 60 capsule product. Used only as supplemental context for likely composition and directions because it is not the official provider page."
+    },
+    {
+      "id": "reference-lpi-resveratrol",
+      "type": "reference_page",
+      "url": "https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/resveratrol",
+      "captureDate": "2026-05-22",
+      "notes": "Linus Pauling Institute resveratrol overview used as ingredient-level context for resveratrol as a phytochemical; not used as personalized dosing advice."
     }
   ]
 }
