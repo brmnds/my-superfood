@@ -2459,11 +2459,6 @@ function renderSupplements() {
     "red-wine-polyphenols": { label: "Linus Pauling Institute", url: "https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/resveratrol" },
   };
 
-  const defaultReferenceSource = {
-    label: "FDA DV",
-    url: "https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels",
-  };
-
   const officialSourceUrls = {
     "website-longevity-mix": "https://blueprint.bryanjohnson.com/products/longevity-blend-multinutrient-drink-mix-blood-orange-flavor",
     "website-essential-capsules": "https://blueprint.bryanjohnson.com/products/essentials-capsules",
@@ -2634,7 +2629,7 @@ function renderSupplements() {
 
   function amountSources(supplement) {
     const blueprintSources = blueprintSourcesForSupplement(supplement.id);
-    const reference = referenceSources[supplement.id] || defaultReferenceSource;
+    const reference = referenceSources[supplement.id];
     const uniqueBlueprintSources = [];
     const seen = new Set();
     blueprintSources.forEach((source) => {
@@ -2644,16 +2639,16 @@ function renderSupplements() {
         uniqueBlueprintSources.push(source);
       }
     });
-    return [...uniqueBlueprintSources.slice(0, 2), reference];
+    return reference ? [...uniqueBlueprintSources.slice(0, 2), reference] : uniqueBlueprintSources.slice(0, 2);
   }
 
   function amountWithSources(supplement) {
     const amountText = formatAmount(supplement.recommendedDailyAmount);
     const sources = amountSources(supplement);
-    const sourceLinks = sources.map((source) => {
+    const sourceLinks = sources.length ? sources.map((source) => {
       const prefix = source.amount ? `${source.label}: ${source.amount}` : source.label;
       return `<a href="${escapeHtml(source.url)}" target="_blank" rel="noopener">${escapeHtml(prefix)}</a>`;
-    }).join("");
+    }).join("") : `<span>Source needs review</span>`;
     const basis = supplement.recommendedDailyAmount?.basis || "Informational amount; not medical advice.";
 
     return `
