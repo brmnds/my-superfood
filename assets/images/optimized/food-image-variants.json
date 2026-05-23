@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T12:26:01.754Z",
+  "generatedAt": "2026-05-23T12:34:52.435Z",
   "source": "assets/js/data/foods.mjs",
   "ignoredOriginalBackup": "assets/images/originals",
   "variants": [
@@ -261,11 +261,6 @@
       "source": "assets/images/real/kohlrabi.png",
       "landing": "assets/images/optimized/landing/kohlrabi.jpg",
       "catalog": "assets/images/optimized/catalog/kohlrabi.jpg"
-    },
-    {
-      "source": "assets/images/real/kombucha.png",
-      "landing": "assets/images/optimized/landing/kombucha.jpg",
-      "catalog": "assets/images/optimized/catalog/kombucha.jpg"
     },
     {
       "source": "assets/images/real/leeks.png",

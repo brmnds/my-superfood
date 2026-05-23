@@ -24,7 +24,7 @@ The public UI uses generated optimized variants:
 - Variant manifest: `assets/images/optimized/food-image-variants.json`.
 - Regeneration script: `scripts/generate-food-image-variants.mjs`.
 
-As of the 2026-05-23 optimization pass, 99 public food image sets were generated. Miso is intentionally omitted from the public food catalog. The original food image set is preserved locally; optimized landing images are roughly `1.5 MB` total, and optimized catalog/detail images are roughly `5.2 MB` total. This keeps the original source assets available locally while avoiding full-size image downloads in the main UI.
+As of the 2026-05-23 optimization pass, 98 public food image sets were generated. Miso and Kombucha are intentionally omitted from the public food catalog. The original food image set is preserved locally; optimized landing images are roughly `1.5 MB` total, and optimized catalog/detail images are roughly `5.2 MB` total. This keeps the original source assets available locally while avoiding full-size image downloads in the main UI.
 
 ## Food Images
 
@@ -113,7 +113,6 @@ As of the 2026-05-23 optimization pass, 99 public food image sets were generated
 | Avocado Oil | `assets/images/real/avocado-oil.png` | Pass | Regenerated product-style ingredient image on a clean white background; visible avocado half and wedge make the oil identifiable. |
 | Olives | `assets/images/real/olives.png` | Pass | Generated product-style ingredient image on a clean white background. |
 | Natto | `assets/images/real/natto.png` | Pass | Generated product-style ingredient image on a clean white background. |
-| Kombucha | `assets/images/real/kombucha.png` | Pass | Generated product-style ingredient image on a clean white background. |
 | Sardines | `assets/images/real/sardines.png` | Pass | Generated product-style ingredient image on a clean white background. |
 | Mackerel | `assets/images/real/mackerel.png` | Pass | Generated product-style ingredient image on a clean white background. |
 | Trout | `assets/images/real/trout.png` | Pass | Generated product-style ingredient image on a clean white background. |

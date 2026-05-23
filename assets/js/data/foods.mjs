@@ -1492,22 +1492,6 @@ export const foods = [
     "tilmanProtocol": false
   },
   {
-    "id": "kombucha",
-    "name": "Kombucha",
-    "image": "assets/images/real/kombucha.png",
-    "categories": [
-      "advanced"
-    ],
-    "benefits": [
-      "Fermented tea",
-      "Tangy drink",
-      "Low sugar option"
-    ],
-    "note": "A fermented tea drink; choose low-sugar versions when possible.",
-    "dietType": "vegan",
-    "tilmanProtocol": false
-  },
-  {
     "id": "sardines",
     "name": "Sardines",
     "image": "assets/images/real/sardines.png",
