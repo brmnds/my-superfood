@@ -911,6 +911,13 @@ h2 {
   width: 100%;
 }
 
+.catalog-card h2 {
+  font-size: clamp(1.55rem, 2vw, 2.05rem);
+  line-height: 1.1;
+  margin-bottom: 18px;
+  overflow-wrap: anywhere;
+}
+
 .tag-row,
 .chip-row {
   display: flex;
