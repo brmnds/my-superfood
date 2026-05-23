@@ -487,24 +487,6 @@ export const foods = [
     "tilmanProtocol": true
   },
   {
-    "id": "miso",
-    "name": "Miso",
-    "image": "assets/images/real/miso.png",
-    "categories": [
-      "advanced"
-    ],
-    "benefits": [
-      "Fermented",
-      "Umami",
-      "Flavor booster"
-    ],
-    "note": "A salty fermented soy paste that adds depth to broths, dressings, and sauces.",
-    "x": "97%",
-    "y": "102%",
-    "dietType": "vegan",
-    "tilmanProtocol": false
-  },
-  {
     "id": "broccoli-sprouts",
     "name": "Broccoli Sprouts",
     "image": "assets/images/real/broccoli-sprouts.png",

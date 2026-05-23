@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T21:51:57.028Z",
+  "generatedAt": "2026-05-23T12:26:01.754Z",
   "source": "assets/js/data/foods.mjs",
   "ignoredOriginalBackup": "assets/images/originals",
   "variants": [
@@ -306,11 +306,6 @@
       "source": "assets/images/real/millet.png",
       "landing": "assets/images/optimized/landing/millet.jpg",
       "catalog": "assets/images/optimized/catalog/millet.jpg"
-    },
-    {
-      "source": "assets/images/real/miso.png",
-      "landing": "assets/images/optimized/landing/miso.jpg",
-      "catalog": "assets/images/optimized/catalog/miso.jpg"
     },
     {
       "source": "assets/images/real/mushrooms.png",

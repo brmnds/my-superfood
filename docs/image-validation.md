@@ -1,6 +1,6 @@
 # Image Validation
 
-Last validated: 2026-05-22
+Last validated: 2026-05-23
 
 This report validates current My Superfood images against the picture steering files:
 
@@ -24,7 +24,7 @@ The public UI uses generated optimized variants:
 - Variant manifest: `assets/images/optimized/food-image-variants.json`.
 - Regeneration script: `scripts/generate-food-image-variants.mjs`.
 
-As of the 2026-05-22 optimization pass, 100 food image sets were generated. The original food image set is roughly `56 MB`; optimized landing images are roughly `1.7 MB` total, and optimized catalog/detail images are roughly `5.4 MB` total. This keeps the original source assets available locally while avoiding full-size image downloads in the main UI.
+As of the 2026-05-23 optimization pass, 99 public food image sets were generated. Miso is intentionally omitted from the public food catalog. The original food image set is preserved locally; optimized landing images are roughly `1.5 MB` total, and optimized catalog/detail images are roughly `5.2 MB` total. This keeps the original source assets available locally while avoiding full-size image downloads in the main UI.
 
 ## Food Images
 
@@ -55,7 +55,6 @@ As of the 2026-05-22 optimization pass, 100 food image sets were generated. The 
 | Soybeans | `assets/images/real/soybeans.png` | Pass | Generated product-style image of dry soybeans on a clean white background. |
 | Tofu | `assets/images/real/tofu.png` | Pass | Generated product-style image of plain tofu blocks on a clean white background. |
 | Tempeh | `assets/images/real/tempeh.png` | Pass | Generated product-style image of plain tempeh with visible soybean texture on a clean white background. |
-| Miso | `assets/images/real/miso.png` | Pass | Generated product-style image of miso paste in a plain white dish on a clean white background. |
 | Broccoli Sprouts | `assets/images/real/broccoli-sprouts.png` | Pass | Generated product-style image of raw broccoli sprouts on a clean white background. |
 | Brussels Sprouts | `assets/images/real/brussels-sprouts.png` | Pass | Generated product-style image of raw Brussels sprouts on a clean white background. |
 | Kale | `assets/images/real/kale.png` | Pass | Generated product-style image of raw kale leaves on a clean white background. |
