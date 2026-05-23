@@ -329,7 +329,7 @@ export function renderAuthControls() {
       <tbody>
         ${items.map((item) => `
           <tr>
-            <td><div class="list-item-cell"><img src="${escapeHtml(item.image)}" alt=""><div><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.id)}</span></div></div></td>
+            <td><div class="list-item-cell text-only"><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.id)}</span></div></td>
             <td>${escapeHtml(item.type)}</td>
             <td>${escapeHtml(item.note || "Saved supplement")}</td>
             <td>${escapeHtml(item.note)}</td>

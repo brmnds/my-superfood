@@ -1683,6 +1683,12 @@ h2 {
   width: 52px;
 }
 
+.list-item-cell.text-only {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .empty-table-cell {
   color: var(--muted);
   font-weight: 750;
