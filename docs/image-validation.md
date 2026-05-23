@@ -30,7 +30,7 @@ As of the 2026-05-23 optimization pass, 98 public food image sets were generated
 
 | Food | Current asset | Status | Notes |
 | --- | --- | --- | --- |
-| Broccoli | `assets/images/real/broccoli.jpg` | Pass | Raw broccoli on bright background. |
+| Broccoli | `assets/images/real/broccoli.jpg` | Pass | Raw broccoli reframed on a square white canvas so it stays centered in catalog cards and circular landing crops. |
 | Chickpeas | `assets/images/real/chickpeas.png` | Pass | Full whole chickpeas on a clean white background. |
 | Lentils | `assets/images/real/lentils-uncooked.jpg` | Pass | Clean uncooked lentils. |
 | Cauliflower | `assets/images/real/cauliflower.png` | Pass | Raw cauliflower head on a clean white background. |
