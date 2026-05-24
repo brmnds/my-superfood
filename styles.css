@@ -261,6 +261,71 @@ select {
   margin-top: 10px;
 }
 
+.article-shell {
+  max-width: 1040px;
+}
+
+.blog-article {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow-soft);
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.72;
+  padding: clamp(22px, 4vw, 44px);
+}
+
+.blog-article section {
+  border-top: 1px solid var(--line);
+  margin-top: 30px;
+  padding-top: 28px;
+}
+
+.blog-article h2,
+.blog-article h3 {
+  color: var(--ink);
+  line-height: 1.16;
+}
+
+.blog-article h2 {
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  margin-bottom: 14px;
+}
+
+.blog-article h3 {
+  font-size: clamp(1.05rem, 1.8vw, 1.32rem);
+  margin: 22px 0 8px;
+}
+
+.blog-article h3 a {
+  color: var(--leaf-dark);
+  text-decoration-color: rgba(46, 125, 50, 0.24);
+  text-underline-offset: 4px;
+}
+
+.blog-article p {
+  margin-bottom: 16px;
+}
+
+.article-meta,
+.article-disclaimer {
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.article-meta {
+  background: #f5faf5;
+  color: var(--leaf-dark);
+  font-weight: 760;
+}
+
+.article-disclaimer {
+  background: #fff8ed;
+  border: 1px solid #f1dfc3;
+  color: #765a2d;
+}
+
 .lumina-dashboard-shell {
   display: grid;
   gap: 22px;
@@ -846,6 +911,20 @@ select {
 
 .compact-heading-card h1 {
   font-size: clamp(1.55rem, 2.4vw, 2.35rem);
+}
+
+.linked-heading-card,
+.blog-heading-card {
+  align-items: center;
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+}
+
+.heading-card-link {
+  flex: 0 0 auto;
+  margin-bottom: 0;
+  width: auto;
 }
 
 .page-heading-card p {
@@ -1957,6 +2036,12 @@ h2 {
   }
 
   .table-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .linked-heading-card,
+  .blog-heading-card {
     align-items: flex-start;
     flex-direction: column;
   }

@@ -25,6 +25,12 @@
       "dataDownload": "https://my-superfood.com/data/supplement-catalog.seed.json"
     },
     {
+      "name": "Supplement Blog",
+      "url": "https://my-superfood.com/supplement-blog",
+      "summary": "A consultation-based reflection by Tilman Resch on his supplement protocol, organized by magnesium forms, morning supplements, fat-soluble supplements, evening supplements, Blueprint products, and open items.",
+      "relatedData": "https://my-superfood.com/data/supplement-catalog.seed.json"
+    },
+    {
       "name": "Recipes",
       "url": "https://my-superfood.com/recipes",
       "summary": "Healthy recipe ideas built around superfood ingredients."

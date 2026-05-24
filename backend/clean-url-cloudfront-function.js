@@ -4,6 +4,7 @@ function handler(event) {
   var cleanRoutes = {
     "/foods": "/foods.html",
     "/supplements": "/supplements.html",
+    "/supplement-blog": "/supplement-blog.html",
     "/recipes": "/recipes.html",
     "/lists": "/lists.html",
     "/luminaos": "/luminaos.html",

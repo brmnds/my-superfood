@@ -9,6 +9,7 @@ The first version is intentionally simple: plain HTML, CSS, and JavaScript with 
 - `index.html` - interactive Apple Watch-style superfood landing page.
 - `foods.html` - list/catalog view of superfoods.
 - `supplements.html` - searchable table-first supplement product and ingredient catalog with source labels.
+- `supplement-blog.html` - consultation-based supplement protocol reflection by Tilman Resch, linked from the supplements heading.
 - `recipes.html` - healthy recipe feature page.
 - `lists.html` - tabbed saved-list workspace for foods, supplements, and recipes, powered by browser `localStorage`, anonymous DynamoDB sync, and optional LuminaOS account sync.
 - `luminaos.html` - LuminaOS handoff page.
@@ -29,7 +30,7 @@ Then open:
 http://localhost:4173/
 ```
 
-This mirrors the production clean URL behavior, so `/foods`, `/supplements`, `/recipes`, `/lists`, `/luminaos`, `/privacy`, `/terms`, and `/imprint` work locally.
+This mirrors the production clean URL behavior, so `/foods`, `/supplements`, `/supplement-blog`, `/recipes`, `/lists`, `/luminaos`, `/privacy`, `/terms`, and `/imprint` work locally.
 
 If you use `python3 -m http.server 4173` directly, open the physical `.html` files such as `http://localhost:4173/lists.html`; Python's built-in static server does not rewrite `/lists` to `lists.html`.
 

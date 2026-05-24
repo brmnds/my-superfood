@@ -504,6 +504,21 @@ export function renderSupplements() {
     document.getElementById(`product-${productId}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
+  function openSupplement(supplementId) {
+    highlightedSupplementId = supplementId;
+    highlightedProductId = "";
+    setActiveTab("ingredients");
+    setActiveFilter("all");
+    render();
+    document.getElementById(`supplement-${supplementId}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  function openHashTarget() {
+    const hash = decodeURIComponent(window.location.hash || "").replace(/^#/, "");
+    if (hash.startsWith("product-")) openProduct(hash.replace(/^product-/, ""));
+    if (hash.startsWith("supplement-")) openSupplement(hash.replace(/^supplement-/, ""));
+  }
+
   function render() {
     if (activeTab === "products") renderProducts();
     if (activeTab === "ingredients") renderIngredients();
@@ -589,6 +604,7 @@ export function renderSupplements() {
 
   document.querySelectorAll("[data-protocol-product]").forEach((button) => {
     button.addEventListener("click", () => {
+      window.history.replaceState(null, "", `#product-${button.dataset.protocolProduct}`);
       openProduct(button.dataset.protocolProduct);
     });
   });
@@ -611,9 +627,12 @@ export function renderSupplements() {
     .then((loadedCatalog) => {
       catalog = loadedCatalog;
       render();
+      openHashTarget();
     })
     .catch((error) => {
       console.error(error);
       table.innerHTML = `<tbody><tr><td>Catalog could not be loaded.</td></tr></tbody>`;
     });
+
+  window.addEventListener("hashchange", openHashTarget);
 }

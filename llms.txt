@@ -16,6 +16,7 @@
 - https://my-superfood.com/ - Interactive food explorer with dietary mode and nutrition filters.
 - https://my-superfood.com/foods - Food catalog covering plant proteins, carbs, healthy oils, fiber-rich foods, advanced nutrients, and Tilman's protocol foods.
 - https://my-superfood.com/supplements - Supplement and supplement-kit catalog that separates purchasable kits from underlying ingredient entities, label amounts, daily reference ranges, and source notes.
+- https://my-superfood.com/supplement-blog - Consultation-based supplement protocol reflection by Tilman Resch, organized by magnesium forms, morning stack, fat-soluble supplements, evening supplements, Blueprint products, and open items.
 - https://my-superfood.com/recipes - Healthy recipe ideas built around superfood ingredients.
 - https://my-superfood.com/lists - Saved list workspace for foods, supplements, and recipes with browser-local storage and optional LuminaOS sync.
 - https://my-superfood.com/luminaos - Handoff page for turning saved nutrition lists into LuminaOS habits.

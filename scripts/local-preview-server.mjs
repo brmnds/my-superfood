@@ -10,6 +10,7 @@ const cleanRoutes = new Map([
   ["/", "index.html"],
   ["/foods", "foods.html"],
   ["/supplements", "supplements.html"],
+  ["/supplement-blog", "supplement-blog.html"],
   ["/recipes", "recipes.html"],
   ["/lists", "lists.html"],
   ["/luminaos", "luminaos.html"],
@@ -76,5 +77,5 @@ createServer((request, response) => {
   createReadStream(filePath).pipe(response);
 }).listen(port, () => {
   console.log(`My Superfood preview server running at http://localhost:${port}`);
-  console.log("Clean URLs enabled: /foods /supplements /recipes /lists /luminaos /privacy /terms /imprint");
+  console.log("Clean URLs enabled: /foods /supplements /supplement-blog /recipes /lists /luminaos /privacy /terms /imprint");
 });

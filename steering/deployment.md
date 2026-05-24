@@ -85,6 +85,7 @@ This is preferred over Amplify for the current version because the app is static
    - Viewer request CloudFront Function for clean URLs:
      - `/foods` -> `/foods.html`
      - `/supplements` -> `/supplements.html`
+     - `/supplement-blog` -> `/supplement-blog.html`
      - `/recipes` -> `/recipes.html`
      - `/lists` -> `/lists.html`
      - `/luminaos` -> `/luminaos.html`
