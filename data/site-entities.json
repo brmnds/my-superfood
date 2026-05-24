@@ -31,6 +31,12 @@
       "relatedData": "https://my-superfood.com/data/supplement-catalog.seed.json"
     },
     {
+      "name": "Supplement Directory",
+      "url": "https://my-superfood.com/supplement-directory",
+      "summary": "A table of supplement primitives in Tilman's active supplement kits, showing where each supplement appears and the combined active label amount.",
+      "relatedData": "https://my-superfood.com/data/supplement-catalog.seed.json"
+    },
+    {
       "name": "Recipes",
       "url": "https://my-superfood.com/recipes",
       "summary": "Healthy recipe ideas built around superfood ingredients."

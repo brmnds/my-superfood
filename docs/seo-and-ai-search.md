@@ -16,6 +16,7 @@ My Superfood uses static, crawlable pages with clean canonical URLs. Search and 
 - The home page uses `WebSite` JSON-LD and links the main catalog areas through `hasPart`.
 - Catalog and legal subpages use page-specific JSON-LD plus `BreadcrumbList` markup.
 - The supplements page includes `Dataset` JSON-LD for the reviewed supplement catalog and points to `data/supplement-catalog.seed.json` as a `DataDownload`.
+- The supplement directory uses `CollectionPage` JSON-LD and renders active protocol totals from the reviewed supplement catalog.
 - The supplement blog uses `BlogPosting` JSON-LD and links back to the supplement catalog table for detailed product facts.
 
 The structured data should describe visible or publicly accessible content only. Do not add fake ratings, unsupported medical claims, hidden content, or properties that imply personalized medical guidance.

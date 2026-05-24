@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Supplement Directory - My Superfood</title>
+    <meta name="description" content="A simple directory of the supplement primitives in Tilman's active supplement kits, including where each appears and the total active label amount.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Tilman Resch">
+    <meta name="theme-color" content="#4caf50">
+    <link rel="canonical" href="https://my-superfood.com/supplement-directory">
+    <meta property="og:site_name" content="My Superfood">
+    <meta property="og:title" content="Supplement Directory - My Superfood">
+    <meta property="og:description" content="See which active supplement kits contain each supplement primitive and the combined label amount.">
+    <meta property="og:url" content="https://my-superfood.com/supplement-directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://my-superfood.com/assets/images/my-superfood-icon-512.png">
+    <meta property="og:image:alt" content="My Superfood leaf icon">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Supplement Directory - My Superfood">
+    <meta name="twitter:description" content="Directory of supplement primitives in Tilman's active supplement kits.">
+    <meta name="twitter:image" content="https://my-superfood.com/assets/images/my-superfood-icon-512.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/my-superfood-icon-512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/my-superfood-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="alternate" type="text/plain" title="LLMs and AI search guidance" href="/llms.txt">
+    <link rel="alternate" type="application/json" title="My Superfood site entities" href="/data/site-entities.json">
+    <link rel="alternate" type="application/json" title="Supplement catalog seed data" href="/data/supplement-catalog.seed.json">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Supplement Directory",
+        "url": "https://my-superfood.com/supplement-directory",
+        "description": "A simple table that shows the supplement primitives in Tilman Resch's active supplement kits, where each appears, and the combined active label amount.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "My Superfood",
+          "url": "https://my-superfood.com/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Tilman Resch"
+        },
+        "about": [
+          "supplement directory",
+          "supplement primitives",
+          "supplement kits",
+          "not medical advice"
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "My Superfood",
+            "item": "https://my-superfood.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Supplements",
+            "item": "https://my-superfood.com/supplements"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Supplement Directory",
+            "item": "https://my-superfood.com/supplement-directory"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body data-page="supplement-directory">
+    <header class="site-header">
+      <a class="brand" href="/"><img class="brand-mark" src="/assets/images/my-superfood-icon.png" alt="" aria-hidden="true"><span>My Superfood</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="primary-nav" aria-label="Primary navigation">
+        <a href="/foods">Foods</a>
+        <a class="active" href="/supplements">Supplements</a>
+        <a href="/recipes">Recipes</a>
+        <a href="/lists">Lists</a>
+        <a href="/luminaos">LuminaOS</a>
+      </nav>
+    </header>
+    <main class="page-shell">
+      <section class="page-heading page-heading-card compact-heading-card linked-heading-card">
+        <div>
+          <p class="eyebrow">Active protocol</p>
+          <h1>Supplement Directory</h1>
+        </div>
+        <a class="button ghost heading-card-link" href="/supplements">Back to supplements</a>
+      </section>
+
+      <section class="directory-note" aria-label="Directory context">
+        <p data-directory-summary>Loading active supplement totals...</p>
+        <p>Totals combine label amounts from Tilman's active supplement kits where units can be safely combined. They are catalog totals per listed serving context, not medical advice or a personalized dosing recommendation.</p>
+      </section>
+
+      <section class="supplement-browser" aria-label="Supplement directory table">
+        <div class="table-wrap directory-table-wrap">
+          <table class="catalog-table directory-table" id="supplement-directory-table"></table>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>My Superfood is an informational catalog by Tilman Resch, not medical advice.</p>
+      <nav aria-label="Legal links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms</a>
+        <a href="/imprint">Imprint</a>
+      </nav>
+    </footer>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
