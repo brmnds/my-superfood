@@ -151,6 +151,14 @@ As of the 2026-05-23 optimization pass, 98 public food image sets were generated
 | --- | --- | --- | --- |
 | LuminaOS | `assets/images/luminaos-logo.png` | Pass | Real local LuminaOS logo copied from the mobile app repository. |
 
+## Blog Images
+
+| Image | Current asset | Status | Notes |
+| --- | --- | --- | --- |
+| Supplement protocol hero | `assets/images/blog/supplement-protocol-hero.jpg` | Pass | Generated editorial article image; compressed JPEG, no readable labels or medical claims. |
+| Morning supplement routine | `assets/images/blog/morning-supplement-routine.jpg` | Pass | Generated editorial inline image for morning timing section; compressed JPEG, no readable labels. |
+| Evening recovery routine | `assets/images/blog/evening-recovery-routine.jpg` | Pass | Generated editorial inline image for evening timing section; compressed JPEG, no readable labels. |
+
 ## Required Image Replacement Backlog
 
 No food image replacement backlog remains after the 2026-05-17 generated image pass.
