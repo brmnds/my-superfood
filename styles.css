@@ -1063,9 +1063,16 @@ select {
 }
 
 .heading-card-link {
-  flex: 0 0 auto;
+  align-self: flex-start;
+  flex: 0 1 auto;
   margin-bottom: 0;
-  width: auto;
+  max-width: 100%;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.linked-heading-card > .heading-card-link {
+  margin-left: auto;
 }
 
 .heading-card-actions {
@@ -2204,6 +2211,10 @@ h2 {
   .heading-card-actions {
     justify-content: flex-start;
     width: 100%;
+  }
+
+  .linked-heading-card > .heading-card-link {
+    margin-left: 0;
   }
 
   .catalog-search {
