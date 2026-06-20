@@ -189,3 +189,9 @@ See `docs/database.md` for the data model and cost notes.
 The production CloudFront distribution uses `backend/clean-url-cloudfront-function.js` as a viewer request function on the static site behavior. It rewrites clean paths such as `/supplement-directory`, `/supplement-blog`, `/lists`, `/privacy`, `/terms`, and `/imprint` to their physical S3 `.html` objects, and redirects legacy `.html` URLs to their clean canonical URLs.
 
 After changing this function, publish a new CloudFront Function version, associate it with the distribution default cache behavior if needed, and invalidate CloudFront.
+
+## Security Response Headers
+
+CloudFront should attach the custom response headers policy defined in `backend/security-response-headers-policy.json` to the static behavior and the `/api/*` behavior. This adds HSTS, `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`, and a restrictive `Permissions-Policy`.
+
+The policy intentionally does not set a Content Security Policy yet because the supplement page still fetches the public catalog Lambda Function URL directly. Add CSP only after allowing the required `connect-src` origins or moving catalog reads behind same-origin `/api` routing.

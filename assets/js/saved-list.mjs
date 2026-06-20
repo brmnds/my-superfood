@@ -9,7 +9,7 @@ export function setAuthLogoutCallback(callback) {
 }
 
 export const listApiUrl = "https://l36bksjavuxnp45gl5fel2jkbq0ertbm.lambda-url.eu-central-1.on.aws";
-export const accountApiBaseUrl = localStorage.getItem("my-superfood-account-api-base") || (["my-superfood.com", "www.my-superfood.com"].includes(location.hostname) ? "/api" : "");
+export const accountApiBaseUrl = normalizeAccountApiBaseUrl(localStorage.getItem("my-superfood-account-api-base"));
 const listStorageKey = "my-superfood-list";
 const accountListCacheStorageKey = "my-superfood-account-list-cache";
 const clientStorageKey = "my-superfood-client-id";
@@ -18,6 +18,25 @@ export const authState = {
   authenticated: false,
   user: null,
 };
+
+function normalizeAccountApiBaseUrl(value) {
+  const productionDefault = ["my-superfood.com", "www.my-superfood.com"].includes(location.hostname) ? "/api" : "";
+  const rawValue = String(value || "").trim();
+  if (!rawValue) return productionDefault;
+
+  if (rawValue.startsWith("/") && !rawValue.startsWith("//")) return rawValue.replace(/\/+$/, "");
+
+  try {
+    const url = new URL(rawValue);
+    const isTrustedProduction = url.protocol === "https:" && ["my-superfood.com", "www.my-superfood.com"].includes(url.hostname);
+    const isTrustedLocal = ["localhost", "127.0.0.1"].includes(url.hostname) && ["http:", "https:"].includes(url.protocol);
+    if (isTrustedProduction || isTrustedLocal) return url.toString().replace(/\/+$/, "");
+  } catch (error) {
+    console.warn("Ignoring invalid account API base URL override.", error);
+  }
+
+  return productionDefault;
+}
 
 function parseStoredList(key) {
   try {
@@ -225,28 +244,39 @@ export function renderAuthControls() {
   });
 
   document.querySelectorAll("[data-auth-actions]").forEach((target) => {
+    target.replaceChildren();
+
     if (!hasAccountApi()) {
-      target.innerHTML = `<span class="tag">LuminaOS sync available after API deployment</span>`;
+      const tag = document.createElement("span");
+      tag.className = "tag";
+      tag.textContent = "LuminaOS sync available after API deployment";
+      target.append(tag);
       return;
     }
 
     if (authState.authenticated) {
-      target.innerHTML = `<button class="button ghost auth-logout" type="button">Sign out</button>`;
+      const button = document.createElement("button");
+      button.className = "button ghost auth-logout";
+      button.type = "button";
+      button.textContent = "Sign out";
+      button.addEventListener("click", async () => {
+        await fetch(accountApiPath("/auth/logout"), { method: "POST", credentials: "include" });
+        clearAccountSessionState();
+        renderAuthControls();
+        if (authLogoutCallback) authLogoutCallback();
+      });
+      target.append(button);
     } else {
-      target.innerHTML = `<a class="button primary" href="${accountApiPath("/auth/start")}">Sign in with LuminaOS</a>`;
+      const link = document.createElement("a");
+      link.className = "button primary";
+      link.href = accountApiPath("/auth/start");
+      link.textContent = "Sign in with LuminaOS";
+      target.append(link);
     }
   });
+}
 
-  document.querySelectorAll(".auth-logout").forEach((button) => {
-    button.addEventListener("click", async () => {
-      if (!hasAccountApi()) return;
-      await fetch(accountApiPath("/auth/logout"), { method: "POST", credentials: "include" });
-      clearAccountSessionState();
-      renderAuthControls();
-      if (authLogoutCallback) authLogoutCallback();
-    });
-  });
-}export function renderSavedList() {
+export function renderSavedList() {
   const target = document.querySelector("#saved-list");
   const intro = document.querySelector("#saved-list-intro");
   const tabs = document.querySelectorAll("[data-list-tab]");
