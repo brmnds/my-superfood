@@ -82,7 +82,8 @@ This is preferred over Amplify for the current version because the app is static
    - Default root object: `index.html`.
    - Viewer protocol policy: redirect HTTP to HTTPS.
    - Alternate domain names: `my-superfood.com`, `www.my-superfood.com`.
-   - Response headers policy: attach `my-superfood-security-headers` from `backend/security-response-headers-policy.json` to the static behavior and `/api/*` behavior. It adds HSTS, frame protection, content-type sniff protection, referrer policy, and a restrictive permissions policy. Do not replace it with a restrictive default CSP without also allowing the public catalog Lambda origin used by the supplement page.
+   - Response headers policy: attach `my-superfood-security-headers` from `backend/security-response-headers-policy.json` to the static behavior and `/api/*` behavior. It adds HSTS, frame protection, content-type sniff protection, referrer policy, restrictive permissions policy, and a CSP that allows the current same-origin app plus the list/catalog Lambda Function URLs in `connect-src`.
+   - `/api/*` CloudFront behavior: use the all-method preset so `POST` works, then attach `backend/api-method-guard-cloudfront-function.js` as a viewer request function to reject unsupported methods with `405` at the edge.
    - Viewer request CloudFront Function for clean URLs:
      - `/foods` -> `/foods.html`
      - `/supplements` -> `/supplements.html`

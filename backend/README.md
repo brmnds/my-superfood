@@ -16,6 +16,7 @@ Small AWS backend for My Superfood saved lists and the read-only supplement cata
 - `catalog-table-supplements.json` - DynamoDB table definition for supplement primitives.
 - `catalog-table-products.json` - DynamoDB table definition for supplement products.
 - `clean-url-cloudfront-function.js` - CloudFront Function source for clean static page URLs.
+- `api-method-guard-cloudfront-function.js` - CloudFront Function source that rejects unsupported `/api/*` methods at the edge.
 
 ## AWS Resources
 
@@ -194,4 +195,6 @@ After changing this function, publish a new CloudFront Function version, associa
 
 CloudFront should attach the custom response headers policy defined in `backend/security-response-headers-policy.json` to the static behavior and the `/api/*` behavior. This adds HSTS, `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`, and a restrictive `Permissions-Policy`.
 
-The policy intentionally does not set a Content Security Policy yet because the supplement page still fetches the public catalog Lambda Function URL directly. Add CSP only after allowing the required `connect-src` origins or moving catalog reads behind same-origin `/api` routing.
+The policy also sets a CSP that permits only this site plus the current list and catalog Lambda Function URLs in `connect-src`. Keep `script-src 'unsafe-inline'` until the inline JSON-LD blocks are moved into external files or hashed. Keep `style-src 'unsafe-inline'` until the generated food-cloud inline style properties are replaced with stylesheet-driven classes.
+
+CloudFront's built-in method presets do not support exactly `GET`, `HEAD`, `OPTIONS`, and `POST`: allowing `POST` requires the all-method preset. Keep the `/api/*` behavior on the all-method preset, but attach `backend/api-method-guard-cloudfront-function.js` as a viewer request function so unsupported methods receive a `405` at the edge before reaching Lambda.
