@@ -766,7 +766,13 @@ select {
 .food-bubble {
   --size: var(--bubble-size, 108px);
   --delay: 0s;
+  --duration: 7.8s;
   --float: 11px;
+  --float-soft: 5px;
+  --drift: 3px;
+  --drift-alt: -2px;
+  --tilt: 0.7deg;
+  --tilt-alt: -0.5deg;
   align-items: center;
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.96);
@@ -781,11 +787,11 @@ select {
   position: absolute;
   top: var(--bubble-y, 0);
   transform: scale(1);
-  transition: transform 210ms ease, opacity 210ms ease, filter 210ms ease, box-shadow 210ms ease, translate 210ms ease;
+  transition: transform 210ms ease, opacity 210ms ease, filter 210ms ease, box-shadow 210ms ease, translate 210ms ease, rotate 210ms ease;
   width: var(--size);
-  animation: bubble-float 6.8s ease-in-out infinite;
+  animation: bubble-float var(--duration) ease-in-out infinite;
   animation-delay: var(--delay);
-  will-change: transform, translate;
+  will-change: transform, translate, rotate;
 }
 
 .food-bubble img {
@@ -2046,10 +2052,25 @@ h2 {
   0%,
   100% {
     translate: -50% -50%;
+    rotate: 0deg;
   }
 
-  50% {
-    translate: -50% calc(-50% - var(--float));
+  42% {
+    translate: calc(-50% + var(--drift)) calc(-50% - var(--float));
+    rotate: var(--tilt);
+  }
+
+  72% {
+    translate: calc(-50% + var(--drift-alt)) calc(-50% - var(--float-soft));
+    rotate: var(--tilt-alt);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .food-bubble {
+    animation: none;
+    translate: -50% -50%;
+    rotate: 0deg;
   }
 }
 
@@ -2168,6 +2189,8 @@ h2 {
 
   .food-bubble {
     animation: none;
+    rotate: 0deg;
+    translate: none;
   }
 
   .food-bubble:hover,

@@ -142,12 +142,32 @@ export function renderHome() {
 
     orbit.innerHTML = `
       <div class="food-cloud" id="food-cloud">
-        ${visibleFoods.map((food, index) => `
-          <button class="food-bubble" type="button" data-food="${escapeHtml(food.id)}" style="--delay:${index * -0.43}s; --float:13px;" aria-label="${escapeHtml(food.name)}">
+        ${visibleFoods.map((food, index) => {
+          const duration = (7.4 + seededFraction(`${food.id}:motion-duration`) * 2.8).toFixed(2);
+          const float = Math.round(8 + seededFraction(`${food.id}:motion-float`) * 6);
+          const floatSoft = Math.round(3 + seededFraction(`${food.id}:motion-float-soft`) * 4);
+          const drift = Math.round((seededFraction(`${food.id}:motion-drift`) - 0.5) * 10);
+          const driftAlt = Math.round((seededFraction(`${food.id}:motion-drift-alt`) - 0.5) * 8);
+          const tilt = (seededFraction(`${food.id}:motion-tilt`) - 0.5) * 2.2;
+          const tiltAlt = (seededFraction(`${food.id}:motion-tilt-alt`) - 0.5) * 1.6;
+          const motionStyle = [
+            `--delay:${(index * -0.43).toFixed(2)}s`,
+            `--duration:${duration}s`,
+            `--float:${float}px`,
+            `--float-soft:${floatSoft}px`,
+            `--drift:${drift}px`,
+            `--drift-alt:${driftAlt}px`,
+            `--tilt:${tilt.toFixed(2)}deg`,
+            `--tilt-alt:${tiltAlt.toFixed(2)}deg`
+          ].join("; ");
+
+          return `
+          <button class="food-bubble" type="button" data-food="${escapeHtml(food.id)}" style="${motionStyle};" aria-label="${escapeHtml(food.name)}">
             <img src="${escapeHtml(optimizedFoodImagePath(food.image, "landing"))}" alt="" draggable="false" loading="lazy" decoding="async">
             <span class="bubble-label">${escapeHtml(food.name)}</span>
           </button>
-        `).join("")}
+        `;
+        }).join("")}
       </div>
     `;
 
