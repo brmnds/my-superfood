@@ -143,13 +143,13 @@ export function renderHome() {
     orbit.innerHTML = `
       <div class="food-cloud" id="food-cloud">
         ${visibleFoods.map((food, index) => {
-          const duration = (7.4 + seededFraction(`${food.id}:motion-duration`) * 2.8).toFixed(2);
-          const float = Math.round(8 + seededFraction(`${food.id}:motion-float`) * 6);
-          const floatSoft = Math.round(3 + seededFraction(`${food.id}:motion-float-soft`) * 4);
-          const drift = Math.round((seededFraction(`${food.id}:motion-drift`) - 0.5) * 10);
-          const driftAlt = Math.round((seededFraction(`${food.id}:motion-drift-alt`) - 0.5) * 8);
-          const tilt = (seededFraction(`${food.id}:motion-tilt`) - 0.5) * 2.2;
-          const tiltAlt = (seededFraction(`${food.id}:motion-tilt-alt`) - 0.5) * 1.6;
+          const duration = (6.1 + seededFraction(`${food.id}:motion-duration`) * 2.3).toFixed(2);
+          const float = Math.round(14 + seededFraction(`${food.id}:motion-float`) * 10);
+          const floatSoft = Math.round(7 + seededFraction(`${food.id}:motion-float-soft`) * 7);
+          const drift = Math.round((seededFraction(`${food.id}:motion-drift`) - 0.5) * 24);
+          const driftAlt = Math.round((seededFraction(`${food.id}:motion-drift-alt`) - 0.5) * 18);
+          const tilt = (seededFraction(`${food.id}:motion-tilt`) - 0.5) * 5.2;
+          const tiltAlt = (seededFraction(`${food.id}:motion-tilt-alt`) - 0.5) * 3.8;
           const motionStyle = [
             `--delay:${(index * -0.43).toFixed(2)}s`,
             `--duration:${duration}s`,

@@ -766,13 +766,13 @@ select {
 .food-bubble {
   --size: var(--bubble-size, 108px);
   --delay: 0s;
-  --duration: 7.8s;
-  --float: 11px;
-  --float-soft: 5px;
-  --drift: 3px;
-  --drift-alt: -2px;
-  --tilt: 0.7deg;
-  --tilt-alt: -0.5deg;
+  --duration: 6.9s;
+  --float: 18px;
+  --float-soft: 10px;
+  --drift: 8px;
+  --drift-alt: -6px;
+  --tilt: 1.6deg;
+  --tilt-alt: -1.2deg;
   align-items: center;
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.96);
@@ -2191,6 +2191,14 @@ h2 {
     animation: none;
     rotate: 0deg;
     translate: none;
+  }
+
+  @media (min-width: 640px) {
+    .food-bubble {
+      animation: bubble-float var(--duration) ease-in-out infinite;
+      animation-delay: var(--delay);
+      translate: -50% -50%;
+    }
   }
 
   .food-bubble:hover,
