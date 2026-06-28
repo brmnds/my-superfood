@@ -5,8 +5,8 @@
   --line: #e5e7eb;
   --paper: #fcfcfc;
   --surface: #ffffff;
-  --leaf: #4caf50;
-  --leaf-dark: #2f7d32;
+  --leaf: #3f7a4d;
+  --leaf-dark: #2f5f3b;
   --mint: #edf8ee;
   --sun: #f4b84a;
   --clay: #c86f4b;
@@ -963,6 +963,10 @@ select {
   width: 100%;
 }
 
+.button.primary:hover {
+  background: var(--leaf-dark);
+}
+
 .button.primary:hover,
 .button.ghost:hover,
 .filter-button:hover {
@@ -1003,12 +1007,19 @@ select {
 .chip {
   background: transparent;
   border: 0;
-  border-radius: 999px;
   color: var(--muted);
   cursor: pointer;
   font-weight: 800;
   padding: 10px 18px;
   white-space: nowrap;
+}
+
+.filter-button {
+  border-radius: 14px;
+}
+
+.chip {
+  border-radius: 999px;
 }
 
 .filter-button.active,
@@ -2202,18 +2213,14 @@ h2 {
 }
 
 .recipe-card .lumina-actions .button {
+  height: 54px;
+  line-height: 1;
   margin-bottom: 0;
   min-height: 48px;
+  padding-bottom: 0;
+  padding-top: 0;
   text-align: center;
   width: 100%;
-}
-
-.recipe-card .lumina-actions .button.primary {
-  background: #5f9f6d;
-}
-
-.recipe-card .lumina-actions .button.primary:hover {
-  background: #548f62;
 }
 
 .recipe-card-compact .lumina-actions {

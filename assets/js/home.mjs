@@ -65,12 +65,12 @@ export function renderHome() {
     const orbitHeight = orbitRect.height;
     const bubbles = Array.from(cloud.querySelectorAll(".food-bubble"));
     const isFullCloud = activeFilter === "all" && bubbles.length > 60;
-    const widthScale = isFullCloud ? (orbitWidth < 560 ? 3.1 : 3.2) : (orbitWidth < 560 ? 2.15 : 1.52);
-    const heightScale = isFullCloud ? (orbitWidth < 560 ? 1.9 : 1.72) : (orbitWidth < 560 ? 1.65 : 1.38);
-    const cloudWidth = Math.round(Math.max(orbitWidth * widthScale, orbitWidth + (isFullCloud ? 920 : 420)));
+    const widthScale = isFullCloud ? (orbitWidth < 560 ? 2.95 : 3.0) : (orbitWidth < 560 ? 2.05 : 1.45);
+    const heightScale = isFullCloud ? (orbitWidth < 560 ? 2.02 : 1.86) : (orbitWidth < 560 ? 1.76 : 1.48);
+    const cloudWidth = Math.round(Math.max(orbitWidth * widthScale, orbitWidth + (isFullCloud ? 850 : 390)));
     const cloudHeight = Math.round(Math.max(orbitHeight * heightScale, orbitHeight + (isFullCloud ? 340 : 210)));
     const edgePadding = orbitWidth < 560 ? 88 : 120;
-    const rowCount = orbitWidth < 560 ? 7 : 5;
+    const rowCount = orbitWidth < 560 ? 9 : 7;
     const usableWidth = cloudWidth - edgePadding * 2;
     const usableHeight = cloudHeight - edgePadding * 2;
     const cellHeight = usableHeight / rowCount;
