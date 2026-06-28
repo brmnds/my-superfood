@@ -30,21 +30,21 @@
       {
         "@context": "https://schema.org",
         "@type": "Recipe",
-        "name": "Green recovery bowl with citrus tahini",
+        "name": "Roasted Vegetable Tofu Plate",
         "url": "https://my-superfood.com/recipes",
-        "description": "A bright superfood bowl with greens, quinoa, avocado, chickpeas, citrus, and tahini.",
-        "image": "https://my-superfood.com/assets/images/real/recipe-bowl.jpg",
+        "description": "A warm roasted vegetable plate with tofu, avocado-tomato mash, and vegan almond cream.",
+        "image": "https://my-superfood.com/assets/images/recipes/roasted-vegetables-tofu-almond-cream.png",
         "author": {
           "@type": "Person",
           "name": "Tilman Resch"
         },
         "recipeIngredient": [
-          "greens",
-          "quinoa",
+          "sweet potato",
+          "zucchini",
+          "tofu or tempeh",
           "avocado",
-          "chickpeas",
-          "citrus",
-          "tahini"
+          "tomato",
+          "vegan almond cream"
         ],
         "recipeCategory": "Healthy recipe",
         "recipeCuisine": "Superfood"
@@ -88,29 +88,15 @@
         <p class="eyebrow">Healthy recipes by Tilman Resch</p>
         <h1>Bright dishes built around real superfoods.</h1>
       </section>
-      <section class="recipe-feature">
-        <div class="recipe-gallery">
-          <img src="assets/images/real/recipe-bowl.jpg" alt="A bright superfood bowl with greens, grains, and vegetables">
-          <div class="gallery-strip">
-            <img src="assets/images/real/recipe-gallery-1.jpg" alt="Avocado toast with tomato and lemon">
-            <img src="assets/images/real/salmon.png" alt="Salmon">
-            <img src="assets/images/real/blueberries.jpg" alt="Blueberries">
-          </div>
-        </div>
-        <article>
-          <p class="eyebrow">Latest post</p>
-          <h2>Green recovery bowl with citrus tahini</h2>
-          <p>A boho-style plate with greens, quinoa, avocado, chickpeas, and a bright sauce. It is rich in fiber, plant protein, minerals, and healthy fats.</p>
-          <div class="lumina-actions">
-            <button class="button ghost save-recipe" type="button" data-recipe="green-recovery-bowl">Add to recipe list</button>
-            <a class="button primary" href="/foods">Explore ingredients</a>
-          </div>
-          <p class="saved-note" id="recipe-saved-note" role="status"></p>
-        </article>
+      <section class="recipe-feature-list" id="featured-recipes" aria-label="Featured recipes">
       </section>
-      <section class="seo-summary" aria-label="Recipe context">
-        <h2>Healthy recipe ideas with superfood ingredients</h2>
-        <p>Recipes on My Superfood focus on practical meals built around colorful vegetables, legumes, grains, healthy fats, and nutrient-dense ingredients from the food catalog.</p>
+      <section class="recipe-library-section" aria-labelledby="recipe-library-title">
+        <div class="section-heading-row">
+          <p class="eyebrow">Boho recipe set</p>
+          <h2 id="recipe-library-title">More real-food recipe ideas</h2>
+        </div>
+        <div class="recipe-library-grid" id="recipe-library"></div>
+        <p class="saved-note" id="recipe-saved-note" role="status"></p>
       </section>
     </main>
     <footer class="site-footer">

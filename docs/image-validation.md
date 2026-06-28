@@ -1,6 +1,6 @@
 # Image Validation
 
-Last validated: 2026-05-23
+Last validated: 2026-06-28
 
 This report validates current My Superfood images against the picture steering files:
 
@@ -135,6 +135,17 @@ As of the 2026-05-23 optimization pass, 98 public food image sets were generated
 | --- | --- | --- | --- |
 | Main recipe | `assets/images/real/recipe-bowl.jpg` | Pass | Bright finished dish. |
 | Gallery image | `assets/images/real/recipe-gallery-1.jpg` | Pass | Bright recipe/food context. |
+| Roasted vegetable tofu almond cream | `assets/images/recipes/roasted-vegetables-tofu-almond-cream.png` | Pass | Generated 4:5 Boho recipe image; food is clear, warm, bright, and the topping reads as vegan almond cream rather than cheese. |
+| Avocado blueberry celery salad | `assets/images/recipes/avocado-blueberry-celery-salad.png` | Pass | Generated 4:5 Boho recipe image; fresh salad ingredients are clear and uncluttered. |
+| Tomato herb vegetable bake | `assets/images/recipes/tomato-herb-vegetable-bake.png` | Pass | Generated 4:5 Boho recipe image; baked dish is clear with bright natural styling. |
+| Creamy green bean tofu salad | `assets/images/recipes/creamy-green-bean-tofu-salad.png` | Pass | Generated 4:5 Boho recipe image; tofu and green beans remain the clear subject. |
+| Spinach avocado lentil salad | `assets/images/recipes/spinach-avocado-lentil-salad.png` | Pass | Generated 4:5 Boho recipe image; leafy greens, avocado, and lentils are distinct. |
+| Broccoli chickpea lentil bowl | `assets/images/recipes/broccoli-chickpea-lentil-bowl.png` | Pass | Generated 4:5 Boho recipe image; legumes and broccoli are clear and appetizing. |
+| Avocado tomato seeded flatbread | `assets/images/recipes/avocado-tomato-seeded-flatbread.png` | Pass | Generated 4:5 Boho recipe image; flatbread toppings are inspectable. |
+| Smoked salmon seeded toast | `assets/images/recipes/smoked-salmon-seeded-toast.png` | Pass | Generated 4:5 Boho recipe image; salmon toasts are clear and bright. |
+| Creamy romaine tomato salad | `assets/images/recipes/creamy-romaine-tomato-salad.png` | Pass | Generated 4:5 Boho recipe image; salad is clean and fresh. |
+| Avocado nut greens bowl | `assets/images/recipes/avocado-nut-greens-bowl.png` | Pass | Generated 4:5 Boho recipe image; bowl ingredients are clear with organic tabletop styling. |
+| Creamy green bean noodle bowl | `assets/images/recipes/creamy-green-bean-noodle-bowl.png` | Pass | Generated 4:5 Boho recipe image; noodles, green beans, and mushrooms are visible. |
 
 ## Supplement Images
 
