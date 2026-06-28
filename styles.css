@@ -1028,6 +1028,13 @@ select {
   color: white;
 }
 
+.filter-bar .filter-button.active {
+  background: rgba(63, 122, 77, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(63, 122, 77, 0.18);
+  color: var(--leaf-dark);
+  padding-inline: 16px;
+}
+
 .page-shell {
   margin: 0 auto;
   max-width: 1280px;

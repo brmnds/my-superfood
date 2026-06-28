@@ -15,7 +15,7 @@ export function renderHome() {
   if (!orbit || !detailTitle || !detailImage || !detailBenefits || !addButton || !openDetail || !detailCard || !closeDetail) return;
   let selected = foods[0];
   let activeFilter = "all";
-  let activeDiet = "pescatarian";
+  let activeDiet = "vegan";
   let cloudX = 0;
   let cloudY = 0;
   let didPan = false;
@@ -97,9 +97,10 @@ export function renderHome() {
           const slotWidth = usableWidth / row.length;
           const rowOffset = (seededFraction(`row-offset:${rowIndex}`) - 0.5) * slotWidth * 0.42;
           const jitterX = (seededFraction(`${foodId}:x`) - 0.5) * Math.max(20, slotWidth - bubbleSize - 24);
-          const jitterY = (seededFraction(`${foodId}:y`) - 0.5) * Math.max(12, cellHeight - bubbleSize - 34);
+          const rowCenterY = edgePadding + rowIndex * cellHeight + cellHeight / 2;
+          const jitterY = (seededFraction(`${foodId}:y`) - 0.5) * (orbitWidth < 560 ? 10 : 14);
           const x = edgePadding + slotIndex * slotWidth + (slotWidth - bubbleSize) / 2 + rowOffset + jitterX;
-          const y = edgePadding + rowIndex * cellHeight + (cellHeight - bubbleSize) / 2 + jitterY;
+          const y = rowCenterY - bubbleSize / 2 + jitterY;
           button.style.setProperty("--bubble-size", `${bubbleSize}px`);
           button.style.setProperty("--bubble-x", `${Math.max(edgePadding, Math.min(cloudWidth - bubbleSize - edgePadding, x))}px`);
           button.style.setProperty("--bubble-y", `${Math.max(edgePadding, Math.min(cloudHeight - bubbleSize - edgePadding, y))}px`);
