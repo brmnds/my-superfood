@@ -10,6 +10,7 @@ export function setAuthLogoutCallback(callback) {
 
 export const listApiUrl = "https://l36bksjavuxnp45gl5fel2jkbq0ertbm.lambda-url.eu-central-1.on.aws";
 export const accountApiBaseUrl = normalizeAccountApiBaseUrl(localStorage.getItem("my-superfood-account-api-base"));
+const localPreviewHost = ["localhost", "127.0.0.1", "::1"].includes(location.hostname);
 const listStorageKey = "my-superfood-list";
 const accountListCacheStorageKey = "my-superfood-account-list-cache";
 const clientStorageKey = "my-superfood-client-id";
@@ -95,7 +96,7 @@ function getClientId() {
 }
 
 function hasListApi() {
-  return listApiUrl.startsWith("https://");
+  return !localPreviewHost && listApiUrl.startsWith("https://");
 }
 
 function hasAccountApi() {
