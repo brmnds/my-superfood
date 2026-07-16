@@ -2,14 +2,14 @@
 
 ## Current Stack
 
-My Superfood is currently a static website with a small AWS persistence layer:
+My Superfood is currently a static website with small AWS persistence and catalog layers:
 
 - HTML pages for routes.
 - CSS for layout, animation, and responsive behavior.
-- Vanilla JavaScript for catalog rendering, interactions, filters, draggable detail card, and `localStorage` list persistence.
+- Native JavaScript ES modules for catalog rendering, interactions, filters, the draggable detail card, local list persistence, and optional LuminaOS session UI.
 - Local image assets under `assets/images/`.
-- DynamoDB for saved list persistence.
-- Lambda Function URL as the tiny browser-facing API.
+- DynamoDB for saved lists and the separate supplement catalog.
+- Lambda Function URLs for list/auth operations and read-only supplement catalog access.
 
 There is no package manager, framework, frontend build step, or frontend SDK dependency in this repository right now.
 
@@ -24,28 +24,27 @@ Keep the current implementation simple and portable:
 
 ## Data And Assets
 
-- Keep food and supplement data in `script.js` for now.
-- Move data to JSON only when the catalog becomes large enough to justify separation.
+- Keep food and recipe data in `assets/js/data/` and the reviewed supplement catalog in `data/supplement-catalog.seed.json`.
+- Keep `script.js` as the small page dispatcher. Put page behavior in the corresponding module under `assets/js/`.
+- Keep supplement catalog caching in the shared public catalog data flow rather than duplicating new cache implementations across pages.
 - Use local assets instead of hotlinked images.
 - Track image provenance in `assets/images/real/sources.tsv`.
-- Optimize large image assets before production if page weight becomes a problem.
+- Keep full-resolution backups under ignored `assets/images/originals/`; deploy optimized public variants rather than originals.
 - Use `localStorage` as the fast local cache for saved lists and sync to DynamoDB when the API is available.
 - Do not store private health data in the anonymous saved-list table.
 
 ## Interaction Standards
 
 - Landing page food bubbles should remain tactile and animated.
-- Hover/focus behavior should update the detail card.
+- Clicking a food should update the detail card; panning the food cloud must not accidentally open it.
 - The detail card should remain draggable on desktop and stable on mobile.
-- Mobile layouts should avoid overlapping controls, text clipping, and off-screen cards.
+- Mobile layouts should avoid overlapping controls, text clipping, document-level horizontal overflow, inaccessible table content, and unnecessarily long unfiltered catalog walls.
 
 ## Future Upgrade Triggers
 
 Consider moving beyond static HTML/CSS/JS when one of these becomes true:
 
-- users need account-based saved lists beyond anonymous browser ids;
-- LuminaOS integration needs authenticated handoff or API calls;
 - recipes become a real publishing workflow;
 - food/supplement data needs editorial tooling;
 - SEO content management becomes important;
-- build-time image optimization becomes necessary.
+- image optimization or repeated page markup becomes difficult to maintain safely without build-time tooling.
