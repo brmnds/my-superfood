@@ -99,9 +99,9 @@
         </div>
 
         <div class="diet-toggle" aria-label="Dietary mode">
-          <button class="diet-toggle-button active" type="button" data-diet="vegan">Vegan</button>
-          <button class="diet-toggle-button" type="button" data-diet="pescatarian">Pescatarian</button>
-          <button class="diet-toggle-button" type="button" data-diet="vegetarian">Vegetarian</button>
+          <button class="diet-toggle-button active" type="button" data-diet="vegan" aria-pressed="true">Vegan</button>
+          <button class="diet-toggle-button" type="button" data-diet="pescatarian" aria-pressed="false">Pescatarian</button>
+          <button class="diet-toggle-button" type="button" data-diet="vegetarian" aria-pressed="false">Vegetarian</button>
         </div>
 
         <div class="food-orbit" id="food-orbit" aria-label="Interactive superfood explorer"></div>
@@ -121,13 +121,13 @@
         </article>
 
         <div class="filter-bar" aria-label="Nutrition filters">
-          <button class="filter-button active" type="button" data-filter="all">View all</button>
-          <button class="filter-button" type="button" data-filter="protein">Protein</button>
-          <button class="filter-button" type="button" data-filter="carbs">Carbs</button>
-          <button class="filter-button" type="button" data-filter="oils">Oils</button>
-          <button class="filter-button" type="button" data-filter="fiber">Fiber</button>
-          <button class="filter-button" type="button" data-filter="advanced">Advanced nutrients</button>
-          <button class="filter-button" type="button" data-filter="tilman">Tilman</button>
+          <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">View all</button>
+          <button class="filter-button" type="button" data-filter="protein" aria-pressed="false">Protein</button>
+          <button class="filter-button" type="button" data-filter="carbs" aria-pressed="false">Carbs</button>
+          <button class="filter-button" type="button" data-filter="oils" aria-pressed="false">Oils</button>
+          <button class="filter-button" type="button" data-filter="fiber" aria-pressed="false">Fiber</button>
+          <button class="filter-button" type="button" data-filter="advanced" aria-pressed="false">Advanced nutrients</button>
+          <button class="filter-button" type="button" data-filter="tilman" aria-pressed="false">Tilman</button>
         </div>
       </section>
       <section class="seo-summary" aria-label="About My Superfood">

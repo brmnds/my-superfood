@@ -86,12 +86,12 @@
       <section class="saved-list-browser" aria-label="Saved lists">
         <div class="table-toolbar">
           <div class="tab-list" role="tablist" aria-label="Saved list views">
-            <button class="tab-button active" type="button" role="tab" aria-selected="true" data-list-tab="foods">Food lists <span data-list-count="foods">0</span></button>
-            <button class="tab-button" type="button" role="tab" aria-selected="false" data-list-tab="supplements">Supplement lists <span data-list-count="supplements">0</span></button>
-            <button class="tab-button" type="button" role="tab" aria-selected="false" data-list-tab="recipes">Recipe lists <span data-list-count="recipes">0</span></button>
+            <button class="tab-button active" id="saved-list-tab-foods" type="button" role="tab" aria-selected="true" aria-controls="saved-list-panel" tabindex="0" data-list-tab="foods">Food lists <span data-list-count="foods">0</span></button>
+            <button class="tab-button" id="saved-list-tab-supplements" type="button" role="tab" aria-selected="false" aria-controls="saved-list-panel" tabindex="-1" data-list-tab="supplements">Supplement lists <span data-list-count="supplements">0</span></button>
+            <button class="tab-button" id="saved-list-tab-recipes" type="button" role="tab" aria-selected="false" aria-controls="saved-list-panel" tabindex="-1" data-list-tab="recipes">Recipe lists <span data-list-count="recipes">0</span></button>
           </div>
         </div>
-        <div class="table-wrap">
+        <div class="table-wrap" id="saved-list-panel" role="tabpanel" aria-labelledby="saved-list-tab-foods">
           <table class="catalog-table saved-list-table" id="saved-list"></table>
         </div>
       </section>

@@ -192,7 +192,11 @@ export function renderHome() {
   document.querySelectorAll(".filter-button").forEach((button) => {
     button.addEventListener("click", () => {
       activeFilter = button.dataset.filter;
-      document.querySelectorAll(".filter-button").forEach((entry) => entry.classList.toggle("active", entry === button));
+      document.querySelectorAll(".filter-button").forEach((entry) => {
+        const isActive = entry === button;
+        entry.classList.toggle("active", isActive);
+        entry.setAttribute("aria-pressed", isActive ? "true" : "false");
+      });
       renderBubbles();
       hideDetail();
     });
@@ -201,7 +205,11 @@ export function renderHome() {
   document.querySelectorAll(".diet-toggle-button").forEach((button) => {
     button.addEventListener("click", () => {
       activeDiet = button.dataset.diet;
-      document.querySelectorAll(".diet-toggle-button").forEach((entry) => entry.classList.toggle("active", entry === button));
+      document.querySelectorAll(".diet-toggle-button").forEach((entry) => {
+        const isActive = entry === button;
+        entry.classList.toggle("active", isActive);
+        entry.setAttribute("aria-pressed", isActive ? "true" : "false");
+      });
       renderBubbles();
       hideDetail();
     });

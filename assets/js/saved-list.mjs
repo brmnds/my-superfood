@@ -261,10 +261,23 @@ export function renderAuthControls() {
       button.type = "button";
       button.textContent = "Sign out";
       button.addEventListener("click", async () => {
-        await fetch(accountApiPath("/auth/logout"), { method: "POST", credentials: "include" });
-        clearAccountSessionState();
-        renderAuthControls();
-        if (authLogoutCallback) authLogoutCallback();
+        button.disabled = true;
+        button.textContent = "Signing out...";
+
+        try {
+          const response = await fetch(accountApiPath("/auth/logout"), { method: "POST", credentials: "include" });
+          if (!response.ok) throw new Error(`Auth logout returned ${response.status}`);
+          clearAccountSessionState();
+          renderAuthControls();
+          if (authLogoutCallback) authLogoutCallback();
+        } catch (error) {
+          button.disabled = false;
+          button.textContent = "Sign out";
+          document.querySelectorAll("[data-auth-status]").forEach((target) => {
+            target.textContent = "Sign out failed. Please try again.";
+          });
+          console.warn("LuminaOS sign out failed.", error);
+        }
       });
       target.append(button);
     } else {
@@ -281,6 +294,7 @@ export function renderSavedList() {
   const target = document.querySelector("#saved-list");
   const intro = document.querySelector("#saved-list-intro");
   const tabs = document.querySelectorAll("[data-list-tab]");
+  const tabPanel = document.querySelector("#saved-list-panel");
   let activeTab = "foods";
   if (intro) intro.textContent = authStatusText();
 
@@ -409,14 +423,31 @@ export function renderSavedList() {
     if (activeTab === "recipes") target.innerHTML = renderRecipeTable(groups.recipes);
   }
 
-  tabs.forEach((button) => {
-    button.addEventListener("click", () => {
-      activeTab = button.dataset.listTab;
-      tabs.forEach((entry) => {
-        entry.classList.toggle("active", entry === button);
-        entry.setAttribute("aria-selected", entry === button ? "true" : "false");
-      });
-      render(visibleList());
+  function activateTab(button, focus = false) {
+    activeTab = button.dataset.listTab;
+    tabs.forEach((entry) => {
+      const isActive = entry === button;
+      entry.classList.toggle("active", isActive);
+      entry.setAttribute("aria-selected", isActive ? "true" : "false");
+      entry.setAttribute("tabindex", isActive ? "0" : "-1");
+    });
+    if (tabPanel) tabPanel.setAttribute("aria-labelledby", button.id);
+    render(visibleList());
+    if (focus) button.focus();
+  }
+
+  tabs.forEach((button, index) => {
+    button.addEventListener("click", () => activateTab(button));
+    button.addEventListener("keydown", (event) => {
+      let nextIndex = null;
+      if (event.key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
+      if (event.key === "ArrowLeft") nextIndex = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === "Home") nextIndex = 0;
+      if (event.key === "End") nextIndex = tabs.length - 1;
+      if (nextIndex === null) return;
+
+      event.preventDefault();
+      activateTab(tabs[nextIndex], true);
     });
   });
 
