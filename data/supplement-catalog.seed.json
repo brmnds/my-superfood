@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "captureDate": "2026-05-21",
+  "captureDate": "2026-07-18",
   "sourcePolicy": "Official provider supplement facts first when exact; package photos are verification evidence and fallback. Mark uncertain reads as needs_review.",
   "supplements": [
     {
@@ -4542,9 +4542,123 @@
         ],
         "sourceStatus": "official_page"
       }
+    },
+    {
+      "id": "norsan-omega-3-total-lemon",
+      "name": "Omega-3 Total Lemon",
+      "aliases": [
+        "NORSAN Omega-3 Total Zitrone",
+        "Fish Omega-3"
+      ],
+      "provider": "NORSAN",
+      "productType": "liquid oil",
+      "purpose": "Fish-oil omega-3 product for heart, brain, eye, and inflammatory-function contexts.",
+      "categories": [
+        "heart",
+        "brain",
+        "inflammation",
+        "recovery"
+      ],
+      "image": "assets/images/omega-3.svg",
+      "ingredients": [
+        {
+          "supplementId": "omega-3",
+          "amount": 2000,
+          "unit": "mg",
+          "perServing": "8 ml daily",
+          "labelNotes": "Total omega-3 fatty acids from natural fish oil.",
+          "sourceIds": [
+            "website-norsan-omega-3-total-lemon"
+          ]
+        },
+        {
+          "supplementId": "epa",
+          "amount": 1040,
+          "unit": "mg",
+          "perServing": "8 ml daily",
+          "labelNotes": "Eicosapentaenoic acid.",
+          "sourceIds": [
+            "website-norsan-omega-3-total-lemon"
+          ]
+        },
+        {
+          "supplementId": "dha",
+          "amount": 600,
+          "unit": "mg",
+          "perServing": "8 ml daily",
+          "labelNotes": "Docosahexaenoic acid.",
+          "sourceIds": [
+            "website-norsan-omega-3-total-lemon"
+          ]
+        },
+        {
+          "supplementId": "vitamin-d3",
+          "amount": 20,
+          "unit": "mcg",
+          "perServing": "8 ml daily",
+          "labelNotes": "Vitamin D3 included in the current official product data sheet.",
+          "sourceIds": [
+            "website-norsan-omega-3-total-lemon"
+          ]
+        },
+        {
+          "supplementId": "vitamin-e",
+          "amount": 3.2,
+          "unit": "mg alpha-TE",
+          "perServing": "8 ml daily",
+          "labelNotes": "Vitamin E included in the current official product data sheet.",
+          "sourceIds": [
+            "website-norsan-omega-3-total-lemon"
+          ]
+        }
+      ],
+      "contains": [
+        "omega-3",
+        "epa",
+        "dha",
+        "vitamin-d3",
+        "vitamin-e"
+      ],
+      "sources": [
+        "website-norsan-omega-3-total-lemon"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ],
+      "shopUrl": "https://norsan.de/shop/omega-3-total-oel/",
+      "timing": {
+        "slots": [
+          "morning"
+        ],
+        "avoidSlots": [],
+        "note": "Tilman's active routine places this fish-oil product in the morning core with the shake; the official label specifies a daily serving but no required clock time.",
+        "sourceIds": [
+          "website-norsan-omega-3-total-lemon"
+        ],
+        "sourceStatus": "needs_review"
+      },
+      "storage": {
+        "requiresRefrigeration": true,
+        "mode": "refrigerate",
+        "label": "Refrigerate after opening",
+        "note": "The unopened bottle can be kept away from direct sunlight at stable room or cellar temperature. Refrigerate after opening and use within 45 days.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-norsan-omega-3-total-lemon"
+        ],
+        "sourceStatus": "official_page"
+      }
     }
   ],
   "sources": [
+    {
+      "id": "website-norsan-omega-3-total-lemon",
+      "type": "official_page",
+      "url": "https://norsan.de/shop/omega-3-total-oel/",
+      "captureDate": "2026-07-18",
+      "notes": "Official NORSAN product page and linked product data sheet used for the 8 ml daily serving, omega-3, EPA, DHA, vitamin D3 and vitamin E amounts, ingredients, and opened-bottle refrigeration guidance."
+    },
     {
       "id": "photo-longevity-1",
       "type": "package_photo",
