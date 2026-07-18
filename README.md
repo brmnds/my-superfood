@@ -10,7 +10,7 @@ The first version is intentionally simple: plain HTML, CSS, and JavaScript with 
 - `foods.html` - list/catalog view of superfoods.
 - `supplements.html` - searchable table-first supplement product and ingredient catalog with source labels.
 - `supplement-directory.html` - active protocol directory that shows each supplement primitive, where it appears, and combined active label amounts.
-- `supplement-blog.html` - consultation-based supplement protocol reflection by Tilman Resch, linked from the supplements heading.
+- `supplement-blog.html` - Tilman Resch's current supplement routine, morning shake, official product links, and product-overlap review, linked from the supplements heading.
 - `recipes.html` - healthy recipe feature page.
 - `lists.html` - tabbed saved-list workspace for foods, supplements, and recipes, powered by browser `localStorage`, anonymous DynamoDB sync, and optional LuminaOS account sync.
 - `luminaos.html` - LuminaOS handoff page.

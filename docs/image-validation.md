@@ -169,6 +169,7 @@ As of the 2026-05-23 optimization pass, 98 public food image sets were generated
 | Supplement protocol hero | `assets/images/blog/supplement-protocol-hero.jpg` | Pass | Generated editorial article image; compressed JPEG, no readable labels or medical claims. |
 | Morning supplement routine | `assets/images/blog/morning-supplement-routine.jpg` | Pass | Generated editorial inline image for morning timing section; compressed JPEG, no readable labels. |
 | Evening recovery routine | `assets/images/blog/evening-recovery-routine.jpg` | Pass | Generated editorial inline image for evening timing section; compressed JPEG, no readable labels. |
+| Morning lion's mane shake | `assets/images/blog/morning-shake-lions-mane.jpg` | Pass | Generated 3:2 editorial image; shake, nuts, hemp seeds, lion's mane mushroom, linseed oil, and olive oil are visible with no labels or medical claims. |
 
 ## Required Image Replacement Backlog
 

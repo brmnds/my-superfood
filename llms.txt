@@ -17,7 +17,7 @@
 - https://my-superfood.com/foods - Food catalog covering plant proteins, carbs, healthy oils, fiber-rich foods, advanced nutrients, and Tilman's protocol foods.
 - https://my-superfood.com/supplements - Supplement and supplement-kit catalog that separates purchasable kits from underlying ingredient entities, label amounts, daily reference ranges, and source notes.
 - https://my-superfood.com/supplement-directory - Active protocol directory showing each supplement primitive, which supplement kits include it, and the combined active label amount.
-- https://my-superfood.com/supplement-blog - First-person consultation-based supplement protocol reflection by Tilman Resch, organized by empty-stomach, morning, midday, and evening timing with links to supplement kit details.
+- https://my-superfood.com/supplement-blog - Tilman Resch's personal supplement routine with a vegan lion's mane morning shake, official product links, selective midday timing, a defined evening stack, and researched alternative and overlap notes.
 - https://my-superfood.com/recipes - Healthy recipe ideas built around superfood ingredients.
 - https://my-superfood.com/lists - Saved list workspace for foods, supplements, and recipes with browser-local storage and optional LuminaOS sync.
 - https://my-superfood.com/luminaos - Handoff page for turning saved nutrition lists into LuminaOS habits.

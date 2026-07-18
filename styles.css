@@ -263,6 +263,8 @@ select {
 
 .article-shell {
   max-width: 1040px;
+  min-width: 0;
+  width: 100%;
 }
 
 .blog-article {
@@ -274,6 +276,7 @@ select {
   font-size: 1rem;
   line-height: 1.72;
   padding: clamp(22px, 4vw, 44px);
+  min-width: 0;
 }
 
 .blog-hero-figure,
@@ -343,6 +346,25 @@ select {
   text-underline-offset: 4px;
 }
 
+.blog-shop-link {
+  border: 1px solid #d8ead9;
+  border-radius: 6px;
+  color: var(--leaf-dark) !important;
+  display: inline-flex;
+  font-size: 0.68rem;
+  font-weight: 850;
+  margin-left: 8px;
+  padding: 4px 7px;
+  text-decoration: none !important;
+  vertical-align: middle;
+}
+
+.blog-shop-link:hover,
+.blog-shop-link:focus-visible {
+  background: var(--leaf-dark);
+  color: white !important;
+}
+
 .brand-pill {
   background: #eef8ef;
   border: 1px solid #d4e7d6;
@@ -365,6 +387,109 @@ select {
 
 .blog-article p {
   margin-bottom: 16px;
+}
+
+.shake-card {
+  border-color: #e5ddcf !important;
+  background: #fffdfa !important;
+}
+
+.shake-ingredient-list {
+  columns: 2;
+  margin: 0 0 18px;
+  padding-left: 22px;
+}
+
+.relationship-table-wrap {
+  max-width: 100%;
+  min-width: 0;
+  margin-top: 18px;
+  overflow-x: auto;
+}
+
+.relationship-section {
+  min-width: 0;
+}
+
+.relationship-table {
+  border-collapse: collapse;
+  min-width: 720px;
+  width: 100%;
+}
+
+.relationship-table th,
+.relationship-table td {
+  border-bottom: 1px solid #e1e7df;
+  padding: 12px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.relationship-table thead th {
+  color: #667068;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.relationship-table tbody th {
+  color: var(--ink);
+  font-size: 0.86rem;
+  width: 17%;
+}
+
+.relationship-table td {
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.relationship-table td p {
+  margin: 7px 0 0;
+}
+
+.relationship-products {
+  display: grid;
+  gap: 7px;
+}
+
+.relationship-product {
+  align-items: baseline;
+  display: flex;
+  gap: 7px;
+}
+
+.relationship-product > a:first-child {
+  color: var(--leaf-dark);
+  font-weight: 800;
+}
+
+.relationship-shop-link {
+  color: #667068;
+  font-size: 0.7rem;
+}
+
+.relationship-status {
+  border-radius: 5px;
+  display: inline-flex;
+  font-size: 0.68rem;
+  font-weight: 850;
+  padding: 4px 7px;
+}
+
+.relationship-alternative {
+  background: #fff3df;
+  color: #80571c;
+}
+
+.relationship-overlap,
+.relationship-review {
+  background: #f1f4ef;
+  color: #59655d;
+}
+
+.relationship-complementary {
+  background: #edf6ed;
+  color: #346a3a;
 }
 
 .dose-line {
@@ -1594,6 +1719,30 @@ h2 {
   position: relative;
 }
 
+.relationship-row {
+  display: flex;
+  margin-top: 1px;
+}
+
+.relationship-note {
+  background: #f2f5f1;
+  border: 1px solid #dfe6dd;
+  border-radius: 5px;
+  color: #59655d;
+  cursor: help;
+  display: inline-flex;
+  font-size: 0.68rem;
+  font-weight: 850;
+  padding: 5px 7px;
+  position: relative;
+}
+
+.relationship-note-alternative {
+  background: #fff5e7;
+  border-color: #ead7b9;
+  color: #7a5724;
+}
+
 .storage-chip,
 .storage-review {
   align-items: center;
@@ -1758,6 +1907,12 @@ h2 {
 .timing-avoid:focus-visible .timing-tooltip,
 .storage-chip:hover .timing-tooltip,
 .storage-chip:focus-visible .timing-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.relationship-note:hover .timing-tooltip,
+.relationship-note:focus-visible .timing-tooltip {
   opacity: 1;
   transform: translateY(0);
 }
@@ -2487,6 +2642,10 @@ h2 {
   .blog-heading-card {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .shake-ingredient-list {
+    columns: 1;
   }
 
   .heading-card-actions {

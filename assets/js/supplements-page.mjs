@@ -1,5 +1,6 @@
 import { escapeHtml } from "./shared.mjs";
 import { saveItem } from "./saved-list.mjs";
+import { relationshipsForProduct } from "./data/supplement-relationships.mjs";
 
 const catalogApiUrl = "https://z4kxvkidmk35kelru4rrjbbsbi0gcpqt.lambda-url.eu-central-1.on.aws";
 const catalogCacheKey = "my-superfood-supplement-catalog-cache-v1";
@@ -145,6 +146,15 @@ export function renderSupplements() {
     return `<a class="shop-link" href="${escapeHtml(product.shopUrl)}" target="_blank" rel="noopener">Official shop</a>`;
   }
 
+  function relationshipMarkup(product) {
+    const relationships = relationshipsForProduct(product.id);
+    if (!relationships.length) return "";
+    const note = relationships.map((group) => `${group.category}: ${group.summary}`).join(" ");
+    const hasAlternative = relationships.some((group) => group.status === "alternative");
+    const label = hasAlternative ? "Alternative / overlap" : "Overlap notes";
+    return `<div class="relationship-row"><span class="relationship-note ${hasAlternative ? "relationship-note-alternative" : ""}" tabindex="0" aria-label="${escapeHtml(`${label}. ${note}`)}">${escapeHtml(label)}<span class="timing-tooltip" role="tooltip">${escapeHtml(note)}</span></span></div>`;
+  }
+
   function storageMarkup(product) {
     const storage = product?.storage;
     if (!storage || storage.sourceStatus === "needs_review") {
@@ -184,6 +194,7 @@ export function renderSupplements() {
         <span>${escapeHtml(product.productType)}</span>
         ${timingMarkup(product)}
         ${storageMarkup(product)}
+        ${relationshipMarkup(product)}
         ${shopLink(product)}
       </div>
     `;
