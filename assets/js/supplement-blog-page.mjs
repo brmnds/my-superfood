@@ -9,8 +9,43 @@ function productLinks(product) {
   return `<span class="relationship-product"><a href="${internalUrl}">${escapeHtml(product.name)}</a>${shop}</span>`;
 }
 
+function renderSupplementDisclosures() {
+  document.querySelectorAll(".blog-section-card").forEach((section) => {
+    const headings = Array.from(section.children).filter((child) => child.tagName === "H3");
+
+    headings.forEach((heading) => {
+      const details = document.createElement("details");
+      details.className = "supplement-entry";
+      const productLink = heading.querySelector('a[href^="/supplements#product-"]');
+      if (productLink) {
+        details.dataset.productId = decodeURIComponent(productLink.getAttribute("href").split("#product-")[1] || "");
+      }
+
+      const summary = document.createElement("summary");
+      summary.className = "supplement-entry-summary";
+      summary.addEventListener("keydown", (event) => {
+        if (event.target !== summary || (event.key !== "Enter" && event.key !== " ")) return;
+        event.preventDefault();
+        details.open = !details.open;
+      });
+      const body = document.createElement("div");
+      body.className = "supplement-entry-body";
+
+      section.insertBefore(details, heading);
+      details.append(summary, body);
+      summary.append(heading);
+
+      while (details.nextElementSibling && details.nextElementSibling.tagName !== "H3") {
+        body.append(details.nextElementSibling);
+      }
+    });
+  });
+}
+
 export async function renderSupplementBlog() {
   const relationshipTable = document.querySelector("[data-supplement-relationships]");
+
+  renderSupplementDisclosures();
 
   try {
     const response = await fetch("/data/supplement-catalog.seed.json");

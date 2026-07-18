@@ -340,6 +340,68 @@ select {
   margin: 22px 0 8px;
 }
 
+.supplement-entry {
+  border-top: 1px solid #dfe9df;
+}
+
+.supplement-entry:first-of-type {
+  margin-top: 18px;
+}
+
+.supplement-entry-summary {
+  align-items: center;
+  cursor: pointer;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(0, 1fr) 24px;
+  list-style: none;
+  min-height: 58px;
+  padding: 12px 2px;
+}
+
+.supplement-entry-summary::-webkit-details-marker {
+  display: none;
+}
+
+.supplement-entry-summary::after {
+  border-bottom: 2px solid var(--leaf-dark);
+  border-right: 2px solid var(--leaf-dark);
+  content: "";
+  height: 8px;
+  justify-self: center;
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 160ms ease;
+  width: 8px;
+}
+
+.supplement-entry[open] > .supplement-entry-summary::after {
+  transform: rotate(225deg) translate(-2px, -2px);
+}
+
+.supplement-entry-summary h3 {
+  margin: 0;
+  min-width: 0;
+}
+
+.supplement-entry-summary:hover h3 a,
+.supplement-entry-summary:focus-visible h3 a {
+  text-decoration-color: currentColor;
+}
+
+.supplement-entry-summary:focus-visible {
+  border-radius: 6px;
+  outline: 3px solid rgba(67, 128, 80, 0.24);
+  outline-offset: 2px;
+}
+
+.supplement-entry-body {
+  padding: 2px 2px 8px;
+}
+
+.supplement-entry-body > :last-child {
+  margin-bottom: 10px;
+}
+
 .blog-article h3 a {
   color: var(--leaf-dark);
   text-decoration-color: rgba(46, 125, 50, 0.24);
@@ -498,6 +560,12 @@ select {
   border-radius: 8px;
   color: var(--ink);
   padding: 10px 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .supplement-entry-summary::after {
+    transition: none;
+  }
 }
 
 .article-meta,
