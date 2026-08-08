@@ -1,14 +1,3 @@
-import { escapeHtml } from "./shared.mjs";
-import { supplementRelationshipGroups } from "./data/supplement-relationships.mjs";
-
-function productLinks(product) {
-  const internalUrl = `/supplements#product-${encodeURIComponent(product.id)}`;
-  const shop = product.shopUrl
-    ? `<a class="relationship-shop-link" href="${escapeHtml(product.shopUrl)}" target="_blank" rel="noopener">Shop</a>`
-    : "";
-  return `<span class="relationship-product"><a href="${internalUrl}">${escapeHtml(product.name)}</a>${shop}</span>`;
-}
-
 function renderSupplementDisclosures() {
   document.querySelectorAll(".blog-section-card").forEach((section) => {
     const headings = Array.from(section.children).filter((child) => child.tagName === "H3");
@@ -43,8 +32,6 @@ function renderSupplementDisclosures() {
 }
 
 export async function renderSupplementBlog() {
-  const relationshipTable = document.querySelector("[data-supplement-relationships]");
-
   renderSupplementDisclosures();
 
   try {
@@ -67,23 +54,7 @@ export async function renderSupplementBlog() {
       link.closest("h3")?.append(shopLink);
     });
 
-    if (!relationshipTable) return;
-    relationshipTable.innerHTML = `
-      <table class="relationship-table">
-        <thead><tr><th>Category</th><th>Products</th><th>How to read it</th></tr></thead>
-        <tbody>
-          ${supplementRelationshipGroups.map((group) => {
-            const groupProducts = group.productIds.map((id) => productById.get(id)).filter(Boolean);
-            return `<tr>
-              <th scope="row">${escapeHtml(group.category)}</th>
-              <td><div class="relationship-products">${groupProducts.map(productLinks).join("")}</div></td>
-              <td><span class="relationship-status relationship-${escapeHtml(group.status)}">${escapeHtml(group.label)}</span><p>${escapeHtml(group.summary)}</p></td>
-            </tr>`;
-          }).join("")}
-        </tbody>
-      </table>`;
   } catch (error) {
     console.error("Supplement blog enhancements could not load.", error);
-    if (relationshipTable) relationshipTable.textContent = "Overlap notes are temporarily unavailable.";
   }
 }
