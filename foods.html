@@ -93,7 +93,12 @@
       <div class="secondary-header-inner">
         <div class="secondary-header-copy">
           <h1 class="secondary-header-title" id="food-catalog-title">Food catalog</h1>
-          <span class="secondary-header-subtitle">Superfoods in a clean list view.</span>
+          <span class="secondary-header-subtitle">Superfoods with details, nutrients and purpose</span>
+        </div>
+        <div class="secondary-header-switcher" role="group" aria-label="Dietary view">
+          <button type="button" data-food-diet="vegan" aria-pressed="true" aria-controls="food-catalog">Vegan</button>
+          <button type="button" data-food-diet="pescatarian" aria-pressed="false" aria-controls="food-catalog">Pescetarian</button>
+          <button type="button" data-food-diet="vegetarian" aria-pressed="false" aria-controls="food-catalog">Vegetarian</button>
         </div>
       </div>
     </section>
@@ -112,6 +117,6 @@
         <a href="/imprint">Imprint</a>
       </nav>
     </footer>
-    <script type="module" src="script.js"></script>
+    <script type="module" src="script.js?v=20260809-foods-header"></script>
   </body>
 </html>
