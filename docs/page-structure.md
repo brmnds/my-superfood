@@ -22,7 +22,7 @@ This is the current implemented page and frontend-module map for My Superfood. P
 
 ## Shared Page Shell
 
-Public pages use the same primary header and mobile navigation from `assets/js/navigation.mjs`. Foods, Supplements, Recipes, and Lists add a shared secondary headline bar below it. The supplement blog uses the same bar pattern with a back action.
+Public pages use the same primary header and mobile navigation from `assets/js/navigation.mjs`. Foods, Supplements, Recipes, and Lists add a shared secondary headline bar below it. The three supplement routes use the same `Supplements and Supplement-Kits` bar and Overview, Directory, and Blog by Tilman switcher, with the current route selected.
 
 `assets/js/shared.mjs` keeps the secondary bar below the measured primary-header height and hides it after roughly one-third of the page scroll. The bar contains:
 

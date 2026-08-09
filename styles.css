@@ -321,10 +321,6 @@ select {
   margin: 0;
 }
 
-.supplement-blog-header .secondary-header-title {
-  text-transform: uppercase;
-}
-
 .secondary-header-subtitle {
   border-left: 1px solid #cad8cb;
   color: var(--muted);
