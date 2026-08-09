@@ -1512,6 +1512,27 @@ h2 {
   width: 100%;
 }
 
+#food-catalog .catalog-card {
+  display: flex;
+  flex-direction: column;
+}
+
+#food-catalog .catalog-card .tag-row {
+  align-content: flex-start;
+  flex: 0 0 54px;
+  margin-bottom: 16px;
+  max-height: 54px;
+  overflow: hidden;
+}
+
+#food-catalog .catalog-card .tag {
+  white-space: nowrap;
+}
+
+#food-catalog .catalog-card .button {
+  margin-top: auto;
+}
+
 .catalog-table .tag {
   font-size: 0.68rem;
   padding: 4px 8px;
