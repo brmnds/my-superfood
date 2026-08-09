@@ -653,6 +653,10 @@ select {
   margin: 22px 0 0;
 }
 
+.blog-section-card > .blog-section-image {
+  margin: 22px 0 0;
+}
+
 .shake-ingredient-list {
   columns: 2;
   margin: 0 0 18px;

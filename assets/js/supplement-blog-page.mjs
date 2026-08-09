@@ -24,7 +24,11 @@ function renderSupplementDisclosures() {
       details.append(summary, body);
       summary.append(heading);
 
-      while (details.nextElementSibling && details.nextElementSibling.tagName !== "H3") {
+      while (
+        details.nextElementSibling
+        && details.nextElementSibling.tagName !== "H3"
+        && !details.nextElementSibling.classList.contains("blog-section-image")
+      ) {
         body.append(details.nextElementSibling);
       }
     });
