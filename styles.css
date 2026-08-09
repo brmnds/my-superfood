@@ -261,6 +261,13 @@ select {
   margin-top: 10px;
 }
 
+.supplement-context-card {
+  background: #fff8ed;
+  border-color: #f1dfc3;
+  max-width: none;
+  width: 100%;
+}
+
 .article-shell {
   max-width: 1040px;
   min-width: 0;
