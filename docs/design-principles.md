@@ -23,6 +23,9 @@ The icon should appear next to the `My Superfood` wordmark in the site header. D
 ## Layout
 
 - Keep the header sticky, white, and compact.
+- Foods, Supplements, Recipes, and Lists use the shared secondary headline bar directly below the primary header. It contains the page title, an optional short subtitle, and page-level navigation or account controls on the right.
+- Keep the secondary headline bar compact and temporarily sticky. It may hide after roughly one-third of the page has been scrolled so it supports orientation without occupying the full reading experience.
+- At the mobile navigation breakpoint, secondary-bar copy and controls may stack into two compact rows. Controls must remain fully visible and must not create document-level horizontal overflow.
 - Use a hamburger menu on mobile/responsive widths instead of wrapping all navigation links into multiple rows.
 - Keep page containers centered with generous but practical spacing.
 - Use cards only for real grouped content, repeated items, status panels, or modals.
@@ -40,6 +43,8 @@ The icon should appear next to the `My Superfood` wordmark in the site header. D
 - Tables should use readable spacing, visible headers, and non-overflowing cells.
 - Source/status badges should be visible but quiet.
 - The saved-list tabs are the structure; do not add extra list-summary cards unless requested.
+- Recipe view controls switch between two prominent featured recipes and the compact full recipe list without changing routes.
+- Food dietary controls use the same Vegan, Pescetarian, and Vegetarian data model on the landing page and catalog page; Vegan is the default view.
 - Protocol chips, such as Tilman's supplement stack, should behave as navigation controls when they reference catalog entities: clicking a chip should open the relevant tab, scroll to the row, and use a quiet green highlight.
 - Supplement timing belongs under the supplement or supplement-kit name as small CSS icons, not emoji or large badges. Hover/focus tooltips should explain the source-backed reason in one short note.
 - Tilman's protocol timing filter should mute non-matching chips instead of removing them so the full stack stays visible and clickable.

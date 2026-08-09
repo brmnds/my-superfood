@@ -16,12 +16,12 @@
     {
       "name": "Foods",
       "url": "https://my-superfood.com/foods",
-      "summary": "Food catalog covering plant proteins, carbohydrates, healthy oils, fiber-rich foods, advanced nutrient foods, and Tilman's protocol foods."
+      "summary": "Food catalog with Vegan, Pescetarian, and Vegetarian views, nutrient strengths, and saved-list actions."
     },
     {
       "name": "Supplements",
       "url": "https://my-superfood.com/supplements",
-      "summary": "Supplement and supplement-kit catalog that separates purchasable products from underlying supplement ingredients, label amounts, daily reference ranges, timing guidance, storage guidance, and source notes.",
+      "summary": "Supplement and supplement-kit catalog with Overview, Directory, and Blog navigation that separates purchasable products from underlying supplement ingredients, label amounts, daily reference ranges, timing guidance, storage guidance, and source notes.",
       "dataDownload": "https://my-superfood.com/data/supplement-catalog.seed.json"
     },
     {
@@ -39,12 +39,12 @@
     {
       "name": "Recipes",
       "url": "https://my-superfood.com/recipes",
-      "summary": "Healthy recipe ideas built around superfood ingredients."
+      "summary": "Healthy recipe ideas built around superfood ingredients with Featured and List views."
     },
     {
       "name": "Lists",
       "url": "https://my-superfood.com/lists",
-      "summary": "Saved list workspace for foods, supplements, and recipes with browser-local storage and optional LuminaOS sync."
+      "summary": "Tabbed saved-list workspace for foods, supplements, and recipes with browser-local storage and optional LuminaOS sync."
     },
     {
       "name": "LuminaOS",

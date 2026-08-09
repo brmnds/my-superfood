@@ -7,11 +7,11 @@ The first version is intentionally simple: plain HTML, CSS, and JavaScript with 
 ## Pages
 
 - `index.html` - interactive Apple Watch-style superfood landing page.
-- `foods.html` - list/catalog view of superfoods.
+- `foods.html` - responsive food catalog with Vegan, Pescetarian, and Vegetarian views.
 - `supplements.html` - searchable table-first supplement product and ingredient catalog with source labels.
 - `supplement-directory.html` - active protocol directory that shows each supplement primitive, where it appears, and combined active label amounts.
 - `supplement-blog.html` - Tilman Resch's current supplement routine, morning shake, official product links, and product-overlap review, linked from the supplements heading.
-- `recipes.html` - healthy recipe feature page.
+- `recipes.html` - recipe catalog with Featured and List views.
 - `lists.html` - tabbed saved-list workspace for foods, supplements, and recipes, powered by browser `localStorage`, anonymous DynamoDB sync, and optional LuminaOS account sync.
 - `luminaos.html` - LuminaOS handoff page.
 - `privacy.html`, `terms.html`, `imprint.html` - simple legal and informational pages with clean URL routes.
@@ -43,11 +43,14 @@ Frontend JavaScript uses native ES modules:
 
 - `script.js` is the small browser entrypoint and dispatches by `body[data-page]`.
 - `assets/js/data/foods.mjs` and `assets/js/data/recipes.mjs` hold static catalog data.
-- `assets/js/home.mjs`, `assets/js/foods-page.mjs`, `assets/js/recipes-page.mjs`, and `assets/js/supplements-page.mjs` render page-specific UI.
+- `assets/js/home.mjs`, `assets/js/foods-page.mjs`, `assets/js/recipes-page.mjs`, `assets/js/supplements-page.mjs`, `assets/js/supplement-directory-page.mjs`, and `assets/js/supplement-blog-page.mjs` render page-specific UI.
+- `assets/js/lists-page.mjs` enhances the Lists headline-bar account controls.
 - `assets/js/saved-list.mjs` owns saved-list persistence and LuminaOS auth/session helpers.
-- `assets/js/navigation.mjs` and `assets/js/shared.mjs` hold shared header and utility code.
+- `assets/js/navigation.mjs` owns the primary responsive navigation; `assets/js/shared.mjs` owns the shared secondary headline-bar behavior.
 
 All public pages load `script.js` with `<script type="module">`; keep the site no-build unless there is a clear product reason to introduce a bundler.
+
+The current route, page-shell, module-ownership, and responsive structure is documented in `docs/page-structure.md`.
 
 Saved lists use a small AWS backend:
 
@@ -131,11 +134,7 @@ Run these before committing:
 
 ```bash
 node --check script.js
-node --check backend/list-api.mjs
-node --check backend/catalog-api.mjs
-node --check scripts/local-preview-server.mjs
-node --check scripts/validate-supplement-catalog.mjs
-node --check scripts/seed-supplement-catalog.mjs
+for file in assets/js/*.mjs assets/js/data/*.mjs backend/*.mjs scripts/*.mjs; do node --check "$file" || exit 1; done
 node scripts/validate-supplement-catalog.mjs
 git diff --check
 ```

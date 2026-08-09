@@ -4,6 +4,8 @@
 
 My Superfood is a bright, organic food and nutrition website/app that helps users discover healthy foods, understand what they are good for, and save inspiring foods into personal lists.
 
+This document records product direction. The implemented route and module structure is maintained separately in `docs/page-structure.md`.
+
 The landing page should feel visual, exploratory, and alive. It should not start as a static article page. The primary first-screen experience is an interactive field of food symbols and images.
 
 ## Landing Page Experience
@@ -45,29 +47,11 @@ There should also be advanced filters where users can filter by highly represent
 
 In addition to the interactive landing page, the site should have a more structured list-view experience with the same food content.
 
-There should be subpages or category pages for:
-
-- Protein-rich foods
-- Carb-rich foods
-- Oil / fat-rich foods
-- Fiber-rich foods
-- Additional nutrient-focused categories over time
-
-These pages should show foods in a clearer list or catalog view for users who prefer scanning and comparing.
+The implemented `/foods` catalog provides one consistent card-based list view with a shared dietary selector. Additional nutrient-focused category routes remain optional future scope; they should only be introduced when a single catalog plus filters is no longer sufficient.
 
 ## User Lists And Accounts
 
-Users should be able to add foods to personal lists.
-
-Initial list use cases:
-
-- Foods the user wants to buy.
-- Foods the user wants to have at home.
-- Foods the user was inspired by and wants to include more often.
-
-Users should be able to log in so their lists can be saved across sessions.
-
-The exact list types and naming will be defined later.
+Users can save foods, supplements, and recipes. `/lists` presents the three item types as accessible tabs over one saved-list store. Browser-local persistence and anonymous AWS sync work without sign-in; optional LuminaOS sign-in provides account-backed synchronization.
 
 ## LuminaOS Connection
 
@@ -81,13 +65,13 @@ This should connect to the LuminaOS website/app and support account creation or 
 
 The site should include a healthy recipes section that works like a blog from Tilman Resch.
 
-Recipe posts should include:
+Recipe cards include:
 
-- One or several high-quality pictures.
-- If there are several pictures, display them as a small gallery.
-- A right-side description explaining what the dish is.
-- A clear explanation of why the recipe is healthy.
-- A visual connection to the relevant foods or superfoods when useful.
+- A high-quality 4:5 dish image with a readable two-line title overlay.
+- A concise description, preparation steps, and Superfood Benefits.
+- Ingredient chips with hover and keyboard-focus details.
+- Consistent actions for saving the recipe and exploring its ingredients.
+- A Featured view for the two primary recipes and a List view for the full recipe catalog.
 
 This section should support frequently posted recipes over time.
 
@@ -149,9 +133,6 @@ The interface should feel premium but practical: visual and inspiring on the lan
 
 ## Open Design Questions
 
-- What exact list types should users be able to create?
-- Which authentication provider should be used?
-- Should food data start as a curated local dataset or come from a nutrition API?
 - Which LuminaOS flow should be triggered: account creation, habit creation, goal creation, or a nutrition-plan import?
 - What should count as a "high representation" of a nutrient for filtering?
 - Which supplement sources should be included beyond Tilman Resch and Bryan Johnson?

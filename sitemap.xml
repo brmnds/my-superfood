@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://my-superfood.com/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://my-superfood.com/foods</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://my-superfood.com/supplements</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -26,25 +26,25 @@
   </url>
   <url>
     <loc>https://my-superfood.com/supplement-directory</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://my-superfood.com/recipes</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://my-superfood.com/lists</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://my-superfood.com/luminaos</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -68,19 +68,19 @@
   </url>
   <url>
     <loc>https://my-superfood.com/llms.txt</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
     <loc>https://my-superfood.com/data/site-entities.json</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
     <loc>https://my-superfood.com/data/supplement-catalog.seed.json</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

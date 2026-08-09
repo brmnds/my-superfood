@@ -24,7 +24,7 @@ The public UI uses generated optimized variants:
 - Variant manifest: `assets/images/optimized/food-image-variants.json`.
 - Regeneration script: `scripts/generate-food-image-variants.mjs`.
 
-As of the 2026-05-23 optimization pass, 98 public food image sets were generated. Miso and Kombucha are intentionally omitted from the public food catalog. The original food image set is preserved locally; optimized landing images are roughly `1.5 MB` total, and optimized catalog/detail images are roughly `5.2 MB` total. This keeps the original source assets available locally while avoiding full-size image downloads in the main UI.
+The current catalog contains 98 public food image sets. Miso and Kombucha are intentionally omitted from the public food catalog. The August 9, 2026 validation regenerated the optimized variants for lentils, avocado, blueberries, spinach, and olive oil after their source images were standardized. The original food image set is preserved locally; optimized landing and catalog/detail variants keep full-size source images out of the main UI.
 
 ## Food Images
 
@@ -173,7 +173,7 @@ As of the 2026-05-23 optimization pass, 98 public food image sets were generated
 
 ## Required Image Replacement Backlog
 
-No food image replacement backlog remains after the 2026-05-17 generated image pass.
+No food image replacement backlog remains after the August 9, 2026 validation pass.
 
 ## Acceptance Criteria For Next Image Pass
 
