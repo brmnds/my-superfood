@@ -2796,6 +2796,15 @@ h2 {
   width: auto;
 }
 
+.lumina-primary-actions .button {
+  box-sizing: border-box;
+  height: 54px;
+  line-height: 1.15;
+  margin: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
 .account-sync-panel {
   background: white;
   border: 1px solid var(--line);
