@@ -1,6 +1,6 @@
 # Image Validation
 
-Last validated: 2026-06-28
+Last validated: 2026-08-09
 
 This report validates current My Superfood images against the picture steering files:
 
@@ -32,12 +32,12 @@ As of the 2026-05-23 optimization pass, 98 public food image sets were generated
 | --- | --- | --- | --- |
 | Broccoli | `assets/images/real/broccoli.jpg` | Pass | Raw broccoli reframed on a square white canvas so it stays centered in catalog cards and circular landing crops. |
 | Chickpeas | `assets/images/real/chickpeas.png` | Pass | Full whole chickpeas on a clean white background. |
-| Lentils | `assets/images/real/lentils-uncooked.jpg` | Pass | Clean uncooked lentils. |
+| Lentils | `assets/images/real/lentils-uncooked.jpg` | Pass | Generated uncooked lentils product image, centered on a square clean white background. |
 | Cauliflower | `assets/images/real/cauliflower.png` | Pass | Raw cauliflower head on a clean white background. |
 | Banana | `assets/images/real/banana.png` | Pass | Generated product-style banana image on a clean white background. |
-| Avocado | `assets/images/real/avocado.jpg` | Pass | Full/halved avocado is recognizable. |
-| Blueberries | `assets/images/real/blueberries.jpg` | Pass | Whole blueberries, clean close-up. |
-| Spinach | `assets/images/real/spinach.jpg` | Pass | Raw spinach leaves. |
+| Avocado | `assets/images/real/avocado.jpg` | Pass | Generated whole and halved avocado product image without the previous gray reflective inset. |
+| Blueberries | `assets/images/real/blueberries.jpg` | Pass | Generated whole blueberry product image with generous white space instead of a full-frame macro crop. |
+| Spinach | `assets/images/real/spinach.jpg` | Pass | Generated raw spinach bunch isolated on white without the previous bowl and outdoor background. |
 | Salmon | `assets/images/real/salmon.png` | Pass | Clean raw salmon fillet on a white background. |
 | Oats | `assets/images/real/oats.png` | Pass | Small mountain of rolled oats on a clean white background. |
 | Olive Oil | `assets/images/real/olive-oil.jpg` | Pass | Clean bottle-and-dish photograph on a bright neutral background; replacement removes the embedded circular outline from both optimized variants. |
