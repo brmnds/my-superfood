@@ -40,7 +40,7 @@ As of the 2026-05-23 optimization pass, 98 public food image sets were generated
 | Spinach | `assets/images/real/spinach.jpg` | Pass | Raw spinach leaves. |
 | Salmon | `assets/images/real/salmon.png` | Pass | Clean raw salmon fillet on a white background. |
 | Oats | `assets/images/real/oats.png` | Pass | Small mountain of rolled oats on a clean white background. |
-| Olive Oil | `assets/images/real/olive-oil.png` | Pass | Generated clean bottle-and-olives image; olives make the oil source identifiable in the circular crop. |
+| Olive Oil | `assets/images/real/olive-oil.jpg` | Pass | Clean bottle-and-dish photograph on a bright neutral background; replacement removes the embedded circular outline from both optimized variants. |
 | Walnuts | `assets/images/real/walnuts.png` | Pass | Generated product-style raw walnut image on a clean white background. |
 | Coconut Yogurt | `assets/images/real/coconut-yogurt.png` | Pass | Generated coconut yogurt image with a coconut piece in the yogurt on a clean white background. |
 | Sweet Potato | `assets/images/real/sweet-potato.png` | Pass | Raw sweet potato with cut pieces on a clean white background. |

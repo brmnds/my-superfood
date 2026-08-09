@@ -195,7 +195,7 @@ export const foods = [
   {
     "id": "olive-oil",
     "name": "Olive Oil",
-    "image": "assets/images/real/olive-oil.png",
+    "image": "assets/images/real/olive-oil.jpg",
     "categories": [
       "oils",
       "advanced"
