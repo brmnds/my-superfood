@@ -5,30 +5,51 @@ import { escapeHtml } from "./shared.mjs";
 export function renderRecipes() {
   const featuredRoot = document.querySelector("#featured-recipes");
   const libraryRoot = document.querySelector("#recipe-library");
-  if (!featuredRoot || !libraryRoot) return;
+  const libraryEyebrow = document.querySelector("#recipe-library-eyebrow");
+  const libraryTitle = document.querySelector("#recipe-library-title");
+  const viewButtons = [...document.querySelectorAll("[data-recipe-view]")];
+  if (!featuredRoot || !libraryRoot || !libraryEyebrow || !libraryTitle || !viewButtons.length) return;
 
   const featuredRecipes = recipes.filter((recipe) => recipe.featured);
   const libraryRecipes = recipes.filter((recipe) => !recipe.featured);
 
   featuredRoot.innerHTML = featuredRecipes.map((recipe) => recipeCardTemplate(recipe, "featured")).join("");
-  libraryRoot.innerHTML = libraryRecipes.map((recipe) => recipeCardTemplate(recipe, "compact")).join("");
+  setRecipeView("featured");
 
-  document.querySelectorAll(".save-recipe").forEach((button) => {
-    button.addEventListener("click", () => {
-      const recipe = recipes.find((entry) => entry.id === button.dataset.recipe);
-      if (!recipe) return;
-      saveItem({
-        type: "Recipe",
-        id: recipe.id,
-        name: recipe.name,
-        image: recipe.image,
-        note: recipe.note,
-      });
-      button.textContent = "Added";
-      const savedNote = document.querySelector("#recipe-saved-note");
-      if (savedNote) savedNote.textContent = `${recipe.name} added to your recipe list.`;
-    });
+  viewButtons.forEach((button) => {
+    button.addEventListener("click", () => setRecipeView(button.dataset.recipeView));
   });
+
+  document.querySelector(".recipes-page-shell")?.addEventListener("click", (event) => {
+    const button = event.target.closest(".save-recipe");
+    if (!button) return;
+    const recipe = recipes.find((entry) => entry.id === button.dataset.recipe);
+    if (!recipe) return;
+    saveItem({
+      type: "Recipe",
+      id: recipe.id,
+      name: recipe.name,
+      image: recipe.image,
+      note: recipe.note,
+    });
+    button.textContent = "Added";
+    const savedNote = document.querySelector("#recipe-saved-note");
+    if (savedNote) savedNote.textContent = `${recipe.name} added to your recipe list.`;
+  });
+
+  function setRecipeView(view) {
+    const showList = view === "list";
+    featuredRoot.hidden = showList;
+    libraryRoot.innerHTML = (showList ? recipes : libraryRecipes)
+      .map((recipe) => recipeCardTemplate(recipe, "compact"))
+      .join("");
+    libraryEyebrow.textContent = showList ? "Recipe collection" : "Boho recipe set";
+    libraryTitle.textContent = showList ? "All recipes" : "More real-food recipe ideas";
+
+    viewButtons.forEach((button) => {
+      button.setAttribute("aria-pressed", String(button.dataset.recipeView === (showList ? "list" : "featured")));
+    });
+  }
 }
 
 function recipeCardTemplate(recipe, density) {

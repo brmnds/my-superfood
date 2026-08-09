@@ -83,16 +83,24 @@
         <a href="/luminaos">LuminaOS</a>
       </nav>
     </header>
-    <main class="page-shell">
-      <section class="page-heading">
-        <p class="eyebrow">Healthy recipes by Tilman Resch</p>
-        <h1>Bright dishes built around real superfoods.</h1>
-      </section>
+    <section class="secondary-header recipes-header" data-secondary-header aria-labelledby="recipes-title">
+      <div class="secondary-header-inner">
+        <div class="secondary-header-copy">
+          <h1 class="secondary-header-title" id="recipes-title">Recipes with superfoods</h1>
+          <span class="secondary-header-subtitle">Healthy dishes by Tilman Resch</span>
+        </div>
+        <div class="secondary-header-switcher" role="group" aria-label="Recipe views">
+          <button type="button" data-recipe-view="featured" aria-pressed="true">Featured</button>
+          <button type="button" data-recipe-view="list" aria-pressed="false">List view</button>
+        </div>
+      </div>
+    </section>
+    <main class="page-shell recipes-page-shell">
       <section class="recipe-feature-list" id="featured-recipes" aria-label="Featured recipes">
       </section>
       <section class="recipe-library-section" aria-labelledby="recipe-library-title">
         <div class="section-heading-row">
-          <p class="eyebrow">Boho recipe set</p>
+          <p class="eyebrow" id="recipe-library-eyebrow">Boho recipe set</p>
           <h2 id="recipe-library-title">More real-food recipe ideas</h2>
         </div>
         <div class="recipe-library-grid" id="recipe-library"></div>
