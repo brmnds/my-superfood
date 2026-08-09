@@ -379,6 +379,20 @@ select {
   max-width: 760px;
 }
 
+.blog-hero-date {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 5px;
+  bottom: 14px;
+  color: var(--leaf-dark);
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 5px 8px;
+  position: absolute;
+  right: 14px;
+}
+
 .blog-inline-image {
   margin-top: 30px;
 }
@@ -561,16 +575,9 @@ select {
   }
 }
 
-.article-meta,
 .article-disclaimer {
   border-radius: 10px;
   padding: 12px 14px;
-}
-
-.article-meta {
-  background: #f5faf5;
-  color: var(--leaf-dark);
-  font-weight: 760;
 }
 
 .article-disclaimer {
