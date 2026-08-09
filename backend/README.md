@@ -100,6 +100,13 @@ node scripts/validate-supplement-catalog.mjs
 node scripts/seed-supplement-catalog.mjs
 ```
 
+For a reviewed single-record update, seed only the changed supplement or product:
+
+```bash
+node scripts/seed-supplement-catalog.mjs --supplement l-theanine
+node scripts/seed-supplement-catalog.mjs --product sunday-green-tea-extract-l-theanine-100mg
+```
+
 The seed validator also checks official `shopUrl` values and the supplement `timing` shape. Timing and storage are source-backed informational catalog metadata and are stored inside each DynamoDB document without backend transformation.
 
 If deploying the catalog Lambda from scratch, create the role and attach the read-only policy:

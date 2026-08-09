@@ -70,6 +70,7 @@ Allowed timing source statuses are:
 
 - `official_page`: the product or provider page gives the timing, directions, or daily routine context.
 - `ingredient_researched`: the catalog timing is inferred from ingredient-level references such as NIH ODS, NCCIH, MedlinePlus, or provider education pages.
+- `user_confirmed`: the timing records Tilman's stated personal routine rather than provider directions or general guidance.
 - `needs_review`: timing is unclear, person-specific, or not backed by enough source context.
 
 Use official product directions first. If they only say "with food" or "before meals", avoid overclaiming exact clock time. If an ingredient can feel stimulating, use conservative earlier-day wording and explain the uncertainty. If timing depends on medication, condition, tolerance, or clinician advice, keep the note neutral.

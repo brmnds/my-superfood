@@ -92,6 +92,7 @@ export function renderSupplements() {
   function timingStatusLabel(status) {
     if (status === "official_page") return "Official page";
     if (status === "ingredient_researched") return "Ingredient research";
+    if (status === "user_confirmed") return "Personal routine";
     return "Timing needs review";
   }
 

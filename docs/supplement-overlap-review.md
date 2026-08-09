@@ -1,6 +1,6 @@
 # Supplement Product Overlap Review
 
-Reviewed July 18, 2026. This is an editorial map for the site, not personalized medical advice. Product directions can change; the linked official pages remain the authority for current labels.
+Reviewed August 9, 2026. This is an editorial map for the site, not personalized medical advice. Product directions can change; the linked official pages remain the authority for current labels.
 
 ## Conclusions
 
@@ -9,7 +9,7 @@ Reviewed July 18, 2026. This is an editorial map for the site, not personalized 
 - **Astaxanthin:** Sunday Natural BioAstin and Blueprint Advanced Antioxidants both list 12 mg astaxanthin. Treat them as alternative astaxanthin sources, even though the Blueprint product contains additional antioxidants.
 - **Ashwagandha:** Blueprint Ashwagandha + Rhodiola and Sunday Natural Muscle Recover Ashwa Pro both contain ashwagandha, but at different amounts and with different companion ingredients. They overlap but are not exact substitutes.
 - **Magnesium:** Magnesium Complex 11, Active Calm, magnesium bisglycinate, Muscle Recover, and Longevity Mix all contribute magnesium. The personal routine identifies Active Calm and Muscle Recover for evening and uses extra magnesium after sport only; which standalone product is used after sport is still ambiguous.
-- **L-theanine:** Longevity Mix and NOW L-Theanine are cumulative sources. The morning/evening split may be deliberate, but both count.
+- **L-theanine:** Longevity Mix and Sunday Natural Green Tea Extract L-Theanine are cumulative sources. The morning/evening split may be deliberate, but both count.
 - **Ubiquinol, NADH, and hyaluronic acid:** Each appears in a multi-ingredient product and a standalone product. These are cumulative sources, not clean alternatives.
 - **Blueprint Essential Capsules + Advanced Antioxidants:** Blueprint describes these as complementary. Advanced Antioxidants still overlaps with standalone astaxanthin and vitamin K products.
 
@@ -31,4 +31,4 @@ Reviewed July 18, 2026. This is an editorial map for the site, not personalized 
 - [Sunday Natural Magnesium Active Calm](https://www.sunday.de/en/magnesium-active-calm-complex-capsules.html)
 - [Sunday Natural Magnesium Complex 11](https://www.sunday.de/en/mg-complex-11-ultra-xl-capsules.html)
 - [natural elements Magnesium Bisglycinate](https://my-ne.com/products/magnesiumbisglycinat-kapseln)
-- [NOW L-Theanine 200 mg](https://www.nowfoods.com/products/supplements/l-theanine-double-strength-200-mg-veg-capsules)
+- [Sunday Natural Green Tea Extract L-Theanine 100 mg](https://www.sunday.de/theanin-kapseln-100mg-gruentee-extrakt.html)

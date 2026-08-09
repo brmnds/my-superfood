@@ -115,7 +115,7 @@ The same supplement may have multiple labels. For example, a supplement can be b
 
 Tilman's supplement protocol should act as a navigation layer into the catalog: clicking a named supplement kit in the stack should switch to the Supplement Kits tab, scroll to the matching product row, and highlight it.
 
-Each Supplement Kit must reference primitive supplements rather than storing ingredients only as free text. For example, a NOW L-Theanine kit references `l-theanine` and `inositol`; a magnesium bisglycinate kit references `magnesium`; a Swanson Apigenin kit references `apigenin`.
+Each Supplement Kit must reference primitive supplements rather than storing ingredients only as free text. For example, the Sunday Natural Green Tea Extract L-Theanine product references `l-theanine`; a magnesium bisglycinate kit references `magnesium`; a Swanson Apigenin kit references `apigenin`.
 
 Supplement cards or detail pages should make the distinction clear between:
 

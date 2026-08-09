@@ -5,7 +5,7 @@ const seedPath = process.argv[2] || "data/supplement-catalog.seed.json";
 const allowedSourceStatuses = new Set(["package_verified", "website_sourced", "needs_review"]);
 const allowedSourceTypes = new Set(["package_photo", "official_page", "reference_page"]);
 const allowedTimingSlots = new Set(["morning", "daytime", "evening"]);
-const allowedTimingSourceStatuses = new Set(["official_page", "ingredient_researched", "needs_review"]);
+const allowedTimingSourceStatuses = new Set(["official_page", "ingredient_researched", "user_confirmed", "needs_review"]);
 const allowedStorageModes = new Set(["refrigerate", "cool_dry", "room_temperature", "needs_review"]);
 const allowedStorageSourceStatuses = new Set(["official_page", "needs_review"]);
 
@@ -47,10 +47,10 @@ function validateTiming(record, label) {
     if (!sourceIds.has(sourceId)) errors.push(`${label} timing references missing source ${sourceId}.`);
   }
 
-  if ((timing.slots || []).length > 0 && (!Array.isArray(timing.sourceIds) || timing.sourceIds.length === 0)) {
+  if (timing.sourceStatus !== "user_confirmed" && (timing.slots || []).length > 0 && (!Array.isArray(timing.sourceIds) || timing.sourceIds.length === 0)) {
     errors.push(`${label} has timing slots but no timing sourceIds.`);
   }
-  if (timing.sourceStatus !== "needs_review" && (!Array.isArray(timing.sourceIds) || timing.sourceIds.length === 0)) {
+  if (!new Set(["needs_review", "user_confirmed"]).has(timing.sourceStatus) && (!Array.isArray(timing.sourceIds) || timing.sourceIds.length === 0)) {
     errors.push(`${label} has reviewed timing without timing sourceIds.`);
   }
 }

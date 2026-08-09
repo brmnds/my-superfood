@@ -47,8 +47,8 @@ export const supplementRelationshipGroups = [
     category: "L-theanine",
     status: "overlap",
     label: "Count both sources",
-    productIds: ["blueprint-longevity-mix-blood-orange", "now-l-theanine-double-strength-200mg"],
-    summary: "Longevity Mix already contains L-theanine and the NOW product adds a separate evening amount. The split may be intentional, but both sources count toward the total.",
+    productIds: ["blueprint-longevity-mix-blood-orange", "sunday-green-tea-extract-l-theanine-100mg"],
+    summary: "Longevity Mix already contains L-theanine and the Sunday Natural product adds a separate 200 mg evening amount from two capsules. The split may be intentional, but both sources count toward the total.",
   },
   {
     category: "Ubiquinol / CoQ10",

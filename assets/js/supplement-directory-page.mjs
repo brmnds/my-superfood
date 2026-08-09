@@ -17,7 +17,7 @@ const activeProductIds = [
   "sunday-magnesium-active-calm",
   "natural-elements-magnesium-bisglycinat",
   "swanson-apigenin-50mg-90-caps",
-  "now-l-theanine-double-strength-200mg",
+  "sunday-green-tea-extract-l-theanine-100mg",
   "sunday-muscle-recover-ashwa-pro-complex",
   "sunday-vitamin-b-complex-extra-forte",
   "sunday-nadh-50-d-ribose-galactose",
