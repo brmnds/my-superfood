@@ -267,45 +267,67 @@ select {
   width: 100%;
 }
 
-.blog-subnav {
-  --blog-header-offset: 56px;
+.secondary-header {
+  --secondary-header-content-width: 1040px;
+  --secondary-header-offset: 56px;
   background: rgba(248, 251, 247, 0.96);
   border-bottom: 1px solid #dfe8df;
   box-shadow: 0 3px 10px rgba(41, 57, 44, 0.05);
   position: sticky;
-  top: var(--blog-header-offset);
+  top: var(--secondary-header-offset);
   transform: translateY(0);
   transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
   z-index: 50;
 }
 
-.blog-subnav.is-hidden {
+.secondary-header.is-hidden {
   opacity: 0;
   pointer-events: none;
   transform: translateY(-100%);
   visibility: hidden;
 }
 
-.blog-subnav-inner {
+.secondary-header-inner {
   align-items: center;
   display: flex;
   gap: 16px;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 1040px;
+  max-width: var(--secondary-header-content-width);
   min-height: 44px;
   padding: 6px 24px;
 }
 
-.blog-subnav-title {
+.secondary-header-copy {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  min-width: 0;
+}
+
+.secondary-header-title {
   color: var(--leaf-dark);
   font-size: 0.78rem;
   font-weight: 850;
   letter-spacing: 0.04em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.supplement-blog-header .secondary-header-title {
   text-transform: uppercase;
 }
 
-.blog-subnav-back {
+.secondary-header-subtitle {
+  border-left: 1px solid #cad8cb;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 500;
+  line-height: 1.25;
+  padding-left: 16px;
+}
+
+.secondary-header-action {
   align-items: center;
   border: 1px solid #d5e2d6;
   border-radius: 6px;
@@ -319,10 +341,19 @@ select {
   white-space: nowrap;
 }
 
-.blog-subnav-back:hover,
-.blog-subnav-back:focus-visible {
+.secondary-header-action:hover,
+.secondary-header-action:focus-visible {
   background: #e8f2e8;
   border-color: #bdd2bf;
+}
+
+.food-catalog-header {
+  --secondary-header-content-width: 1280px;
+}
+
+.food-catalog-header .secondary-header-title {
+  font-size: 1rem;
+  letter-spacing: 0;
 }
 
 .blog-section-nav {
@@ -2657,7 +2688,7 @@ h2 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .blog-subnav {
+  .secondary-header {
     transition: none;
   }
 
@@ -2725,16 +2756,24 @@ h2 {
     padding: 12px 18px;
   }
 
-  .blog-subnav-inner {
+  .secondary-header-inner {
     min-height: 42px;
     padding: 5px 18px;
   }
 
-  .blog-subnav-title {
+  .secondary-header-title {
     font-size: 0.7rem;
   }
 
-  .blog-subnav-back {
+  .food-catalog-header .secondary-header-title {
+    font-size: 0.9rem;
+  }
+
+  .secondary-header-subtitle {
+    font-size: 0.76rem;
+  }
+
+  .secondary-header-action {
     font-size: 0.72rem;
   }
 

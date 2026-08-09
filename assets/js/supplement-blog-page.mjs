@@ -1,3 +1,5 @@
+import { initSecondaryHeader } from "./shared.mjs";
+
 function renderSupplementDisclosures() {
   document.querySelectorAll(".blog-section-card").forEach((section) => {
     const headings = Array.from(section.children).filter((child) => child.tagName === "H3");
@@ -33,40 +35,6 @@ function renderSupplementDisclosures() {
       }
     });
   });
-}
-
-function initBlogSubnav() {
-  const subnav = document.querySelector("[data-blog-subnav]");
-  const header = document.querySelector(".site-header");
-  if (!subnav || !header) return;
-
-  let ticking = false;
-
-  const updatePosition = () => {
-    const scrollableHeight = Math.max(document.documentElement.scrollHeight - window.innerHeight, 0);
-    const hideAfter = scrollableHeight / 3;
-    subnav.classList.toggle("is-hidden", hideAfter > 0 && window.scrollY > hideAfter);
-    ticking = false;
-  };
-
-  const updateHeaderOffset = () => {
-    subnav.style.setProperty("--blog-header-offset", `${Math.round(header.getBoundingClientRect().height)}px`);
-    updatePosition();
-  };
-
-  window.addEventListener("scroll", () => {
-    if (ticking) return;
-    ticking = true;
-    window.requestAnimationFrame(updatePosition);
-  }, { passive: true });
-  window.addEventListener("resize", updateHeaderOffset);
-
-  if ("ResizeObserver" in window) {
-    const headerObserver = new ResizeObserver(updateHeaderOffset);
-    headerObserver.observe(header);
-  }
-
-  updateHeaderOffset();
 }
 
 function initBlogSectionNav() {
@@ -107,7 +75,7 @@ function initBlogSectionNav() {
 }
 
 export async function renderSupplementBlog() {
-  initBlogSubnav();
+  initSecondaryHeader();
   initBlogSectionNav();
   renderSupplementDisclosures();
 
