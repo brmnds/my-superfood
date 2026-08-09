@@ -73,16 +73,17 @@
         <a href="/luminaos">LuminaOS</a>
       </nav>
     </header>
-    <main class="page-shell">
-      <section class="page-heading">
-        <p class="eyebrow">Saved lists</p>
-        <h1>Foods, supplements, and recipes you want to keep close.</h1>
-        <p id="saved-list-intro">Saved in this browser. Sign in with LuminaOS to sync your list.</p>
-        <div class="account-sync-panel">
-          <p data-auth-status>Checking LuminaOS sync...</p>
-          <div class="lumina-actions" data-auth-actions></div>
+    <section class="secondary-header lists-header" data-secondary-header aria-labelledby="lists-title">
+      <div class="secondary-header-inner">
+        <div class="secondary-header-copy">
+          <h1 class="secondary-header-title" id="lists-title">Saved lists</h1>
+          <span class="secondary-header-subtitle">Foods, supplements, and recipes</span>
         </div>
-      </section>
+        <div class="secondary-header-auth" data-auth-actions="header" aria-label="LuminaOS account"></div>
+        <p class="header-auth-status visually-hidden" data-auth-status role="status">Checking LuminaOS sync...</p>
+      </div>
+    </section>
+    <main class="page-shell lists-page-shell">
       <section class="saved-list-browser" aria-label="Saved lists">
         <div class="table-toolbar">
           <div class="tab-list" role="tablist" aria-label="Saved list views">
@@ -104,6 +105,6 @@
         <a href="/imprint">Imprint</a>
       </nav>
     </footer>
-    <script type="module" src="script.js"></script>
+    <script type="module" src="script.js?v=20260809-lists-header"></script>
   </body>
 </html>

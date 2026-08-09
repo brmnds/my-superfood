@@ -355,7 +355,8 @@ select {
 }
 
 .food-catalog-header,
-.recipes-header {
+.recipes-header,
+.lists-header {
   --secondary-header-content-width: 1280px;
 }
 
@@ -364,9 +365,95 @@ select {
 }
 
 .food-catalog-header .secondary-header-title,
-.recipes-header .secondary-header-title {
+.recipes-header .secondary-header-title,
+.lists-header .secondary-header-title {
   font-size: 1rem;
   letter-spacing: 0;
+}
+
+.secondary-header-auth {
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.header-auth-menu {
+  position: relative;
+}
+
+.header-auth-menu summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.header-auth-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.header-auth-chevron {
+  border-bottom: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  height: 7px;
+  margin: -3px 2px 0 4px;
+  transform: rotate(45deg);
+  transition: transform 150ms ease;
+  width: 7px;
+}
+
+.header-auth-menu[open] .header-auth-chevron {
+  margin-top: 3px;
+  transform: rotate(225deg);
+}
+
+.header-auth-popover {
+  background: white;
+  border: 1px solid #d5e2d6;
+  border-radius: 6px;
+  box-shadow: 0 12px 28px rgba(41, 57, 44, 0.14);
+  min-width: 132px;
+  padding: 6px;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 60;
+}
+
+.header-auth-signout {
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.76rem;
+  font-weight: 760;
+  padding: 8px 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.header-auth-signout:hover,
+.header-auth-signout:focus-visible {
+  background: #eef5ee;
+  color: var(--leaf-dark);
+}
+
+.header-auth-signout:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.header-auth-status.is-error {
+  background: #fff2de;
+  border: 1px solid #ecd1a7;
+  border-radius: 6px;
+  color: #7a4a1c;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 6px 8px;
+  position: absolute;
+  right: max(18px, calc((100vw - 1280px) / 2 + 24px));
+  top: calc(100% + 6px);
+  z-index: 61;
 }
 
 .supplements-header .secondary-header-title {
@@ -2832,15 +2919,21 @@ h2 {
   }
 
   .food-catalog-header .secondary-header-title,
-  .recipes-header .secondary-header-title {
+  .recipes-header .secondary-header-title,
+  .lists-header .secondary-header-title {
     font-size: 0.9rem;
   }
 
   .supplements-header .secondary-header-inner,
-  .recipes-header .secondary-header-inner {
+  .recipes-header .secondary-header-inner,
+  .lists-header .secondary-header-inner {
     align-items: stretch;
     flex-direction: column;
     gap: 5px;
+  }
+
+  .lists-header .secondary-header-auth {
+    align-self: flex-end;
   }
 
   .supplements-header .secondary-header-title {
