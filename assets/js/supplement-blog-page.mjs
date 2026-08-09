@@ -65,8 +65,46 @@ function initBlogSubnav() {
   updateHeaderOffset();
 }
 
+function initBlogSectionNav() {
+  const nav = document.querySelector("[data-blog-section-nav]");
+  if (!nav) return;
+
+  const links = Array.from(nav.querySelectorAll('a[href^="#"]'));
+  const sections = links
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+  if (!sections.length) return;
+
+  let ticking = false;
+
+  const updateCurrentSection = () => {
+    const marker = window.innerHeight * 0.42;
+    let currentSection = sections[0];
+
+    sections.forEach((section) => {
+      if (section.getBoundingClientRect().top <= marker) currentSection = section;
+    });
+
+    links.forEach((link) => {
+      const isCurrent = link.getAttribute("href") === `#${currentSection.id}`;
+      if (isCurrent) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+    ticking = false;
+  };
+
+  window.addEventListener("scroll", () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(updateCurrentSection);
+  }, { passive: true });
+  window.addEventListener("resize", updateCurrentSection);
+  updateCurrentSection();
+}
+
 export async function renderSupplementBlog() {
   initBlogSubnav();
+  initBlogSectionNav();
   renderSupplementDisclosures();
 
   try {

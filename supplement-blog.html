@@ -107,6 +107,20 @@
         <a class="blog-subnav-back" href="/supplements"><span aria-hidden="true">&larr;</span> Supplement list</a>
       </div>
     </aside>
+    <nav class="blog-section-nav" data-blog-section-nav aria-label="Article sections">
+      <a href="#section-morning" aria-label="Morning" aria-current="location">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2v8M4.93 10.93l1.41 1.41M2 18h2M20 18h2M19.07 10.93l-1.41 1.41M22 22H2M16 18a4 4 0 0 0-8 0"/></svg>
+        <span class="blog-section-nav-label">Morning</span>
+      </a>
+      <a href="#section-daytime" aria-label="Daytime">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.42"/></svg>
+        <span class="blog-section-nav-label">Daytime</span>
+      </a>
+      <a href="#section-evening" aria-label="Evening">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        <span class="blog-section-nav-label">Evening</span>
+      </a>
+    </nav>
     <main class="page-shell article-shell">
       <article class="blog-article">
         <p class="article-disclaimer">This is my personal educational catalog note, not medical advice, diagnosis, treatment, or a dosing recommendation for other people. I keep uncertain points visible instead of pretending the protocol is more settled than it is.</p>
@@ -118,9 +132,9 @@
         </figure>
         <p class="article-intro">This article combines my current routine with product-label research and notes from a professional nutrition consultation. I take most of my supplements together in the morning because that is the most reliable routine for me. Collagen remains the first separate step. The main stack follows with my vegan shake. Midday is selective rather than a second full stack. The evening routine is clearly smaller: Active Calm, Ashwa Pro, L-theanine, and apigenin.</p>
 
-        <section class="blog-section-card shake-card">
+        <section class="blog-section-card shake-card" id="section-morning">
           <p class="eyebrow">Morning anchor</p>
-          <h2>My vegan morning shake</h2>
+          <h2><a class="blog-heading-anchor" href="#section-morning">My vegan morning shake</a></h2>
           <p>I grind vegan protein powder, hazelnuts, almonds, and hemp seeds, then blend them with linseed oil and a small amount of olive oil. The result is a creamy, nutty shake that makes the morning stack a consistent meal-based ritual.</p>
           <ul class="shake-ingredient-list">
             <li>Vegan protein powder</li>
@@ -134,8 +148,8 @@
           </figure>
         </section>
 
-        <section class="blog-section-card">
-          <h2>First thing, before the shake</h2>
+        <section class="blog-section-card" id="section-before-shake">
+          <h2><a class="blog-heading-anchor" href="#section-before-shake">First thing, before the shake</a></h2>
           <p>This is the one part of the routine where timing really matters. I do not want protein, breakfast, or a large supplement stack to get in the way.</p>
 
           <h3><a href="/supplements#product-blueprint-collagen-peptides">Collagen Peptides</a> <span class="brand-pill">Blueprint</span></h3>
@@ -151,8 +165,8 @@
           <img src="/assets/images/blog/morning-supplement-routine.jpg" alt="Generated editorial image of a morning supplement routine with a shake, water, olive oil, and capsules">
         </figure>
 
-        <section class="blog-section-card">
-          <h2>Morning core</h2>
+        <section class="blog-section-card" id="section-morning-core">
+          <h2><a class="blog-heading-anchor" href="#section-morning-core">Morning core</a></h2>
           <p>This is the main stack I take with the shake. Morning is the reliable habit window; it does not imply that every ingredient must be taken at this time.</p>
 
           <h3><a href="/supplements#product-blueprint-longevity-mix-blood-orange">Longevity Mix</a> <span class="brand-pill">Blueprint</span></h3>
@@ -192,8 +206,8 @@
           <p>I see this as less essential if Ashwa Pro is already in the routine, because the ashwagandha amount is much lower than two capsules of Ashwa Pro. The more interesting part may be rhodiola, which was described as an adaptogen for everyday stress adaptation. The consultation notes even suggested that a stronger separate rhodiola product from Sunday Natural might be cleaner later.</p>
         </section>
 
-        <section class="blog-section-card">
-          <h2>Morning stack, with midday kept selective</h2>
+        <section class="blog-section-card" id="section-daytime">
+          <h2><a class="blog-heading-anchor" href="#section-daytime">Morning stack, with midday kept selective</a></h2>
           <p>I normally take these with the morning shake too. Midday is available for selected products when I deliberately split the routine or follow a label direction, but it is not a second full stack and I am not assigning products to it here without a fixed list.</p>
 
           <h3><a href="/supplements#product-sunday-astaxanthin-12-bioastin">Astaxanthin 12 mg BioAstin</a> <span class="brand-pill">Sunday Natural</span></h3>
@@ -233,8 +247,8 @@
           <img src="/assets/images/blog/evening-recovery-routine.jpg" alt="Generated editorial image of a calm evening supplement routine on a bedside table">
         </figure>
 
-        <section class="blog-section-card">
-          <h2>Evening and before bed</h2>
+        <section class="blog-section-card" id="section-evening">
+          <h2><a class="blog-heading-anchor" href="#section-evening">Evening and before bed</a></h2>
           <p>This is the clearly separated evening stack: Active Calm, Ashwa Pro, L-theanine, and apigenin. Extra magnesium after sport remains conditional rather than a fifth automatic evening product.</p>
 
           <h3><a href="/supplements#product-sunday-magnesium-active-calm">Magnesium Active Calm</a> <span class="brand-pill">Sunday Natural</span></h3>
@@ -254,8 +268,8 @@
           <p>I keep apigenin in the calm-evening cluster. The detailed consultation notes focus more on L-theanine and magnesium, so for apigenin I rely on the product table rather than adding a stronger narrative claim.</p>
         </section>
 
-        <section class="blog-section-card">
-          <h2>My reflection</h2>
+        <section class="blog-section-card" id="section-reflection">
+          <h2><a class="blog-heading-anchor" href="#section-reflection">My reflection</a></h2>
           <p>The most useful shift for me is to stop seeing the stack as one pile of capsules. The shake anchors the morning routine, midday stays selective, and the evening stack is limited to four named products. Magnesium is not one thing, and antioxidants can overlap. Some products are clearly useful to keep; some are alternatives; and some totals still need review.</p>
           <p>The supplement table remains the data layer. This article is the narrative layer: how I currently think about the routine, where I am confident, and where I am deliberately leaving room for review.</p>
         </section>
