@@ -1,5 +1,3 @@
-import { initSecondaryHeader } from "./shared.mjs";
-
 function renderSupplementDisclosures() {
   document.querySelectorAll(".blog-section-card").forEach((section) => {
     const headings = Array.from(section.children).filter((child) => child.tagName === "H3");
@@ -75,7 +73,6 @@ function initBlogSectionNav() {
 }
 
 export async function renderSupplementBlog() {
-  initSecondaryHeader();
   initBlogSectionNav();
   renderSupplementDisclosures();
 

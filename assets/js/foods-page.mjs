@@ -1,9 +1,8 @@
 import { foods } from "./data/foods.mjs";
-import { escapeHtml, initSecondaryHeader, optimizedFoodImagePath } from "./shared.mjs";
+import { escapeHtml, optimizedFoodImagePath } from "./shared.mjs";
 import { saveItem } from "./saved-list.mjs";
 
 export function renderFoods() {
-  initSecondaryHeader();
   const catalog = document.querySelector("#food-catalog");
   catalog.innerHTML = foods.map((food) => `
     <article class="catalog-card" id="${escapeHtml(food.id)}">

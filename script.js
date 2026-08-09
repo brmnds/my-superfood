@@ -1,4 +1,5 @@
 import { initMobileMenu } from "./assets/js/navigation.mjs";
+import { initSecondaryHeader } from "./assets/js/shared.mjs";
 import { renderHome } from "./assets/js/home.mjs";
 import { renderFoods } from "./assets/js/foods-page.mjs";
 import { renderRecipes } from "./assets/js/recipes-page.mjs";
@@ -10,6 +11,7 @@ import { authReady, renderAuthControls, renderSavedList, setAuthLogoutCallback }
 const page = document.body.dataset.page;
 
 initMobileMenu();
+initSecondaryHeader();
 setAuthLogoutCallback(() => {
   if (document.body.dataset.page === "lists") renderSavedList();
 });

@@ -127,14 +127,19 @@
         <a href="/luminaos">LuminaOS</a>
       </nav>
     </header>
-    <main class="page-shell">
-      <section class="page-heading page-heading-card compact-heading-card linked-heading-card">
-        <h1>Supplements and Supplement-Kits</h1>
-        <div class="heading-card-actions">
-          <a class="button ghost heading-card-link" href="/supplement-directory">Supplement Directory</a>
-          <a class="button ghost heading-card-link" href="/supplement-blog">Supplement blog by Tilman</a>
+    <section class="secondary-header supplements-header" data-secondary-header aria-labelledby="supplements-title">
+      <div class="secondary-header-inner">
+        <div class="secondary-header-copy">
+          <h1 class="secondary-header-title" id="supplements-title">Supplements and Supplement-Kits</h1>
         </div>
-      </section>
+        <nav class="secondary-header-switcher" aria-label="Supplement views">
+          <a href="/supplements" aria-current="page">Overview</a>
+          <a href="/supplement-directory">Directory</a>
+          <a href="/supplement-blog">Blog by Tilman</a>
+        </nav>
+      </div>
+    </section>
+    <main class="page-shell">
       <section class="protocol-card" aria-labelledby="tilman-protocol-title">
         <div class="protocol-profile">
           <img src="/assets/images/tilman-headshot.jpeg" alt="Tilman Resch">

@@ -351,9 +351,53 @@ select {
   --secondary-header-content-width: 1280px;
 }
 
+.supplements-header {
+  --secondary-header-content-width: 1280px;
+}
+
 .food-catalog-header .secondary-header-title {
   font-size: 1rem;
   letter-spacing: 0;
+}
+
+.supplements-header .secondary-header-title {
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+.secondary-header-switcher {
+  align-items: stretch;
+  border: 1px solid #d5e2d6;
+  border-radius: 6px;
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.secondary-header-switcher a {
+  align-items: center;
+  color: var(--muted);
+  display: inline-flex;
+  font-size: 0.76rem;
+  font-weight: 760;
+  justify-content: center;
+  min-height: 30px;
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+
+.secondary-header-switcher a + a {
+  border-left: 1px solid #d5e2d6;
+}
+
+.secondary-header-switcher a:hover,
+.secondary-header-switcher a:focus-visible {
+  background: #eef5ee;
+  color: var(--leaf-dark);
+}
+
+.secondary-header-switcher a[aria-current="page"] {
+  background: rgba(63, 122, 77, 0.12);
+  color: var(--leaf-dark);
 }
 
 .blog-section-nav {
@@ -2767,6 +2811,27 @@ h2 {
 
   .food-catalog-header .secondary-header-title {
     font-size: 0.9rem;
+  }
+
+  .supplements-header .secondary-header-inner {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .supplements-header .secondary-header-title {
+    font-size: 0.9rem;
+  }
+
+  .secondary-header-switcher {
+    display: flex;
+    width: 100%;
+  }
+
+  .secondary-header-switcher a {
+    flex: 1 1 0;
+    font-size: 0.7rem;
+    padding-inline: 6px;
   }
 
   .secondary-header-subtitle {
