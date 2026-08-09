@@ -1,4 +1,4 @@
-import { foods } from "./data/foods.mjs";
+import { foods } from "./data/foods.mjs?v=20260809-clean-food-images";
 import { escapeHtml, optimizedFoodImagePath } from "./shared.mjs";
 import { saveItem } from "./saved-list.mjs";
 

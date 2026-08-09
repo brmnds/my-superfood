@@ -41,7 +41,7 @@ export const foods = [
   {
     "id": "lentils",
     "name": "Lentils",
-    "image": "assets/images/real/lentils-uncooked.jpg",
+    "image": "assets/images/real/lentils-clean.jpg",
     "categories": [
       "protein",
       "carbs",
@@ -99,7 +99,7 @@ export const foods = [
   {
     "id": "avocado",
     "name": "Avocado",
-    "image": "assets/images/real/avocado.jpg",
+    "image": "assets/images/real/avocado-clean.jpg",
     "categories": [
       "oils",
       "fiber"
@@ -118,7 +118,7 @@ export const foods = [
   {
     "id": "blueberries",
     "name": "Blueberries",
-    "image": "assets/images/real/blueberries.jpg",
+    "image": "assets/images/real/blueberries-clean.jpg",
     "categories": [
       "carbs",
       "advanced",
@@ -138,7 +138,7 @@ export const foods = [
   {
     "id": "spinach",
     "name": "Spinach",
-    "image": "assets/images/real/spinach.jpg",
+    "image": "assets/images/real/spinach-clean.jpg",
     "categories": [
       "fiber",
       "advanced"

@@ -1,7 +1,7 @@
 import { initMobileMenu } from "./assets/js/navigation.mjs";
 import { initSecondaryHeader } from "./assets/js/shared.mjs?v=20260809-secondary-header";
-import { renderHome } from "./assets/js/home.mjs";
-import { renderFoods } from "./assets/js/foods-page.mjs?v=20260809-foods-header";
+import { renderHome } from "./assets/js/home.mjs?v=20260809-clean-food-images";
+import { renderFoods } from "./assets/js/foods-page.mjs?v=20260809-clean-food-images";
 import { renderRecipes } from "./assets/js/recipes-page.mjs?v=20260809-recipe-views";
 import { renderSupplementDirectory } from "./assets/js/supplement-directory-page.mjs";
 import { renderSupplements } from "./assets/js/supplements-page.mjs";
