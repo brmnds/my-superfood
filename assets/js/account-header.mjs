@@ -1,4 +1,4 @@
-export function initListsHeaderAuth() {
+export function initAccountHeader() {
   const actions = document.querySelector('[data-auth-actions="header"]');
   const status = document.querySelector(".header-auth-status[data-auth-status]");
   if (!actions) return;

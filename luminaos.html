@@ -74,11 +74,21 @@
         <a class="active" href="/luminaos">LuminaOS</a>
       </nav>
     </header>
+    <section class="secondary-header lumina-header" data-secondary-header aria-labelledby="lumina-next-steps-title">
+      <div class="secondary-header-inner">
+        <div class="secondary-header-copy">
+          <h1 class="secondary-header-title" id="lumina-next-steps-title">Next Steps in LuminaOS</h1>
+        </div>
+        <div class="secondary-header-auth" data-auth-actions="header" aria-label="LuminaOS account"></div>
+        <p class="header-auth-status visually-hidden" data-auth-status role="status">Checking LuminaOS sync...</p>
+      </div>
+    </section>
     <main class="page-shell">
       <section class="lumina-panel">
-        <img class="lumina-logo" src="assets/images/luminaos-logo.png" alt="LuminaOS logo">
-        <p class="eyebrow">Next step</p>
-        <h1>Create your nutrition habits in LuminaOS</h1>
+        <div class="lumina-panel-heading">
+          <img class="lumina-logo" src="assets/images/luminaos-logo.png" alt="LuminaOS logo">
+          <h2>Create your nutrition habits in LuminaOS</h2>
+        </div>
         <p>Use My Superfood to discover what belongs in your kitchen, then move the plan into LuminaOS for accountability and daily execution.</p>
         <div class="account-sync-panel">
           <p data-auth-status>Checking LuminaOS sync...</p>
@@ -102,6 +112,6 @@
         <a href="/imprint">Imprint</a>
       </nav>
     </footer>
-    <script type="module" src="script.js"></script>
+    <script type="module" src="script.js?v=20260809-lumina-header"></script>
   </body>
 </html>

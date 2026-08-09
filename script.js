@@ -6,7 +6,7 @@ import { renderRecipes } from "./assets/js/recipes-page.mjs?v=20260809-recipe-vi
 import { renderSupplementDirectory } from "./assets/js/supplement-directory-page.mjs";
 import { renderSupplements } from "./assets/js/supplements-page.mjs";
 import { renderSupplementBlog } from "./assets/js/supplement-blog-page.mjs";
-import { initListsHeaderAuth } from "./assets/js/lists-page.mjs?v=20260809-lists-header";
+import { initAccountHeader } from "./assets/js/account-header.mjs?v=20260809-lumina-header";
 import { authReady, renderAuthControls, renderSavedList, setAuthLogoutCallback } from "./assets/js/saved-list.mjs";
 
 const page = document.body.dataset.page;
@@ -24,7 +24,10 @@ if (page === "supplement-directory") renderSupplementDirectory();
 if (page === "supplements") renderSupplements();
 if (page === "supplement-blog") renderSupplementBlog();
 if (page === "lists") {
-  initListsHeaderAuth();
+  initAccountHeader();
   renderSavedList();
 }
-if (page === "luminaos") authReady.then(renderAuthControls);
+if (page === "luminaos") {
+  initAccountHeader();
+  authReady.then(renderAuthControls);
+}

@@ -44,7 +44,7 @@ Frontend JavaScript uses native ES modules:
 - `script.js` is the small browser entrypoint and dispatches by `body[data-page]`.
 - `assets/js/data/foods.mjs` and `assets/js/data/recipes.mjs` hold static catalog data.
 - `assets/js/home.mjs`, `assets/js/foods-page.mjs`, `assets/js/recipes-page.mjs`, `assets/js/supplements-page.mjs`, `assets/js/supplement-directory-page.mjs`, and `assets/js/supplement-blog-page.mjs` render page-specific UI.
-- `assets/js/lists-page.mjs` enhances the Lists headline-bar account controls.
+- `assets/js/account-header.mjs` enhances the shared Lists and LuminaOS headline-bar account controls.
 - `assets/js/saved-list.mjs` owns saved-list persistence and LuminaOS auth/session helpers.
 - `assets/js/navigation.mjs` owns the primary responsive navigation; `assets/js/shared.mjs` owns the shared secondary headline-bar behavior.
 

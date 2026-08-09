@@ -14,7 +14,7 @@ This is the current implemented page and frontend-module map for My Superfood. P
 | `/supplement-directory` | `supplement-directory.html` | `assets/js/supplement-directory-page.mjs` | Active supplement primitive and combined-label directory. |
 | `/supplement-blog` | `supplement-blog.html` | `assets/js/supplement-blog-page.mjs` | Tilman's expandable morning, daytime, and evening routine article. |
 | `/recipes` | `recipes.html` | `assets/js/recipes-page.mjs` | Recipe catalog with Featured and List views. |
-| `/lists` | `lists.html` | `assets/js/lists-page.mjs` and `assets/js/saved-list.mjs` | Accessible saved-food, supplement, and recipe tabs with optional LuminaOS sync. |
+| `/lists` | `lists.html` | `assets/js/account-header.mjs` and `assets/js/saved-list.mjs` | Accessible saved-food, supplement, and recipe tabs with optional LuminaOS sync. |
 | `/luminaos` | `luminaos.html` | `assets/js/saved-list.mjs` | LuminaOS sign-in and nutrition-habit handoff. |
 | `/privacy`, `/terms`, `/imprint` | matching `.html` files | static HTML | Legal and informational pages. |
 
@@ -22,7 +22,7 @@ This is the current implemented page and frontend-module map for My Superfood. P
 
 ## Shared Page Shell
 
-Public pages use the same primary header and mobile navigation from `assets/js/navigation.mjs`. Foods, Supplements, Recipes, and Lists add a shared secondary headline bar below it. The three supplement routes use the same `Supplements and Supplement-Kits` bar and Overview, Directory, and Blog by Tilman switcher, with the current route selected.
+Public pages use the same primary header and mobile navigation from `assets/js/navigation.mjs`. Foods, Supplements, Recipes, Lists, and LuminaOS add a shared secondary headline bar below it. The three supplement routes use the same `Supplements and Supplement-Kits` bar and Overview, Directory, and Blog by Tilman switcher, with the current route selected. Lists and LuminaOS share the compact LuminaOS account-state control in their headline bars.
 
 `assets/js/shared.mjs` keeps the secondary bar below the measured primary-header height and hides it after roughly one-third of the page scroll. The bar contains:
 
@@ -37,6 +37,7 @@ Each page then renders one semantic `<main>` followed by the shared legal footer
 - `script.js`: small dispatcher based on `body[data-page]`.
 - `assets/js/navigation.mjs`: primary desktop/mobile navigation.
 - `assets/js/shared.mjs`: shared secondary headline-bar behavior and common helpers.
+- `assets/js/account-header.mjs`: shared Lists and LuminaOS sign-in state, signed-in menu, and sign-out error presentation.
 - `assets/js/data/foods.mjs`: static food records and image references.
 - `assets/js/data/recipes.mjs`: static recipe records and template content.
 - `assets/js/data/supplement-relationships.mjs`: supplement relationship helpers.

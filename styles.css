@@ -352,7 +352,8 @@ select {
 
 .food-catalog-header,
 .recipes-header,
-.lists-header {
+.lists-header,
+.lumina-header {
   --secondary-header-content-width: 1280px;
 }
 
@@ -362,7 +363,8 @@ select {
 
 .food-catalog-header .secondary-header-title,
 .recipes-header .secondary-header-title,
-.lists-header .secondary-header-title {
+.lists-header .secondary-header-title,
+.lumina-header .secondary-header-title {
   font-size: 1rem;
   letter-spacing: 0;
 }
@@ -2763,10 +2765,24 @@ h2 {
   padding: clamp(28px, 6vw, 72px);
 }
 
+.lumina-panel-heading {
+  align-items: center;
+  display: flex;
+  gap: clamp(18px, 3vw, 32px);
+  margin-bottom: 28px;
+}
+
+.lumina-panel-heading h2 {
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
+  line-height: 1.02;
+  margin: 0;
+  max-width: 760px;
+}
+
 .lumina-logo {
   display: block;
+  flex: 0 0 auto;
   height: 82px;
-  margin-bottom: 28px;
   width: 82px;
 }
 
@@ -2916,14 +2932,16 @@ h2 {
 
   .food-catalog-header .secondary-header-title,
   .recipes-header .secondary-header-title,
-  .lists-header .secondary-header-title {
+  .lists-header .secondary-header-title,
+  .lumina-header .secondary-header-title {
     font-size: 0.9rem;
   }
 
   .supplements-header .secondary-header-inner,
   .food-catalog-header .secondary-header-inner,
   .recipes-header .secondary-header-inner,
-  .lists-header .secondary-header-inner {
+  .lists-header .secondary-header-inner,
+  .lumina-header .secondary-header-inner {
     align-items: stretch;
     flex-direction: column;
     gap: 5px;
@@ -2940,7 +2958,8 @@ h2 {
     width: 100%;
   }
 
-  .lists-header .secondary-header-auth {
+  .lists-header .secondary-header-auth,
+  .lumina-header .secondary-header-auth {
     align-self: flex-end;
   }
 
@@ -3161,6 +3180,20 @@ h2 {
 }
 
 @media (max-width: 520px) {
+  .lumina-panel-heading {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .lumina-panel-heading h2 {
+    font-size: 1.9rem;
+  }
+
+  .lumina-logo {
+    height: 64px;
+    width: 64px;
+  }
+
   .food-orbit {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

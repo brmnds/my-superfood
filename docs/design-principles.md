@@ -25,6 +25,7 @@ The icon should appear next to the `My Superfood` wordmark in the site header. D
 - Keep the header sticky, white, and compact.
 - Foods, Supplements, Recipes, and Lists use the shared secondary headline bar directly below the primary header. It contains the page title, an optional short subtitle, and page-level navigation or account controls on the right.
 - Supplement Overview, Directory, and Blog use one identical headline bar and three-option switcher. Route-specific headings remain in the page content where needed.
+- The LuminaOS page uses `Next Steps in LuminaOS` in the shared headline bar and reuses the Lists account-state control. Its main action headline sits beside the LuminaOS symbol rather than below it.
 - Keep the secondary headline bar compact and temporarily sticky. It may hide after roughly one-third of the page has been scrolled so it supports orientation without occupying the full reading experience.
 - At the mobile navigation breakpoint, secondary-bar copy and controls may stack into two compact rows. Controls must remain fully visible and must not create document-level horizontal overflow.
 - Use a hamburger menu on mobile/responsive widths instead of wrapping all navigation links into multiple rows.
