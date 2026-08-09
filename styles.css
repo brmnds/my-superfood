@@ -537,6 +537,10 @@ select {
   background: #fffdfa !important;
 }
 
+.shake-card .shake-image {
+  margin: 22px 0 0;
+}
+
 .shake-ingredient-list {
   columns: 2;
   margin: 0 0 18px;
