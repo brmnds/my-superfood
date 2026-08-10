@@ -84,6 +84,13 @@ export const supplementRelationshipGroups = [
     productIds: ["blueprint-essential-capsules", "blueprint-advanced-antioxidants"],
     summary: "Blueprint presents these products as complementary. That does not remove their separate overlaps with standalone astaxanthin, vitamin D, or vitamin K products.",
   },
+  {
+    category: "Probiotics",
+    status: "overlap",
+    label: "Additional probiotic source",
+    productIds: ["omni-biotic-sr9", "blueprint-essential-capsules"],
+    summary: "OMNi-BiOTiC SR-9 is the selected nine-strain probiotic product. Essential Capsules separately contribute Lactobacillus acidophilus, so both products count as probiotic sources rather than exact substitutes.",
+  },
 ];
 
 export function relationshipsForProduct(productId) {

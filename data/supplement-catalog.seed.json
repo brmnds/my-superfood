@@ -1065,6 +1065,41 @@
       }
     },
     {
+      "id": "probiotic-nine-strain-blend",
+      "name": "Nine-Strain Probiotic Blend",
+      "aliases": [
+        "OMNi-BiOTiC SR-9 bacterial culture blend",
+        "Human probiotic culture blend"
+      ],
+      "purpose": "Multi-strain probiotic culture used in gut-microbiome and gut-brain-axis contexts.",
+      "categories": [
+        "essentials",
+        "brain",
+        "recovery"
+      ],
+      "recommendedDailyAmount": {
+        "min": null,
+        "medium": null,
+        "max": null,
+        "unit": "CFU",
+        "basis": "No universal daily amount is assigned; use the strain-specific product label and personal tolerance.",
+        "source": "website_sourced"
+      },
+      "sourceStatus": "website_sourced",
+      "timing": {
+        "slots": [
+          "morning",
+          "evening"
+        ],
+        "avoidSlots": [],
+        "note": "The OMNi-BiOTiC SR-9 label recommends use on a preferably empty stomach, such as before breakfast and/or before dinner or bedtime.",
+        "sourceIds": [
+          "website-omni-biotic-sr9"
+        ],
+        "sourceStatus": "official_page"
+      }
+    },
+    {
       "id": "lactobacillus-acidophilus",
       "name": "Lactobacillus Acidophilus",
       "aliases": [
@@ -4530,6 +4565,74 @@
       }
     },
     {
+      "id": "omni-biotic-sr9",
+      "name": "OMNi-BiOTiC SR-9",
+      "aliases": [
+        "OMNi-BiOTiC Stress Repair 9",
+        "OMNi-BiOTiC SR9"
+      ],
+      "provider": "Institut Allergosan / OMNi-BiOTiC",
+      "productType": "probiotic powder sachets",
+      "purpose": "Nine-strain probiotic powder selected for gut-microbiome and gut-brain-axis support contexts.",
+      "categories": [
+        "essentials",
+        "brain",
+        "recovery"
+      ],
+      "ingredients": [
+        {
+          "supplementId": "probiotic-nine-strain-blend",
+          "amount": 7.5,
+          "unit": "billion CFU",
+          "perServing": "1 sachet (3 g); official directions allow 1-2 sachets daily",
+          "labelNotes": "Total across Lacticaseibacillus paracasei W56 and W20, Lactobacillus acidophilus W22, Bifidobacterium animalis subsp. lactis W51 and W52, Ligilactobacillus salivarius W24, Lactococcus lactis subsp. lactis W19, Lactiplantibacillus plantarum W62, and Bifidobacterium bifidum W23.",
+          "sourceIds": [
+            "website-omni-biotic-sr9"
+          ]
+        }
+      ],
+      "contains": [
+        "probiotic-nine-strain-blend"
+      ],
+      "sources": [
+        "website-omni-biotic-sr9",
+        "reference-docmorris-omni-biotic-sr9-double-pack"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ],
+      "protocolRole": {
+        "status": "default",
+        "label": "Selected",
+        "note": "Selected as Tilman's probiotic product; the personal schedule of one versus two sachets remains open."
+      },
+      "shopUrl": "https://shop.omni-biotic.com/de-de/products/omni-biotic-sr-9-de-99112",
+      "timing": {
+        "slots": [
+          "morning",
+          "evening"
+        ],
+        "avoidSlots": [],
+        "note": "The official directions say one sachet one to two times daily on a preferably empty stomach. Tilman's exact personal frequency remains to be confirmed.",
+        "sourceIds": [
+          "website-omni-biotic-sr9"
+        ],
+        "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Keep dry",
+        "note": "The official product directions say to store the sachets dry; no refrigerator requirement is stated.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-omni-biotic-sr9"
+        ],
+        "sourceStatus": "official_page"
+      }
+    },
+    {
       "id": "norsan-omega-3-capsules",
       "name": "Omega-3 Capsules",
       "aliases": [
@@ -4923,6 +5026,20 @@
     }
   ],
   "sources": [
+    {
+      "id": "website-omni-biotic-sr9",
+      "type": "official_page",
+      "url": "https://shop.omni-biotic.com/de-de/products/omni-biotic-sr-9-de-99112",
+      "captureDate": "2026-08-10",
+      "notes": "Official OMNi-BiOTiC product page used for the nine strains, 7.5 billion CFU per 3 g sachet, one-to-two-times-daily directions, empty-stomach context, and dry storage guidance."
+    },
+    {
+      "id": "reference-docmorris-omni-biotic-sr9-double-pack",
+      "type": "reference_page",
+      "url": "https://www.docmorris.de/doppelpack-omnibiotic-sr9/80043380?isc=OR",
+      "captureDate": "2026-08-10",
+      "notes": "User-provided DocMorris double-pack listing retained as a purchase reference; composition and directions use the official manufacturer page."
+    },
     {
       "id": "website-norsan-omega-3-capsules",
       "type": "official_page",

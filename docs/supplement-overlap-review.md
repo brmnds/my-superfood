@@ -12,6 +12,7 @@ Reviewed August 10, 2026. This is an editorial map for the site, not personalize
 - **L-theanine:** Longevity Mix and Sunday Natural Green Tea Extract L-Theanine are cumulative sources. The morning/evening split may be deliberate, but both count.
 - **Ubiquinol, NADH, and hyaluronic acid:** Each appears in a multi-ingredient product and a standalone product. These are cumulative sources, not clean alternatives.
 - **Blueprint Essential Capsules + Advanced Antioxidants:** Blueprint describes these as complementary. Advanced Antioxidants still overlaps with standalone astaxanthin and vitamin K products.
+- **Probiotics:** OMNi-BiOTiC SR-9 is the selected nine-strain probiotic product, with the personal one-versus-two-sachet schedule still open. Essential Capsules separately provide Lactobacillus acidophilus, so the two products are cumulative probiotic sources rather than exact substitutes.
 
 ## Label Conflicts Corrected
 
@@ -29,6 +30,7 @@ Reviewed August 10, 2026. This is an editorial map for the site, not personalize
 - [Sunday Natural Astaxanthin 12 mg BioAstin](https://www.sunday.de/en/astaxanthin-bioastin-capsules-12mg.html)
 - [Blueprint Advanced Antioxidants](https://blueprint.bryanjohnson.com/products/advanced-antioxidants)
 - [Blueprint Essential Capsules](https://blueprint.bryanjohnson.com/products/essentials-capsules)
+- [OMNi-BiOTiC SR-9](https://shop.omni-biotic.com/de-de/products/omni-biotic-sr-9-de-99112)
 - [Blueprint Ashwagandha + Rhodiola](https://blueprint.bryanjohnson.com/products/ashwagandha-rhodiola-120mg)
 - [Sunday Natural Muscle Recover Ashwa Pro](https://www.sunday.de/en/muscle-recover-sport-ashwagandha-complex.html)
 - [Sunday Natural Magnesium Active Calm](https://www.sunday.de/en/magnesium-active-calm-complex-capsules.html)
