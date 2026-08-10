@@ -160,13 +160,15 @@ Records store a small query envelope plus the reviewed JSON document:
 - `document`
 - `updatedAt`
 
-The document payload preserves catalog fields such as `shopUrl`, `timing`, and `storage` unchanged. `shopUrl` is limited to official provider/shop pages. `timing` is source-backed informational guidance for morning/daytime/evening UI hints; it is not medical advice or a personalized schedule. `storage` distinguishes true refrigerator storage from ordinary cool/dry or room-temperature storage so the UI can show the subtle snowflake filter without implying that all cool-storage products belong in the fridge.
+The document payload preserves catalog fields such as `shopUrl`, `timing`, `storage`, and `protocolRole` unchanged. `shopUrl` is limited to official provider/shop pages. `timing` is source-backed informational guidance for morning/daytime/evening UI hints; it is not medical advice or a personalized schedule. `storage` distinguishes true refrigerator storage from ordinary cool/dry or room-temperature storage so the UI can show the subtle snowflake filter without implying that all cool-storage products belong in the fridge. `protocolRole` distinguishes a personal default from products used in rotation and cataloged non-default alternatives; it never implies that full label servings should be combined.
 
 The repo source of truth is:
 
 ```text
 data/supplement-catalog.seed.json
 ```
+
+The local preview intentionally reads this seed directly on `localhost` and `127.0.0.1`, so catalog changes can be verified before DynamoDB is reseeded. Production continues to read the catalog API, with the local seed retained as its network-failure fallback.
 
 ## Supplement Catalog API
 

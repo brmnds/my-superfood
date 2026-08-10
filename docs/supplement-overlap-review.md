@@ -1,11 +1,11 @@
 # Supplement Product Overlap Review
 
-Reviewed August 9, 2026. This is an editorial map for the site, not personalized medical advice. Product directions can change; the linked official pages remain the authority for current labels.
+Reviewed August 10, 2026. This is an editorial map for the site, not personalized medical advice. Product directions can change; the linked official pages remain the authority for current labels.
 
 ## Conclusions
 
-- **Omega-3:** NORSAN Omega-3 Total Lemon is the active morning fish-oil route. Blueprint algae omega-3 remains an alternative and is not part of the same default stack.
-- **D3 + K2:** Sunday Natural high-dose tablets and altapharma daily drops are alternative schedules. Essential Capsules, Advanced Antioxidants, and NORSAN Omega-3 Total add further vitamin D or K, so total intake still needs review.
+- **Omega-3:** NORSAN Omega-3 capsules are the default fish-oil route. Sunday Natural EPA-focused and DHA-focused algae softgels are in the personal rotation. NORSAN liquid oil and Blueprint algae omega-3 remain non-default alternatives. The catalog does not interpret the rotation as taking every full label serving together.
+- **D3 + K2:** Sunday Natural high-dose tablets and altapharma daily drops are alternative schedules. Essential Capsules and Advanced Antioxidants add further vitamin D or K. The non-default NORSAN liquid oil also adds vitamin D if used, so total intake still needs review.
 - **Astaxanthin:** Sunday Natural BioAstin and Blueprint Advanced Antioxidants both list 12 mg astaxanthin. Treat them as alternative astaxanthin sources, even though the Blueprint product contains additional antioxidants.
 - **Ashwagandha:** Blueprint Ashwagandha + Rhodiola and Sunday Natural Muscle Recover Ashwa Pro both contain ashwagandha, but at different amounts and with different companion ingredients. They overlap but are not exact substitutes.
 - **Magnesium:** Magnesium Complex 11, Active Calm, magnesium bisglycinate, Muscle Recover, and Longevity Mix all contribute magnesium. The personal routine identifies Active Calm and Muscle Recover for evening and uses extra magnesium after sport only; which standalone product is used after sport is still ambiguous.
@@ -20,7 +20,10 @@ Reviewed August 9, 2026. This is an editorial map for the site, not personalized
 
 ## Official Product Sources
 
+- [NORSAN Omega-3 Capsules](https://norsan.de/shop/omega-3-kapseln/)
 - [NORSAN Omega-3 Total Lemon](https://norsan.de/shop/omega-3-total-oel/)
+- [Sunday Natural Vegan Omega-3 EPA Focus](https://www.sunday.de/en/omega-3-capsules-epa-dha-vegan-algae-1000mg.html)
+- [Sunday Natural Vegan Omega-3 DHA Focus](https://www.sunday.de/en/omega-3-complex-softgel-capsules-vegan.html)
 - [Sunday Natural Vitamin D3 + K2 20,000 IU](https://www.sunday.de/en/vitamin-d-tabletten-20000-ie-plus-k2-mk7-200mcg.html)
 - [altapharma D3 + K2 Drops](https://www.rossmann.de/de/gesundheit-altapharma-d3--k2-tropfen/p/4068134002600)
 - [Sunday Natural Astaxanthin 12 mg BioAstin](https://www.sunday.de/en/astaxanthin-bioastin-capsules-12mg.html)

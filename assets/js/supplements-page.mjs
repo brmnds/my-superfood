@@ -156,6 +156,13 @@ export function renderSupplements() {
     return `<div class="relationship-row"><span class="relationship-note ${hasAlternative ? "relationship-note-alternative" : ""}" tabindex="0" aria-label="${escapeHtml(`${label}. ${note}`)}">${escapeHtml(label)}<span class="timing-tooltip" role="tooltip">${escapeHtml(note)}</span></span></div>`;
   }
 
+  function protocolRoleMarkup(product) {
+    const role = product?.protocolRole;
+    if (!role?.status || !role?.label) return "";
+    const note = role.note || role.label;
+    return `<div class="protocol-role-row"><span class="protocol-role protocol-role-${escapeHtml(role.status)}" tabindex="0" aria-label="${escapeHtml(`${role.label}. ${note}`)}">${escapeHtml(role.label)}<span class="timing-tooltip" role="tooltip">${escapeHtml(note)}</span></span></div>`;
+  }
+
   function storageMarkup(product) {
     const storage = product?.storage;
     if (!storage || storage.sourceStatus === "needs_review") {
@@ -193,6 +200,7 @@ export function renderSupplements() {
       <div class="catalog-name-cell">
         <strong>${escapeHtml(product.name)}</strong>
         <span>${escapeHtml(product.productType)}</span>
+        ${protocolRoleMarkup(product)}
         ${timingMarkup(product)}
         ${storageMarkup(product)}
         ${relationshipMarkup(product)}
@@ -484,7 +492,9 @@ export function renderSupplements() {
       const matches = matchesTiming && matchesStorage;
       button.classList.toggle("protocol-muted", !matches);
       const titleParts = [product?.timing?.note, product?.storage?.note].filter(Boolean);
+      if (product?.protocolRole?.note) titleParts.unshift(product.protocolRole.note);
       if (titleParts.length) button.title = titleParts.join(" ");
+      button.classList.toggle("protocol-rotation", product?.protocolRole?.status === "rotation");
     });
   }
 
@@ -568,6 +578,12 @@ export function renderSupplements() {
         products: productsPayload.products || [],
         sources: await fetchSeedSources(),
       };
+    }
+
+    const isLocalPreview = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+    if (isLocalPreview) {
+      const seed = await fetchSeedCatalog();
+      return { supplements: seed.supplements || [], products: seed.supplementProducts || [], sources: seed.sources || [] };
     }
 
     const cached = readCatalogCache();

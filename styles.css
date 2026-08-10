@@ -1875,6 +1875,11 @@ h2 {
   opacity: 0.54;
 }
 
+.protocol-stack button.protocol-rotation:not(.protocol-muted) {
+  background: #f3f7f1;
+  border-style: dashed;
+}
+
 .saved-list-browser {
   display: grid;
   gap: 18px;
@@ -2087,6 +2092,40 @@ h2 {
   margin-top: 1px;
 }
 
+.protocol-role-row {
+  display: flex;
+  margin-top: 2px;
+}
+
+.protocol-role {
+  border: 1px solid #dfe6dd;
+  border-radius: 5px;
+  cursor: help;
+  display: inline-flex;
+  font-size: 0.68rem;
+  font-weight: 850;
+  padding: 5px 7px;
+  position: relative;
+}
+
+.protocol-role-default {
+  background: #eaf5e9;
+  border-color: #c8dfc8;
+  color: #2f663d;
+}
+
+.protocol-role-rotation {
+  background: #eef4ec;
+  border-color: #d2dfcf;
+  color: #526b51;
+}
+
+.protocol-role-alternative {
+  background: #f3f4f2;
+  border-color: #e1e3df;
+  color: #6b726c;
+}
+
 .relationship-note {
   background: #f2f5f1;
   border: 1px solid #dfe6dd;
@@ -2275,7 +2314,9 @@ h2 {
 }
 
 .relationship-note:hover .timing-tooltip,
-.relationship-note:focus-visible .timing-tooltip {
+.relationship-note:focus-visible .timing-tooltip,
+.protocol-role:hover .timing-tooltip,
+.protocol-role:focus-visible .timing-tooltip {
   opacity: 1;
   transform: translateY(0);
 }

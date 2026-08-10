@@ -75,6 +75,20 @@ Allowed timing source statuses are:
 
 Use official product directions first. If they only say "with food" or "before meals", avoid overclaiming exact clock time. If an ingredient can feel stimulating, use conservative earlier-day wording and explain the uncertainty. If timing depends on medication, condition, tolerance, or clinician advice, keep the note neutral.
 
+## Personal Protocol Role
+
+When multiple products cover the same category, Supplement Products may use `protocolRole` to keep the personal routine explicit:
+
+```json
+{
+  "status": "rotation",
+  "label": "In rotation",
+  "note": "Short explanation of how this product relates to the default."
+}
+```
+
+Allowed statuses are `default`, `rotation`, and `alternative`. Use `default` for the primary product, `rotation` for products Tilman actively alternates or mixes into the routine, and `alternative` for retained catalog products that are not currently a default. A rotation must not be presented as an instruction to add every product's full label serving together.
+
 ## Storage And Refrigeration
 
 Supplement Products should include storage guidance when the provider page or package label gives enough evidence. Store it as:
@@ -100,7 +114,7 @@ Allowed storage modes are:
 
 Only mark `requiresRefrigeration: true` when the official product page or package label explicitly says to refrigerate or keep refrigerated. Do not treat "cool", "cool dry place", or "protected from heat" as refrigerator guidance. Refrigerators can introduce moisture and may be unsuitable for some capsules, powders, or tablets unless the provider specifically recommends fridge storage.
 
-As of the 2026-05-21 review, the only current Tilman protocol product marked as refrigerator storage is Sunday Natural Liposomal Vitamin C + Zinc. Sunday Natural says refrigeration is ideal before and during use, to use it within 8 weeks after opening, and not to freeze it.
+As of the 2026-08-10 review, Sunday Natural Liposomal Vitamin C + Zinc is refrigerated, and the two Sunday Natural algae omega-3 softgel products are marked for refrigeration after opening. NORSAN fish-oil capsules remain cool/dry rather than refrigerated.
 
 ## Reseeding
 

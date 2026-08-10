@@ -2869,6 +2869,11 @@
         }
       ],
       "includedIn": [],
+      "protocolRole": {
+        "status": "alternative",
+        "label": "Not default",
+        "note": "Cataloged algae omega-3 alternative; it is not part of Tilman's current default or rotation."
+      },
       "contains": [
         "microalgae-oil-concentrate",
         "omega-3",
@@ -4525,6 +4530,288 @@
       }
     },
     {
+      "id": "norsan-omega-3-capsules",
+      "name": "Omega-3 Capsules",
+      "aliases": [
+        "NORSAN Omega-3 Kapseln",
+        "Fish Omega-3 capsules"
+      ],
+      "provider": "NORSAN",
+      "productType": "fish-oil capsules",
+      "purpose": "Default fish-oil omega-3 product in Tilman's mixed omega-3 routine.",
+      "categories": [
+        "heart",
+        "brain",
+        "inflammation",
+        "recovery"
+      ],
+      "image": "assets/images/omega-3.svg",
+      "ingredients": [
+        {
+          "supplementId": "omega-3",
+          "amount": 1500,
+          "unit": "mg",
+          "perServing": "4 capsules daily",
+          "labelNotes": "Total omega-3 fatty acids from 4 g natural fish oil.",
+          "sourceIds": [
+            "website-norsan-omega-3-capsules"
+          ]
+        },
+        {
+          "supplementId": "epa",
+          "amount": 780,
+          "unit": "mg",
+          "perServing": "4 capsules daily",
+          "labelNotes": "Eicosapentaenoic acid on the current official product data sheet.",
+          "sourceIds": [
+            "website-norsan-omega-3-capsules"
+          ]
+        },
+        {
+          "supplementId": "dha",
+          "amount": 450,
+          "unit": "mg",
+          "perServing": "4 capsules daily",
+          "labelNotes": "Docosahexaenoic acid on the current official product data sheet. The same serving also lists 90 mg DPA.",
+          "sourceIds": [
+            "website-norsan-omega-3-capsules"
+          ]
+        },
+        {
+          "supplementId": "vitamin-e",
+          "amount": 2.4,
+          "unit": "mg alpha-TE",
+          "perServing": "4 capsules daily",
+          "labelNotes": "Vitamin E listed on the current official product data sheet.",
+          "sourceIds": [
+            "website-norsan-omega-3-capsules"
+          ]
+        }
+      ],
+      "contains": [
+        "omega-3",
+        "epa",
+        "dha",
+        "vitamin-e"
+      ],
+      "sources": [
+        "website-norsan-omega-3-capsules",
+        "reference-shop-apotheke-norsan-omega-3-capsules"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ],
+      "protocolRole": {
+        "status": "default",
+        "label": "Default",
+        "note": "Tilman's default omega-3 product is the NORSAN fish-oil capsule form."
+      },
+      "shopUrl": "https://norsan.de/shop/omega-3-kapseln/",
+      "timing": {
+        "slots": [
+          "morning"
+        ],
+        "avoidSlots": [],
+        "note": "Tilman uses this as the default morning omega-3 with the shake. The official label says four capsules daily with or after a meal.",
+        "sourceIds": [
+          "website-norsan-omega-3-capsules"
+        ],
+        "sourceStatus": "user_confirmed"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Store dry, protected from direct sunlight, at a stable room or cellar temperature.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-norsan-omega-3-capsules"
+        ],
+        "sourceStatus": "official_page"
+      }
+    },
+    {
+      "id": "sunday-vegan-omega-3-epa-focus",
+      "name": "Vegan Omega-3 Complete EPA 300 + DHA 200",
+      "aliases": [
+        "Vegan Omega-3 EPA Focus",
+        "EPA 300 + DHA 200 + ALA 5"
+      ],
+      "provider": "Sunday Natural",
+      "productType": "vegan algae-oil softgel",
+      "purpose": "EPA-focused algae omega-3 option in Tilman's mixed omega-3 rotation.",
+      "categories": [
+        "heart",
+        "brain",
+        "inflammation",
+        "recovery"
+      ],
+      "image": "assets/images/omega-3.svg",
+      "ingredients": [
+        {
+          "supplementId": "omega-3",
+          "amount": 555,
+          "unit": "mg",
+          "perServing": "1 softgel daily",
+          "labelNotes": "Total omega-3 fatty acids; the label also lists 40 mg DPA and 5 mg ALA.",
+          "sourceIds": [
+            "website-sunday-vegan-omega-3-epa-focus"
+          ]
+        },
+        {
+          "supplementId": "epa",
+          "amount": 300,
+          "unit": "mg",
+          "perServing": "1 softgel daily",
+          "labelNotes": "EPA-focused 3:2 EPA-to-DHA ratio.",
+          "sourceIds": [
+            "website-sunday-vegan-omega-3-epa-focus"
+          ]
+        },
+        {
+          "supplementId": "dha",
+          "amount": 200,
+          "unit": "mg",
+          "perServing": "1 softgel daily",
+          "labelNotes": "DHA from Schizochytrium sp. microalgae oil.",
+          "sourceIds": [
+            "website-sunday-vegan-omega-3-epa-focus"
+          ]
+        }
+      ],
+      "contains": [
+        "omega-3",
+        "epa",
+        "dha"
+      ],
+      "sources": [
+        "website-sunday-vegan-omega-3-epa-focus"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ],
+      "protocolRole": {
+        "status": "rotation",
+        "label": "In rotation",
+        "note": "Ordered for Tilman's mixed omega-3 rotation; this is not an instruction to add its full serving to every other omega-3 serving."
+      },
+      "shopUrl": "https://www.sunday.de/en/omega-3-capsules-epa-dha-vegan-algae-1000mg.html",
+      "timing": {
+        "slots": [
+          "morning"
+        ],
+        "avoidSlots": [],
+        "note": "Tilman places omega-3 in the morning routine. The official label says one softgel daily with a meal and water.",
+        "sourceIds": [
+          "website-sunday-vegan-omega-3-epa-focus"
+        ],
+        "sourceStatus": "user_confirmed"
+      },
+      "storage": {
+        "requiresRefrigeration": true,
+        "mode": "refrigerate",
+        "label": "Refrigerate after opening",
+        "note": "Keep tightly sealed and refrigerate after opening; protect from sunlight and heat.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-sunday-vegan-omega-3-epa-focus"
+        ],
+        "sourceStatus": "official_page"
+      }
+    },
+    {
+      "id": "sunday-vegan-omega-3-dha-focus",
+      "name": "Vegan Omega-3 Complete DHA 350 + EPA 180",
+      "aliases": [
+        "Vegan Omega-3 DHA Focus",
+        "DHA 350 + EPA 180 + ALA 5"
+      ],
+      "provider": "Sunday Natural",
+      "productType": "vegan algae-oil softgel",
+      "purpose": "DHA-focused algae omega-3 option in Tilman's mixed omega-3 rotation.",
+      "categories": [
+        "heart",
+        "brain",
+        "inflammation",
+        "recovery"
+      ],
+      "image": "assets/images/omega-3.svg",
+      "ingredients": [
+        {
+          "supplementId": "omega-3",
+          "amount": 585,
+          "unit": "mg",
+          "perServing": "1 softgel daily",
+          "labelNotes": "Total omega-3 fatty acids; the label also lists 5 mg ALA.",
+          "sourceIds": [
+            "website-sunday-vegan-omega-3-dha-focus"
+          ]
+        },
+        {
+          "supplementId": "epa",
+          "amount": 180,
+          "unit": "mg",
+          "perServing": "1 softgel daily",
+          "labelNotes": "EPA from Schizochytrium sp. microalgae oil.",
+          "sourceIds": [
+            "website-sunday-vegan-omega-3-dha-focus"
+          ]
+        },
+        {
+          "supplementId": "dha",
+          "amount": 350,
+          "unit": "mg",
+          "perServing": "1 softgel daily",
+          "labelNotes": "DHA-focused approximately 2:1 DHA-to-EPA ratio.",
+          "sourceIds": [
+            "website-sunday-vegan-omega-3-dha-focus"
+          ]
+        }
+      ],
+      "contains": [
+        "omega-3",
+        "epa",
+        "dha"
+      ],
+      "sources": [
+        "website-sunday-vegan-omega-3-dha-focus"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ],
+      "protocolRole": {
+        "status": "rotation",
+        "label": "In rotation",
+        "note": "Ordered for Tilman's mixed omega-3 rotation; this is not an instruction to add its full serving to every other omega-3 serving."
+      },
+      "shopUrl": "https://www.sunday.de/en/omega-3-complex-softgel-capsules-vegan.html",
+      "timing": {
+        "slots": [
+          "morning"
+        ],
+        "avoidSlots": [],
+        "note": "Tilman places omega-3 in the morning routine. The official label says one softgel daily with a meal and water.",
+        "sourceIds": [
+          "website-sunday-vegan-omega-3-dha-focus"
+        ],
+        "sourceStatus": "user_confirmed"
+      },
+      "storage": {
+        "requiresRefrigeration": true,
+        "mode": "refrigerate",
+        "label": "Refrigerate after opening",
+        "note": "Refrigerate after opening and protect from direct sunlight and heat.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-sunday-vegan-omega-3-dha-focus"
+        ],
+        "sourceStatus": "official_page"
+      }
+    },
+    {
       "id": "norsan-omega-3-total-lemon",
       "name": "Omega-3 Total Lemon",
       "aliases": [
@@ -4604,16 +4891,19 @@
         "website-norsan-omega-3-total-lemon"
       ],
       "sourceStatus": "website_sourced",
-      "includedIn": [
-        "Tilman's supplement protocol"
-      ],
+      "includedIn": [],
+      "protocolRole": {
+        "status": "alternative",
+        "label": "Not default",
+        "note": "Retained in the catalog as the liquid NORSAN alternative; the capsule form is Tilman's default."
+      },
       "shopUrl": "https://norsan.de/shop/omega-3-total-oel/",
       "timing": {
         "slots": [
           "morning"
         ],
         "avoidSlots": [],
-        "note": "Tilman's active routine places this fish-oil product in the morning core with the shake; the official label specifies a daily serving but no required clock time.",
+        "note": "This liquid oil remains a non-default alternative. The official label specifies a daily serving but no required clock time.",
         "sourceIds": [
           "website-norsan-omega-3-total-lemon"
         ],
@@ -4633,6 +4923,34 @@
     }
   ],
   "sources": [
+    {
+      "id": "website-norsan-omega-3-capsules",
+      "type": "official_page",
+      "url": "https://norsan.de/shop/omega-3-kapseln/",
+      "captureDate": "2026-08-10",
+      "notes": "Official NORSAN capsule page and linked product data sheet used for the four-capsule serving, total omega-3, EPA, DHA, vitamin E, meal timing, and storage guidance."
+    },
+    {
+      "id": "reference-shop-apotheke-norsan-omega-3-capsules",
+      "type": "reference_page",
+      "url": "https://www.shop-apotheke.com/arzneimittel/8115570/norsan-omega-3-kapseln.htm",
+      "captureDate": "2026-08-10",
+      "notes": "User-provided retail listing for the NORSAN Omega-3 capsule multipack. Exact nutrient amounts use the current official NORSAN data sheet where the listings differ."
+    },
+    {
+      "id": "website-sunday-vegan-omega-3-epa-focus",
+      "type": "official_page",
+      "url": "https://www.sunday.de/en/omega-3-capsules-epa-dha-vegan-algae-1000mg.html",
+      "captureDate": "2026-08-10",
+      "notes": "Official Sunday Natural label used for one softgel with 555 mg total omega-3, 300 mg EPA, 200 mg DHA, meal timing, and refrigeration after opening."
+    },
+    {
+      "id": "website-sunday-vegan-omega-3-dha-focus",
+      "type": "official_page",
+      "url": "https://www.sunday.de/en/omega-3-complex-softgel-capsules-vegan.html",
+      "captureDate": "2026-08-10",
+      "notes": "Official Sunday Natural label used for one softgel with 585 mg total omega-3, 350 mg DHA, 180 mg EPA, meal timing, and refrigeration after opening."
+    },
     {
       "id": "website-norsan-omega-3-total-lemon",
       "type": "official_page",

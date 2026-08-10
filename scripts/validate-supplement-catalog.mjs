@@ -8,6 +8,7 @@ const allowedTimingSlots = new Set(["morning", "daytime", "evening"]);
 const allowedTimingSourceStatuses = new Set(["official_page", "ingredient_researched", "user_confirmed", "needs_review"]);
 const allowedStorageModes = new Set(["refrigerate", "cool_dry", "room_temperature", "needs_review"]);
 const allowedStorageSourceStatuses = new Set(["official_page", "needs_review"]);
+const allowedProtocolRoles = new Set(["default", "rotation", "alternative"]);
 
 function fail(errors) {
   for (const error of errors) console.error(`- ${error}`);
@@ -123,6 +124,12 @@ for (const product of seed.supplementProducts || []) {
   if (!Array.isArray(product.ingredients) || product.ingredients.length === 0) errors.push(`Product ${product.id} needs ingredients.`);
   if (!Array.isArray(product.contains)) errors.push(`Product ${product.id} contains must be an array.`);
   if (!Array.isArray(product.sources) || product.sources.length === 0) errors.push(`Product ${product.id} needs sources.`);
+  if (product.protocolRole !== undefined) {
+    if (!product.protocolRole || typeof product.protocolRole !== "object") errors.push(`Product ${product.id} protocolRole must be an object.`);
+    if (!allowedProtocolRoles.has(product.protocolRole?.status)) errors.push(`Product ${product.id} has invalid protocolRole.status.`);
+    if (!isNonEmptyString(product.protocolRole?.label)) errors.push(`Product ${product.id} protocolRole needs a label.`);
+    if (!isNonEmptyString(product.protocolRole?.note)) errors.push(`Product ${product.id} protocolRole needs a note.`);
+  }
   if (product.shopUrl !== undefined) {
     if (!isNonEmptyString(product.shopUrl) || !product.shopUrl.startsWith("https://")) {
       errors.push(`Product ${product.id} shopUrl must be an HTTPS URL.`);

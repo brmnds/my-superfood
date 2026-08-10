@@ -2,9 +2,15 @@ export const supplementRelationshipGroups = [
   {
     category: "Omega-3",
     status: "alternative",
-    label: "Active fish route",
-    productIds: ["norsan-omega-3-total-lemon", "blueprint-omega-3"],
-    summary: "NORSAN fish oil is the active morning omega-3 route. Blueprint algae omega-3 remains a cataloged alternative, not an additional default product.",
+    label: "Mixed rotation",
+    productIds: [
+      "norsan-omega-3-capsules",
+      "sunday-vegan-omega-3-epa-focus",
+      "sunday-vegan-omega-3-dha-focus",
+      "norsan-omega-3-total-lemon",
+      "blueprint-omega-3",
+    ],
+    summary: "NORSAN fish-oil capsules are the default. The two Sunday Natural algae softgels are in rotation. NORSAN liquid oil and Blueprint algae omega-3 remain non-default alternatives. Full label servings are not automatically added together.",
   },
   {
     category: "Vitamin D3 + K2",
@@ -14,7 +20,7 @@ export const supplementRelationshipGroups = [
       "sunday-vitamin-d3-k2-mk7-20000-iu-200mcg",
       "altapharma-d3-k2-drops",
     ],
-    summary: "The high-dose periodic tablet and daily drops are alternative D3/K2 schedules, not a default combined stack. Essential Capsules, Advanced Antioxidants, and NORSAN Omega-3 Total add further vitamin D or K.",
+    summary: "The high-dose periodic tablet and daily drops are alternative D3/K2 schedules, not a default combined stack. Essential Capsules and Advanced Antioxidants add further vitamin D or K. The non-default NORSAN liquid oil also contains vitamin D if used.",
   },
   {
     category: "Astaxanthin",
