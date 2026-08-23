@@ -12,6 +12,11 @@ export function renderHome() {
   const savedNote = document.querySelector("#saved-note");
   const detailCard = document.querySelector("#detail-card");
   const closeDetail = document.querySelector(".close-detail");
+  const guidancePopup = document.querySelector("[data-instagram-guidance]");
+  const closeGuidancePopup = guidancePopup?.querySelector("[data-instagram-guidance-close]");
+  closeGuidancePopup?.addEventListener("click", () => {
+    guidancePopup.hidden = true;
+  });
   if (!orbit || !detailTitle || !detailImage || !detailBenefits || !addButton || !openDetail || !detailCard || !closeDetail) return;
   let selected = foods[0];
   let activeFilter = "all";

@@ -160,6 +160,8 @@ The current catalog contains 98 public food image sets. Miso and Kombucha are in
 
 | Brand | Current asset | Status | Notes |
 | --- | --- | --- | --- |
+| My Superfood vertical thumbnail | `assets/images/my-superfood-vertical-thumbnail.png` | Pass | Generated 9:16 brand thumbnail using the production leaf mark, exact `my-superfood.com` text, and fresh vegetables across the lower third. |
+| Viktoria supplement guidance portrait | `assets/images/viktoria-supplement-guidance.png` | Pass | Cropped from the user-provided Instagram profile screenshot without visual alteration; used as the round portrait in the landing-page guidance popup. |
 | LuminaOS | `assets/images/luminaos-logo.png` | Pass | Real local LuminaOS logo copied from the mobile app repository. |
 
 ## Blog Images
