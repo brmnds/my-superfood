@@ -1887,6 +1887,10 @@ h2 {
   gap: 16px;
 }
 
+.protocol-profile-copy {
+  min-width: 0;
+}
+
 .protocol-profile img {
   aspect-ratio: 1;
   border: 2px solid white;
@@ -1903,6 +1907,18 @@ h2 {
   margin: 0;
 }
 
+.protocol-profile .protocol-disclaimer {
+  background: #fff8ea;
+  border: 1px solid #eeddbd;
+  border-radius: 6px;
+  color: #64685f;
+  font-size: 0.74rem;
+  line-height: 1.45;
+  margin: 14px 0 0;
+  max-width: 340px;
+  padding: 10px 11px;
+}
+
 .protocol-content {
   display: grid;
   gap: 14px;
@@ -1916,6 +1932,26 @@ h2 {
 }
 
 .protocol-stack {
+  display: grid;
+  gap: 11px;
+}
+
+.protocol-stack-group {
+  align-items: start;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 118px minmax(0, 1fr);
+}
+
+.protocol-stack-label {
+  color: #6d776e;
+  font-size: 0.68rem;
+  font-weight: 850;
+  line-height: 1.35;
+  margin: 6px 0 0;
+}
+
+.protocol-stack-items {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -3225,6 +3261,23 @@ h2 {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 12px 18px;
+  }
+
+  .protocol-profile {
+    align-items: flex-start;
+  }
+
+  .protocol-profile img {
+    width: 72px;
+  }
+
+  .protocol-stack-group {
+    gap: 5px;
+    grid-template-columns: 1fr;
+  }
+
+  .protocol-stack-label {
+    margin-top: 0;
   }
 
   .instagram-guidance-popup {

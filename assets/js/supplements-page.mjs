@@ -562,7 +562,8 @@ export function renderSupplements() {
   function updateProtocolFilters() {
     document.querySelectorAll("[data-protocol-product]").forEach((button) => {
       const product = catalog.products.find((entry) => entry.id === button.dataset.protocolProduct);
-      const slots = product?.timing?.slots || [];
+      const groupSlots = button.closest("[data-protocol-slots]")?.dataset.protocolSlots?.split(" ").filter(Boolean);
+      const slots = groupSlots?.length ? groupSlots : (product?.timing?.slots || []);
       const matchesTiming = activeProtocolTiming === "all" || slots.includes(activeProtocolTiming);
       const matchesStorage = activeProtocolStorage === "all" || product?.storage?.requiresRefrigeration === true;
       const matches = matchesTiming && matchesStorage;
