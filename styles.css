@@ -404,6 +404,10 @@ select {
   margin-top: 10px;
 }
 
+body[data-page="home"] .seo-summary {
+  margin-bottom: 28px;
+}
+
 .supplement-context-card {
   background: #fff8ed;
   border-color: #f1dfc3;
