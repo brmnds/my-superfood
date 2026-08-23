@@ -2333,17 +2333,6 @@ h2 {
   color: #746f67;
 }
 
-.purchase-row {
-  display: flex;
-  margin-top: 2px;
-}
-
-.purchase-note {
-  color: #6a756c;
-  font-size: 0.68rem;
-  font-weight: 750;
-}
-
 .retirement-toggle {
   align-items: center;
   align-self: flex-start;

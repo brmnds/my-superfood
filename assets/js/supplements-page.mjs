@@ -152,13 +152,6 @@ export function renderSupplements() {
     return `<a class="shop-link" href="${escapeHtml(product.shopUrl)}" target="_blank" rel="noopener">Official shop</a>`;
   }
 
-  function purchaseMarkup(product) {
-    const purchase = product?.purchase;
-    if (!purchase || purchase.status !== "ordered") return "";
-    const note = ["Ordered", purchase.sku ? `SKU ${purchase.sku}` : ""].filter(Boolean).join(" · ");
-    return `<div class="purchase-row"><span class="purchase-note" title="${escapeHtml(note)}">${escapeHtml(note)}</span></div>`;
-  }
-
   function retirementControl(product) {
     if (!product?.retirement) return "";
     const expanded = expandedRetirements.has(product.id);
@@ -226,7 +219,6 @@ export function renderSupplements() {
         ${timingMarkup(product)}
         ${storageMarkup(product)}
         ${relationshipMarkup(product)}
-        ${purchaseMarkup(product)}
         ${shopLink(product)}
         ${retirementControl(product)}
       </div>

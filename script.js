@@ -4,7 +4,7 @@ import { renderHome } from "./assets/js/home.mjs?v=20260823-viktoria-guidance";
 import { renderFoods } from "./assets/js/foods-page.mjs?v=20260809-clean-food-images";
 import { renderRecipes } from "./assets/js/recipes-page.mjs?v=20260809-recipe-views";
 import { renderSupplementDirectory } from "./assets/js/supplement-directory-page.mjs";
-import { renderSupplements } from "./assets/js/supplements-page.mjs?v=20260823-protocol-groups";
+import { renderSupplements } from "./assets/js/supplements-page.mjs?v=20260823-hide-purchase-metadata";
 import { renderSupplementBlog } from "./assets/js/supplement-blog-page.mjs";
 import { initAccountHeader } from "./assets/js/account-header.mjs?v=20260809-lumina-header";
 import { authReady, renderAuthControls, renderSavedList, setAuthLogoutCallback } from "./assets/js/saved-list.mjs";
