@@ -3,7 +3,7 @@ import { saveItem } from "./saved-list.mjs";
 import { relationshipsForProduct } from "./data/supplement-relationships.mjs";
 
 const catalogApiUrl = "https://z4kxvkidmk35kelru4rrjbbsbi0gcpqt.lambda-url.eu-central-1.on.aws";
-const catalogCacheKey = "my-superfood-supplement-catalog-cache-v1";
+const catalogCacheKey = "my-superfood-supplement-catalog-cache-v2";
 const catalogCacheTtlMs = 5 * 60 * 1000;
 
 function readCatalogCache() {
@@ -29,16 +29,21 @@ export function renderSupplements() {
   const table = document.querySelector("#supplement-catalog-table");
   const tabs = document.querySelectorAll(".tab-button");
   const filters = document.querySelectorAll("[data-catalog-filter]");
+  const productScope = document.querySelector("[data-product-scope-control]");
+  const productScopeButtons = document.querySelectorAll("[data-product-scope]");
+  const catalogPanel = document.querySelector("#supplement-catalog-panel");
   const searchInput = document.querySelector("[data-catalog-search]");
   const protocolTimingButtons = document.querySelectorAll("[data-protocol-timing]");
   const protocolStorageButtons = document.querySelectorAll("[data-protocol-storage]");
-  let activeTab = "ingredients";
+  let activeTab = "products";
   let activeFilter = "all";
+  let activeProductScope = "current";
   let activeSearch = "";
   let activeProtocolTiming = "all";
   let activeProtocolStorage = "all";
   let catalog = { supplements: [], products: [] };
   const expandedProducts = new Set();
+  const expandedRetirements = new Set();
   let highlightedSupplementId = "";
   let highlightedProductId = "";
 
@@ -147,12 +152,29 @@ export function renderSupplements() {
     return `<a class="shop-link" href="${escapeHtml(product.shopUrl)}" target="_blank" rel="noopener">Official shop</a>`;
   }
 
+  function purchaseMarkup(product) {
+    const purchase = product?.purchase;
+    if (!purchase || purchase.status !== "ordered") return "";
+    const note = ["Ordered", purchase.sku ? `SKU ${purchase.sku}` : ""].filter(Boolean).join(" · ");
+    return `<div class="purchase-row"><span class="purchase-note" title="${escapeHtml(note)}">${escapeHtml(note)}</span></div>`;
+  }
+
+  function retirementControl(product) {
+    if (!product?.retirement) return "";
+    const expanded = expandedRetirements.has(product.id);
+    return `
+      <button class="retirement-toggle" type="button" data-retirement-toggle="${escapeHtml(product.id)}" aria-expanded="${expanded ? "true" : "false"}" aria-controls="retirement-${escapeHtml(product.id)}">
+        ${expanded ? "Hide replacements" : "What replaces it"}
+      </button>
+    `;
+  }
+
   function relationshipMarkup(product) {
     const relationships = relationshipsForProduct(product.id);
     if (!relationships.length) return "";
     const note = relationships.map((group) => `${group.category}: ${group.summary}`).join(" ");
     const hasAlternative = relationships.some((group) => group.status === "alternative");
-    const label = hasAlternative ? "Alternative / overlap" : "Overlap notes";
+    const label = relationships.length === 1 ? relationships[0].label : (hasAlternative ? "Alternative / overlap" : "Overlap notes");
     return `<div class="relationship-row"><span class="relationship-note ${hasAlternative ? "relationship-note-alternative" : ""}" tabindex="0" aria-label="${escapeHtml(`${label}. ${note}`)}">${escapeHtml(label)}<span class="timing-tooltip" role="tooltip">${escapeHtml(note)}</span></span></div>`;
   }
 
@@ -204,8 +226,39 @@ export function renderSupplements() {
         ${timingMarkup(product)}
         ${storageMarkup(product)}
         ${relationshipMarkup(product)}
+        ${purchaseMarkup(product)}
         ${shopLink(product)}
+        ${retirementControl(product)}
       </div>
+    `;
+  }
+
+  function retirementDetailRow(product) {
+    const retirement = product?.retirement;
+    if (!retirement || !expandedRetirements.has(product.id)) return "";
+    const replacements = (retirement.replacedBy || []).map((replacement) => {
+      const replacementProduct = catalog.products.find((entry) => entry.id === replacement.productId);
+      const label = replacementProduct?.name || replacement.productId;
+      return `
+        <li>
+          <button type="button" data-replacement-product="${escapeHtml(replacement.productId)}">${escapeHtml(label)}</button>
+          <span>${escapeHtml(replacement.note || "Selected replacement.")}</span>
+        </li>
+      `;
+    }).join("");
+    const uncovered = (retirement.uncovered || []).length
+      ? `<p><strong>Not directly replaced:</strong> ${escapeHtml(retirement.uncovered.join(", "))}.</p>`
+      : "";
+    return `
+      <tr class="retirement-detail-row" id="retirement-${escapeHtml(product.id)}">
+        <td colspan="6">
+          <div class="retirement-detail">
+            <p>${escapeHtml(retirement.note)}</p>
+            ${replacements ? `<ul>${replacements}</ul>` : ""}
+            ${uncovered}
+          </div>
+        </td>
+      </tr>
     `;
   }
 
@@ -376,8 +429,18 @@ export function renderSupplements() {
     return haystack.includes(activeSearch);
   }
 
+  function isCurrentProduct(product) {
+    const memberships = product.includedIn || [];
+    const activeMembership = memberships.includes("Tilman's supplement protocol") || memberships.includes("Easy Stack");
+    return activeMembership && !["retired", "alternative"].includes(product?.protocolRole?.status);
+  }
+
+  function matchesProductScope(product) {
+    return activeProductScope === "all" || isCurrentProduct(product);
+  }
+
   function renderProducts() {
-    const products = catalog.products.filter((product) => matchesFilter(product) && matchesSearch(product));
+    const products = catalog.products.filter((product) => matchesProductScope(product) && matchesFilter(product) && matchesSearch(product));
     table.innerHTML = `
       <thead>
         <tr>
@@ -399,6 +462,7 @@ export function renderSupplements() {
             <td>${productIngredientList(product)}</td>
             <td><button class="button ghost table-action save-catalog-item" type="button" data-kind="Supplement Product" data-id="${escapeHtml(product.id)}">Add</button></td>
           </tr>
+          ${retirementDetailRow(product)}
         `).join("") || `<tr><td colspan="6">No supplement kits match this search or filter.</td></tr>`}
       </tbody>
     `;
@@ -451,11 +515,23 @@ export function renderSupplements() {
       const selected = entry.dataset.tab === nextTab;
       entry.classList.toggle("active", selected);
       entry.setAttribute("aria-selected", selected ? "true" : "false");
+      entry.tabIndex = selected ? 0 : -1;
     });
+    catalogPanel?.setAttribute("aria-labelledby", nextTab === "products" ? "supplement-kits-tab" : "supplements-tab");
+    productScope?.toggleAttribute("hidden", nextTab !== "products");
     if (searchInput) {
       searchInput.placeholder = nextTab === "products" ? "Search supplement kits" : "Search supplements";
       searchInput.setAttribute("aria-label", searchInput.placeholder);
     }
+  }
+
+  function setActiveProductScope(nextScope) {
+    activeProductScope = nextScope;
+    productScopeButtons.forEach((entry) => {
+      const selected = entry.dataset.productScope === nextScope;
+      entry.classList.toggle("active", selected);
+      entry.setAttribute("aria-pressed", selected ? "true" : "false");
+    });
   }
 
   function setActiveFilter(nextFilter) {
@@ -515,6 +591,20 @@ export function renderSupplements() {
         render();
       });
     });
+
+    document.querySelectorAll("[data-retirement-toggle]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const productId = button.dataset.retirementToggle;
+        if (expandedRetirements.has(productId)) expandedRetirements.delete(productId);
+        else expandedRetirements.add(productId);
+        render();
+        document.getElementById(`product-${productId}`)?.scrollIntoView({ block: "nearest" });
+      });
+    });
+
+    document.querySelectorAll("[data-replacement-product]").forEach((button) => {
+      button.addEventListener("click", () => openProduct(button.dataset.replacementProduct));
+    });
   }
 
   function openProduct(productId) {
@@ -522,6 +612,8 @@ export function renderSupplements() {
     highlightedSupplementId = "";
     setActiveTab("products");
     setActiveFilter("all");
+    const product = catalog.products.find((entry) => entry.id === productId);
+    setActiveProductScope(product && isCurrentProduct(product) ? "current" : "all");
     render();
     document.getElementById(`product-${productId}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
   }
@@ -614,6 +706,30 @@ export function renderSupplements() {
     });
   });
 
+  tabs.forEach((button, index) => {
+    button.addEventListener("keydown", (event) => {
+      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+      event.preventDefault();
+      let nextIndex = index;
+      if (event.key === "ArrowLeft") nextIndex = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
+      if (event.key === "Home") nextIndex = 0;
+      if (event.key === "End") nextIndex = tabs.length - 1;
+      const nextTab = tabs[nextIndex];
+      setActiveTab(nextTab.dataset.tab);
+      nextTab.focus();
+      render();
+    });
+  });
+
+  productScopeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      highlightedProductId = "";
+      setActiveProductScope(button.dataset.productScope || "current");
+      render();
+    });
+  });
+
   filters.forEach((button) => {
     button.addEventListener("click", () => {
       highlightedSupplementId = "";
@@ -650,6 +766,9 @@ export function renderSupplements() {
       setActiveProtocolStorage(nextStorage || "all");
     });
   });
+
+  setActiveTab(activeTab);
+  setActiveProductScope(activeProductScope);
 
   fetchCatalog()
     .then((loadedCatalog) => {

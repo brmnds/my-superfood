@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "captureDate": "2026-08-09",
+  "schemaVersion": 2,
+  "captureDate": "2026-08-23",
   "sourcePolicy": "Official provider supplement facts first when exact; package photos are verification evidence and fallback. Mark uncertain reads as needs_review.",
   "supplements": [
     {
@@ -2476,9 +2476,7 @@
           ]
         }
       ],
-      "includedIn": [
-        "Easy Stack"
-      ],
+      "includedIn": [],
       "contains": [
         "vitamin-c",
         "calcium",
@@ -2524,6 +2522,79 @@
           "website-longevity-mix"
         ],
         "sourceStatus": "official_page"
+      },
+      "protocolRole": {
+        "status": "retired",
+        "label": "Not currently taking",
+        "note": "Retired from Tilman's current stack. Its selected functions are now distributed across standalone products rather than one drink mix."
+      },
+      "retirement": {
+        "effectiveDate": "2026-08-23",
+        "note": "Retired from Tilman's current stack. Its selected functions are now distributed across standalone products rather than one drink mix.",
+        "replacedBy": [
+          {
+            "productId": "sunday-creatine-monohydrate-ultrapure",
+            "covers": [
+              "creatine-monohydrate"
+            ],
+            "note": "Standalone creatine; the serving amount differs from Longevity Mix."
+          },
+          {
+            "productId": "sunday-calcium-alpha-ketoglutarate-500",
+            "covers": [
+              "calcium-alpha-ketoglutarate",
+              "calcium"
+            ],
+            "note": "Replaces CaAKG and part of the calcium contribution; the amounts differ."
+          },
+          {
+            "productId": "sunday-taurine-500",
+            "covers": [
+              "taurine"
+            ],
+            "note": "Standalone taurine; the listed serving range is lower than the former mix amount."
+          },
+          {
+            "productId": "sunday-glucosamine-850",
+            "covers": [
+              "glucosamine-sulfate"
+            ],
+            "note": "Standalone fermented glucosamine sulfate."
+          },
+          {
+            "productId": "sunday-green-tea-extract-l-theanine-100mg",
+            "covers": [
+              "l-theanine"
+            ],
+            "note": "Two capsules provide the separate 200 mg L-theanine routine."
+          },
+          {
+            "productId": "sunday-hyaluronic-acid-250-high-dose",
+            "covers": [
+              "sodium-hyaluronate"
+            ],
+            "note": "Standalone hyaluronic-acid source with a different form and amount."
+          },
+          {
+            "productId": "sunday-liposomal-vitamin-c-zinc",
+            "covers": [
+              "vitamin-c"
+            ],
+            "note": "Standalone vitamin C source; SunGlow Collagen + C adds another accepted vitamin C source."
+          },
+          {
+            "productId": "sunday-magnesium-active-calm",
+            "covers": [
+              "magnesium"
+            ],
+            "note": "One of the accepted standalone magnesium routes; not an amount-equivalent replacement."
+          }
+        ],
+        "uncovered": [
+          "Glycine 1,200 mg",
+          "L-lysine 1,000 mg",
+          "Reduced glutathione 250 mg"
+        ]
       }
     },
     {
@@ -2827,7 +2898,7 @@
         "avoidSlots": [
           "evening"
         ],
-        "note": "Blueprint directions say to take 2 capsules in the morning with food, including with Longevity Mix.",
+        "note": "Blueprint directions say to take 2 capsules in the morning with food. Tilman keeps Essential Capsules current while the Longevity Mix is retired.",
         "sourceIds": [
           "website-essential-capsules"
         ],
@@ -3028,6 +3099,28 @@
           "website-collagen"
         ],
         "sourceStatus": "official_page"
+      },
+      "protocolRole": {
+        "status": "retired",
+        "label": "Not currently taking",
+        "note": "Replaced by Sunday Natural SunGlow Luxe Collagen + C. The products differ in collagen amount and composition."
+      },
+      "retirement": {
+        "effectiveDate": "2026-08-23",
+        "note": "Replaced by Sunday Natural SunGlow Luxe Collagen + C. The products differ in collagen amount and composition.",
+        "replacedBy": [
+          {
+            "productId": "sunday-sunglow-luxe-collagen-c",
+            "covers": [
+              "collagen-peptides"
+            ],
+            "note": "Selected replacement, with a lower listed collagen amount plus vitamin C and no type II cartilage ingredients."
+          }
+        ],
+        "uncovered": [
+          "Standardized cartilage 40 mg",
+          "Undenatured type II collagen 10 mg"
+        ]
       }
     },
     {
@@ -3314,6 +3407,32 @@
           "website-advanced-antioxidants"
         ],
         "sourceStatus": "official_page"
+      },
+      "protocolRole": {
+        "status": "retired",
+        "label": "Not currently taking",
+        "note": "Not currently taking; the standalone Sunday Natural astaxanthin product is the selected astaxanthin source."
+      },
+      "retirement": {
+        "effectiveDate": "2026-08-23",
+        "note": "Not currently taking; the standalone Sunday Natural astaxanthin product is the selected astaxanthin source.",
+        "replacedBy": [
+          {
+            "productId": "sunday-astaxanthin-12-bioastin",
+            "covers": [
+              "astaxanthin"
+            ],
+            "note": "Selected astaxanthin source; it does not replace the other carotenoids and vitamin K forms in Advanced Antioxidants."
+          }
+        ],
+        "uncovered": [
+          "Vitamin K1",
+          "Lycopene",
+          "Lutein",
+          "Vitamin K2 MK-4",
+          "Zeaxanthin",
+          "Vitamin K2 MK-7"
+        ]
       }
     },
     {
@@ -3357,9 +3476,7 @@
           ]
         }
       ],
-      "includedIn": [
-        "Tilman's supplement protocol"
-      ],
+      "includedIn": [],
       "contains": [
         "vitamin-d3",
         "vitamin-k2-mk7"
@@ -3394,6 +3511,26 @@
           "website-altapharma-d3-k2-drops"
         ],
         "sourceStatus": "official_page"
+      },
+      "protocolRole": {
+        "status": "retired",
+        "label": "Not currently taking",
+        "note": "Previous D3/K2 route, replaced by the selected Sunday Natural 2,500 IU + 100 µg drops."
+      },
+      "retirement": {
+        "effectiveDate": "2026-08-23",
+        "note": "Previous D3/K2 route, replaced by the selected Sunday Natural 2,500 IU + 100 µg drops.",
+        "replacedBy": [
+          {
+            "productId": "sunday-vitamin-d3-k2-mk7-2500-iu-100mcg",
+            "covers": [
+              "vitamin-d3",
+              "vitamin-k2-mk7"
+            ],
+            "note": "Selected standalone D3/K2 route; follow its every-third-day label and count vitamin D from Essential Capsules."
+          }
+        ],
+        "uncovered": []
       }
     },
     {
@@ -3545,6 +3682,13 @@
           "website-sunday-magnesium-active-calm"
         ],
         "sourceStatus": "official_page"
+      },
+      "purchase": {
+        "status": "ordered",
+        "sku": "N8759CDE",
+        "quantity": 1,
+        "orderedAt": "2026-08-10",
+        "orderUrl": "https://www.sunday.de/magnesium-active-calm-komplex-kapseln.html"
       }
     },
     {
@@ -3653,6 +3797,13 @@
           "website-sunday-muscle-recover-ashwa-pro"
         ],
         "sourceStatus": "official_page"
+      },
+      "purchase": {
+        "status": "ordered",
+        "sku": "N8128CDE",
+        "quantity": 1,
+        "orderedAt": "2026-08-10",
+        "orderUrl": "https://www.sunday.de/muscle-recover-sport-ashwagandha-komplex.html"
       }
     },
     {
@@ -3852,6 +4003,13 @@
           "website-sunday-vitamin-b-complex-extra-forte"
         ],
         "sourceStatus": "official_page"
+      },
+      "purchase": {
+        "status": "ordered",
+        "sku": "4546",
+        "quantity": 1,
+        "orderedAt": "2026-08-10",
+        "orderUrl": "https://www.sunday.de/vitamin-b-komplex-forte-hochdosiert-kapseln-bioaktiv-b12-mh3a.html"
       }
     },
     {
@@ -3939,6 +4097,13 @@
           "website-sunday-nadh-50-d-ribose-galactose"
         ],
         "sourceStatus": "official_page"
+      },
+      "purchase": {
+        "status": "ordered",
+        "sku": "7595",
+        "quantity": 1,
+        "orderedAt": "2026-08-10",
+        "orderUrl": "https://www.sunday.de/nadh-50mg-kapseln.html"
       }
     },
     {
@@ -3987,9 +4152,7 @@
         "website-sunday-vitamin-d3-k2-20000"
       ],
       "sourceStatus": "website_sourced",
-      "includedIn": [
-        "Tilman's supplement protocol"
-      ],
+      "includedIn": [],
       "shopUrl": "https://www.sunday.de/en/vitamin-d-tabletten-20000-ie-plus-k2-mk7-200mcg.html",
       "timing": {
         "slots": [
@@ -4014,6 +4177,26 @@
           "website-sunday-vitamin-d3-k2-20000"
         ],
         "sourceStatus": "official_page"
+      },
+      "protocolRole": {
+        "status": "retired",
+        "label": "Not currently taking",
+        "note": "Retired high-dose periodic route, replaced by the Sunday Natural 2,500 IU + 100 µg drops."
+      },
+      "retirement": {
+        "effectiveDate": "2026-08-23",
+        "note": "Retired high-dose periodic route, replaced by the Sunday Natural 2,500 IU + 100 µg drops.",
+        "replacedBy": [
+          {
+            "productId": "sunday-vitamin-d3-k2-mk7-2500-iu-100mcg",
+            "covers": [
+              "vitamin-d3",
+              "vitamin-k2-mk7"
+            ],
+            "note": "Selected lower-dose standalone D3/K2 route; the frequency and amounts differ."
+          }
+        ],
+        "uncovered": []
       }
     },
     {
@@ -4076,6 +4259,13 @@
           "website-sunday-hyaluronic-acid-250"
         ],
         "sourceStatus": "official_page"
+      },
+      "purchase": {
+        "status": "ordered",
+        "sku": "4998",
+        "quantity": 1,
+        "orderedAt": "2026-08-10",
+        "orderUrl": "https://www.sunday.de/hyaluronsaeure-tabletten-250mg-hochdosiert-fermentation-vegan.html"
       }
     },
     {
@@ -4139,6 +4329,13 @@
           "website-sunday-astaxanthin-12-bioastin"
         ],
         "sourceStatus": "official_page"
+      },
+      "purchase": {
+        "status": "ordered",
+        "sku": "N8357CDE",
+        "quantity": 1,
+        "orderedAt": "2026-08-10",
+        "orderUrl": "https://www.sunday.de/astaxanthin-bioastin-kapseln-12mg.html"
       }
     },
     {
@@ -4205,6 +4402,13 @@
           "website-sunday-coq10-kaneka-ubiquinol-200"
         ],
         "sourceStatus": "official_page"
+      },
+      "purchase": {
+        "status": "ordered",
+        "sku": "N8500CDE",
+        "quantity": 1,
+        "orderedAt": "2026-08-10",
+        "orderUrl": "https://www.sunday.de/coenzym-q10-kapseln-200mg-ubiquinol-kaneka.html"
       }
     },
     {
@@ -4279,6 +4483,13 @@
           "website-sunday-liposomal-vitamin-c-zinc"
         ],
         "sourceStatus": "official_page"
+      },
+      "purchase": {
+        "status": "ordered",
+        "sku": "N7427CDE-bundle",
+        "quantity": 1,
+        "orderedAt": "2026-08-10",
+        "orderUrl": "https://www.sunday.de/vitamin-c-zink-liposomal-fluessig-set.html"
       }
     },
     {
@@ -4605,20 +4816,19 @@
       "protocolRole": {
         "status": "default",
         "label": "Selected",
-        "note": "Selected as Tilman's probiotic product; the personal schedule of one versus two sachets remains open."
+        "note": "Selected as Tilman's probiotic product and taken only in the morning. The personal number of sachets remains open."
       },
       "shopUrl": "https://shop.omni-biotic.com/de-de/products/omni-biotic-sr-9-de-99112",
       "timing": {
         "slots": [
-          "morning",
-          "evening"
+          "morning"
         ],
         "avoidSlots": [],
-        "note": "The official directions say one sachet one to two times daily on a preferably empty stomach. Tilman's exact personal frequency remains to be confirmed.",
+        "note": "Tilman takes this product only in the morning, preferably on an empty stomach. The official directions allow one sachet one to two times daily; the personal number of sachets remains open.",
         "sourceIds": [
           "website-omni-biotic-sr9"
         ],
-        "sourceStatus": "official_page"
+        "sourceStatus": "user_confirmed"
       },
       "storage": {
         "requiresRefrigeration": false,
@@ -4822,6 +5032,13 @@
           "website-sunday-vegan-omega-3-epa-focus"
         ],
         "sourceStatus": "official_page"
+      },
+      "purchase": {
+        "status": "ordered",
+        "sku": "N8896CDE",
+        "quantity": 1,
+        "orderedAt": "2026-08-10",
+        "orderUrl": "https://www.sunday.de/omega-3-kapseln-epa-dha-vegan-algen-1000mg.html"
       }
     },
     {
@@ -4912,6 +5129,13 @@
           "website-sunday-vegan-omega-3-dha-focus"
         ],
         "sourceStatus": "official_page"
+      },
+      "purchase": {
+        "status": "ordered",
+        "sku": "4906",
+        "quantity": 1,
+        "orderedAt": "2026-08-10",
+        "orderUrl": "https://www.sunday.de/omega-3-kapseln-dha-epa-vegan.html"
       }
     },
     {
@@ -5022,6 +5246,462 @@
           "website-norsan-omega-3-total-lemon"
         ],
         "sourceStatus": "official_page"
+      }
+    },
+    {
+      "id": "sunday-creatine-monohydrate-ultrapure",
+      "name": "Creatine Monohydrate Ultrapure Powder",
+      "aliases": [
+        "Creatin Monohydrat Ultrapure Pulver",
+        "SKU N8647CDE"
+      ],
+      "provider": "Sunday Natural",
+      "productType": "powder",
+      "purpose": "Standalone high-purity creatine monohydrate replacing the creatine contribution from the retired Longevity Mix.",
+      "categories": [
+        "recovery",
+        "energy",
+        "longevity"
+      ],
+      "image": "assets/images/creatine.svg",
+      "ingredients": [
+        {
+          "supplementId": "creatine-monohydrate",
+          "amount": 3400,
+          "unit": "mg",
+          "perServing": "1 level scoop daily",
+          "labelNotes": "3.4 g creatine monohydrate provides 3.0 g creatine.",
+          "sourceIds": [
+            "website-sunday-creatine-monohydrate-ultrapure"
+          ]
+        }
+      ],
+      "contains": [
+        "creatine-monohydrate"
+      ],
+      "sources": [
+        "website-sunday-creatine-monohydrate-ultrapure"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ],
+      "shopUrl": "https://www.sunday.de/creatin-monohydrat-pulver-ultrapure.html",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Sunday directs one scoop after training on training days and after waking on rest days.",
+        "sourceIds": [
+          "website-sunday-creatine-monohydrate-ultrapure"
+        ],
+        "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Store cool, dry, and protected from direct sunlight and heat.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-sunday-creatine-monohydrate-ultrapure"
+        ],
+        "sourceStatus": "official_page"
+      },
+      "purchase": {
+        "status": "ordered",
+        "sku": "N8647CDE",
+        "quantity": 1,
+        "orderedAt": "2026-08-10",
+        "orderUrl": "https://www.sunday.de/creatin-monohydrat-pulver-ultrapure.html"
+      }
+    },
+    {
+      "id": "sunday-calcium-alpha-ketoglutarate-500",
+      "name": "Calcium Alpha-Ketoglutarate 500 mg",
+      "aliases": [
+        "Calcium-alpha-Ketoglutarat (CaAKG)",
+        "SKU N8319CDE"
+      ],
+      "provider": "Sunday Natural",
+      "productType": "capsules",
+      "purpose": "Standalone CaAKG product replacing part of the calcium and alpha-ketoglutarate contribution from the retired Longevity Mix.",
+      "categories": [
+        "longevity",
+        "recovery"
+      ],
+      "image": "assets/images/creatine.svg",
+      "ingredients": [
+        {
+          "supplementId": "calcium-alpha-ketoglutarate",
+          "amount": 1000,
+          "unit": "mg",
+          "perServing": "2 capsules daily",
+          "labelNotes": "The serving provides 713 mg alpha-ketoglutarate.",
+          "sourceIds": [
+            "website-sunday-calcium-alpha-ketoglutarate-500"
+          ]
+        },
+        {
+          "supplementId": "calcium",
+          "amount": 198,
+          "unit": "mg",
+          "perServing": "2 capsules daily",
+          "labelNotes": "Calcium contributed by calcium alpha-ketoglutarate.",
+          "sourceIds": [
+            "website-sunday-calcium-alpha-ketoglutarate-500"
+          ]
+        }
+      ],
+      "contains": [
+        "calcium-alpha-ketoglutarate",
+        "calcium"
+      ],
+      "sources": [
+        "website-sunday-calcium-alpha-ketoglutarate-500"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ],
+      "shopUrl": "https://www.sunday.de/calcium-alpha-ketoglutarat-kapseln.html",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Tilman keeps this in the morning or daytime routine; Sunday directs the capsules before or with a meal and plenty of fluid.",
+        "sourceIds": [
+          "website-sunday-calcium-alpha-ketoglutarate-500"
+        ],
+        "sourceStatus": "user_confirmed"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Store cool, dry, and protected from direct sunlight and heat.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-sunday-calcium-alpha-ketoglutarate-500"
+        ],
+        "sourceStatus": "official_page"
+      },
+      "purchase": {
+        "status": "ordered",
+        "sku": "N8319CDE",
+        "quantity": 1,
+        "orderedAt": "2026-08-10",
+        "orderUrl": "https://www.sunday.de/calcium-alpha-ketoglutarat-kapseln.html"
+      }
+    },
+    {
+      "id": "sunday-taurine-500",
+      "name": "Taurine 500 mg Capsules",
+      "aliases": [
+        "Taurin 500 mg Kapseln",
+        "SKU 4567-bundle"
+      ],
+      "provider": "Sunday Natural",
+      "productType": "capsules",
+      "purpose": "Standalone vegan taurine replacing part of the taurine contribution from the retired Longevity Mix.",
+      "categories": [
+        "energy",
+        "heart",
+        "recovery",
+        "longevity"
+      ],
+      "image": "assets/images/creatine.svg",
+      "ingredients": [
+        {
+          "supplementId": "taurine",
+          "amount": 1000,
+          "unit": "mg",
+          "perServing": "1-2 capsules daily",
+          "labelNotes": "500 mg per capsule; 1,000 mg represents the upper end of the listed daily serving range.",
+          "sourceIds": [
+            "website-sunday-taurine-500"
+          ]
+        }
+      ],
+      "contains": [
+        "taurine"
+      ],
+      "sources": [
+        "website-sunday-taurine-500"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ],
+      "shopUrl": "https://www.sunday.de/taurin-kapseln-500-vegan-set.html",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Tilman keeps this in the morning or daytime routine; Sunday lists one to two capsules before food.",
+        "sourceIds": [
+          "website-sunday-taurine-500"
+        ],
+        "sourceStatus": "user_confirmed"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Store cool, dry, and protected from direct sunlight and heat.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-sunday-taurine-500"
+        ],
+        "sourceStatus": "official_page"
+      },
+      "purchase": {
+        "status": "ordered",
+        "sku": "4567-bundle",
+        "quantity": 1,
+        "orderedAt": "2026-08-10",
+        "orderUrl": "https://www.sunday.de/taurin-kapseln-500-vegan-set.html"
+      }
+    },
+    {
+      "id": "sunday-glucosamine-850",
+      "name": "Glucosamine 850 mg High-Dose",
+      "aliases": [
+        "Glucosamin 850 mg Hochdosiert",
+        "SKU 4368-bundle"
+      ],
+      "provider": "Sunday Natural",
+      "productType": "capsules",
+      "purpose": "Fermentation-derived vegan glucosamine sulfate replacing the glucosamine contribution from the retired Longevity Mix.",
+      "categories": [
+        "recovery",
+        "longevity"
+      ],
+      "image": "assets/images/creatine.svg",
+      "ingredients": [
+        {
+          "supplementId": "glucosamine-sulfate",
+          "amount": 850,
+          "unit": "mg",
+          "perServing": "1 capsule daily",
+          "labelNotes": "D-glucosamine sulfate from fermentation.",
+          "sourceIds": [
+            "website-sunday-glucosamine-850"
+          ]
+        }
+      ],
+      "contains": [
+        "glucosamine-sulfate"
+      ],
+      "sources": [
+        "website-sunday-glucosamine-850"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ],
+      "shopUrl": "https://www.sunday.de/glucosamin-glucosaminsulfat-kapseln-850mg-hochdosiert-aus-fermentation-vegan-set.html",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Sunday directs one capsule with a meal and fluid; Tilman keeps it in the morning or daytime routine.",
+        "sourceIds": [
+          "website-sunday-glucosamine-850"
+        ],
+        "sourceStatus": "user_confirmed"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Store cool, dry, and protected from direct sunlight and heat.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-sunday-glucosamine-850"
+        ],
+        "sourceStatus": "official_page"
+      },
+      "purchase": {
+        "status": "ordered",
+        "sku": "4368-bundle",
+        "quantity": 1,
+        "orderedAt": "2026-08-10",
+        "orderUrl": "https://www.sunday.de/glucosamin-glucosaminsulfat-kapseln-850mg-hochdosiert-aus-fermentation-vegan-set.html"
+      }
+    },
+    {
+      "id": "sunday-sunglow-luxe-collagen-c",
+      "name": "SunGlow Luxe Collagen + C",
+      "aliases": [
+        "KOLLAGEN SunGlow Luxe + C",
+        "SKU N9078CDE-bundle"
+      ],
+      "provider": "Sunday Natural",
+      "productType": "capsules",
+      "purpose": "Bovine type I and III collagen hydrolysate with vitamin C, selected to replace Blueprint Collagen Peptides.",
+      "categories": [
+        "skin",
+        "recovery"
+      ],
+      "image": "assets/images/creatine.svg",
+      "ingredients": [
+        {
+          "supplementId": "collagen-peptides",
+          "amount": 2000,
+          "unit": "mg",
+          "perServing": "5 capsules daily",
+          "labelNotes": "Grass-fed bovine type I and III collagen hydrolysate; this differs from the retired Blueprint product's composition and serving amount.",
+          "sourceIds": [
+            "website-sunday-sunglow-luxe-collagen-c"
+          ]
+        },
+        {
+          "supplementId": "vitamin-c",
+          "amount": 100,
+          "unit": "mg",
+          "perServing": "5 capsules daily",
+          "labelNotes": "PureWay-C with citrus bioflavonoids and plant fatty acids.",
+          "sourceIds": [
+            "website-sunday-sunglow-luxe-collagen-c"
+          ]
+        }
+      ],
+      "contains": [
+        "collagen-peptides",
+        "vitamin-c"
+      ],
+      "sources": [
+        "website-sunday-sunglow-luxe-collagen-c"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ],
+      "shopUrl": "https://www.sunday.de/kollagen-kapseln-sunglow-luxe-plus-c-set.html",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Sunday directs five capsules spread across the day with meals and water; this replaces the prior empty-stomach Blueprint collagen routine.",
+        "sourceIds": [
+          "website-sunday-sunglow-luxe-collagen-c"
+        ],
+        "sourceStatus": "official_page"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Store cool, dry, and dark.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-sunday-sunglow-luxe-collagen-c"
+        ],
+        "sourceStatus": "official_page"
+      },
+      "purchase": {
+        "status": "ordered",
+        "sku": "N9078CDE-bundle",
+        "quantity": 1,
+        "orderedAt": "2026-08-10",
+        "orderUrl": "https://www.sunday.de/kollagen-kapseln-sunglow-luxe-plus-c-set.html"
+      }
+    },
+    {
+      "id": "sunday-vitamin-d3-k2-mk7-2500-iu-100mcg",
+      "name": "Vitamin D3 + K2 MK-7 2,500 IU + 100 µg Drops",
+      "aliases": [
+        "Vitamin D3 + K2 MK7 2.500IE + 100 µg Tropfen",
+        "SKU 3944"
+      ],
+      "provider": "Sunday Natural",
+      "productType": "drops",
+      "purpose": "Selected D3 and K2 route replacing the former Altapharma drops and Sunday Natural 20,000 IU tablets.",
+      "categories": [
+        "essentials",
+        "longevity",
+        "heart"
+      ],
+      "image": "assets/images/vitamin-d3-k2.svg",
+      "ingredients": [
+        {
+          "supplementId": "vitamin-d3",
+          "amount": 63,
+          "unit": "mcg",
+          "perServing": "1 drop every third day",
+          "labelNotes": "2,500 IU vitamin D3 per drop. Essential Capsules separately contribute vitamin D, so total intake needs attention.",
+          "sourceIds": [
+            "website-sunday-vitamin-d3-k2-2500"
+          ]
+        },
+        {
+          "supplementId": "vitamin-k2-mk7",
+          "amount": 100,
+          "unit": "mcg",
+          "perServing": "1 drop every third day",
+          "labelNotes": "Sunquinone K2 MK-7 all-trans.",
+          "sourceIds": [
+            "website-sunday-vitamin-d3-k2-2500"
+          ]
+        }
+      ],
+      "contains": [
+        "vitamin-d3",
+        "vitamin-k2-mk7"
+      ],
+      "sources": [
+        "website-sunday-vitamin-d3-k2-2500"
+      ],
+      "sourceStatus": "website_sourced",
+      "includedIn": [
+        "Tilman's supplement protocol"
+      ],
+      "protocolRole": {
+        "status": "default",
+        "label": "Selected D3/K2",
+        "note": "This is Tilman's selected standalone D3/K2 route. Use caution with the total amount because Essential Capsules also contain vitamin D. The official label says one drop every third day."
+      },
+      "shopUrl": "https://www.sunday.de/vitamin-d3-2500-plus-k2-mk7-100mcg-100-prozent-all-trans.html",
+      "timing": {
+        "slots": [
+          "morning",
+          "daytime"
+        ],
+        "avoidSlots": [],
+        "note": "Sunday directs one drop every third day with a meal. Tilman uses this as the selected standalone D3/K2 route, while counting vitamin D from Essential Capsules.",
+        "sourceIds": [
+          "website-sunday-vitamin-d3-k2-2500"
+        ],
+        "sourceStatus": "user_confirmed"
+      },
+      "storage": {
+        "requiresRefrigeration": false,
+        "mode": "cool_dry",
+        "label": "Cool, dry",
+        "note": "Store cool and dry, protected from direct sunlight and heat.",
+        "avoidFreezing": false,
+        "sourceIds": [
+          "website-sunday-vitamin-d3-k2-2500"
+        ],
+        "sourceStatus": "official_page"
+      },
+      "purchase": {
+        "status": "ordered",
+        "sku": "3944",
+        "quantity": 1,
+        "orderedAt": "2026-08-10",
+        "orderUrl": "https://www.sunday.de/vitamin-d3-2500-plus-k2-mk7-100mcg-100-prozent-all-trans.html"
       }
     }
   ],
@@ -5424,6 +6104,48 @@
       "url": "https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/resveratrol",
       "captureDate": "2026-05-22",
       "notes": "Linus Pauling Institute resveratrol overview used as ingredient-level context for resveratrol as a phytochemical; not used as personalized dosing advice."
+    },
+    {
+      "id": "website-sunday-creatine-monohydrate-ultrapure",
+      "type": "official_page",
+      "url": "https://www.sunday.de/creatin-monohydrat-pulver-ultrapure.html",
+      "captureDate": "2026-08-23",
+      "notes": "Official Sunday Natural page used for the 3.4 g powder serving, 3.0 g creatine yield, use directions, SKU, and storage guidance."
+    },
+    {
+      "id": "website-sunday-calcium-alpha-ketoglutarate-500",
+      "type": "official_page",
+      "url": "https://www.sunday.de/calcium-alpha-ketoglutarat-kapseln.html",
+      "captureDate": "2026-08-23",
+      "notes": "Official Sunday Natural page used for the two-capsule serving with 1,000 mg CaAKG, 713 mg alpha-ketoglutarate, and 198 mg calcium."
+    },
+    {
+      "id": "website-sunday-taurine-500",
+      "type": "official_page",
+      "url": "https://www.sunday.de/taurin-kapseln-500-vegan-set.html",
+      "captureDate": "2026-08-23",
+      "notes": "Official Sunday Natural page used for 500 mg taurine per capsule, the one-to-two-capsule serving range, and storage guidance."
+    },
+    {
+      "id": "website-sunday-glucosamine-850",
+      "type": "official_page",
+      "url": "https://www.sunday.de/glucosamin-glucosaminsulfat-kapseln-850mg-hochdosiert-aus-fermentation-vegan-set.html",
+      "captureDate": "2026-08-23",
+      "notes": "Official Sunday Natural page used for the 850 mg fermented vegan glucosamine sulfate capsule, meal directions, and storage guidance."
+    },
+    {
+      "id": "website-sunday-sunglow-luxe-collagen-c",
+      "type": "official_page",
+      "url": "https://www.sunday.de/kollagen-kapseln-sunglow-luxe-plus-c-set.html",
+      "captureDate": "2026-08-23",
+      "notes": "Official Sunday Natural page used for five capsules with 2,000 mg bovine type I and III collagen hydrolysate plus 100 mg vitamin C."
+    },
+    {
+      "id": "website-sunday-vitamin-d3-k2-2500",
+      "type": "official_page",
+      "url": "https://www.sunday.de/vitamin-d3-2500-plus-k2-mk7-100mcg-100-prozent-all-trans.html",
+      "captureDate": "2026-08-23",
+      "notes": "Official Sunday Natural page used for 2,500 IU vitamin D3 and 100 micrograms vitamin K2 MK-7 per drop, the every-third-day direction, SKU, and storage guidance."
     }
   ]
 }

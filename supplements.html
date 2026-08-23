@@ -163,19 +163,18 @@
               <span class="visually-hidden">Show refrigerated supplement kits</span>
             </button>
           </div>
-          <div class="protocol-stack" aria-label="Tilman's supplements">
+          <div class="protocol-stack" aria-label="Tilman's current supplement kits">
             <button type="button" data-protocol-product="blueprint-essential-capsules">Daily Essentials</button>
-            <button type="button" data-protocol-product="blueprint-longevity-mix-blood-orange">Longevity Mix</button>
-            <button type="button" data-protocol-product="blueprint-collagen-peptides">Collagen</button>
+            <button type="button" data-protocol-product="sunday-sunglow-luxe-collagen-c">SunGlow Collagen + C</button>
             <button type="button" data-protocol-product="omni-biotic-sr9">Probiotic SR-9</button>
-            <button type="button" data-protocol-product="blueprint-advanced-antioxidants">Antioxidants</button>
-            <button type="button" data-protocol-product="blueprint-ashwagandha-rhodiola">Ashwagandha</button>
-            <button type="button" data-protocol-product="blueprint-nac-ginger-curcumin">DynaC</button>
-            <button type="button" data-protocol-product="blueprint-nac-ginger-curcumin">Cumin</button>
+            <button type="button" data-protocol-product="sunday-creatine-monohydrate-ultrapure">Creatine</button>
+            <button type="button" data-protocol-product="sunday-calcium-alpha-ketoglutarate-500">CaAKG</button>
+            <button type="button" data-protocol-product="sunday-taurine-500">Taurine</button>
+            <button type="button" data-protocol-product="sunday-glucosamine-850">Glucosamine</button>
             <button type="button" data-protocol-product="norsan-omega-3-capsules">Fish Omega-3 capsules</button>
             <button type="button" data-protocol-product="sunday-vegan-omega-3-epa-focus">Algae omega-3 EPA</button>
             <button type="button" data-protocol-product="sunday-vegan-omega-3-dha-focus">Algae omega-3 DHA</button>
-            <button type="button" data-protocol-product="altapharma-d3-k2-drops">D3 + K2 drops</button>
+            <button type="button" data-protocol-product="sunday-vitamin-d3-k2-mk7-2500-iu-100mcg">Sunday D3 + K2 drops</button>
             <button type="button" data-protocol-product="sunday-magnesium-complex-11-ultra-xl">Magnesium Complex 11</button>
             <button type="button" data-protocol-product="sunday-magnesium-active-calm">Active Calm</button>
             <button type="button" data-protocol-product="natural-elements-magnesium-bisglycinat">Magnesium bisglycinat</button>
@@ -184,25 +183,28 @@
             <button type="button" data-protocol-product="sunday-muscle-recover-ashwa-pro-complex">Ashwa Pro</button>
             <button type="button" data-protocol-product="sunday-vitamin-b-complex-extra-forte">B Complex</button>
             <button type="button" data-protocol-product="sunday-nadh-50-d-ribose-galactose">NADH 50</button>
-            <button type="button" data-protocol-product="sunday-vitamin-d3-k2-mk7-20000-iu-200mcg">D3 + K2 tablets</button>
             <button type="button" data-protocol-product="sunday-hyaluronic-acid-250-high-dose">Hyaluronic Acid</button>
             <button type="button" data-protocol-product="sunday-astaxanthin-12-bioastin">Astaxanthin</button>
             <button type="button" data-protocol-product="sunday-coenzyme-q10-kaneka-ubiquinol-200">CoQ10</button>
             <button type="button" data-protocol-product="weightworld-trans-resveratrol-510-red-wine-polyphenols">Resveratrol</button>
             <button type="button" data-protocol-product="sunday-liposomal-vitamin-c-zinc">Vitamin C + Zinc</button>
           </div>
-          <p>Tilman takes most of the stack in the morning with a vegan protein shake made with hazelnuts, almonds, hemp seeds, linseed oil, and a little olive oil. NORSAN fish-oil capsules are the default omega-3 product, with the two Sunday Natural algae softgels kept in rotation rather than added as three automatic full servings. Midday is selective; the calming and recovery stack stays in the evening.</p>
+          <p>Tilman takes most of the stack in the morning with a vegan protein shake made with hazelnuts, almonds, hemp seeds, linseed oil, and a little olive oil. Probiotic SR-9 is taken only in the morning. NORSAN fish-oil capsules are the default omega-3 product, with the two Sunday Natural algae softgels kept in rotation. The Sunday Natural 2,500 IU D3 + K2 drops are the selected standalone vitamin D route; total vitamin D still needs attention because Essential Capsules also contribute vitamin D. Midday is selective; the calming and recovery stack stays in the evening.</p>
         </div>
       </section>
       <section class="supplement-browser" aria-label="Supplement catalog">
         <div class="table-toolbar">
           <div class="tab-list" role="tablist" aria-label="Supplement catalog views">
-            <button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab="ingredients">Supplements</button>
-            <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="products">Supplement Kits</button>
+            <button class="tab-button" id="supplements-tab" type="button" role="tab" aria-selected="false" aria-controls="supplement-catalog-panel" tabindex="-1" data-tab="ingredients">Supplements</button>
+            <button class="tab-button active" id="supplement-kits-tab" type="button" role="tab" aria-selected="true" aria-controls="supplement-catalog-panel" data-tab="products">Supplement Kits</button>
+          </div>
+          <div class="product-scope-control" data-product-scope-control aria-label="Supplement kit status">
+            <button class="active" type="button" data-product-scope="current" aria-pressed="true">Current</button>
+            <button type="button" data-product-scope="all" aria-pressed="false">All</button>
           </div>
           <label class="catalog-search" aria-label="Search supplement catalog">
             <span class="visually-hidden">Search current supplement table</span>
-            <input type="search" data-catalog-search placeholder="Search supplements" autocomplete="off">
+            <input type="search" data-catalog-search placeholder="Search supplement kits" autocomplete="off">
           </label>
           <div class="category-filter-row" aria-label="Supplement category filters">
             <button class="filter-button active" type="button" data-catalog-filter="all">All</button>
@@ -217,7 +219,7 @@
           </div>
         </div>
 
-        <div class="table-wrap">
+        <div class="table-wrap" id="supplement-catalog-panel" role="tabpanel" aria-labelledby="supplement-kits-tab">
           <table class="catalog-table" id="supplement-catalog-table"></table>
         </div>
       </section>

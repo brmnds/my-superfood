@@ -8,7 +8,8 @@ const allowedTimingSlots = new Set(["morning", "daytime", "evening"]);
 const allowedTimingSourceStatuses = new Set(["official_page", "ingredient_researched", "user_confirmed", "needs_review"]);
 const allowedStorageModes = new Set(["refrigerate", "cool_dry", "room_temperature", "needs_review"]);
 const allowedStorageSourceStatuses = new Set(["official_page", "needs_review"]);
-const allowedProtocolRoles = new Set(["default", "rotation", "alternative"]);
+const allowedProtocolRoles = new Set(["default", "rotation", "alternative", "retired"]);
+const allowedPurchaseStatuses = new Set(["ordered"]);
 
 function fail(errors) {
   for (const error of errors) console.error(`- ${error}`);
@@ -22,6 +23,7 @@ function isNonEmptyString(value) {
 const seed = JSON.parse(await fs.readFile(path.resolve(seedPath), "utf8"));
 const errors = [];
 const supplementIds = new Set();
+const productIds = new Set();
 const sourceIds = new Set();
 const officialSourceUrls = new Set();
 
@@ -115,6 +117,12 @@ for (const supplement of seed.supplements || []) {
 }
 
 for (const product of seed.supplementProducts || []) {
+  if (!isNonEmptyString(product.id)) continue;
+  if (productIds.has(product.id)) errors.push(`Duplicate product id: ${product.id}`);
+  productIds.add(product.id);
+}
+
+for (const product of seed.supplementProducts || []) {
   if (!isNonEmptyString(product.id)) errors.push("Every supplement product needs an id.");
   if (!isNonEmptyString(product.name)) errors.push(`Product ${product.id} needs a name.`);
   if (!isNonEmptyString(product.provider)) errors.push(`Product ${product.id} needs a provider.`);
@@ -129,6 +137,30 @@ for (const product of seed.supplementProducts || []) {
     if (!allowedProtocolRoles.has(product.protocolRole?.status)) errors.push(`Product ${product.id} has invalid protocolRole.status.`);
     if (!isNonEmptyString(product.protocolRole?.label)) errors.push(`Product ${product.id} protocolRole needs a label.`);
     if (!isNonEmptyString(product.protocolRole?.note)) errors.push(`Product ${product.id} protocolRole needs a note.`);
+  }
+  if (product.protocolRole?.status === "retired" && product.includedIn?.length) {
+    errors.push(`Retired product ${product.id} must not remain in an active protocol.`);
+  }
+  if (product.retirement !== undefined) {
+    if (!product.retirement || typeof product.retirement !== "object") errors.push(`Product ${product.id} retirement must be an object.`);
+    if (!isNonEmptyString(product.retirement?.effectiveDate)) errors.push(`Product ${product.id} retirement needs an effectiveDate.`);
+    if (!isNonEmptyString(product.retirement?.note)) errors.push(`Product ${product.id} retirement needs a note.`);
+    if (!Array.isArray(product.retirement?.replacedBy)) errors.push(`Product ${product.id} retirement.replacedBy must be an array.`);
+    if (!Array.isArray(product.retirement?.uncovered)) errors.push(`Product ${product.id} retirement.uncovered must be an array.`);
+    for (const replacement of product.retirement?.replacedBy || []) {
+      if (!productIds.has(replacement.productId)) errors.push(`Product ${product.id} references missing replacement ${replacement.productId}.`);
+      if (!Array.isArray(replacement.covers) || replacement.covers.length === 0) errors.push(`Product ${product.id} replacement ${replacement.productId} needs covered ingredients.`);
+      if (!isNonEmptyString(replacement.note)) errors.push(`Product ${product.id} replacement ${replacement.productId} needs a note.`);
+    }
+  }
+  if (product.purchase !== undefined) {
+    const purchase = product.purchase;
+    if (!purchase || typeof purchase !== "object") errors.push(`Product ${product.id} purchase must be an object.`);
+    if (!allowedPurchaseStatuses.has(purchase?.status)) errors.push(`Product ${product.id} has invalid purchase.status.`);
+    if (!isNonEmptyString(purchase?.sku)) errors.push(`Product ${product.id} purchase needs a SKU.`);
+    if (!Number.isInteger(purchase?.quantity) || purchase.quantity < 1) errors.push(`Product ${product.id} purchase.quantity must be a positive integer.`);
+    if (!isNonEmptyString(purchase?.orderedAt)) errors.push(`Product ${product.id} purchase needs an orderedAt date.`);
+    if (!isNonEmptyString(purchase?.orderUrl) || !purchase.orderUrl.startsWith("https://")) errors.push(`Product ${product.id} purchase.orderUrl must be an HTTPS URL.`);
   }
   if (product.shopUrl !== undefined) {
     if (!isNonEmptyString(product.shopUrl) || !product.shopUrl.startsWith("https://")) {

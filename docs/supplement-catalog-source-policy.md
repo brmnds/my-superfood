@@ -26,7 +26,7 @@ The current package-photo evidence folder is:
 
 The package photos are evidence and provenance, not public product thumbnails. For Blueprint/Bryan Johnson products, official Blueprint pages are the preferred source of truth when the exact supplement facts are available online.
 
-For Sunday Natural products, use the exact product page matching the ordered name and SKU. Store the purchased item as a **Supplement Product** and connect its ingredients to primitive **Supplement** rows. Keep prices out of the catalog. The current Sunday Natural research note is:
+For Sunday Natural products, use the exact product page matching the ordered name and SKU. Store the purchased item as a **Supplement Product** and connect its ingredients to primitive **Supplement** rows. Keep prices out of the catalog; optional `purchase` metadata may retain the SKU, order date, quantity, and canonical order URL. The current Sunday Natural research note is:
 
 ```text
 docs/sunday-natural-supplement-research.md
@@ -87,7 +87,7 @@ When multiple products cover the same category, Supplement Products may use `pro
 }
 ```
 
-Allowed statuses are `default`, `rotation`, and `alternative`. Use `default` for the primary product, `rotation` for products Tilman actively alternates or mixes into the routine, and `alternative` for retained catalog products that are not currently a default. A rotation must not be presented as an instruction to add every product's full label serving together.
+Allowed statuses are `default`, `rotation`, `alternative`, and `retired`. Use `default` for the primary product, `rotation` for products Tilman actively alternates or mixes into the routine, `alternative` for retained catalog products that are not currently a default, and `retired` for a product Tilman no longer takes. Retired products must be excluded from active protocol membership and may use a structured `retirement` object to link selected replacements and unresolved gaps. A rotation must not be presented as an instruction to add every product's full label serving together.
 
 ## Storage And Refrigeration
 

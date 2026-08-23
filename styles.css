@@ -1917,6 +1917,39 @@ h2 {
   flex: 0 0 auto;
 }
 
+.product-scope-control {
+  align-items: center;
+  background: #f3f6f2;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 2px;
+  padding: 3px;
+}
+
+.product-scope-control[hidden] {
+  display: none;
+}
+
+.product-scope-control button {
+  background: transparent;
+  border: 0;
+  border-radius: 5px;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 850;
+  min-height: 27px;
+  padding: 5px 9px;
+}
+
+.product-scope-control button.active {
+  background: white;
+  box-shadow: 0 1px 4px rgba(32, 49, 35, 0.1);
+  color: var(--leaf-dark);
+}
+
 .supplement-browser .category-filter-row {
   justify-content: flex-end;
   margin-left: auto;
@@ -2124,6 +2157,82 @@ h2 {
   background: #f3f4f2;
   border-color: #e1e3df;
   color: #6b726c;
+}
+
+.protocol-role-retired {
+  background: #f2f1ee;
+  border-color: #dedbd4;
+  color: #746f67;
+}
+
+.purchase-row {
+  display: flex;
+  margin-top: 2px;
+}
+
+.purchase-note {
+  color: #6a756c;
+  font-size: 0.68rem;
+  font-weight: 750;
+}
+
+.retirement-toggle {
+  align-items: center;
+  align-self: flex-start;
+  background: transparent;
+  border: 0;
+  color: var(--leaf-dark);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.72rem;
+  font-weight: 850;
+  padding: 4px 0;
+  text-decoration: underline;
+  text-decoration-color: rgba(47, 102, 61, 0.3);
+  text-underline-offset: 3px;
+}
+
+.retirement-detail-row td {
+  background: #f7f7f4;
+  padding: 0 18px 18px;
+}
+
+.retirement-detail {
+  border-left: 3px solid #b8b7ae;
+  color: var(--muted);
+  display: grid;
+  gap: 9px;
+  padding: 12px 14px;
+}
+
+.retirement-detail p,
+.retirement-detail ul {
+  margin: 0;
+}
+
+.retirement-detail ul {
+  display: grid;
+  gap: 7px;
+  list-style: none;
+  padding: 0;
+}
+
+.retirement-detail li {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 9px;
+}
+
+.retirement-detail li button {
+  background: transparent;
+  border: 0;
+  color: var(--leaf-dark);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 850;
+  padding: 0;
+  text-align: left;
 }
 
 .relationship-note {

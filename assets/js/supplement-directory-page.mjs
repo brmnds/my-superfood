@@ -1,33 +1,8 @@
 import { escapeHtml } from "./shared.mjs";
 
 const catalogApiUrl = "https://z4kxvkidmk35kelru4rrjbbsbi0gcpqt.lambda-url.eu-central-1.on.aws";
-const catalogCacheKey = "my-superfood-supplement-catalog-cache-v1";
+const catalogCacheKey = "my-superfood-supplement-catalog-cache-v2";
 const catalogCacheTtlMs = 5 * 60 * 1000;
-
-const activeProductIds = [
-  "blueprint-essential-capsules",
-  "blueprint-longevity-mix-blood-orange",
-  "blueprint-collagen-peptides",
-  "blueprint-advanced-antioxidants",
-  "blueprint-ashwagandha-rhodiola",
-  "blueprint-nac-ginger-curcumin",
-  "blueprint-omega-3",
-  "altapharma-d3-k2-drops",
-  "sunday-magnesium-complex-11-ultra-xl",
-  "sunday-magnesium-active-calm",
-  "natural-elements-magnesium-bisglycinat",
-  "swanson-apigenin-50mg-90-caps",
-  "sunday-green-tea-extract-l-theanine-100mg",
-  "sunday-muscle-recover-ashwa-pro-complex",
-  "sunday-vitamin-b-complex-extra-forte",
-  "sunday-nadh-50-d-ribose-galactose",
-  "sunday-vitamin-d3-k2-mk7-20000-iu-200mcg",
-  "sunday-hyaluronic-acid-250-high-dose",
-  "sunday-astaxanthin-12-bioastin",
-  "sunday-coenzyme-q10-kaneka-ubiquinol-200",
-  "weightworld-trans-resveratrol-510-red-wine-polyphenols",
-  "sunday-liposomal-vitamin-c-zinc",
-];
 
 function readCatalogCache() {
   try {
@@ -136,11 +111,16 @@ function totalAmount(entries) {
   return totals.join(" + ") || "Needs review";
 }
 
-function buildRows(catalog) {
+function activeProductsForCatalog(catalog) {
+  return catalog.products.filter((product) => {
+    const memberships = product.includedIn || [];
+    const activeMembership = memberships.includes("Tilman's supplement protocol") || memberships.includes("Easy Stack");
+    return activeMembership && !["retired", "alternative"].includes(product?.protocolRole?.status);
+  });
+}
+
+function buildRows(catalog, activeProducts) {
   const supplementById = new Map(catalog.supplements.map((supplement) => [supplement.id, supplement]));
-  const activeProducts = activeProductIds
-    .map((id) => catalog.products.find((product) => product.id === id))
-    .filter(Boolean);
   const rowMap = new Map();
 
   activeProducts.forEach((product) => {
@@ -191,9 +171,10 @@ export function renderSupplementDirectory() {
 
   loadCatalog()
     .then((catalog) => {
-      const rows = buildRows(catalog);
+      const activeProducts = activeProductsForCatalog(catalog);
+      const rows = buildRows(catalog, activeProducts);
       if (summary) {
-        summary.textContent = `${rows.length} supplement primitives across ${activeProductIds.length} active supplement kits.`;
+        summary.textContent = `${rows.length} supplement primitives across ${activeProducts.length} active supplement kits.`;
       }
       table.innerHTML = `
         <thead>
