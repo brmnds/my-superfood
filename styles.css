@@ -1882,6 +1882,11 @@ h2 {
 }
 
 .protocol-profile {
+  display: grid;
+  gap: 14px;
+}
+
+.protocol-profile-main {
   align-items: center;
   display: flex;
   gap: 16px;
@@ -1914,9 +1919,9 @@ h2 {
   color: #64685f;
   font-size: 0.74rem;
   line-height: 1.45;
-  margin: 14px 0 0;
-  max-width: 340px;
+  margin: 0;
   padding: 10px 11px;
+  width: 100%;
 }
 
 .protocol-content {
@@ -3263,7 +3268,7 @@ h2 {
     padding: 12px 18px;
   }
 
-  .protocol-profile {
+  .protocol-profile-main {
     align-items: flex-start;
   }
 
@@ -3278,6 +3283,21 @@ h2 {
 
   .protocol-stack-label {
     margin-top: 0;
+  }
+
+  .protocol-stack-items {
+    gap: 6px;
+  }
+
+  .protocol-stack button {
+    font-size: 0.7rem;
+    padding: 5px 8px;
+  }
+
+  .protocol-profile .protocol-disclaimer {
+    font-size: 0.7rem;
+    line-height: 1.4;
+    padding: 9px 10px;
   }
 
   .instagram-guidance-popup {
