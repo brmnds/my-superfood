@@ -2931,6 +2931,17 @@ h2 {
   white-space: nowrap;
 }
 
+.recipe-card-summer.recipe-card-featured .recipe-title-overlay {
+  left: 10px;
+  padding: clamp(12px, 1.5vw, 16px);
+  right: 10px;
+}
+
+.recipe-card-summer.recipe-card-featured .recipe-title-overlay h2 {
+  font-size: clamp(1.45rem, 2.8vw, 2.8rem);
+  line-height: 1;
+}
+
 .recipe-card-compact .recipe-title-overlay {
   left: 10px;
   padding: 14px 12px;
