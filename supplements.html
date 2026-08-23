@@ -22,7 +22,7 @@
     <meta name="twitter:image" content="https://my-superfood.com/assets/images/my-superfood-icon-512.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/my-superfood-icon-512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/my-superfood-icon.png">
-    <link rel="stylesheet" href="styles.css?v=20260823-protocol-groups">
+    <link rel="stylesheet" href="styles.css?v=20260823-flat-protocol-stack">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <link rel="alternate" type="text/plain" title="LLMs and AI search guidance" href="/llms.txt">
     <link rel="alternate" type="application/json" title="My Superfood site entities" href="/data/site-entities.json">
@@ -166,51 +166,31 @@
               <span class="visually-hidden">Show refrigerated supplement kits</span>
             </button>
           </div>
-          <div class="protocol-stack" aria-label="Tilman's current supplement kits by timing">
-            <div class="protocol-stack-group" role="group" aria-labelledby="protocol-group-morning" data-protocol-slots="morning">
-              <p class="protocol-stack-label" id="protocol-group-morning">Morning</p>
-              <div class="protocol-stack-items">
-                <button type="button" data-protocol-product="blueprint-essential-capsules">Daily Essentials</button>
-                <button type="button" data-protocol-product="omni-biotic-sr9">Probiotic SR-9</button>
-                <button type="button" data-protocol-product="norsan-omega-3-capsules">Fish Omega-3 capsules</button>
-                <button type="button" data-protocol-product="sunday-vegan-omega-3-epa-focus">Algae omega-3 EPA</button>
-                <button type="button" data-protocol-product="sunday-vegan-omega-3-dha-focus">Algae omega-3 DHA</button>
-                <button type="button" data-protocol-product="sunday-nadh-50-d-ribose-galactose">NADH 50</button>
-              </div>
-            </div>
-            <div class="protocol-stack-group" role="group" aria-labelledby="protocol-group-morning-daytime" data-protocol-slots="morning daytime">
-              <p class="protocol-stack-label" id="protocol-group-morning-daytime">Morning and daytime</p>
-              <div class="protocol-stack-items">
-                <button type="button" data-protocol-product="sunday-sunglow-luxe-collagen-c">SunGlow Collagen + C</button>
-                <button type="button" data-protocol-product="sunday-creatine-monohydrate-ultrapure">Creatine</button>
-                <button type="button" data-protocol-product="sunday-calcium-alpha-ketoglutarate-500">CaAKG</button>
-                <button type="button" data-protocol-product="sunday-taurine-500">Taurine</button>
-                <button type="button" data-protocol-product="sunday-glucosamine-850">Glucosamine</button>
-                <button type="button" data-protocol-product="sunday-vitamin-d3-k2-mk7-2500-iu-100mcg">Sunday D3 + K2 drops</button>
-                <button type="button" data-protocol-product="sunday-vitamin-b-complex-extra-forte">B Complex</button>
-                <button type="button" data-protocol-product="sunday-hyaluronic-acid-250-high-dose">Hyaluronic Acid</button>
-                <button type="button" data-protocol-product="sunday-coenzyme-q10-kaneka-ubiquinol-200">CoQ10</button>
-              </div>
-            </div>
-            <div class="protocol-stack-group" role="group" aria-labelledby="protocol-group-daytime" data-protocol-slots="daytime">
-              <p class="protocol-stack-label" id="protocol-group-daytime">Daytime only</p>
-              <div class="protocol-stack-items">
-                <button type="button" data-protocol-product="sunday-astaxanthin-12-bioastin">Astaxanthin</button>
-                <button type="button" data-protocol-product="weightworld-trans-resveratrol-510-red-wine-polyphenols">Resveratrol</button>
-                <button type="button" data-protocol-product="sunday-liposomal-vitamin-c-zinc">Vitamin C + Zinc</button>
-              </div>
-            </div>
-            <div class="protocol-stack-group" role="group" aria-labelledby="protocol-group-evening" data-protocol-slots="evening">
-              <p class="protocol-stack-label" id="protocol-group-evening">Evening</p>
-              <div class="protocol-stack-items">
-                <button type="button" data-protocol-product="sunday-magnesium-complex-11-ultra-xl">Magnesium Complex 11</button>
-                <button type="button" data-protocol-product="sunday-magnesium-active-calm">Active Calm</button>
-                <button type="button" data-protocol-product="natural-elements-magnesium-bisglycinat">Magnesium bisglycinat</button>
-                <button type="button" data-protocol-product="swanson-apigenin-50mg-90-caps">Apigenin</button>
-                <button type="button" data-protocol-product="sunday-green-tea-extract-l-theanine-100mg">L-Theanine</button>
-                <button type="button" data-protocol-product="sunday-muscle-recover-ashwa-pro-complex">Ashwa Pro</button>
-              </div>
-            </div>
+          <div class="protocol-stack" aria-label="Tilman's current supplement kits ordered from morning to evening">
+            <button type="button" data-protocol-product="blueprint-essential-capsules" data-protocol-slots="morning">Daily Essentials</button>
+            <button type="button" data-protocol-product="omni-biotic-sr9" data-protocol-slots="morning">Probiotic SR-9</button>
+            <button type="button" data-protocol-product="norsan-omega-3-capsules" data-protocol-slots="morning">Fish Omega-3 capsules</button>
+            <button type="button" data-protocol-product="sunday-vegan-omega-3-epa-focus" data-protocol-slots="morning">Algae omega-3 EPA</button>
+            <button type="button" data-protocol-product="sunday-vegan-omega-3-dha-focus" data-protocol-slots="morning">Algae omega-3 DHA</button>
+            <button type="button" data-protocol-product="sunday-nadh-50-d-ribose-galactose" data-protocol-slots="morning">NADH 50</button>
+            <button type="button" data-protocol-product="sunday-sunglow-luxe-collagen-c" data-protocol-slots="morning daytime">SunGlow Collagen + C</button>
+            <button type="button" data-protocol-product="sunday-creatine-monohydrate-ultrapure" data-protocol-slots="morning daytime">Creatine</button>
+            <button type="button" data-protocol-product="sunday-calcium-alpha-ketoglutarate-500" data-protocol-slots="morning daytime">CaAKG</button>
+            <button type="button" data-protocol-product="sunday-taurine-500" data-protocol-slots="morning daytime">Taurine</button>
+            <button type="button" data-protocol-product="sunday-glucosamine-850" data-protocol-slots="morning daytime">Glucosamine</button>
+            <button type="button" data-protocol-product="sunday-vitamin-d3-k2-mk7-2500-iu-100mcg" data-protocol-slots="morning daytime">Sunday D3 + K2 drops</button>
+            <button type="button" data-protocol-product="sunday-vitamin-b-complex-extra-forte" data-protocol-slots="morning daytime">B Complex</button>
+            <button type="button" data-protocol-product="sunday-hyaluronic-acid-250-high-dose" data-protocol-slots="morning daytime">Hyaluronic Acid</button>
+            <button type="button" data-protocol-product="sunday-coenzyme-q10-kaneka-ubiquinol-200" data-protocol-slots="morning daytime">CoQ10</button>
+            <button type="button" data-protocol-product="sunday-astaxanthin-12-bioastin" data-protocol-slots="daytime">Astaxanthin</button>
+            <button type="button" data-protocol-product="weightworld-trans-resveratrol-510-red-wine-polyphenols" data-protocol-slots="daytime">Resveratrol</button>
+            <button type="button" data-protocol-product="sunday-liposomal-vitamin-c-zinc" data-protocol-slots="daytime">Vitamin C + Zinc</button>
+            <button type="button" data-protocol-product="sunday-magnesium-complex-11-ultra-xl" data-protocol-slots="evening">Magnesium Complex 11</button>
+            <button type="button" data-protocol-product="sunday-magnesium-active-calm" data-protocol-slots="evening">Active Calm</button>
+            <button type="button" data-protocol-product="natural-elements-magnesium-bisglycinat" data-protocol-slots="evening">Magnesium bisglycinat</button>
+            <button type="button" data-protocol-product="swanson-apigenin-50mg-90-caps" data-protocol-slots="evening">Apigenin</button>
+            <button type="button" data-protocol-product="sunday-green-tea-extract-l-theanine-100mg" data-protocol-slots="evening">L-Theanine</button>
+            <button type="button" data-protocol-product="sunday-muscle-recover-ashwa-pro-complex" data-protocol-slots="evening">Ashwa Pro</button>
           </div>
           <p>Tilman takes most of the stack in the morning with a vegan protein shake made with hazelnuts, almonds, hemp seeds, linseed oil, and a little olive oil. Probiotic SR-9 is taken only in the morning. NORSAN fish-oil capsules are the default omega-3 product, with the two Sunday Natural algae softgels kept in rotation. The Sunday Natural 2,500 IU D3 + K2 drops are the selected standalone vitamin D route; total vitamin D still needs attention because Essential Capsules also contribute vitamin D. Midday is selective; the calming and recovery stack stays in the evening.</p>
         </div>

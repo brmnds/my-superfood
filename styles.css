@@ -1941,26 +1941,6 @@ h2 {
 }
 
 .protocol-stack {
-  display: grid;
-  gap: 11px;
-}
-
-.protocol-stack-group {
-  align-items: start;
-  display: grid;
-  gap: 8px;
-  grid-template-columns: 118px minmax(0, 1fr);
-}
-
-.protocol-stack-label {
-  color: #6d776e;
-  font-size: 0.68rem;
-  font-weight: 850;
-  line-height: 1.35;
-  margin: 6px 0 0;
-}
-
-.protocol-stack-items {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -3291,16 +3271,7 @@ h2 {
     width: 72px;
   }
 
-  .protocol-stack-group {
-    gap: 5px;
-    grid-template-columns: 1fr;
-  }
-
-  .protocol-stack-label {
-    margin-top: 0;
-  }
-
-  .protocol-stack-items {
+  .protocol-stack {
     gap: 6px;
   }
 
